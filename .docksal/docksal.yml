@@ -1,0 +1,23 @@
+# Pantheon alike stack
+#
+# - Nginx 1.14
+# - MariaDB 10.1
+# - PHP 7.2
+# - Varnish 4.1
+# - Redis 4.0
+# - ApacheSolr 3.6
+
+version: "2.1"
+
+services:
+
+  # CLI
+  cli:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: cli
+    environment:
+      - PANTHEON_SITE
+      - PANTHEON_ENV
+    volumes:
+      - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro

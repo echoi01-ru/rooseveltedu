@@ -1,0 +1,8 @@
+# Basic LAMP stack
+
+version: "2.1"
+
+services:
+  cli:
+    environment:
+      - PHP_IDE_CONFIG=serverName=${VIRTUAL_HOST}

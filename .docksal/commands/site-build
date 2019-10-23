@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+#: exec_target = cli
+
+# Abort if anything fails
+set -e
+
+SITE_DIRECTORY=${SITE_DIRECTORY:-default}
+
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
+
+cd $DOCROOT_PATH
+
+echo "Running Drush Cache-Rebuild"
+drush cr
+
+echo "Running Update.php..."
+drush updb -y
+
+if [[ -f "${PROJECT_ROOT}/config/core.extension.yml" ]]; then
+  echo "Importing Configuration..."
+  drush config-import -y
+fi
+
+echo "Running Drush Cache-Rebuild"
+drush cr
