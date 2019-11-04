@@ -1,4 +1,4 @@
-# rooseveltedu
+# Roosevelt EDU
 
 [![CircleCI](https://circleci.com/gh/kanopi/rooseveltedu.svg?style=shield)](https://circleci.com/gh/kanopi/rooseveltedu)
 [![Dashboard rooseveltedu](https://img.shields.io/badge/dashboard-rooseveltedu-yellow.svg)](https://dashboard.pantheon.io/sites/bd787532-7df1-43fd-9b09-ca162d2c4bab#dev/code)
@@ -19,8 +19,8 @@ Follow [Docksal environment setup instructions](https://docs.docksal.io/getting-
 1. Clone this repo into your Projects directory
 
     ```
-    git clone git@github.com:kanopi/maui.git maui
-    cd maui
+    git clone git@github.com:kanopi/rooseveltedu.git rooseveltedu
+    cd rooseveltedu
     ```
 
 2. Initialize the site
@@ -31,12 +31,15 @@ Follow [Docksal environment setup instructions](https://docs.docksal.io/getting-
     fin init
     ```
 
-3. **On Windows** add `192.168.64.100  maui.docksal` to your hosts file
+3.  Add `192.168.64.100  rooseveltedu.docksal` to your hosts file
+    ```
+    fin hosts add
+    ```
 
 4. Point your browser to
 
     ```
-    http://maui.docksal
+    http://rooseveltedu   rooseveltedu.docksal
     ```
 
 When the automated install is complete the command line output will display the admin username and password.
