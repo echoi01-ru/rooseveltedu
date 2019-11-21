@@ -39,7 +39,7 @@ Follow [Docksal environment setup instructions](https://docs.docksal.io/getting-
 4. Point your browser to
 
     ```
-    http://rooseveltedu   rooseveltedu.docksal
+    http://rooseveltedu.docksal
     ```
 
 When the automated install is complete the command line output will display the admin username and password.
