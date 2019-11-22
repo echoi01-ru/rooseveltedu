@@ -1,0 +1,59 @@
+uuid: 5655f04c-1fbe-4563-a39c-86d6df40d013
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.location.field_address
+    - field.field.taxonomy_term.location.field_geo_code
+    - field.field.taxonomy_term.location.field_info
+    - field.field.taxonomy_term.location.field_main_phone_number
+    - taxonomy.vocabulary.location
+  module:
+    - geolocation
+    - telephone
+    - text
+id: taxonomy_term.location.default
+targetEntityType: taxonomy_term
+bundle: location
+mode: default
+content:
+  field_address:
+    weight: 1
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_geo_code:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_info:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_main_phone_number:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
