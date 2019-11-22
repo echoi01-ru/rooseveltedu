@@ -1,0 +1,22 @@
+uuid: c5b6919e-14a4-4d9b-831f-46d6719655a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.event_type
+id: taxonomy_term.event_type.default
+targetEntityType: taxonomy_term
+bundle: event_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
