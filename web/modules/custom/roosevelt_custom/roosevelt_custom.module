@@ -44,6 +44,12 @@ function roosevelt_custom_module_implements_alter(&$implementations, $hook) {
  */
 function roosevelt_custom_form_user_form_alter(&$form, FormStateInterface $form_state) {
   $form['field_full_name']['#type'] = 'hidden';
+/*
+  $form['field_primary_phone']['widget'][0]['value']['#attributes'] = ["pattern" => "[0-9]{3}-[0-9]{3}-[0-9]{4}"];
+  $form['field_primary_phone']['widget'][0]['value']['#placeholder'] = 'eg. 999-999-9999';
+  $form['field_secondary_phone']['widget'][0]['value']['#attributes'] = ["pattern" => "[0-9]{3}-[0-9]{3}-[0-9]{4}"];
+  $form['field_secondary_phone']['widget'][0]['value']['#placeholder'] = 'eg. 999-999-9999';
+*/
 }
 
 /**
