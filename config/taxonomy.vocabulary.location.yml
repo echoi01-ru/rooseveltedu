@@ -1,8 +1,0 @@
-uuid: 69815804-c9f1-487a-9c25-5a4a8fb01458
-langcode: en
-status: true
-dependencies: {  }
-name: Location
-vid: location
-description: ''
-weight: 0
