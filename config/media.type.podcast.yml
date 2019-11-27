@@ -1,0 +1,20 @@
+uuid: 7163a08f-dd15-47f0-b7b6-7a6556578863
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_podcast
+_core:
+  default_config_hash: EVdzNQo6A4iYjkXiPl-E4Ijp5ivRlHUqlT9YKj-gFvk
+id: podcast
+label: Podcast
+description: 'A remotely hosted podcast.'
+source: podcast
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_podcast
+  thumbnails_directory: 'public://thumbnails'
+  providers: {  }
+field_map:
+  title: name

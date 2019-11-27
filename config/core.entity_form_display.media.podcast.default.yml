@@ -1,0 +1,63 @@
+uuid: faf9f3b3-bde2-4db3-b976-95a6e3c2ea3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.podcast.field_media_podcast
+    - media.type.podcast
+  module:
+    - media_entity_podcast
+    - path
+_core:
+  default_config_hash: qwCHNP5Gjr7_hxcKg-S90u14LoRcnGUrpF8Fmifkjmw
+id: media.podcast.default
+targetEntityType: media
+bundle: podcast
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_podcast:
+    type: podcast_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  moderation_state: true
