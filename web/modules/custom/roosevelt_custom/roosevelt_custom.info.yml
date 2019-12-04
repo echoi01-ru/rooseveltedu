@@ -1,0 +1,9 @@
+name: 'Roosevelt Custom'
+type: module
+description: 'Cusotm functionality needed for the Roosevelt website'
+package: Roosevelt
+core: 8.x
+version: VERSION
+dependencies:
+  - drupal:hal (>=8.3.x)
+  - default_content:default_content
