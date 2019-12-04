@@ -17,4 +17,12 @@ source_configuration:
   thumbnails_directory: 'public://thumbnails'
   providers: {  }
 field_map:
+  description: field_description
   title: name
+  series_title: field_podcast_series_title
+  series_image: field_podcast_series_image
+  series_description: field_podcast_series_description
+  date: field_published_date
+  more: field_learn_more
+  keywords: field_additional_keywords
+  url: field_media_podcast

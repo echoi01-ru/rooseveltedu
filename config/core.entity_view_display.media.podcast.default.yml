@@ -3,10 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.podcast.field_additional_keywords
+    - field.field.media.podcast.field_description
+    - field.field.media.podcast.field_learn_more
     - field.field.media.podcast.field_media_podcast
+    - field.field.media.podcast.field_podcast_series_description
+    - field.field.media.podcast.field_podcast_series_image
+    - field.field.media.podcast.field_podcast_series_title
+    - field.field.media.podcast.field_published_date
     - media.type.podcast
   module:
-    - media
+    - datetime
+    - link
+    - media_entity_podcast
 _core:
   default_config_hash: 53u5lJaKLKMVfXubPwsuJdaEQawZwqwguNJJUBCcFqA
 id: media.podcast.default
@@ -14,17 +23,83 @@ targetEntityType: media
 bundle: podcast
 mode: default
 content:
+  field_additional_keywords:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_description:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_learn_more:
+    weight: 6
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_media_podcast:
-    type: oembed
-    weight: 0
-    label: hidden
+    type: podcast
+    weight: 1
+    label: above
     settings:
       max_width: 0
       max_height: 0
     third_party_settings: {  }
     region: content
+  field_podcast_series_description:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_podcast_series_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_podcast_series_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_published_date:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
-  name: true
   thumbnail: true
   uid: true

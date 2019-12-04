@@ -1,9 +1,8 @@
-uuid: e88195b9-2ebe-4af9-ba8e-c2703d620b5d
+uuid: 52240f22-2e1b-46ad-b698-8e2d2f146700
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_file_name
     - field.field.media.image.field_link_label
     - field.field.media.image.field_media_image
     - media.type.image
@@ -16,16 +15,8 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
-  field_file_name:
-    weight: 2
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_link_label:
-    weight: 3
+    weight: 2
     label: above
     settings:
       link_to_entity: false

@@ -1,9 +1,8 @@
-uuid: 48f2714f-e291-411f-b4e4-8ab667a8c4c5
+uuid: 81f2fd3e-5f80-4a47-946a-789a62b2926e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.audio.field_file_name
     - field.field.media.audio.field_link_label
     - field.field.media.audio.field_media_audio_file
     - media.type.audio
@@ -19,20 +18,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_file_name:
-    weight: 101
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_link_label:
-    weight: 102
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -40,15 +31,23 @@ content:
     type: string_textfield
     region: content
   field_media_audio_file:
-    weight: 0
+    weight: 1
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -56,17 +55,16 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 100
+    weight: 6
     region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden:
-  name: true
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 1c572b9e-4339-40a7-ae77-8e9226d99508
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_link_label
+    - media.type.audio
+id: media.audio.field_link_label
+field_name: field_link_label
+entity_type: media
+bundle: audio
+label: 'Link Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

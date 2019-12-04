@@ -1,9 +1,8 @@
-uuid: 51a5fb47-1bc7-46e9-ba27-240cd41e7b5f
+uuid: a04cf3ae-f585-4d77-83d5-759b2c9b321b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_file_name
     - field.field.media.video.field_link_label
     - field.field.media.video.field_media_video_file
     - media.type.video
@@ -16,16 +15,8 @@ targetEntityType: media
 bundle: video
 mode: default
 content:
-  field_file_name:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_link_label:
-    weight: 2
+    weight: 1
     label: above
     settings:
       link_to_entity: false

@@ -1,18 +1,14 @@
-uuid: 7d4a1d60-4207-48c6-9c9e-a22fc32b1452
+uuid: 9fc85334-a0dc-4ffa-ace5-bb7a53484ef3
 langcode: en
 status: true
 dependencies:
   module:
     - media
-_core:
-  default_config_hash: SJgxR5XWOesQbEKqp8VgInPyJjCFU_t2pi7UzYB78xg
-id: media.field_media_oembed_video
-field_name: field_media_oembed_video
+id: media.field_podcast_series_description
+field_name: field_podcast_series_description
 entity_type: media
-type: string
+type: string_long
 settings:
-  max_length: 255
-  is_ascii: false
   case_sensitive: false
 module: core
 locked: false
