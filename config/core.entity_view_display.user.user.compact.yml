@@ -1,12 +1,9 @@
 uuid: 29d99ab6-f6de-4577-8880-ff8f6f78bdfd
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.field_first_name
-    - field.field.user.user.field_full_name
-    - field.field.user.user.field_last_name
   module:
     - user
 _core:
@@ -17,7 +14,4 @@ bundle: user
 mode: compact
 content: {  }
 hidden:
-  field_first_name: true
-  field_full_name: true
-  field_last_name: true
   member_for: true
