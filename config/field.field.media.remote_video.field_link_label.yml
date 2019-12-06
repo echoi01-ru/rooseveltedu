@@ -1,0 +1,19 @@
+uuid: a2965679-e7f8-450e-8c57-aece87f1b058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_link_label
+    - media.type.remote_video
+id: media.remote_video.field_link_label
+field_name: field_link_label
+entity_type: media
+bundle: remote_video
+label: 'Link Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

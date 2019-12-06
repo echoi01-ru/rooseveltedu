@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.podcast.field_media_podcast
+    - media.type.podcast
+  module:
+    - media_entity_podcast
+_core:
+  default_config_hash: 53u5lJaKLKMVfXubPwsuJdaEQawZwqwguNJJUBCcFqA
+id: media.podcast.default
+targetEntityType: media
+bundle: podcast
+mode: default
+content:
+  field_media_podcast:
+    type: podcast
+    weight: 0
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

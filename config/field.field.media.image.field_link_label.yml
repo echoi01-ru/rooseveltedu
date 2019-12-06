@@ -1,0 +1,19 @@
+uuid: 9a91a7be-3940-4068-ad9a-a2d35c859349
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_link_label
+    - media.type.image
+id: media.image.field_link_label
+field_name: field_link_label
+entity_type: media
+bundle: image
+label: 'Link Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

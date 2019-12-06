@@ -1,0 +1,23 @@
+uuid: ed734a8c-27f2-4a9c-a7ab-4d6136a705cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_learn_more
+    - media.type.podcast
+  module:
+    - link
+id: media.podcast.field_learn_more
+field_name: field_learn_more
+entity_type: media
+bundle: podcast
+label: 'Learn more'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
