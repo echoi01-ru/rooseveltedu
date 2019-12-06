@@ -1,8 +1,9 @@
-uuid: 0b286486-808d-4916-b2db-e5d61e7c599c
+uuid: 81f2fd3e-5f80-4a47-946a-789a62b2926e
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.audio.field_link_label
     - field.field.media.audio.field_media_audio_file
     - media.type.audio
   module:
@@ -21,6 +22,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_link_label:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_media_audio_file:
     weight: 0
     settings:
@@ -28,6 +37,14 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

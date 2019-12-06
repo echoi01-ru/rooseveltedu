@@ -1,8 +1,9 @@
-uuid: 3a85b469-4d30-4234-bf31-5102a1ae2b83
+uuid: 08799dc7-179b-41ca-ac82-1ca66967d4b5
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.file.field_link_label
     - field.field.media.file.field_media_file
     - media.type.file
   module:
@@ -21,6 +22,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_link_label:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_media_file:
     settings:
       progress_indicator: throbber
@@ -28,6 +37,14 @@ content:
     type: file_generic
     weight: 0
     region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

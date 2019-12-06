@@ -1,8 +1,9 @@
-uuid: b937d585-3015-4f85-9838-a6ad26d1b4ec
+uuid: 8ff4d8a1-a1e9-438b-a6d4-d738665b7900
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.audio.field_link_label
     - field.field.media.audio.field_media_audio_file
     - media.type.audio
   module:
@@ -14,6 +15,14 @@ targetEntityType: media
 bundle: audio
 mode: default
 content:
+  field_link_label:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_media_audio_file:
     type: file_audio
     weight: 0
