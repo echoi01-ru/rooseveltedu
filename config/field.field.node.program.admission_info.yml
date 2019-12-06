@@ -1,0 +1,21 @@
+uuid: 6d3feb6d-71a0-4712-b488-0070d0cd8830
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.admission_info
+    - node.type.program
+  module:
+    - text
+id: node.program.admission_info
+field_name: admission_info
+entity_type: node
+bundle: program
+label: 'Admission Info'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

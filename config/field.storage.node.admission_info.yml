@@ -1,0 +1,19 @@
+uuid: 1008a7b8-a1cb-43f1-9c16-2b284e8df70e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.admission_info
+field_name: admission_info
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false
