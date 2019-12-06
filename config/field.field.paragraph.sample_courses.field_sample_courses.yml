@@ -1,0 +1,61 @@
+uuid: b513799d-0ef3-4b37-98eb-957dcda1769c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sample_courses
+    - paragraphs.paragraphs_type.sample_course
+    - paragraphs.paragraphs_type.sample_courses
+  module:
+    - entity_reference_revisions
+id: paragraph.sample_courses.field_sample_courses
+field_name: field_sample_courses
+entity_type: paragraph
+bundle: sample_courses
+label: 'Sample Courses'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      sample_course: sample_course
+    target_bundles_drag_drop:
+      sample_course:
+        enabled: true
+        weight: -23
+      accordion:
+        weight: -22
+        enabled: false
+      accordion_item:
+        weight: -21
+        enabled: false
+      basic_content:
+        weight: -20
+        enabled: false
+      call_to_action:
+        weight: -19
+        enabled: false
+      raci_consult:
+        weight: -18
+        enabled: false
+      raci_informed:
+        weight: -17
+        enabled: false
+      raci_responsible:
+        weight: -16
+        enabled: false
+      related_content:
+        weight: -15
+        enabled: false
+      related_media:
+        weight: -14
+        enabled: false
+      sample_courses:
+        weight: -13
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,28 @@
+uuid: 63a442fc-09d2-40e4-97d8-fd942e1bd37b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_staff_faculty_member
+    - paragraphs.paragraphs_type.raci_informed
+id: paragraph.raci_informed.field_staff_faculty_member
+field_name: field_staff_faculty_member
+entity_type: paragraph
+bundle: raci_informed
+label: 'Staff or Faculty Member'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
