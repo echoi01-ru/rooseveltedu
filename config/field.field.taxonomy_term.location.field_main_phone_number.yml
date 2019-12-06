@@ -1,0 +1,21 @@
+uuid: b79a9212-2299-4579-b7b7-97db42a6787c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_main_phone_number
+    - taxonomy.vocabulary.location
+  module:
+    - telephone
+id: taxonomy_term.location.field_main_phone_number
+field_name: field_main_phone_number
+entity_type: taxonomy_term
+bundle: location
+label: 'Main Phone number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone
