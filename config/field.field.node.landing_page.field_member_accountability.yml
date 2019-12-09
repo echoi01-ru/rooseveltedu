@@ -10,7 +10,7 @@ field_name: field_member_accountability
 entity_type: node
 bundle: landing_page
 label: 'Staff or Faculty Member Accountability'
-description: ''
+description: 'Accountable for this page.'
 required: false
 translatable: false
 default_value: {  }

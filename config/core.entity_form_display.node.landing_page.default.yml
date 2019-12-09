@@ -25,14 +25,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   body:
-    type: text_textarea_with_summary
-    weight: 1
-    region: content
+    weight: 26
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   created:
     type: datetime_timestamp
     weight: 6

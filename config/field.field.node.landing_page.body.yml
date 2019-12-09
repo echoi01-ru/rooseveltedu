@@ -1,10 +1,10 @@
-uuid: 622763ae-a815-4a16-8fc8-0b7bac53aecd
+uuid: ca451cdc-9f13-47ce-8a94-751c99f7c46b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.page
+    - node.type.landing_page
   module:
     - text
 id: node.landing_page.body
