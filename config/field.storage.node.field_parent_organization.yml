@@ -1,16 +1,16 @@
-uuid: 750f7fcb-dad7-4acf-9b21-87aba7b3cf80
+uuid: 3696f6b7-7a70-4a40-8015-c57ce35f8fc8
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - user
-id: node.field_related_people
-field_name: field_related_people
+    - taxonomy
+id: node.field_parent_organization
+field_name: field_parent_organization
 entity_type: node
 type: entity_reference
 settings:
-  target_type: user
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: -1

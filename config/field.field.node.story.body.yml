@@ -1,18 +1,16 @@
-uuid: f80a58f7-7889-4ec3-bf59-54e30076a0b3
+uuid: 63a9002f-a34b-4787-a211-303cc3eab124
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.page
+    - node.type.story
   module:
     - text
-_core:
-  default_config_hash: rUop-8b6hvxxDYbv-KobTfNIBNbPY9qOPl8f6kBNSpw
-id: node.page.body
+id: node.story.body
 field_name: body
 entity_type: node
-bundle: page
+bundle: story
 label: Body
 description: ''
 required: false

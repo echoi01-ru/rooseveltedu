@@ -1,28 +1,29 @@
-uuid: 1314d5cc-6061-4277-b49d-c923711a29ba
+uuid: dae7e9ac-3084-4518-b0bd-417e1d1cf441
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_story_type
+    - field.storage.node.field_campus
     - node.type.story
-    - taxonomy.vocabulary.story_type
-id: node.story.field_story_type
-field_name: field_story_type
+    - taxonomy.vocabulary.location
+id: node.story.field_campus
+field_name: field_campus
 entity_type: node
 bundle: story
-label: 'Story Type'
+label: Campus
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      story_type: story_type
+      location: location
     sort:
-      field: _none
-    auto_create: true
+      field: name
+      direction: asc
+    auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
