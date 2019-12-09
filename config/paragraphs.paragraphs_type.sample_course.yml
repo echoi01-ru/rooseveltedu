@@ -1,0 +1,9 @@
+uuid: dd78071f-0bd7-462a-b59d-0ffb861a68fd
+langcode: en
+status: true
+dependencies: {  }
+id: sample_course
+label: 'Sample Course'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

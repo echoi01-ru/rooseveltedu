@@ -1,8 +1,9 @@
-uuid: df20ab05-2f70-4636-b204-19174e9e9d2f
+uuid: c41b87b2-4aac-4921-8d88-2ba5d91f48ea
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.remote_video.field_link_label
     - field.field.media.remote_video.field_media_oembed_video
     - media.type.remote_video
   module:
@@ -14,9 +15,17 @@ targetEntityType: media
 bundle: remote_video
 mode: default
 content:
+  field_link_label:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_media_oembed_video:
     type: oembed
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       max_width: 0

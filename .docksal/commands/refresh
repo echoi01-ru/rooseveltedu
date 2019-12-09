@@ -87,25 +87,48 @@ if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'db' ]; then
 fi
 
 if [ $ELEMENTS = 'all' ] || [ $ELEMENTS = 'files' ]; then
+      FILES="/tmp/${PANTHEON_ENV}.${PANTHEON_SITE}.tar.gz"
+
+  if [ ! -f $FILES ] || [ ! -z $(find ${FILES} -mmin +360) ]; then
+    echo "${FILES} need updating"
+    rm -rf $FILES
+
     echo "Downloading latest set of files from ${PANTHEON_SITE}..."
 
     FILES_DIRECTORY=${SITEDIR_PATH}/files
 
     if [ ! -d ${FILES_DIRECTORY} ]; then
-        mkdir ${FILES_DIRECTORY}
+      mkdir ${FILES_DIRECTORY}
     fi
 
     if $LIVE ; then
       terminus rsync ${PANTHEON_SITE}.${PANTHEON_ENV}:files ${FILES_DIRECTORY}
     else
-      FILES="/tmp/${PANTHEON_ENV}.${PANTHEON_SITE}.tar.gz"
+      COUNT=$(terminus backup:list ${PANTHEON_SITE}.${PANTHEON_ENV} --element=files --format=list | wc -l)
+      if [ $COUNT -eq 1 ]; then
+        echo "Creating backup on Pantheon..."
+        terminus backup:create ${PANTHEON_SITE}.${PANTHEON_ENV} --element=files
+      fi
+  
+      LASTBKUP=$(terminus backup:list ${PANTHEON_SITE}.${PANTHEON_ENV} --element=files --field=date | head -n 1)
+      YESTERDAY=`date --date='yesterday' "+%Y-%m-%d %H:%M:%S"`
+  
+      if [ "${LASTBKUP}" \< "${YESTERDAY}" ]; then
+        echo "Old backup on Pantheon...Creating new one..."
+        terminus backup:create ${PANTHEON_SITE}.${PANTHEON_ENV} --element=files
+      fi
+  
       terminus backup:get ${PANTHEON_SITE}.${PANTHEON_ENV} --element=files --to="${FILES}"
       rm -rf ${FILES_DIRECTORY}
       tar -xf ${FILES}
       mv files_* files
     fi
+
     echo "Fixing files directory permissions..."
     chmod -R 755 files
+
+  fi
+
 fi
 
 echo "Done!"

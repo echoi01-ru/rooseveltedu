@@ -1,8 +1,9 @@
-uuid: 9ab36ac8-03a9-40d3-a44f-0a3e28e248a9
+uuid: 351b1847-f904-43ff-bdd5-70bb7bc5c207
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.remote_video.field_link_label
     - field.field.media.remote_video.field_media_oembed_video
     - media.type.remote_video
   module:
@@ -21,6 +22,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_link_label:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_media_oembed_video:
     type: oembed_textfield
     weight: 0
@@ -29,6 +38,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

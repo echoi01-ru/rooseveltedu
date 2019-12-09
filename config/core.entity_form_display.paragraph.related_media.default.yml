@@ -1,0 +1,24 @@
+uuid: fe35163f-e232-4b2f-a09f-d26a6a6863e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.related_media.field_media
+    - paragraphs.paragraphs_type.related_media
+id: paragraph.related_media.default
+targetEntityType: paragraph
+bundle: related_media
+mode: default
+content:
+  field_media:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

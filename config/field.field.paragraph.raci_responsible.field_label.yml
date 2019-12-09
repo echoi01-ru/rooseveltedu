@@ -1,0 +1,21 @@
+uuid: 058f0577-cb13-4dc2-924f-6298a69d8173
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_label
+    - paragraphs.paragraphs_type.raci_responsible
+id: paragraph.raci_responsible.field_label
+field_name: field_label
+entity_type: paragraph
+bundle: raci_responsible
+label: Label
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Responsible for this page'
+default_value_callback: ''
+settings: {  }
+field_type: string

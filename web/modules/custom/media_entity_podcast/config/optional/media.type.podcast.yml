@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: podcast
+label: 'Podcast'
+description: 'A remotely hosted podcast.'
+source: 'podcast'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://thumbnails'
+  providers: {  }
+  source_field: field_media_podcast
+field_map:
+  title: name

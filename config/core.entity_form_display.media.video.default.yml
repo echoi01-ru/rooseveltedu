@@ -1,8 +1,9 @@
-uuid: 78c8bc07-aad5-4b0f-89f3-a2d95e77e154
+uuid: fd8af2a9-883b-4faa-b0d1-8a183c32c883
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.video.field_link_label
     - field.field.media.video.field_media_video_file
     - media.type.video
   module:
@@ -21,6 +22,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_link_label:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_media_video_file:
     weight: 0
     settings:
@@ -28,6 +37,14 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
