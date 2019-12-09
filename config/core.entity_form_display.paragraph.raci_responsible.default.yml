@@ -1,0 +1,42 @@
+uuid: 2da504bb-ef3b-4b94-9a11-fe4eaef68444
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.raci_responsible.field_label
+    - field.field.paragraph.raci_responsible.field_plain_text
+    - field.field.paragraph.raci_responsible.field_staff_faculty_member
+    - paragraphs.paragraphs_type.raci_responsible
+id: paragraph.raci_responsible.default
+targetEntityType: paragraph
+bundle: raci_responsible
+mode: default
+content:
+  field_label:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_plain_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_staff_faculty_member:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
