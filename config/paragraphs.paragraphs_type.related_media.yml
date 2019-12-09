@@ -1,0 +1,9 @@
+uuid: 3068b25f-df20-4390-bf7d-53e2de206897
+langcode: en
+status: true
+dependencies: {  }
+id: related_media
+label: 'Related Media'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
