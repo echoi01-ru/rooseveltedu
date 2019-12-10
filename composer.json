@@ -23,6 +23,7 @@
         "drupal/devel": "^2.1",
         "drupal/geolocation": "^1.11",
         "drupal/kint": "^2.1",
+        "drupal/paragraphs": "^1.10",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
         "pantheon-systems/quicksilver-pushback": "^2",

@@ -1,0 +1,9 @@
+uuid: c4459b79-3707-4a05-ac5b-763e8dd62bf7
+langcode: en
+status: true
+dependencies: {  }
+id: raci_responsible
+label: 'RACI Responsible'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
