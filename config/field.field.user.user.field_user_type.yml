@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.storage.user.field_user_type
     - taxonomy.vocabulary.user_type
+  module:
+    - user
 id: user.user.field_user_type
 field_name: field_user_type
 entity_type: user
 bundle: user
 label: 'User Type'
-description: 'Enter a comma-separated list. For example: Amsterdam, Mexico City, "Cleveland, Ohio"'
+description: ''
 required: false
 translatable: true
 default_value: {  }
@@ -23,4 +25,5 @@ settings:
     sort:
       field: _none
     auto_create: true
+    auto_create_bundle: ''
 field_type: entity_reference
