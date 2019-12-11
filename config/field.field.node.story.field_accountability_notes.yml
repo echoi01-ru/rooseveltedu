@@ -1,0 +1,19 @@
+uuid: afe7c4d4-8762-4678-9e86-8434dfcfc978
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accountability_notes
+    - node.type.story
+id: node.story.field_accountability_notes
+field_name: field_accountability_notes
+entity_type: node
+bundle: story
+label: 'Accountability notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

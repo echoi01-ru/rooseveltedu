@@ -1,4 +1,4 @@
-uuid: 7f286e52-f1da-42df-b60b-8bc0ffee6de9
+uuid: a839132e-d55e-497f-bc0a-79a211a8fdcc
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-id: node.field_raci
-field_name: field_raci
+id: node.field_related_media
+field_name: field_related_media
 entity_type: node
 type: entity_reference_revisions
 settings:
