@@ -1,0 +1,61 @@
+uuid: 89320f87-cac5-47d8-86d3-6a9ae692ab96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_media
+    - node.type.story
+    - paragraphs.paragraphs_type.related_media
+  module:
+    - entity_reference_revisions
+id: node.story.field_related_media
+field_name: field_related_media
+entity_type: node
+bundle: story
+label: 'Related Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      related_media: related_media
+    target_bundles_drag_drop:
+      accordion:
+        weight: 12
+        enabled: false
+      accordion_item:
+        weight: 13
+        enabled: false
+      basic_content:
+        weight: 14
+        enabled: false
+      call_to_action:
+        weight: 15
+        enabled: false
+      raci_consult:
+        weight: 16
+        enabled: false
+      raci_informed:
+        weight: 17
+        enabled: false
+      raci_responsible:
+        weight: 18
+        enabled: false
+      related_content:
+        weight: 19
+        enabled: false
+      related_media:
+        enabled: true
+        weight: 20
+      sample_course:
+        weight: 21
+        enabled: false
+      sample_courses:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

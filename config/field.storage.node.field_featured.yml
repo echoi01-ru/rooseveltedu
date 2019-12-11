@@ -1,16 +1,14 @@
-uuid: 9baf0277-98e3-4352-a290-9306f050b0a3
+uuid: 312b9e31-d03f-4738-ae40-d4e4e3cd4ee2
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - user
-id: node.field_member_accountability
-field_name: field_member_accountability
+id: node.field_featured
+field_name: field_featured
 entity_type: node
-type: entity_reference
-settings:
-  target_type: user
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1
