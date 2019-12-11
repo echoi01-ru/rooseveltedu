@@ -1,0 +1,28 @@
+uuid: 9b92a119-03b6-4ecd-9531-251c90d77389
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_accountability
+    - node.type.program
+id: node.program.field_member_accountability
+field_name: field_member_accountability
+entity_type: node
+bundle: program
+label: 'Staff or Faculty Member Accountability'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
