@@ -1,17 +1,15 @@
-uuid: 01e492e0-17d7-4285-9994-af26f2529456
+uuid: b07ac963-6c55-4aab-b280-f18d4762ceb9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_content
+    - field.storage.node.field_related_content
     - node.type.landing_page
-    - node.type.story
-    - paragraphs.paragraphs_type.related_content
-id: paragraph.related_content.field_content
-field_name: field_content
-entity_type: paragraph
-bundle: related_content
-label: Content
+id: node.landing_page.field_related_content
+field_name: field_related_content
+entity_type: node
+bundle: landing_page
+label: 'Related Content'
 description: ''
 required: false
 translatable: false
@@ -22,7 +20,6 @@ settings:
   handler_settings:
     target_bundles:
       landing_page: landing_page
-      story: story
     sort:
       field: _none
     auto_create: false
