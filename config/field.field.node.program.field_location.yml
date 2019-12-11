@@ -10,7 +10,7 @@ id: node.program.field_location
 field_name: field_location
 entity_type: node
 bundle: program
-label: location
+label: Location
 description: 'Enter a comma-separated list. For example: Amsterdam, Mexico City, "Cleveland, Ohio"'
 required: false
 translatable: true
@@ -24,4 +24,5 @@ settings:
     sort:
       field: _none
     auto_create: true
+    auto_create_bundle: ''
 field_type: entity_reference

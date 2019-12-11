@@ -10,9 +10,9 @@ id: node.program.field_possible_terms
 field_name: field_possible_terms
 entity_type: node
 bundle: program
-label: academic_terms
+label: 'Possible Start Terms'
 description: 'Enter a comma-separated list. For example: Amsterdam, Mexico City, "Cleveland, Ohio"'
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -24,4 +24,5 @@ settings:
     sort:
       field: _none
     auto_create: true
+    auto_create_bundle: ''
 field_type: entity_reference

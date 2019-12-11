@@ -11,7 +11,7 @@ entity_type: node
 bundle: program
 label: 'Staff or Faculty Member Accountability'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
