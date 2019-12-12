@@ -11,7 +11,9 @@ module:
   comment: 0
   config: 0
   contextual: 0
+  date_recur: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   default_content: 0
   dynamic_page_cache: 0
@@ -43,6 +45,7 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
+  time_field: 0
   toolbar: 0
   update: 0
   user: 0
