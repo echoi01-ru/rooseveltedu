@@ -2,4 +2,107 @@
 
 /**
  * @file
+ * Contains roosevelt_custom.module.
  */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_help().
+ */
+function roosevelt_custom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the roosevelt_custom module.
+    case 'help.page.roosevelt_custom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Roosevelt customizations of views, settings, etc.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+   * Implements hook_module_implements_alter().
+   */
+function roosevelt_custom_module_implements_alter(&$implementations, $hook) {
+  switch ($hook) {
+    // Move our hook_entity_presave() implementation to the end of the list.
+    case 'entity_presave':
+      $group = $implementations['roosevelt_custom'];
+      unset($implementations['roosevelt_custom']);
+      $implementations['roosevelt_custom'] = $group;
+      break;
+  }
+}
+/**
+ * hook_form_BASE_FORM_ID_alter() for the node_form.
+ */
+function roosevelt_custom_form_user_form_alter(&$form, FormStateInterface $form_state) {
+  // Hide full name field because it is created dynamically
+  $form['field_full_name']['#type'] = 'hidden';
+
+  // Validate the Net ID field is unique
+  $form['#validate'][] = 'validateIsUnique';
+
+  // Format the telephone fields to be pretty
+  $form['field_primary_phone']['widget'][0]['value']['#attributes'] = ["pattern" => "[0-9]{3}-[0-9]{3}-[0-9]{4}"];
+  $form['field_primary_phone']['widget'][0]['value']['#placeholder'] = 'eg. 999-999-9999';
+  $form['field_secondary_phone']['widget'][0]['value']['#attributes'] = ["pattern" => "[0-9]{3}-[0-9]{3}-[0-9]{4}"];
+  $form['field_secondary_phone']['widget'][0]['value']['#placeholder'] = 'eg. 999-999-9999';
+
+  // Per spec, hide the mail field from user form
+  $form['account']['mail']['#access'] = false;
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function roosevelt_custom_entity_presave(EntityInterface $entity) {
+  switch ($entity->bundle()) {
+    case 'user':
+      // Build the full name field
+      $title_data = [
+        'first' => $entity->field_first_name->value,
+        'last' => $entity->field_last_name->value,
+      ];
+  
+      // Remove empty values and convert to string
+      $title_data = array_filter($title_data);
+      $title = implode(' ', $title_data);
+  
+      $entity->set('field_full_name', $title);
+      break;
+  }
+}
+
+
+/**
+ * Adds custom validation to the user edit/add form
+ */
+function validateIsUnique(array &$form, FormStateInterface $form_state) {
+  if (!empty($form_state->getValue('field_netid'))) {
+    $unique = $form_state->getValue('field_netid')[0]['value'];
+
+    if (isset($unique)) {
+      // Get any user with the same netid value
+      $query = \Drupal::entityQuery('user')
+        ->condition('field_netid', $unique);
+      $uids = $query->execute();
+
+      // If we are editing an existing user, remove it from the results
+      if($uid = $form_state->getformObject()->getEntity()->id()) {
+        unset($uids[$uid]);
+      }
+
+      // If there is a user with the same netid, return and error message
+      if(count($uids) > 0) {
+        $form_state->setErrorByName('field_netid', 'The Net ID field must be unique for each user.');
+      }
+    }
+  }
+}

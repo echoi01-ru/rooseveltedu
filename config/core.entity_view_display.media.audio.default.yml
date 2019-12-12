@@ -16,7 +16,7 @@ bundle: audio
 mode: default
 content:
   field_link_label:
-    weight: 1
+    weight: 0
     label: above
     settings:
       link_to_entity: false
@@ -25,7 +25,7 @@ content:
     region: content
   field_media_audio_file:
     type: file_audio
-    weight: 0
+    weight: 1
     label: visually_hidden
     settings:
       controls: true

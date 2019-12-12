@@ -16,7 +16,7 @@ bundle: image
 mode: default
 content:
   field_link_label:
-    weight: 2
+    weight: 0
     label: above
     settings:
       link_to_entity: false
