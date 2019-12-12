@@ -1,0 +1,23 @@
+uuid: 93e7c756-005a-45bb-a5a9-d39d0a84a947
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tickets
+    - node.type.event
+  module:
+    - link
+id: node.event.field_tickets
+field_name: field_tickets
+entity_type: node
+bundle: event
+label: Tickets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

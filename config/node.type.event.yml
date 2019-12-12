@@ -1,0 +1,11 @@
+uuid: c7463321-563f-4872-9cf3-a3f7e38a1453
+langcode: en
+status: true
+dependencies: {  }
+name: Event
+type: event
+description: 'This content type is for Events that are manually entered by any authenticated user and many also be imported by syncing with external ICS feeds'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
