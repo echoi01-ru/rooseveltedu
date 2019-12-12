@@ -1,38 +1,28 @@
-uuid: 9563e7a7-e8d1-4386-8cb7-3d2e62684d3a
+uuid: 1dbe71e5-324f-48af-a23f-8e189125f506
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_featured_image
+    - media.type.image
     - node.type.general_info
-  module:
-    - image
 id: node.general_info.field_featured_image
 field_name: field_featured_image
 entity_type: node
 bundle: general_info
-label: Image
+label: 'Featured Image'
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
-  max_resolution: ''
-  min_resolution: ''
-  alt_field: true
-  title_field: false
-  alt_field_required: true
-  title_field_required: false
-  default_image:
-    uuid: null
-    alt: ''
-    title: ''
-    width: null
-    height: null
-  handler: 'default:file'
-  handler_settings: {  }
-field_type: image
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

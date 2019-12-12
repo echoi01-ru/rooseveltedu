@@ -24,9 +24,15 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  body: true
+  field_accountability_notes: true
+  field_campus: true
   field_date_published: true
   field_featured: true
   field_featured_image: true
   field_member_accountability: true
+  field_parent_organization: true
+  field_raci: true
+  field_related_media: true
   field_related_people: true
   field_story_type: true

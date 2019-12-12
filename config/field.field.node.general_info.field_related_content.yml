@@ -1,0 +1,33 @@
+uuid: b47277ea-d478-4d19-a025-acd9e3a73016
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_content
+    - node.type.general_info
+    - node.type.landing_page
+    - node.type.program
+    - node.type.story
+id: node.general_info.field_related_content
+field_name: field_related_content
+entity_type: node
+bundle: general_info
+label: 'Related Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      general_info: general_info
+      landing_page: landing_page
+      program: program
+      story: story
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: general_info
+field_type: entity_reference
