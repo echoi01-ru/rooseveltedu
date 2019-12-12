@@ -1,0 +1,74 @@
+uuid: 1e4a42bb-eb48-47fc-a6ce-eb1c1af2209c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.general_info.accountability_notes
+    - field.field.node.general_info.body
+    - field.field.node.general_info.field_featured_image
+    - field.field.node.general_info.field_member_accountability
+    - field.field.node.general_info.field_raci
+    - field.field.node.general_info.field_related_content
+    - node.type.general_info
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.general_info.default
+targetEntityType: node
+bundle: general_info
+mode: default
+content:
+  accountability_notes:
+    type: basic_string
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_default
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_featured_image:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_member_accountability:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_raci:
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_related_content:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
