@@ -1,4 +1,4 @@
-uuid: ca997cf1-bb82-408b-b9ac-f67129d45980
+uuid: d8d4a6d6-e6e4-477f-9bf4-b6cd86e18e31
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ entity_type: node
 type: string_long
 settings:
   case_sensitive: false
-module: text
+module: core
 locked: false
 cardinality: 1
 translatable: true

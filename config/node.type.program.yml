@@ -1,0 +1,11 @@
+uuid: b7c70d33-7e73-4a2e-8199-bf3bc46cd39d
+langcode: en
+status: true
+dependencies: {  }
+name: Program
+type: program
+description: 'This content type is for all primary Program overview pages.. The Program layout can be managed with Layout Builder, though the layout template is limited to one standard as well as one optional for Performing Arts only.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

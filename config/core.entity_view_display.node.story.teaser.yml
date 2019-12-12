@@ -1,0 +1,32 @@
+uuid: 9fdb0002-c7cc-4e26-81c8-a8f4e2d9cccc
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.story.field_date_published
+    - field.field.node.story.field_featured
+    - field.field.node.story.field_featured_image
+    - field.field.node.story.field_member_accountability
+    - field.field.node.story.field_related_people
+    - field.field.node.story.field_story_type
+    - node.type.story
+  module:
+    - user
+id: node.story.teaser
+targetEntityType: node
+bundle: story
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_date_published: true
+  field_featured: true
+  field_featured_image: true
+  field_member_accountability: true
+  field_related_people: true
+  field_story_type: true
