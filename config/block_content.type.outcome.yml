@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: outcome
-label: Outcome
+label: 'Outcome Blocks'
 revision: 0
 description: 'This block type is custom built so when placed with Layout Builder, the editor can add multiple outcomes via paragraph reference.'

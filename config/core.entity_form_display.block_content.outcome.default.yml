@@ -1,0 +1,45 @@
+uuid: 39a1dd31-c56f-4b94-9f08-06d62d5ee2d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.outcome
+    - field.field.block_content.outcome.field_outcomes
+    - field.field.block_content.outcome.field_text
+  module:
+    - paragraphs
+    - text
+id: block_content.outcome.default
+targetEntityType: block_content
+bundle: outcome
+mode: default
+content:
+  field_outcomes:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_text:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

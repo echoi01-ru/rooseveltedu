@@ -1,19 +1,19 @@
-uuid: 3acdcc12-e66b-4b5c-a3d4-ab07a7bab8d7
+uuid: 398395de-b47a-4742-a406-018658dbb188
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.testimonial
+    - block_content.type.custom_html
     - field.storage.block_content.body
   module:
     - text
-id: block_content.testimonial.body
+id: block_content.custom_html.body
 field_name: body
 entity_type: block_content
-bundle: testimonial
+bundle: custom_html
 label: Body
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
