@@ -1,0 +1,22 @@
+uuid: 3acdcc12-e66b-4b5c-a3d4-ab07a7bab8d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.testimonial.body
+field_name: body
+entity_type: block_content
+bundle: testimonial
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
