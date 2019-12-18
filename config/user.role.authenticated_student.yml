@@ -10,4 +10,5 @@ permissions:
   - 'access content'
   - 'create event content'
   - 'edit own event content'
+  - 'use event_workflow transition send_to_publisher'
   - 'view own unpublished content'
