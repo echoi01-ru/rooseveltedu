@@ -1,0 +1,8 @@
+uuid: e4fc7ab8-1fbf-4990-809c-c331b4ab45e4
+langcode: en
+status: true
+dependencies: {  }
+id: outcome
+label: 'Outcome Blocks'
+revision: 0
+description: 'This block type is custom built so when placed with Layout Builder, the editor can add multiple outcomes via paragraph reference.'

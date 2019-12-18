@@ -1,0 +1,58 @@
+uuid: b78d8aeb-2daf-476a-b405-09711764ccdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_citation
+    - field.field.block_content.media_citation.field_headline
+    - field.field.block_content.media_citation.field_link_to_media
+    - field.field.block_content.media_citation.field_published_date
+    - field.field.block_content.media_citation.field_publisher_logo
+  module:
+    - datetime
+    - link
+id: block_content.media_citation.default
+targetEntityType: block_content
+bundle: media_citation
+mode: default
+content:
+  field_headline:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_link_to_media:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_published_date:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_publisher_logo:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
