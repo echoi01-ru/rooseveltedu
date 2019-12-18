@@ -1,0 +1,13 @@
+uuid: 44dbc3cd-cb33-4fea-8101-394f0f211b18
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated_student
+label: 'Authenticated - Student'
+weight: -8
+is_admin: null
+permissions:
+  - 'access content'
+  - 'create event content'
+  - 'edit own event content'
+  - 'view own unpublished content'

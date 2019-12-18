@@ -1,0 +1,41 @@
+uuid: 93af4aa5-9ca2-47a9-b13f-03bb5a15a971
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content Editor'
+weight: -6
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'administer blocks'
+  - 'create event content'
+  - 'create general_info content'
+  - 'create landing_page content'
+  - 'create media'
+  - 'create program content'
+  - 'create story content'
+  - 'create url aliases'
+  - 'edit any event content'
+  - 'edit any general_info content'
+  - 'edit any landing_page content'
+  - 'edit any program content'
+  - 'edit any story content'
+  - 'edit own event content'
+  - 'edit own general_info content'
+  - 'edit own landing_page content'
+  - 'edit own program content'
+  - 'edit own story content'
+  - 'update media'
+  - 'use text format full_html'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'

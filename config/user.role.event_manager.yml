@@ -1,0 +1,17 @@
+uuid: 9093f412-da07-4c2b-814d-cea0d6ccb8a9
+langcode: en
+status: true
+dependencies: {  }
+id: event_manager
+label: 'Event Manager'
+weight: -4
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'create event content'
+  - 'delete any event content'
+  - 'delete own event content'
+  - 'edit any event content'
+  - 'edit own event content'
+  - 'use text format full_html'
