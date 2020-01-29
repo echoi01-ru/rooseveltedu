@@ -3,6 +3,16 @@
     "description": "Install drops-8 with Composer on Pantheon.",
     "type": "project",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Blanca <blanca@kanopistudios.com>",
+            "role": "Tech Leadd / Developer"
+        },
+        {
+            "name": "Jason <jason@kanopistudios.com>",
+            "role": "Developer"
+        }
+    ],
     "repositories": [
         {
             "type": "composer",
