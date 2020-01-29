@@ -33,6 +33,11 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_featured_image:
     weight: 3
     label: above
