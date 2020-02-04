@@ -217,3 +217,4 @@ hidden:
   field_member_accountability: true
   field_organization_school: true
   field_organization_student: true
+  field_recurring: true
