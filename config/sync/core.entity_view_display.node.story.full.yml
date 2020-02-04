@@ -47,3 +47,4 @@ hidden:
   field_related_media: true
   field_related_people: true
   field_story_type: true
+  layout_builder__layout: true
