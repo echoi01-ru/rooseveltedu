@@ -1,0 +1,21 @@
+uuid: db464a49-8f91-4c9e-b76d-12fee5173570
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_info
+    - taxonomy.vocabulary.location
+  module:
+    - text
+id: taxonomy_term.location.field_info
+field_name: field_info
+entity_type: taxonomy_term
+bundle: location
+label: Info
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

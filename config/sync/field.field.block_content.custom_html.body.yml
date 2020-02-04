@@ -1,0 +1,22 @@
+uuid: 398395de-b47a-4742-a406-018658dbb188
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_html
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.custom_html.body
+field_name: body
+entity_type: block_content
+bundle: custom_html
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

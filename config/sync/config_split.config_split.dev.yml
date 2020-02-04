@@ -1,0 +1,19 @@
+uuid: 00c56780-45ab-4af1-ac9b-0c79798e4c0d
+langcode: en
+status: false
+dependencies: {  }
+id: dev
+label: 'Config Dev'
+description: ''
+folder: ''
+module:
+  devel: 0
+  kint: 0
+theme: {  }
+blacklist:
+  - devel.settings
+  - devel.toolbar.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

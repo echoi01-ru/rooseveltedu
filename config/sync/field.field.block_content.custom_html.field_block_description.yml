@@ -1,0 +1,19 @@
+uuid: 0004782c-5d53-4679-bc6a-fac7f59f5914
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_html
+    - field.storage.block_content.field_block_description
+id: block_content.custom_html.field_block_description
+field_name: field_block_description
+entity_type: block_content
+bundle: custom_html
+label: 'Block description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

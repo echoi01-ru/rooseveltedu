@@ -1,0 +1,14 @@
+uuid: 1b658c2e-1650-4ac6-9530-cbc4cf117699
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.authenticated_student
+  module:
+    - user
+id: user_add_role_action.authenticated_student
+label: 'Add the Authenticated - Student role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: authenticated_student

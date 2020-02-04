@@ -1,0 +1,23 @@
+uuid: 39d3af11-464d-4788-af3e-fe25d7825bf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial
+    - field.storage.block_content.field_graduation_year
+id: block_content.testimonial.field_graduation_year
+field_name: field_graduation_year
+entity_type: block_content
+bundle: testimonial
+label: 'Graduation Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

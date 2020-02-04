@@ -1,0 +1,67 @@
+uuid: 9b4a1d55-c54b-4d47-90c0-90599d20ac61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.accountability_notes
+    - field.field.node.program.admission_info
+    - field.field.node.program.body
+    - field.field.node.program.field_contact_person
+    - field.field.node.program.field_location
+    - field.field.node.program.field_member_accountability
+    - field.field.node.program.field_organizational_parent
+    - field.field.node.program.field_possible_terms
+    - field.field.node.program.field_program_contact
+    - field.field.node.program.field_program_faculty
+    - field.field.node.program.field_raci
+    - field.field.node.program.field_sample_courses
+    - node.type.program
+  module:
+    - entity_reference_revisions
+    - user
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  field_organizational_parent:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_raci:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sample_courses:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  accountability_notes: true
+  admission_info: true
+  body: true
+  field_contact_person: true
+  field_location: true
+  field_member_accountability: true
+  field_possible_terms: true
+  field_program_contact: true
+  field_program_faculty: true

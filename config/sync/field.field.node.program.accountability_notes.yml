@@ -1,0 +1,21 @@
+uuid: 7dcc77ea-c60d-44a8-bfbe-801ed8c8b09b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.accountability_notes
+    - node.type.program
+  module:
+    - text
+id: node.program.accountability_notes
+field_name: accountability_notes
+entity_type: node
+bundle: program
+label: 'Accountability notes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

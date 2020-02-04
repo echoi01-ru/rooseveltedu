@@ -1,0 +1,38 @@
+uuid: d6e27e92-4225-4783-b813-8a68a4c278b4
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.story.field_date_published
+    - field.field.node.story.field_featured
+    - field.field.node.story.field_featured_image
+    - field.field.node.story.field_member_accountability
+    - field.field.node.story.field_related_people
+    - field.field.node.story.field_story_type
+    - node.type.story
+  module:
+    - user
+id: node.story.full
+targetEntityType: node
+bundle: story
+mode: full
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_accountability_notes: true
+  field_campus: true
+  field_date_published: true
+  field_featured: true
+  field_featured_image: true
+  field_member_accountability: true
+  field_parent_organization: true
+  field_raci: true
+  field_related_media: true
+  field_related_people: true
+  field_story_type: true

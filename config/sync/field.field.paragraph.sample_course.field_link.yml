@@ -1,0 +1,23 @@
+uuid: 7310b843-3d9d-4e43-a5ed-368e098da8c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.sample_course
+  module:
+    - link
+id: paragraph.sample_course.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: sample_course
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

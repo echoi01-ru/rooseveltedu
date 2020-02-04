@@ -1,0 +1,94 @@
+uuid: 657b64a3-b5d6-45e6-a5ef-005a1416e5a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_campus
+    - field.field.user.user.field_display_name
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_netid
+    - field.field.user.user.field_office_location
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_picture
+    - field.field.user.user.field_primary_phone
+    - field.field.user.user.field_secondary_phone
+    - field.field.user.user.field_user_type
+  module:
+    - roosevelt_custom
+    - text
+    - user
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+  field_bio:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_netid:
+    type: unique_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_picture:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_user_type:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_campus: true
+  field_display_name: true
+  field_full_name: true
+  field_office_location: true
+  field_organization: true
+  field_primary_phone: true
+  field_secondary_phone: true
+  language: true
+  timezone: true

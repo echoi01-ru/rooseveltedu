@@ -1,0 +1,19 @@
+uuid: bbc7b004-555d-4c41-928b-fd0898903a00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_link_label
+    - media.type.video
+id: media.video.field_link_label
+field_name: field_link_label
+entity_type: media
+bundle: video
+label: 'Link Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

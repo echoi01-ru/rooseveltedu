@@ -1,0 +1,73 @@
+uuid: c056a6b8-c383-4d06-9e36-4db3ecc6b5a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+  module:
+    - content_moderation
+id: landing_page_workflow
+label: 'Landing Page Workflow'
+type: content_moderation
+type_settings:
+  states:
+    archive:
+      published: false
+      default_revision: false
+      label: Archive
+      weight: 1
+    draft:
+      published: false
+      default_revision: false
+      label: Draft
+      weight: -2
+    editor_review:
+      published: false
+      default_revision: false
+      label: 'Editor Review'
+      weight: 2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+    review:
+      published: false
+      default_revision: false
+      label: 'Related Organization Review'
+      weight: -1
+  transitions:
+    publish:
+      label: Publish
+      from:
+        - review
+      to: published
+      weight: 0
+    return_to_draft:
+      label: 'Return to Draft'
+      from:
+        - review
+      to: editor_review
+      weight: 1
+    send_to_archive:
+      label: 'Send to Archive'
+      from:
+        - published
+      to: archive
+      weight: 2
+    send_to_editor:
+      label: 'Send to Editor'
+      from:
+        - draft
+      to: editor_review
+      weight: -3
+    send_to_publisher:
+      label: 'Send to Publisher'
+      from:
+        - editor_review
+      to: review
+      weight: -2
+  entity_types:
+    node:
+      - landing_page
+  default_moderation_state: draft
