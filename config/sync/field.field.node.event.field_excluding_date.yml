@@ -1,19 +1,19 @@
-uuid: 0e3f0b18-d9f1-40f1-90a6-545b27b56c2c
+uuid: d6b3a995-4da0-4b0b-be39-4069384e16aa
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_start_date
+    - field.storage.node.field_excluding_date
     - node.type.event
   module:
     - datetime
-id: node.event.field_start_date
-field_name: field_start_date
+id: node.event.field_excluding_date
+field_name: field_excluding_date
 entity_type: node
 bundle: event
-label: 'Start Date'
+label: 'Excluding Date'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

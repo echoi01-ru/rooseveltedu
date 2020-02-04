@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.event.field_contact_person
     - field.field.node.event.field_end_date
     - field.field.node.event.field_end_time
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_excluding_date
     - field.field.node.event.field_featured
     - field.field.node.event.field_image
     - field.field.node.event.field_location
@@ -18,16 +20,17 @@ dependencies:
     - field.field.node.event.field_organization_school
     - field.field.node.event.field_organization_student
     - field.field.node.event.field_raci
-    - field.field.node.event.field_recurring
     - field.field.node.event.field_related_content
     - field.field.node.event.field_related_programs
     - field.field.node.event.field_room_number
     - field.field.node.event.field_start_date
     - field.field.node.event.field_start_time
     - field.field.node.event.field_tickets
+    - field.field.node.event.field_weekly_event
     - node.type.event
+    - workflows.workflow.event_workflow
   module:
-    - date_recur
+    - content_moderation
     - datetime
     - link
     - paragraphs
@@ -176,13 +179,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
-  field_recurring:
-    weight: 28
-    settings:
-      timezone_override: ''
-    third_party_settings: {  }
-    type: date_recur_interactive_widget
-    region: content
   field_related_content:
     weight: 21
     settings:
@@ -231,6 +227,12 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 5
@@ -275,4 +277,7 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_event_type: true
+  field_excluding_date: true
+  field_weekly_event: true
