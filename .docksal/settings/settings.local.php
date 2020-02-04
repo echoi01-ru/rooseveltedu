@@ -55,6 +55,11 @@ $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
 
 /**
+ * Enable local config split which may have been enabled
+ */
+$config['config_split.config_split.dev']['status'] = FALSE;
+
+/**
  * Disable the render cache.
  *
  * Note: you should test with the render cache enabled, to ensure the correct

@@ -4,10 +4,16 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - field.field.node.story.body
+    - field.field.node.story.field_accountability_notes
+    - field.field.node.story.field_campus
     - field.field.node.story.field_date_published
     - field.field.node.story.field_featured
     - field.field.node.story.field_featured_image
     - field.field.node.story.field_member_accountability
+    - field.field.node.story.field_parent_organization
+    - field.field.node.story.field_raci
+    - field.field.node.story.field_related_media
     - field.field.node.story.field_related_people
     - field.field.node.story.field_story_type
     - node.type.story
@@ -18,6 +24,11 @@ targetEntityType: node
 bundle: story
 mode: full
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
@@ -36,3 +47,4 @@ hidden:
   field_related_media: true
   field_related_people: true
   field_story_type: true
+  layout_builder__layout: true

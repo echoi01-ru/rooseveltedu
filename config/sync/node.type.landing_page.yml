@@ -1,11 +1,18 @@
 uuid: d016bc7e-6aef-4941-a2d6-e9717e6d49bc
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: 'Landing Page'
 type: landing_page
 description: 'This content type is for primary site pages that require a lot of design/layout flexibility.   The Landing Page layout can be managed with Layout Builder and allows editors to design their own layout by adding Sections and Blocks.'
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false
