@@ -1,11 +1,11 @@
-uuid: 00c56780-45ab-4af1-ac9b-0c79798e4c0d
+uuid: 56c2aa78-3ec5-49e4-9acf-071611dab135
 langcode: en
 status: true
 dependencies: {  }
 id: dev
 label: 'Config Dev'
 description: ''
-folder: ''
+folder: ../config/dev
 module:
   devel: 0
   kint: 0

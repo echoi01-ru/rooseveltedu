@@ -1,17 +1,21 @@
-uuid: 6dd3acbf-15df-4564-a5fa-2681077f0b74
+uuid: 17822e24-3de5-4fdf-b71e-fa83b8bf87d6
 langcode: en
-status: false
+status: true
 dependencies:
+  config:
+    - node.type.event
+    - taxonomy.vocabulary.event_type
+  content:
+    - 'taxonomy_term:event_type:e7fb74b8-abe9-44d2-be6d-b2a690430da5'
   module:
     - node
+    - taxonomy
     - user
-_core:
-  default_config_hash: sqwEJaSgef4rCaRMf-JdNAdV_kCICU1SfQh5Wl2sUrc
-id: content_recent
-label: 'Recent content'
-module: node
-description: 'Recent content.'
-tag: default
+id: featured_upcoming_events
+label: 'Featured Upcoming Events'
+module: views
+description: 'Roosevelt Custom View'
+tag: roosevelt
 base_table: node_field_data
 base_field: nid
 core: 8.x
@@ -50,17 +54,10 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 10
+          items_per_page: 5
           offset: 0
       style:
-        type: html_list
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          type: ul
-          wrapper_class: item-list
-          class: ''
+        type: default
       row:
         type: fields
       fields:
@@ -68,42 +65,9 @@ display:
           id: title
           table: node_field_data
           field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          relationship: none
-          group_type: group
-          admin_label: ''
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_alter_empty: true
-          type: string
           settings:
             link_to_entity: true
           plugin_id: field
-        changed:
-          id: changed
-          table: node_field_data
-          field: changed
           relationship: none
           group_type: group
           admin_label: ''
@@ -140,7 +104,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -149,8 +113,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp_ago
-          settings: {  }
+          type: string
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -161,19 +124,36 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: changed
-          plugin_id: field
       filters:
-        status_extra:
-          id: status_extra
+        status:
+          value: '1'
           table: node_field_data
-          field: status_extra
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_featured_value:
+          id: field_featured_value
+          table: node__field_featured
+          field: field_featured_value
           relationship: none
           group_type: group
           admin_label: ''
           operator: '='
-          value: false
+          value: '1'
           group: 1
           exposed: false
           expose:
@@ -200,18 +180,93 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          plugin_id: node_status
-        langcode:
-          id: langcode
+          plugin_id: boolean
+      sorts:
+        created:
+          id: created
           table: node_field_data
-          field: langcode
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+      title: none
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'Featured Upcoming Events'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Admissions Events'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
           value:
-            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_event_type_target_id:
+          id: field_event_type_target_id
+          table: node__field_event_type
+          field: field_event_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            34: 34
           group: 1
           exposed: false
           expose:
@@ -239,81 +294,26 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-      sorts:
-        changed:
-          id: changed
-          table: node_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          entity_type: node
-          entity_field: changed
-          plugin_id: date
-      title: 'Recent content'
-      header: {  }
-      footer: {  }
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: 'No content available.'
-          plugin_id: text_custom
-      relationships:
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: author
-          required: true
-          entity_type: node
-          entity_field: uid
-          plugin_id: standard
-      arguments: {  }
-      display_extenders: {  }
-      use_more: false
-      use_more_always: false
-      use_more_text: More
-      link_url: ''
-      link_display: '0'
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: event_type
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - user
         - 'user.node_grants:view'
         - user.permissions
-      max-age: -1
-      tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 1
-    display_options:
-      display_extenders: {  }
-    cache_metadata:
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      max-age: -1
       tags: {  }

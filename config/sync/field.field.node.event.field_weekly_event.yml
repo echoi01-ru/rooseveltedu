@@ -1,0 +1,21 @@
+uuid: 91e094ef-7dc3-4694-a855-0782e5cc5447
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weekly_event
+    - node.type.event
+  module:
+    - options
+id: node.event.field_weekly_event
+field_name: field_weekly_event
+entity_type: node
+bundle: event
+label: 'Recur Weekly'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

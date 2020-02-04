@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.program.field_possible_terms
     - field.field.node.program.field_program_contact
     - field.field.node.program.field_program_faculty
+    - field.field.node.program.field_program_type
     - field.field.node.program.field_raci
     - field.field.node.program.field_sample_courses
     - node.type.program
@@ -119,6 +120,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_program_type:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_raci:
     type: entity_reference_paragraphs
     weight: 11
@@ -143,6 +153,12 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 17

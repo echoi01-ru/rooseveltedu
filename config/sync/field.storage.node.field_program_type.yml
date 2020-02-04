@@ -1,17 +1,17 @@
-uuid: ea000a44-056c-4451-a3ab-171bdc65d498
+uuid: d221b3a7-ccca-4b01-8763-4179d6eb92e8
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_end_date
-field_name: field_end_date
+    - taxonomy
+id: node.field_program_type
+field_name: field_program_type
 entity_type: node
-type: datetime
+type: entity_reference
 settings:
-  datetime_type: datetime
-module: datetime
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

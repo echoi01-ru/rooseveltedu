@@ -1,19 +1,19 @@
-uuid: ea000a44-056c-4451-a3ab-171bdc65d498
+uuid: 591f8391-7b7d-48e5-a92f-81d0714a922c
 langcode: en
 status: true
 dependencies:
   module:
     - datetime
     - node
-id: node.field_end_date
-field_name: field_end_date
+id: node.field_excluding_date
+field_name: field_excluding_date
 entity_type: node
 type: datetime
 settings:
-  datetime_type: datetime
+  datetime_type: date
 module: datetime
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
