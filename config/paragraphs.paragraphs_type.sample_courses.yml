@@ -1,9 +1,0 @@
-uuid: 48166564-99f9-433a-bc6d-7c51c56b7cb3
-langcode: en
-status: true
-dependencies: {  }
-id: sample_courses
-label: 'Sample Courses (bulleted list)'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

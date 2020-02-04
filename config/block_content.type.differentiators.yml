@@ -1,8 +1,0 @@
-uuid: da6b9d33-c9ab-45d6-b4d0-025eb267fb96
-langcode: en
-status: true
-dependencies: {  }
-id: differentiators
-label: Differentiators
-revision: 0
-description: 'This block type is used on Program pages to share important features of a program like small class size, emphasis on difversity, etc.'

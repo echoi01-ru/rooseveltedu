@@ -1,8 +1,0 @@
-uuid: 9d4735d6-f3bf-4ab3-9ea7-2f6e562c4cd0
-langcode: en
-status: true
-dependencies: {  }
-id: media_citation
-label: 'Media Citation'
-revision: 0
-description: 'This block type is to collect links, logos, and publisher information for media mentions of Roosevelt Univeristy.'

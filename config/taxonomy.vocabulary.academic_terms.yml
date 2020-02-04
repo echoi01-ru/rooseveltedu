@@ -1,8 +1,0 @@
-uuid: 13b3247b-81cc-48d8-8c30-842056e2df18
-langcode: en
-status: true
-dependencies: {  }
-name: 'Academic Terms'
-vid: academic_terms
-description: ''
-weight: 0

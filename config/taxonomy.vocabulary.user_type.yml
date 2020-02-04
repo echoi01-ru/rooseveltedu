@@ -1,8 +1,0 @@
-uuid: 7f8908f9-fd3d-440d-8c2f-f42756885bde
-langcode: en
-status: true
-dependencies: {  }
-name: 'User Type'
-vid: user_type
-description: ''
-weight: 0

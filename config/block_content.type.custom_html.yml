@@ -1,8 +1,0 @@
-uuid: 6e01ca6b-9f64-493a-9969-6c63f997bd7a
-langcode: en
-status: true
-dependencies: {  }
-id: custom_html
-label: 'Custom HTML'
-revision: 0
-description: 'This block type is available for extra content that needs to be flexibly formatted.  Most frequently used to add an extra chunk of information to be displayed with a Story. Also possibly used for pullquotes with the quote styles defined as a WYSIWYG button.'

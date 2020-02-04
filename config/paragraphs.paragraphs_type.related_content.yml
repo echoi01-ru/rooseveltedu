@@ -1,9 +1,0 @@
-uuid: d47dce53-1212-4748-bbcb-fb92d862679d
-langcode: en
-status: true
-dependencies: {  }
-id: related_content
-label: 'Related Content'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

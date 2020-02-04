@@ -1,8 +1,0 @@
-uuid: 1189ba3b-975b-4fdc-89ed-35b300576351
-langcode: en
-status: true
-dependencies: {  }
-id: checklist
-label: Checklist
-revision: 0
-description: 'A checklist item could be "Submit your application."  Many checklist items are reused but grouped in different order with other checklist items.  This is where Admission Info items should be stored as well. '

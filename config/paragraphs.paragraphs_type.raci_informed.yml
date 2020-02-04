@@ -1,9 +1,0 @@
-uuid: 2e501407-f546-4363-ba12-ad637e49f593
-langcode: en
-status: true
-dependencies: {  }
-id: raci_informed
-label: 'RACI Informed'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

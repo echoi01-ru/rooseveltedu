@@ -1,8 +1,0 @@
-uuid: dddb395a-28d4-4586-b9c6-4e531b511e9f
-langcode: en
-status: true
-dependencies: {  }
-name: 'Story Type'
-vid: story_type
-description: ''
-weight: 0

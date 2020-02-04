@@ -1,8 +1,0 @@
-uuid: f0e1a311-2a7f-4c41-8142-8d775ff0f7d0
-langcode: en
-status: true
-dependencies: {  }
-name: 'Program Type'
-vid: program_type
-description: ''
-weight: 0

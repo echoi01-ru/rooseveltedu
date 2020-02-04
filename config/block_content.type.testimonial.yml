@@ -1,8 +1,0 @@
-uuid: 9bdc0b19-07db-4c2b-85e7-35908c2ba579
-langcode: en
-status: true
-dependencies: {  }
-id: testimonial
-label: Testimonial
-revision: 0
-description: 'This block type is for all quotes or testimonies attributed to Roosevelt University students, faculty, staff, or community stakeholders.'
