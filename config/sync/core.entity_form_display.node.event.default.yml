@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.event.field_affiliated_personnel
     - field.field.node.event.field_audience
     - field.field.node.event.field_brand_pillars
+    - field.field.node.event.field_campus
     - field.field.node.event.field_contact_person
     - field.field.node.event.field_end_date
     - field.field.node.event.field_end_time
@@ -32,11 +33,63 @@ dependencies:
   module:
     - content_moderation
     - datetime
+    - field_group
     - link
     - paragraphs
     - path
     - text
     - time_field
+third_party_settings:
+  field_group:
+    group_categories:
+      children:
+        - field_event_type
+        - field_brand_pillars
+        - field_campus
+      parent_name: ''
+      weight: 15
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Categories
+    group_related_content:
+      children:
+        - field_related_programs
+        - field_related_content
+        - field_organization_student
+        - field_organization_school
+      parent_name: ''
+      weight: 16
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Related Content'
+    group_raci:
+      children:
+        - field_member_accountability
+        - accountability_notes
+        - field_raci
+      parent_name: ''
+      weight: 17
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: RACI
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -44,14 +97,14 @@ mode: default
 content:
   accountability_notes:
     type: string_textarea
-    weight: 23
+    weight: 27
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
   body:
-    weight: 13
+    weight: 9
     settings:
       rows: 9
       summary_rows: 3
@@ -61,12 +114,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   field_affiliated_personnel:
-    weight: 16
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -75,7 +128,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_audience:
-    weight: 18
+    weight: 14
     settings:
       match_operator: CONTAINS
       size: 60
@@ -84,7 +137,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_brand_pillars:
-    weight: 17
+    weight: 14
     settings:
       match_operator: CONTAINS
       size: 60
@@ -92,7 +145,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_contact_person:
+  field_campus:
     weight: 15
     settings:
       match_operator: CONTAINS
@@ -101,29 +154,47 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_contact_person:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_end_date:
-    weight: 9
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_end_time:
-    weight: 10
+    weight: 4
     settings:
       enabled: false
       step: 5
     third_party_settings: {  }
     type: time_widget
     region: content
+  field_event_type:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_featured:
-    weight: 22
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_image:
-    weight: 14
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60
@@ -133,7 +204,7 @@ content:
     region: content
   field_location:
     type: entity_reference_autocomplete
-    weight: 24
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -142,7 +213,7 @@ content:
     third_party_settings: {  }
   field_member_accountability:
     type: entity_reference_autocomplete
-    weight: 25
+    weight: 26
     region: content
     settings:
       match_operator: CONTAINS
@@ -151,7 +222,7 @@ content:
     third_party_settings: {  }
   field_organization_school:
     type: entity_reference_autocomplete
-    weight: 26
+    weight: 29
     region: content
     settings:
       match_operator: CONTAINS
@@ -160,7 +231,7 @@ content:
     third_party_settings: {  }
   field_organization_student:
     type: entity_reference_autocomplete
-    weight: 27
+    weight: 28
     region: content
     settings:
       match_operator: CONTAINS
@@ -168,7 +239,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_raci:
-    weight: 20
+    weight: 28
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -180,7 +251,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_related_content:
-    weight: 21
+    weight: 27
     settings:
       match_operator: CONTAINS
       size: 60
@@ -189,7 +260,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_related_programs:
-    weight: 19
+    weight: 26
     settings:
       match_operator: CONTAINS
       size: 60
@@ -198,7 +269,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_room_number:
-    weight: 11
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -206,13 +277,13 @@ content:
     type: string_textarea
     region: content
   field_start_date:
-    weight: 8
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_start_time:
-    weight: 7
+    weight: 2
     settings:
       enabled: false
       step: 5
@@ -220,22 +291,28 @@ content:
     type: time_widget
     region: content
   field_tickets:
-    weight: 12
+    weight: 8
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
+  field_weekly_event:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 24
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -243,21 +320,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 20
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 23
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 21
     region: content
     third_party_settings: {  }
   title:
@@ -270,7 +347,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 18
     settings:
       match_operator: CONTAINS
       size: 60
@@ -278,6 +355,4 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
-  field_event_type: true
   field_excluding_date: true
-  field_weekly_event: true
