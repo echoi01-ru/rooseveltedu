@@ -36,7 +36,6 @@ dependencies:
     - paragraphs
     - path
     - text
-    - time_field
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -44,14 +43,14 @@ mode: default
 content:
   accountability_notes:
     type: string_textarea
-    weight: 23
+    weight: 21
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
   body:
-    weight: 13
+    weight: 11
     settings:
       rows: 9
       summary_rows: 3
@@ -66,7 +65,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_affiliated_personnel:
-    weight: 16
+    weight: 14
     settings:
       match_operator: CONTAINS
       size: 60
@@ -75,7 +74,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_audience:
-    weight: 18
+    weight: 16
     settings:
       match_operator: CONTAINS
       size: 60
@@ -84,15 +83,6 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_brand_pillars:
-    weight: 17
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_contact_person:
     weight: 15
     settings:
       match_operator: CONTAINS
@@ -101,29 +91,30 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_contact_person:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_end_date:
-    weight: 9
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_end_time:
-    weight: 10
-    settings:
-      enabled: false
-      step: 5
-    third_party_settings: {  }
-    type: time_widget
-    region: content
   field_featured:
-    weight: 22
+    weight: 20
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_image:
-    weight: 14
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -133,7 +124,7 @@ content:
     region: content
   field_location:
     type: entity_reference_autocomplete
-    weight: 24
+    weight: 22
     region: content
     settings:
       match_operator: CONTAINS
@@ -142,7 +133,7 @@ content:
     third_party_settings: {  }
   field_member_accountability:
     type: entity_reference_autocomplete
-    weight: 25
+    weight: 23
     region: content
     settings:
       match_operator: CONTAINS
@@ -151,7 +142,7 @@ content:
     third_party_settings: {  }
   field_organization_school:
     type: entity_reference_autocomplete
-    weight: 26
+    weight: 24
     region: content
     settings:
       match_operator: CONTAINS
@@ -160,7 +151,7 @@ content:
     third_party_settings: {  }
   field_organization_student:
     type: entity_reference_autocomplete
-    weight: 27
+    weight: 25
     region: content
     settings:
       match_operator: CONTAINS
@@ -168,7 +159,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_raci:
-    weight: 20
+    weight: 18
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -180,15 +171,6 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_related_content:
-    weight: 21
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_related_programs:
     weight: 19
     settings:
       match_operator: CONTAINS
@@ -197,8 +179,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_related_programs:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_room_number:
-    weight: 11
+    weight: 9
     settings:
       rows: 5
       placeholder: ''
@@ -206,21 +197,13 @@ content:
     type: string_textarea
     region: content
   field_start_date:
-    weight: 8
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_start_time:
-    weight: 7
-    settings:
-      enabled: false
-      step: 5
-    third_party_settings: {  }
-    type: time_widget
-    region: content
   field_tickets:
-    weight: 12
+    weight: 10
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -229,7 +212,7 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 26
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -278,6 +261,8 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  field_end_time: true
   field_event_type: true
   field_excluding_date: true
+  field_start_time: true
   field_weekly_event: true
