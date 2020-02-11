@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.story.body
     - field.field.node.story.field_accountability_notes
+    - field.field.node.story.field_brand_pillars
     - field.field.node.story.field_campus
     - field.field.node.story.field_date_published
     - field.field.node.story.field_featured
@@ -12,22 +13,77 @@ dependencies:
     - field.field.node.story.field_member_accountability
     - field.field.node.story.field_parent_organization
     - field.field.node.story.field_raci
+    - field.field.node.story.field_related_content
     - field.field.node.story.field_related_media
     - field.field.node.story.field_related_people
     - field.field.node.story.field_story_type
+    - field.field.node.story.layout_builder__layout
     - node.type.story
+    - workflows.workflow.story_workflow
   module:
+    - content_moderation
     - datetime
+    - field_group
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_categories:
+      children:
+        - field_brand_pillars
+        - field_campus
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Categories
+    group_related_content:
+      children:
+        - field_parent_organization
+        - field_related_people
+        - field_related_content
+        - field_related_media
+      parent_name: ''
+      weight: 7
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Related Content'
+    group_raci:
+      children:
+        - field_member_accountability
+        - field_raci
+        - field_accountability_notes
+      parent_name: ''
+      weight: 8
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: RACI
 id: node.story.default
 targetEntityType: node
 bundle: story
 mode: default
 content:
   body:
-    weight: 7
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -37,7 +93,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 14
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -49,8 +105,17 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_brand_pillars:
+    weight: 21
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_campus:
-    weight: 8
+    weight: 22
     settings:
       match_operator: CONTAINS
       size: 60
@@ -60,20 +125,20 @@ content:
     region: content
   field_date_published:
     type: datetime_default
-    weight: 5
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_featured:
     type: boolean_checkbox
-    weight: 2
+    weight: 3
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_featured_image:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -82,7 +147,7 @@ content:
     third_party_settings: {  }
   field_member_accountability:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -90,7 +155,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_parent_organization:
-    weight: 10
+    weight: 11
     settings:
       match_operator: CONTAINS
       size: 60
@@ -110,9 +175,18 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
+  field_related_content:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_related_media:
     type: entity_reference_paragraphs
-    weight: 9
+    weight: 14
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -124,7 +198,7 @@ content:
     region: content
   field_related_people:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 12
     region: content
     settings:
       match_operator: CONTAINS
@@ -133,7 +207,7 @@ content:
     third_party_settings: {  }
   field_story_type:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
@@ -142,13 +216,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 18
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 15
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -156,21 +230,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 16
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 17
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 12
     region: content
     third_party_settings: {  }
   title:
@@ -183,7 +257,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 15
     settings:
       match_operator: CONTAINS
       size: 60

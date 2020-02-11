@@ -6,14 +6,51 @@ dependencies:
     - field.field.node.landing_page.accountability_notes
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_contact_person
+    - field.field.node.landing_page.field_featured_image
     - field.field.node.landing_page.field_member_accountability
     - field.field.node.landing_page.field_raci
     - field.field.node.landing_page.field_related_content
+    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
+    - workflows.workflow.landing_page_workflow
   module:
+    - content_moderation
+    - field_group
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_related_content:
+      children:
+        - field_related_content
+      parent_name: ''
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Related Content'
+    group_raci:
+      children:
+        - field_member_accountability
+        - accountability_notes
+        - field_raci
+      parent_name: ''
+      weight: 5
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: RACI
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -21,14 +58,14 @@ mode: default
 content:
   accountability_notes:
     type: string_textarea
-    weight: 2
+    weight: 9
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
   body:
-    weight: 1
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -38,7 +75,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -51,9 +88,18 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_featured_image:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_member_accountability:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -62,7 +108,7 @@ content:
     third_party_settings: {  }
   field_raci:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 10
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -81,9 +127,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 12
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -91,21 +143,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 8
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 11
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -118,11 +170,12 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true
