@@ -39,6 +39,7 @@
         "drupal/kint": "^2.1",
         "drupal/optional_end_date": "^1.0@RC",
         "drupal/paragraphs": "^1.10",
+        "drupal/pathauto": "^1.6",
         "drupal/time_field": "^1.13",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
