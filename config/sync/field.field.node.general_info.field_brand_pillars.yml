@@ -1,0 +1,29 @@
+uuid: ca784292-58a7-446f-b097-d528fbf8a927
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brand_pillars
+    - node.type.general_info
+    - taxonomy.vocabulary.brand_pillar
+id: node.general_info.field_brand_pillars
+field_name: field_brand_pillars
+entity_type: node
+bundle: general_info
+label: 'Brand Pillars'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      brand_pillar: brand_pillar
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
