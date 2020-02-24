@@ -42,6 +42,7 @@ third_party_settings:
   field_group:
     group_categories:
       children:
+        - field_audience
         - field_brand_pillars
         - field_campus
         - field_event_type
@@ -136,7 +137,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_brand_pillars:
-    weight: 15
+    weight: 17
     settings:
       match_operator: CONTAINS
       size: 60
@@ -145,7 +146,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_campus:
-    weight: 15
+    weight: 18
     settings:
       match_operator: CONTAINS
       size: 60
