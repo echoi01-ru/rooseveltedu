@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.story.body
+    - field.field.node.story.field_accordion
     - field.field.node.story.field_accountability_notes
+    - field.field.node.story.field_basic_content
     - field.field.node.story.field_brand_pillars
+    - field.field.node.story.field_call_to_action
     - field.field.node.story.field_campus
     - field.field.node.story.field_date_published
     - field.field.node.story.field_featured
@@ -283,6 +286,57 @@ third_party_settings:
                 type: entity_reference_label
             additional: {  }
             weight: 15
+          595fcaf4-8367-4b38-a988-68b0c7b5d340:
+            uuid: 595fcaf4-8367-4b38-a988-68b0c7b5d340
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:story:field_accordion'
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+                type: entity_reference_revisions_entity_view
+            additional: {  }
+            weight: 16
+          8614f35a-d837-413c-abf4-bb6a8db4123b:
+            uuid: 8614f35a-d837-413c-abf4-bb6a8db4123b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:story:field_basic_content'
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+                type: entity_reference_revisions_entity_view
+            additional: {  }
+            weight: 17
+          22cc94c5-4dc4-4eaa-bd56-97a63038eaf6:
+            uuid: 22cc94c5-4dc4-4eaa-bd56-97a63038eaf6
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:story:field_call_to_action'
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+                type: entity_reference_revisions_entity_view
+            additional: {  }
+            weight: 18
         third_party_settings: {  }
 id: node.story.default
 targetEntityType: node
@@ -301,12 +355,30 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_accordion:
+    weight: 15
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_accountability_notes:
     weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_basic_content:
+    weight: 16
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_brand_pillars:
     weight: 13
@@ -315,6 +387,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_call_to_action:
+    weight: 17
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_campus:
     weight: 8

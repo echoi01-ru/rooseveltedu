@@ -5,7 +5,10 @@ dependencies:
   config:
     - field.field.node.general_info.accountability_notes
     - field.field.node.general_info.body
+    - field.field.node.general_info.field_accordion
+    - field.field.node.general_info.field_basic_content
     - field.field.node.general_info.field_brand_pillars
+    - field.field.node.general_info.field_call_to_action
     - field.field.node.general_info.field_campus
     - field.field.node.general_info.field_featured_image
     - field.field.node.general_info.field_member_accountability
@@ -40,6 +43,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_accordion:
+    weight: 9
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_basic_content:
+    weight: 10
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_brand_pillars:
     weight: 7
     label: above
@@ -47,6 +68,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_call_to_action:
+    weight: 11
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_campus:
     weight: 8

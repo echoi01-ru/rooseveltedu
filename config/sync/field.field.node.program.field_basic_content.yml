@@ -1,0 +1,61 @@
+uuid: df3a563e-8c49-4a56-83cc-1b4e83a760e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_basic_content
+    - node.type.program
+    - paragraphs.paragraphs_type.basic_content
+  module:
+    - entity_reference_revisions
+id: node.program.field_basic_content
+field_name: field_basic_content
+entity_type: node
+bundle: program
+label: 'Basic Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      basic_content: basic_content
+    target_bundles_drag_drop:
+      accordion:
+        weight: 12
+        enabled: false
+      accordion_item:
+        weight: 13
+        enabled: false
+      basic_content:
+        enabled: true
+        weight: 14
+      call_to_action:
+        weight: 15
+        enabled: false
+      raci_consult:
+        weight: 16
+        enabled: false
+      raci_informed:
+        weight: 17
+        enabled: false
+      raci_responsible:
+        weight: 18
+        enabled: false
+      related_content:
+        weight: 19
+        enabled: false
+      related_media:
+        weight: 20
+        enabled: false
+      sample_course:
+        weight: 21
+        enabled: false
+      sample_courses:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

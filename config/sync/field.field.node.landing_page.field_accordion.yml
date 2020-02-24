@@ -1,0 +1,61 @@
+uuid: 3e986166-edc5-4546-8b85-a923bf6edce5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accordion
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_accordion
+field_name: field_accordion
+entity_type: node
+bundle: landing_page
+label: Accordion
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 12
+      accordion_item:
+        weight: 13
+        enabled: false
+      basic_content:
+        weight: 14
+        enabled: false
+      call_to_action:
+        weight: 15
+        enabled: false
+      raci_consult:
+        weight: 16
+        enabled: false
+      raci_informed:
+        weight: 17
+        enabled: false
+      raci_responsible:
+        weight: 18
+        enabled: false
+      related_content:
+        weight: 19
+        enabled: false
+      related_media:
+        weight: 20
+        enabled: false
+      sample_course:
+        weight: 21
+        enabled: false
+      sample_courses:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

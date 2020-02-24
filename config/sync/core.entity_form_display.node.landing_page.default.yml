@@ -5,6 +5,9 @@ dependencies:
   config:
     - field.field.node.landing_page.accountability_notes
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_accordion
+    - field.field.node.landing_page.field_basic_content
+    - field.field.node.landing_page.field_call_to_action
     - field.field.node.landing_page.field_contact_person
     - field.field.node.landing_page.field_featured_image
     - field.field.node.landing_page.field_member_accountability
@@ -79,6 +82,42 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_accordion:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_basic_content:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_call_to_action:
+    type: entity_reference_paragraphs
+    weight: 28
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_contact_person:
     type: entity_reference_autocomplete
     weight: 3

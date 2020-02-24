@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.node.event.accountability_notes
     - field.field.node.event.body
+    - field.field.node.event.field_accordion
     - field.field.node.event.field_affiliated_personnel
     - field.field.node.event.field_audience
+    - field.field.node.event.field_basic_content
     - field.field.node.event.field_brand_pillars
+    - field.field.node.event.field_call_to_action
     - field.field.node.event.field_campus
     - field.field.node.event.field_contact_person
     - field.field.node.event.field_end_date
@@ -33,6 +36,7 @@ dependencies:
   module:
     - content_moderation
     - datetime
+    - entity_reference_revisions
     - field_group
     - link
     - paragraphs
@@ -117,6 +121,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_accordion:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
   field_affiliated_personnel:
     weight: 14
     settings:
@@ -135,6 +148,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_basic_content:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
   field_brand_pillars:
     weight: 15
     settings:
@@ -143,6 +165,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_call_to_action:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
     region: content
   field_campus:
     weight: 15
