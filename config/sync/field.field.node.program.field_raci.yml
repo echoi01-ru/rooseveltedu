@@ -14,7 +14,7 @@ id: node.program.field_raci
 field_name: field_raci
 entity_type: node
 bundle: program
-label: RACI
+label: 'Additional RACI info'
 description: ''
 required: false
 translatable: false

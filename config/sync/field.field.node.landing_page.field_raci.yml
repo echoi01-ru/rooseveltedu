@@ -14,7 +14,7 @@ id: node.landing_page.field_raci
 field_name: field_raci
 entity_type: node
 bundle: landing_page
-label: RACI
+label: 'Additional RACI info'
 description: ''
 required: false
 translatable: false

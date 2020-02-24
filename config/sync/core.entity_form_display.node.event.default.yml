@@ -42,9 +42,9 @@ third_party_settings:
   field_group:
     group_categories:
       children:
-        - field_event_type
         - field_brand_pillars
         - field_campus
+        - field_event_type
       parent_name: ''
       weight: 15
       format_type: details
@@ -60,8 +60,8 @@ third_party_settings:
       children:
         - field_related_programs
         - field_related_content
-        - field_organization_student
         - field_organization_school
+        - field_organization_student
       parent_name: ''
       weight: 16
       format_type: details
@@ -96,7 +96,7 @@ mode: default
 content:
   accountability_notes:
     type: string_textarea
-    weight: 21
+    weight: 24
     region: content
     settings:
       rows: 5
@@ -221,7 +221,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_raci:
-    weight: 18
+    weight: 25
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -333,4 +333,3 @@ hidden:
   field_event_type: true
   field_excluding_date: true
   field_start_time: true
-  field_weekly_event: true
