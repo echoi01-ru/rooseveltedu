@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.story.body
     - field.field.node.story.field_accountability_notes
+    - field.field.node.story.field_audience
     - field.field.node.story.field_brand_pillars
     - field.field.node.story.field_campus
     - field.field.node.story.field_date_published
@@ -31,6 +32,7 @@ third_party_settings:
   field_group:
     group_categories:
       children:
+        - field_audience
         - field_brand_pillars
         - field_campus
       parent_name: ''
@@ -105,8 +107,17 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_audience:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_brand_pillars:
-    weight: 21
+    weight: 27
     settings:
       match_operator: CONTAINS
       size: 60
@@ -115,7 +126,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_campus:
-    weight: 22
+    weight: 28
     settings:
       match_operator: CONTAINS
       size: 60
