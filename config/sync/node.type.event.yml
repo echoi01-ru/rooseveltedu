@@ -1,7 +1,14 @@
 uuid: c7463321-563f-4872-9cf3-a3f7e38a1453
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: Event
 type: event
 description: 'This content type is for Events that are manually entered by any authenticated user and many also be imported by syncing with external ICS feeds'
