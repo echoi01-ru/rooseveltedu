@@ -6,8 +6,8 @@ dependencies:
     - field.field.node.story.body
     - field.field.node.story.field_accordion
     - field.field.node.story.field_accountability_notes
-    - field.field.node.story.field_basic_content
     - field.field.node.story.field_audience
+    - field.field.node.story.field_basic_content
     - field.field.node.story.field_brand_pillars
     - field.field.node.story.field_call_to_action
     - field.field.node.story.field_campus
@@ -21,7 +21,6 @@ dependencies:
     - field.field.node.story.field_related_media
     - field.field.node.story.field_related_people
     - field.field.node.story.field_story_type
-    - field.field.node.story.layout_builder__layout
     - node.type.story
     - workflows.workflow.story_workflow
   module:
@@ -120,15 +119,6 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_basic_content:
-    weight: 27
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
-    region: content
   field_audience:
     weight: 26
     settings:
@@ -137,6 +127,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_basic_content:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
     region: content
   field_brand_pillars:
     weight: 27
@@ -306,5 +305,4 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden:
-  layout_builder__layout: true
+hidden: {  }
