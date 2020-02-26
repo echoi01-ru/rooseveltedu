@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.story.field_accordion
     - field.field.node.story.field_accountability_notes
     - field.field.node.story.field_basic_content
+    - field.field.node.story.field_audience
     - field.field.node.story.field_brand_pillars
     - field.field.node.story.field_call_to_action
     - field.field.node.story.field_campus
@@ -293,7 +294,7 @@ third_party_settings:
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:story:field_accordion'
+                id: 'field_block:node:story:field_accordion'
               formatter:
                 label: above
                 settings:
@@ -337,7 +338,24 @@ third_party_settings:
                 type: entity_reference_revisions_entity_view
             additional: {  }
             weight: 18
-        third_party_settings: {  }
+            third_party_settings: {  }
+          e0ffe5e5-2fb7-4f05-ba72-89aa0a2c327f:
+            uuid: e0ffe5e5-2fb7-4f05-ba72-89aa0a2c327f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+                id: 'field_block:node:story:field_audience'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 16
+            third_party_settings: {  }
 id: node.story.default
 targetEntityType: node
 bundle: story
@@ -379,6 +397,15 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_audience:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
     region: content
   field_brand_pillars:
     weight: 13

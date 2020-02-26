@@ -14,7 +14,7 @@ id: node.general_info.field_raci
 field_name: field_raci
 entity_type: node
 bundle: general_info
-label: RACI
+label: 'Additional RACI info'
 description: ''
 required: false
 translatable: true

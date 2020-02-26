@@ -1,0 +1,23 @@
+uuid: 87cd04b2-ec5f-4ba7-b113-797ad6419cf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_catalog_link
+    - node.type.program
+  module:
+    - link
+id: node.program.field_catalog_link
+field_name: field_catalog_link
+entity_type: node
+bundle: program
+label: 'Catalog Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
