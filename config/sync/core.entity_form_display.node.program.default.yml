@@ -6,6 +6,9 @@ dependencies:
     - field.field.node.program.accountability_notes
     - field.field.node.program.admission_info
     - field.field.node.program.body
+    - field.field.node.program.field_accordion
+    - field.field.node.program.field_basic_content
+    - field.field.node.program.field_call_to_action
     - field.field.node.program.field_catalog_link
     - field.field.node.program.field_contact_person
     - field.field.node.program.field_location
@@ -22,6 +25,7 @@ dependencies:
     - workflows.workflow.program_workflow
   module:
     - content_moderation
+    - entity_reference_revisions
     - field_group
     - link
     - paragraphs
@@ -96,6 +100,33 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_accordion:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_basic_content:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_call_to_action:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
   field_catalog_link:
     weight: 10
     settings:

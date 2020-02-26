@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.field.node.event.accountability_notes
     - field.field.node.event.body
+    - field.field.node.event.field_accordion
     - field.field.node.event.field_affiliated_personnel
     - field.field.node.event.field_audience
+    - field.field.node.event.field_basic_content
     - field.field.node.event.field_brand_pillars
+    - field.field.node.event.field_call_to_action
     - field.field.node.event.field_campus
     - field.field.node.event.field_contact_person
     - field.field.node.event.field_end_date
@@ -54,6 +57,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_accordion:
+    weight: 122
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_affiliated_personnel:
     weight: 110
     label: above
@@ -70,6 +82,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_basic_content:
+    weight: 123
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_brand_pillars:
     weight: 111
     label: above
@@ -77,6 +98,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_call_to_action:
+    weight: 124
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_campus:
     weight: 121

@@ -5,7 +5,10 @@ dependencies:
   config:
     - field.field.node.general_info.accountability_notes
     - field.field.node.general_info.body
+    - field.field.node.general_info.field_accordion
+    - field.field.node.general_info.field_basic_content
     - field.field.node.general_info.field_brand_pillars
+    - field.field.node.general_info.field_call_to_action
     - field.field.node.general_info.field_campus
     - field.field.node.general_info.field_featured_image
     - field.field.node.general_info.field_member_accountability
@@ -15,6 +18,7 @@ dependencies:
     - workflows.workflow.general_info_workflow
   module:
     - content_moderation
+    - entity_reference_revisions
     - field_group
     - paragraphs
     - path
@@ -94,6 +98,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_accordion:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_basic_content:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
   field_brand_pillars:
     weight: 26
     settings:
@@ -102,6 +124,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_call_to_action:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
     region: content
   field_campus:
     weight: 27

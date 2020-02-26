@@ -5,6 +5,9 @@ dependencies:
   config:
     - field.field.node.landing_page.accountability_notes
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_accordion
+    - field.field.node.landing_page.field_basic_content
+    - field.field.node.landing_page.field_call_to_action
     - field.field.node.landing_page.field_contact_person
     - field.field.node.landing_page.field_featured_image
     - field.field.node.landing_page.field_member_accountability
@@ -13,6 +16,7 @@ dependencies:
     - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
+    - entity_reference_revisions
     - layout_builder
     - layout_discovery
     - user
@@ -21,6 +25,63 @@ third_party_settings:
     allow_custom: true
     enabled: true
     sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          173d6ebb-01a7-4509-a7bb-09e596535eae:
+            uuid: 173d6ebb-01a7-4509-a7bb-09e596535eae
+            region: content
+            configuration:
+              id: 'field_block:node:landing_page:field_basic_content'
+              label: 'Basic Content'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          43c1c111-a4ea-45a7-bc0b-469dfdd57117:
+            uuid: 43c1c111-a4ea-45a7-bc0b-469dfdd57117
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:field_accordion'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          bd31c08a-f305-4e45-ad3c-776b27bab871:
+            uuid: bd31c08a-f305-4e45-ad3c-776b27bab871
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:field_call_to_action'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings: {  }
@@ -72,6 +133,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_accordion:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_call_to_action:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_featured_image:
     weight: 101
     label: above
@@ -88,6 +167,7 @@ content:
 hidden:
   accountability_notes: true
   body: true
+  field_basic_content: true
   field_contact_person: true
   field_member_accountability: true
   field_raci: true
