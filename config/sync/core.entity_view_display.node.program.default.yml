@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.program.accountability_notes
     - field.field.node.program.admission_info
     - field.field.node.program.body
+    - field.field.node.program.field_catalog_link
     - field.field.node.program.field_contact_person
     - field.field.node.program.field_location
     - field.field.node.program.field_member_accountability
@@ -20,6 +21,7 @@ dependencies:
     - node.type.program
   module:
     - entity_reference_revisions
+    - link
     - user
 id: node.program.default
 targetEntityType: node
@@ -30,6 +32,18 @@ content:
     weight: -20
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_catalog_link:
+    weight: 106
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   field_organizational_parent:
     weight: 101

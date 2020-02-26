@@ -14,7 +14,7 @@ id: node.event.field_raci
 field_name: field_raci
 entity_type: node
 bundle: event
-label: RACI
+label: 'Additional RACI info'
 description: ''
 required: false
 translatable: true
