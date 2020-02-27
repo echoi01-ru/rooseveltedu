@@ -21,12 +21,12 @@ dependencies:
     - field.field.node.story.field_related_media
     - field.field.node.story.field_related_people
     - field.field.node.story.field_story_type
+    - field.field.node.story.layout_builder__layout
     - node.type.story
     - workflows.workflow.story_workflow
   module:
     - content_moderation
     - datetime
-    - entity_reference_revisions
     - field_group
     - paragraphs
     - path
@@ -98,18 +98,21 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 13
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_accordion:
-    weight: 26
+    weight: 15
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_accountability_notes:
     weight: 11
@@ -129,13 +132,16 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_basic_content:
-    weight: 27
+    weight: 16
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_brand_pillars:
     weight: 27
@@ -147,13 +153,16 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_call_to_action:
-    weight: 28
+    weight: 17
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_campus:
     weight: 28
@@ -263,7 +272,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -271,21 +280,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 13
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -298,11 +307,12 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 15
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true
