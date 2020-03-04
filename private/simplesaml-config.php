@@ -3,6 +3,9 @@
  * The configuration of SimpleSAMLphp
  *
  */
+if (!ini_get('session.save_handler')) {
+    ini_set('session.save_handler', 'file');
+}
 
 $config = [
 
@@ -73,7 +76,7 @@ $config = [
      * also as the technical contact in generated metadata.
      */
     'technicalcontact_name' => 'Administrator',
-    'technicalcontact_email' => 'na@example.org',
+    'technicalcontact_email' => 'blanca@kanopistudios.com',
 
     /*
      * (Optional) The method by which email is delivered.  Defaults to mail which utilizes the
@@ -130,7 +133,7 @@ $config = [
      * A possible way to generate a random salt is by running the following command from a unix shell:
      * LC_CTYPE=C tr -c -d '0123456789abcdefghijklmnopqrstuvwxyz' </dev/urandom | dd bs=32 count=1 2>/dev/null;echo
      */
-    'secretsalt' => 'defaultsecretsalt',
+    'secretsalt' => 'C+DmZ@T+Spwy-#=T)f./$y)f~I^tR,|W?}p~~dT)Xg!|t9u1O})-=zi-=J43U!dn',
 
     /*
      * This password must be kept secret, and modified from the default value 123.
@@ -138,14 +141,14 @@ $config = [
      * metadata listing and diagnostics pages.
      * You can also put a hash here; run "bin/pwgen.php" to generate one.
      */
-    'auth.adminpassword' => '123',
+    'auth.adminpassword' => 'Kanopi123',
 
     /*
      * Set this options to true if you want to require administrator password to access the web interface
      * or the metadata pages, respectively.
      */
-    'admin.protectindexpage' => false,
-    'admin.protectmetadata' => false,
+    'admin.protectindexpage' => true,
+    'admin.protectmetadata' => true,
 
     /*
      * Set this option to false if you don't want SimpleSAMLphp to check for new stable releases when
@@ -175,7 +178,9 @@ $config = [
      * Example:
      *   'trusted.url.domains' => ['sp.example.com', 'app.example.com'],
      */
-    'trusted.url.domains' => [],
+    'trusted.url.domains' => ['ci-858-rooseveltedu.pantheonsite.io', 
+                              'dev-rooseveltedu.pantheonsite.io',
+                              'test-rooseveltedu.pantheonsite.io'],
 
     /*
      * Enable regular expression matching of trusted.url.domains.
@@ -1175,3 +1180,20 @@ $config = [
      */
     'store.redis.prefix' => 'SimpleSAMLphp',
 ];
+
+if (defined('PANTHEON_ENVIRONMENT')) {
+  $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
+  $host = $_SERVER['HTTP_HOST'];
+  $db = $ps['databases']['default']['default'];
+  $config['baseurlpath'] = 'https://' . $host . 
+  ':443/simplesaml/'; // SAML should always connect via 443
+  $config['certdir'] = 'cert/';
+  $config['loggingdir'] = $_ENV['HOME'] . '/files/private/log/';
+  $config['datadir'] = 'data/';
+  $config['tempdir'] = $_ENV['HOME'] . '/tmp/simplesaml';
+  $config['store.type'] = 'sql';
+  $config['store.sql.dsn'] = 'mysql:host=' . $db['host'] 
+  . ';port=' . $db['port'] . ';dbname=' . $db['database'];
+  $config['store.sql.username'] = $db['username'];
+  $config['store.sql.password'] = $db['password'];
+};
