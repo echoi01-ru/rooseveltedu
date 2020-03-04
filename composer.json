@@ -95,7 +95,6 @@
         "post-install-cmd": [
             "@drupal-scaffold",
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "rm ./vendor/simplesamlphp/simplesamlphp/config/config.php",
             "ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
         ],
         "post-update-cmd": [
