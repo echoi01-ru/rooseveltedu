@@ -178,9 +178,7 @@ $config = [
      * Example:
      *   'trusted.url.domains' => ['sp.example.com', 'app.example.com'],
      */
-    'trusted.url.domains' => ['ci-858-rooseveltedu.pantheonsite.io', 
-                              'dev-rooseveltedu.pantheonsite.io',
-                              'test-rooseveltedu.pantheonsite.io'],
+    'trusted.url.domains' => [],
 
     /*
      * Enable regular expression matching of trusted.url.domains.
