@@ -40,11 +40,13 @@
         "drupal/optional_end_date": "^1.0@RC",
         "drupal/paragraphs": "^1.10",
         "drupal/pathauto": "^1.6",
+        "drupal/simplesamlphp_auth": "^3.2",
         "drupal/time_field": "^1.13",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
+        "simplesamlphp/simplesamlphp": "^1.18",
         "webflo/drupal-core-strict": "8.7",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },

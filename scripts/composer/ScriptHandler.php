@@ -45,6 +45,14 @@ class ScriptHandler
       umask($oldmask);
       $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
     }
+
+    // If simplesaml exist the create a symlink.
+    // "ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
+    $link = "./vendor/simplesamlphp/simplesamlphp/config/config.php";
+    if (!is_link($link) && file_exists("./private/simplesaml-config.php")) {
+      symlink("../../../../private/simplesaml-config.php", $link);
+    }
+
   }
 
   // This is called by the QuickSilver deploy hook to convert from
