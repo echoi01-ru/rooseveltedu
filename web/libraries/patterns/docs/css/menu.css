@@ -1,0 +1,916 @@
+  /*NAVIGAITON TOGGLE*/
+
+  .menuAud {
+      color: #FFFFFF;
+      font-size: 1.6em;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      padding: 6px 0 9px 20px;
+  }
+
+  .mobileBtnWrapper {
+      position: absolute;
+      top: 8px;
+      right: 30px;
+      line-height: 0;
+  }
+
+  a.mainMenuToggle {
+      position: relative;
+      font-family: 'FontAwesome';
+      font-size: 24px;
+      content: "\f0c9";
+      line-height: 1;
+      font-weight: normal;
+      color: #5fac3d;
+      text-decoration: none;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      transition: all .5s ease;
+  }
+
+  a.mainMenuToggle:after {
+      content: "\f0c9";
+  }
+
+  a.mainMenuToggle.active {
+      margin: 0 12px 0 0;
+      color: #5fac3d;
+  }
+
+  a.mainMenuToggle.active:after {
+      content: "\f00d";
+  }
+
+  a.mainMenuToggle:hover {
+      color: #5fac3d;
+  }
+
+  /*NAVIGATION GENERAL*/
+  ul.roosMenu {
+      display: block;
+      font-size: 0;
+      text-align: left;
+      margin: 0 !important;
+  }
+
+  ul.roosMenu ul {
+      padding: 0;
+  }
+
+  ul.roosMenu li {
+      display: block;
+      position: relative;
+  }
+
+  ul.roosMenu li .openChild {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 45px;
+      height: 100%;
+      vertical-align: top;
+      cursor: pointer;
+      font-family: 'FontAwesome';
+      font-size: 14px;
+      line-height: 1;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+  }
+
+  ul.roosMenu li .openChildInner:before {
+      display: block;
+      position: relative;
+      content: "\f0fe";
+      top: 16px;
+      color: #095909;
+      font-size: 17px;
+  }
+
+  ul.roosMenu li .openChild:hover {
+      color: #FFF;
+  }
+
+  ul.roosMenu li.over > a .openChild {
+      background: #f4f4f4;
+  }
+
+  ul.roosMenu li.over > .openChild .openChildInner:before,
+  ul.roosMenu li.over > a .openChild .openChildInner:before {
+      content: "\f146";
+      color: #AAA;
+  }
+
+  ul.roosMenu li ul li .openChild {
+      color: #aaa;
+      top: 1px;
+  }
+
+  ul.roosMenu li ul li .openChildInner:before {
+      top: 13px;
+      color: #AAA;
+  }
+
+  ul.roosMenu li ul li .openChild:hover {
+      background: #272727;
+  }
+
+  ul.roosMenu li ul li .openChild:hover .openChildInner:before {
+      color: #fff;
+  }
+
+  ul.roosMenu li ul li.over > a .openChild {
+      background: #aaa;
+  }
+
+  ul.roosMenu li ul li.over > a .openChild .openChildInner:before {
+      color: #fff;
+  }
+
+  ul.roosMenu li > a {
+      display: block;
+      padding: 15px 45px 13px 0;
+      border-top: 1px solid #e4e4e4;
+      font-size: 12px;
+      font-family: 'locatorbold';
+      font-weight: normal;
+      color: #FFF;
+      line-height: 1.3;
+      text-decoration: none;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+  }
+
+  ul.roosMenu li > div {
+      display: block;
+      padding: 15px 45px 13px 0;
+      border-top: 1px solid #e4e4e4;
+      font-size: 12px;
+      font-family: 'locator_regularregular';
+      font-weight: normal;
+      color: #FFF;
+      line-height: 1.3;
+      text-decoration: none;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+  }
+
+  ul.roosMenu li > a:before {
+      content: "\203A";
+      padding: 0 5px 0 0;
+      font-size: 13px;
+      color: #6ebf4b;
+      font-weight: normal;
+      position: relative;
+      top: -1px;
+  }
+
+  ul.roosMenu li > div:before {
+      content: "\203A";
+      padding: 0 5px 0 0;
+      font-size: 13px;
+      color: #6ebf4b;
+      font-weight: normal;
+      position: relative;
+      top: -1px;
+  }
+
+  ul.roosMenu li.first > a {
+      border-top: none;
+  }
+
+  ul.roosMenu li > a:hover {
+      text-decoration: none;
+      color: #454545;
+  }
+
+  ul.roosMenu > li ul {
+      display: none;
+      background: #f4f4f4;
+      margin: 0 !important;
+  }
+
+  ul.roosMenu > li > ul li {
+      display: block;
+      position: relative;
+      width: 100%;
+  }
+
+  ul.roosMenu > li > ul li a:before {
+      content: "\203A";
+      padding: 0 5px 0 0;
+      font-size: 13px;
+      color: #999;
+  }
+
+  ul.roosMenu > li > ul > li li a {
+      border-top: 1px solid #BDBDBD;
+      background: #990000;
+  }
+
+  ul.roosMenu > li > ul > li li li a {
+      padding-left: 20px;
+  }
+
+  ul.roosMenu > li > ul > li > ul > li a {
+      background: #DBDBDB;
+      color: #505050;
+  }
+
+  ul.roosMenu > li > ul > li > ul > li a:hover {
+      color: #fff;
+      background: #999;
+  }
+
+  ul.roosMenu > li > ul > li > ul > li a:before {
+      color: #fff;
+  }
+
+  /*MAIN MENU*/
+  nav#mainMenu {
+      display: none;
+      padding: 0;
+      text-align: left;
+      width: 100%;
+  }
+
+  nav#mainMenu ul.roosMenu {
+      padding: 10px 30px 30px;
+  }
+
+  nav#mainMenu ul.roosMenu li.over > a .openChild {
+      background: none;
+  }
+
+  nav#mainMenu ul.roosMenu li.over > a .openChild .openChildInner:before {
+      color: #a9ff83;
+  }
+
+  nav#mainMenu li > a:before {
+      content: none;
+      padding: 0;
+  }
+
+  nav#mainMenu ul.roosMenu li > a {
+      font-size: 13px;
+      text-transform: uppercase;
+      border-top: 1px solid #7bd86a;
+  }
+
+  nav#mainMenu ul.roosMenu li > a:hover {
+      color: #095909;
+  }
+
+  nav#mainMenu ul.roosMenu li.first > a {
+      border-top: none;
+  }
+
+  nav#mainMenu ul.roosMenu > li > ul > li a {
+      display: block;
+      padding: 13px 45px 12px 10px;
+      color: #777777;
+      border-top: 1px solid #dedede;
+      font-size: 12px;
+  }
+
+  nav#mainMenu ul.roosMenu > li > ul > li a:hover {
+      background: #e4e4e4;
+      color: #095909;
+  }
+
+  nav#mainMenu ul.roosMenu > li > ul > li > ul > li a {
+      background: #333333;
+      color: #FFF;
+      border-top: 1px solid #484848;
+  }
+
+  nav#mainMenu ul.roosMenu > li > ul > li > ul > li a:hover {
+      background: #111111;
+      color: #FFF;
+      border-top: 1px solid #437243;
+  }
+
+  /*AUDIENCE MENU*/
+  nav#audienceMenu {
+      display: none;
+      padding: 0;
+      text-align: left;
+      width: 100%;
+  }
+
+  nav#audienceMenu ul.roosMenu {
+      padding: 10px 30px 0px 30px;
+  }
+
+  nav#audienceMenu ul.roosMenu li.over > a .openChild {
+      background: none;
+  }
+
+  nav#audienceMenu ul.roosMenu li.over > a .openChild .openChildInner:before {
+      color: #CCC;
+  }
+
+  nav#audienceMenu ul.roosMenu li .openChildInner:before {
+      color: #6ebf4b;
+  }
+
+  nav#audienceMenu li > a:before {
+      content: none;
+      padding: 0;
+  }
+
+  nav#audienceMenu ul.roosMenu li > a {
+      font-size: 13px;
+      text-transform: uppercase;
+      border-top: 1px solid #e4e4e4;
+      color: #343132;
+      font-family: 'locatormedium';
+      font-weight: normal;
+  }
+
+  nav#audienceMenu ul.roosMenu li > a:hover {
+      color: #DDD;
+  }
+
+  nav#audienceMenu ul.roosMenu > li > ul > li a {
+      display: block;
+      padding: 13px 45px 12px 10px;
+      color: #666;
+  }
+
+  nav#audienceMenu ul.roosMenu > li > ul > li a:hover {
+      background: #DDD;
+      color: #666;
+  }
+
+  nav#audienceMenu ul.roosMenu > li > ul > li > ul > li a {
+      background: #5fac3d;
+      color: #FFF;
+      border-top: 1px solid #4f8c34;
+  }
+
+  nav#audienceMenu ul.roosMenu > li > ul > li > ul > li a:hover {
+      background: #4e922f;
+      color: #FFF;
+      border-top: 1px solid #437243;
+  }
+
+  /*SIDEBAR MENU*/
+  nav#sidebarMenu ul li > a {
+      padding: 14px 45px 14px 10px;
+      font-size: 14px;
+      color: #444;
+      text-indent: -10px;
+  }
+
+  nav#sidebarMenu ul li ul li > a {
+      padding: 14px 45px 14px 15px;
+  }
+
+  nav#sidebarMenu ul li > div {
+      padding: 14px 45px 14px 10px;
+      font-size: 14px;
+      color: #444;
+      text-indent: -10px;
+  }
+
+  nav#sidebarMenu ul li ul li > div {
+      padding: 14px 45px 14px 15px;
+  }
+
+  nav#sidebarMenu ul li a {
+      background: none;
+  }
+
+  nav#sidebarMenu ul li a:hover {
+      background: none;
+  }
+
+  nav#sidebarMenu ul li.over > a .openChild {
+      background: #272727;
+  }
+
+  nav#sidebarMenu ul li .openChild:hover {
+      background: #272727;
+  }
+
+  nav#sidebarMenu ul li .openChild .openChildInner:before {
+      color: #6ebf4b;
+      top: 15px;
+  }
+
+  nav#sidebarMenu ul li .openChild:hover .openChildInner:before {
+      color: #FFF;
+  }
+
+  nav#sidebarMenu ul li ul li a {
+      background: #272727;
+      color: #fff;
+      border-top: 1px solid #444;
+      font-family: 'locatormedium';
+      font-weight: normal;
+      font-size: 12px;
+  }
+
+  nav#sidebarMenu ul li ul li div {
+      background: #272727;
+      color: #fff;
+      border-top: 1px solid #444;
+      font-family: 'locator_regularregular';
+      font-weight: normal;
+      font-size: 12px;
+  }
+
+  nav#sidebarMenu ul li ul li a:hover {
+      background: #000;
+  }
+
+  nav#sidebarMenu ul li ul li.over > a .openChild {
+      background: #6ebf4b;
+  }
+
+  nav#sidebarMenu ul li ul li .openChild:hover {
+      background: #6ebf4b;
+  }
+
+  nav#sidebarMenu ul li ul li .openChild .openChildInner:before {
+      color: #FFF;
+      top: 14px;
+  }
+
+  nav#sidebarMenu ul li ul li .openChild:hover .openChildInner:before {
+      color: #fff;
+  }
+
+  nav#sidebarMenu ul li ul li ul li a {
+      background: #6ebf4b;
+      color: #fff;
+      border-top: 1px solid #54ad44;
+  }
+
+  nav#sidebarMenu ul li ul li ul li div {
+      background: #6ebf4b;
+      color: #fff;
+      border-top: 1px solid #54ad44;
+  }
+
+  nav#sidebarMenu ul li ul li ul li a:hover {
+      background: #489e39;
+  }
+
+  nav#sidebarMenu ul li ul li ul li.over > a .openChild {
+      background: #333;
+  }
+
+  nav#sidebarMenu ul li ul li ul li .openChild:hover {
+      background: #333;
+  }
+
+  nav#sidebarMenu ul li ul li ul li .openChild .openChildInner:before {
+      color: #FFF;
+  }
+
+  nav#sidebarMenu ul li ul li ul li .openChild:hover .openChildInner:before {
+      color: #c2dee7;
+  }
+
+  nav#sidebarMenu ul li ul li ul li ul li a {
+      background: #333;
+      color: #fff;
+      border-top: 1px solid #555;
+  }
+
+  nav#sidebarMenu ul li ul li ul li ul li a:hover {
+      background: #000;
+  }
+
+  nav#sidebarMenu ul li a#selectedNav {
+      color: #FFF;
+      background-color: #CCC;
+      cursor: default;
+  }
+
+  nav#sidebarMenu ul li ul li a#selectedNav {
+      color: #FFF;
+      background-color: #CCC;
+      cursor: default;
+  }
+
+  nav#sidebarMenu ul li ul li ul li a#selectedNav {
+      color: #FFF;
+      background-color: #CCC;
+      cursor: default;
+  }
+
+  /* PHARMACY NAVIGATION */
+
+  .ribbon:before {
+  }
+
+  .ribbon {
+      text-align: center;
+      background-color: #666666;
+      height: 24px;
+      width: 240px;
+      float: right;
+      position: absolute;
+      right: 0px;
+      top: -16px;
+      color: #DFDFDF;
+      padding: 10px 20px 24px 20px;
+      font-size: 18px;
+      font-weight: bold;
+  }
+
+  .ribbon:after,
+  .ribbon:after {
+      z-index: -1;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: solid 14px #555555;
+      border-left: solid 120px transparent;
+      border-right: solid 120px transparent;
+  }
+
+
+
+
+
+  /* PHARMACY NAVIGATION */
+  /* PHARMACY NAVIGATION */
+  /* PHARMACY NAVIGATION */
+  /* END /* PHARMACY NAVIGATION */
+  /* PHARMACY NAVIGATION */
+  /* PHARMACY NAVIGATION */
+
+
+
+
+  /* ======================================================= */
+  /*                        MEDIA QUERIES                    */
+  /* ======================================================= */
+  @media only screen and (min-width: 600px) {
+
+      /*NAVIGAITON TOGGLE*/
+      .mobileBtnWrapper {
+          right: 40px;
+      }
+
+
+      /*MAIN MENU*/
+      nav#mainMenu {
+          padding: 0;
+      }
+
+      nav#mainMenu ul.roosMenu {
+          padding: 10px 40px 30px;
+      }
+
+      /*AUDIENCE MENU*/
+      nav#audienceMenu {
+          padding: 40px 0 0 13px;
+      }
+
+      nav#audienceMenu ul.roosMenu {
+          padding: 10px 40px 0px 40px;
+      }
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+      /*temporary hack to fix jquery issue*/
+
+      #mainMenu .tierMenu a {
+          cursor: default;
+          pointer-events: none;
+      }
+
+      #mainMenu .subMenu a {
+          cursor: pointer;
+          pointer-events: auto;
+      }
+
+      nav#audienceMenu > ul > li > ul > li > .no-click {
+          cursor: pointer;
+          pointer-events: none;
+      }
+
+      /*end temporary hack to fix jquery issue*/
+
+      /*NAVIGATION TOGGLE*/
+
+
+      .mobileBtnWrapper {
+          display: none;
+      }
+
+      .menuAud {
+          text-align: left !important;
+          padding: 12px 0 2px 20px !important;
+      }
+
+      /*GENERAL NAVIGATION*/
+      ul.roosMenu li .openChildInner:before {
+          top: 14px;
+          color: #FFF;
+      }
+
+      ul.roosMenu li .openChild {
+          width: 30px;
+      }
+
+      /*MAIN MENU*/
+      nav#mainMenu {
+          display: block !important;
+          position: relative;
+          padding: 0;
+          right: 0;
+          bottom: 0;
+          margin: 20px 0 0 0;
+          border: none;
+          overflow: visible !important;
+      }
+
+      nav#mainMenu ul.roosMenu {
+          text-align: left;
+          display: block;
+          padding: 0;
+      }
+
+      nav#mainMenu ul.roosMenu li {
+          display: inline-block;
+      }
+
+      nav#mainMenu ul.roosMenu li > a {
+          margin: 0;
+          border-top: none;
+      }
+
+      nav#mainMenu ul.roosMenu li > a:hover {
+          background-color: transparent;
+      }
+
+      nav#mainMenu ul.roosMenu li.empty.last > a {
+          padding: 15px 0;
+      }
+
+      nav#mainMenu ul.roosMenu > li ul {
+          position: absolute;
+          text-align: left;
+          background: #fff;
+          top: 45px;
+          border-right: none;
+          border-left: none;
+          border-bottom: none;
+          border-top: 2px solid #39a228;
+      }
+
+      nav#mainMenu ul.roosMenu li > a {
+          font-size: 15px;
+      }
+
+      nav#mainMenu ul.roosMenu > li > ul > li a {
+          width: auto;
+          margin: 0;
+          white-space: nowrap;
+          font-size: 14px;
+          text-transform: none;
+          font-family: 'locatorbold';
+          font-weight: normal;
+          color: #FFF;
+          border-bottom: 1px solid #529c46;
+          border-right: 1px solid #529c46;
+          border-left: 1px solid #529c46;
+          border-top: none;
+          background: #409632 url('images/greenHatch.png');
+      }
+
+      nav#mainMenu ul.roosMenu > li > ul > li a:hover {
+          background: #272727;
+          color: #FFF;
+      }
+
+      nav#mainMenu ul.roosMenu > li > ul > li a:before {
+          content: "\203A";
+          padding: 0 5px 0 0;
+          font-size: 13px;
+          color: #FFF;
+          font-weight: normal;
+          position: relative;
+          top: -1px;
+      }
+
+      nav#mainMenu ul.roosMenu li .openChild:active {
+          background-color: transparent;
+      }
+
+      nav#mainMenu ul.roosMenu li.tierMenu > a {
+          margin: 0 5px 0 20px;
+          padding: 15px 30px 15px 0;
+      }
+
+      nav#mainMenu ul.roosMenu li.tierMenu.empty > a {
+          margin: 0 -20px 0 20px;
+      }
+
+      nav#mainMenu ul.roosMenu li.tierMenu.empty.last > a {
+          margin: 0 0 0 20px;
+      }
+
+      /*-- Navigation: If Tier 3 exposed on Desktop --*/
+      nav#mainMenu ul.roosMenu > li ul li ul,
+      nav#mainMenu ul.roosMenu > li ul li span.openChild {
+          display: none;
+      }
+
+      /*-- Navigation: Last Element Flip --*/
+      nav#mainMenu ul.roosMenu > li.tierMenu.last ul {
+          right: 0;
+          text-align: right;
+      }
+
+      /*AUDIENCE MENU*/
+      nav#audienceMenu {
+          display: block !important;
+          position: relative;
+          padding: 0;
+          right: 0;
+          bottom: 0;
+          margin: 0;
+          border: none;
+          overflow: visible !important;
+      }
+
+      nav#audienceMenu ul.roosMenu {
+          text-align: right;
+          display: block;
+          padding: 0;
+      }
+
+      nav#audienceMenu ul.roosMenu li {
+          display: inline-block;
+      }
+
+      nav#audienceMenu ul.roosMenu li > a {
+          margin: 0;
+          border-top: none;
+      }
+
+      nav#audienceMenu ul.roosMenu li > a:hover {
+          background-color: transparent;
+          color: #888;
+      }
+
+      nav#audienceMenu ul.roosMenu li.empty.last > a {
+          padding: 15px 0;
+      }
+
+      nav#audienceMenu ul.roosMenu > li ul {
+          position: absolute;
+          text-align: right;
+          background: #fff;
+          /*top:52px;*/
+          z-index: 100;
+          border-right: none;
+          border-left: none;
+          border-bottom: none;
+          border-top: none;
+      }
+
+      nav#audienceMenu ul.roosMenu > li > ul > li a {
+          width: auto;
+          margin: 0;
+          white-space: nowrap;
+          font-size: 12px;
+          text-transform: none;
+          font-family: 'locatorbold';
+          font-weight: normal;
+          border-bottom: 1px solid #e4e4e4;
+          border-right: 1px solid #e4e4e4;
+          border-left: 1px solid #e4e4e4;
+          border-top: none;
+          background: #FFF;
+      }
+
+      nav#audienceMenu ul.roosMenu > li > ul > li a:hover {
+          background: #e4e4e4;
+          color: #666;
+      }
+
+      nav#audienceMenu ul.roosMenu li .openChild:active {
+          background-color: #fff;
+      }
+
+      nav#audienceMenu ul.roosMenu li.tierMenu > a {
+          margin: 0 5px 0 20px;
+          padding: 15px 30px 0 0;
+      }
+
+      nav#audienceMenu ul.roosMenu li.tierMenu.empty > a {
+          margin: 0 -20px 0 20px;
+      }
+
+      nav#audienceMenu ul.roosMenu li.tierMenu.empty.last > a {
+          margin: 0 0 0 20px;
+      }
+
+      /*-- Navigation: If Tier 3 exposed on Desktop --*/
+      nav#audienceMenu ul.roosMenu > li ul li ul,
+      nav#audienceMenu ul.roosMenu > li ul li span.openChild {
+          display: block;
+      }
+
+      nav#audienceMenu ul.roosMenu > li ul li ul {
+          left: 100%;
+          top: -1px;
+          display: none;
+      }
+
+      /*-- Navigation: Last Element Flip --*/
+      nav#audienceMenu ul.roosMenu > li.tierMenu.last ul {
+          right: 0;
+          text-align: right;
+      }
+  }
+
+  .hamburgerMenuText {
+      font-family: 'locatorlight';
+      font-size: 14px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-top: -3px;
+      display: inline-block;
+      margin-right: 5px;
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width:1455px) {
+      nav#audienceMenu ul.roosMenu li.tierMenu > a {
+          padding-right: 22px;
+          margin-right: 5px;
+          font-size: 12px;
+          margin-left: 8px;
+      }
+
+      ul.roosMenu {
+          display: block;
+          font-size: 0;
+          text-align: left;
+          margin-right: -45px !important;
+      }
+
+      .menuAud {
+          font-size: 2em;
+      }
+
+
+  }
+
+  @media only screen and (min-width: 1200px) {
+      header.site-header nav#mainMenu {
+          left: 0px;
+          -webkit-transition: all .4s linear;
+          -moz-transition: all .4s linear;
+          -ms-transition: all .4s linear;
+          -o-transition: all .4s linear;
+          transition: all .4s linear;
+      }
+
+      /*header.site-header.is_stuck nav#mainMenu {
+          left: 25px;
+      }*/
+
+      .menuAud {
+          font-size: 2em;
+      }
+
+      nav#audienceMenu ul.roosMenu ul.submenu li a {
+          color: red !important;
+      }
+
+  }
+
+  @media (min-width:700px) and (max-width:1199px) {
+      .mainMenuNestedControl {
+          display: table;
+          width: 100%;
+      }
+
+      .menuAud {
+          font-size: 2em;
+      }
+  }

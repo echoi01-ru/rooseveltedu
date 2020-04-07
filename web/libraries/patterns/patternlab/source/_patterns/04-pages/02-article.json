@@ -1,0 +1,14 @@
+{
+	"title" : "Top 10 Trails You Have To Hike Before You Die",
+	"bodyClass": "article",
+	"inset_blocks" : [
+		{
+			"headline" : "This is the headline for the inset block"
+		}
+	],
+	"latest_block" : [
+		{
+			"headline" : "This is the headline for the latest block"
+		}
+	]
+}
