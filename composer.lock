@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55a07e8b012c4fec05be0f5bb9dbea84",
+    "content-hash": "2f254e547569329a2c7c987bf5913954",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3753,6 +3753,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -3799,7 +3800,19 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "kanopi/roosevelt_pl",
+            "version": "master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kanopi/roosevelt_pl.git",
+                "reference": "master"
+            },
+            "type": "drupal-library",
+            "time": "2020-04-13T20:20:25+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -10976,7 +10989,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "stability-flags": {
         "drupal/better_exposed_filters": 15,
         "drupal/default_content": 15,
