@@ -105,4 +105,4 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
-/web/libraries
+/web/libraries/patterns
