@@ -1,0 +1,10 @@
+global-styling:
+   css:
+    theme:
+      styles/style.css : {}
+   js:
+     scripts/script.js : {}
+patterns:
+   css:
+    theme:
+      libraries/patterns/patternlab/source/css/style.css: {}

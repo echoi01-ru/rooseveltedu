@@ -1,0 +1,16 @@
+name: rooseveltedu
+type: theme
+description: 'Roosevelt Redesign'
+package: Other
+core: 8.x
+libraries:
+  - rooseveltedu/global-styling
+  - rooseveltedu/patterns
+
+regions:
+  announcement: Announcement
+  header: Header
+  message: Message
+  help: Help
+  content: Content
+  footer: Footer
