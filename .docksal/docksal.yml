@@ -22,12 +22,12 @@ services:
     volumes:
       - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro
 
+  # http(s)://patternlab.VIRTUAL_HOST
   patternlab:
     hostname: patternlab
     extends:
       file: ${HOME}/.docksal/stacks/services.yml
       service: nginx
-    image: ${WEB_IMAGE:-docksal/nginx:1.14-1.0}
     depends_on:
       - cli
     labels:
@@ -38,4 +38,3 @@ services:
       - NGINX_SERVER_ROOT=/var/www/${DOCROOT}/libraries/patterns/docs
     ports:
       - "3000:80"
-      - "3001:3001"

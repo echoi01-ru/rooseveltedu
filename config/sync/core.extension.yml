@@ -37,8 +37,12 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  link_attributes: 0
   media: 0
   media_entity_podcast: 0
+  menu_attributes: 0
+  menu_item_extras: 0
+  menu_link_attributes: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -70,6 +74,7 @@ theme:
   classy: 0
   bartik: 0
   seven: 0
+  roosevelt: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

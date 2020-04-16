@@ -1,0 +1,25 @@
+uuid: a9d17ed3-ea63-43f3-8afe-a9cc67895935
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.megamenubar
+  module:
+    - system
+  theme:
+    - roosevelt
+id: megamenubar
+theme: roosevelt
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:megamenubar'
+settings:
+  id: 'system_menu_block:megamenubar'
+  label: 'Mega Menu Bar'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

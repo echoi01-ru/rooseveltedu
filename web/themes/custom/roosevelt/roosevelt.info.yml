@@ -1,11 +1,12 @@
-name: rooseveltedu
+name: Roosevelt
 type: theme
 description: 'Roosevelt Redesign'
 package: Other
 core: 8.x
+varsion: 8.7.0
 libraries:
-  - rooseveltedu/global-styling
-  - rooseveltedu/patterns
+  - roosevelt/global-styling
+  - roosevelt/patterns
 
 regions:
   announcement: Announcement

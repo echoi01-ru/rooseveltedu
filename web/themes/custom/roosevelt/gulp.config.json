@@ -1,0 +1,54 @@
+{
+  "root": "./",
+  "browserSync": {
+    "host": "rooseveltedu.docksal",
+    "proxy": "rooseveltedu.docksal"
+  },
+  "assets": {
+    "base": "app/",
+    "dest": "dist/"
+  },
+  "scripts": {
+    "base"  : "app/scripts/",
+    "files" : [
+      "app/scripts/**/*.js"
+    ],
+    "dest"  : "dist/js/"
+  },
+  "scss": {
+    "base" : "app/scss/",
+    "files": [
+      "app/scss/*.scss",
+      "app/scss/**/*.scss"
+    ],
+    "dest" : "dist/css/",
+    "dest_file": "scripts.js"
+  },
+  "sass": {
+    "options": {
+      "outputStyle": "expanded",
+      "sourceComments": "true"
+    }
+  },
+  "fonts": {
+    "base" : "app/fonts/",
+    "files": [
+      "app/fonts/**/*"
+    ],
+    "dest" : "dist/fonts/"
+  },
+  "images": {
+    "base" : "app/images/",
+    "files": [
+      "app/images/**/*"
+    ],
+    "dest" : "dist/images/"
+  },
+  "theme": {
+    "files": [
+      "**/*.yml",
+      "**/*.twig",
+      "*.theme"
+    ]
+  }
+}

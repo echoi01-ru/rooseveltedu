@@ -1,0 +1,15 @@
+global-styling:
+  css:
+    components:
+      dist/css/components/toolbar.css: {}
+    theme:
+      dist/css/style.css: {}
+  js:
+     js/script.js: {}
+
+patterns:
+  css:
+    theme:
+      /libraries/patterns/docs/styles/global.css: {}
+  js:
+    /libraries/patterns/docs/scripts/global.js: {}
