@@ -8,10 +8,8 @@ const del         = require('del'),
       imagemin    = require('gulp-imagemin'),
       rename      = require('gulp-rename'),
       sass        = require('gulp-sass'),
-      exec        = require('gulp-exec'),
       uglify      = require('gulp-uglify'),
       log         = require('fancy-log');
-var cp = require('child_process').exec;
 
 // Configurations
 var config        = require('./gulp.config.json');
@@ -55,13 +53,6 @@ function styles() {
     .pipe(browerSync.reload({ stream: true }));
 }
 
-// Task: theme
-// Description: Handle Drupal theme files
-function theme() {
-  return src(config.theme.files)
-    .pipe(browerSync.reload({ stream: true }));
-}
-
 // Task: watchTask
 // Description: Watch files
 function watchTask() {
@@ -84,14 +75,12 @@ function watchTask() {
   watch(config.scss.files, options, styles);
   // Watch fonts
   watch(config.fonts.files, options, fonts);
-  // Watch Drupal Theme
-  watch(config.theme.files, options, theme);
 }
 exports.watchTask = watchTask;
 
 // Task: Build.
 // Description: Build all stuff of the project once.
-const build = series(cleanBefore, series(fonts, styles, images, scripts, theme));
+const build = series(cleanBefore, series(fonts, styles, images, scripts));
 exports.build = build;
 
 // Task: Default.

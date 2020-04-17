@@ -1,15 +1,38 @@
 global-styling:
   css:
-    components:
+#     base:
+#     layout:
+    component:
       dist/css/components/toolbar.css: {}
     theme:
       dist/css/style.css: {}
-  js:
-     js/script.js: {}
+#   js:
+#      dist/js/script.js: {}
 
 patterns:
   css:
-    theme:
+    base:
+      /libraries/patterns/patternlab/source/plugins/font-awesome-v.4.6.3/css/font-awesome.min.css: {}
+      /libraries/patterns/patternlab/source/plugins/royalslider/royalslider.css: {}
+      /libraries/patterns/patternlab/source/plugins/royalslider/skins/universal/rs-universal.css: {}
+      /libraries/patterns/patternlab/source/plugins/royalslider/skins/default/rs-default.css: {}
+    component:
+      https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css: { type: external, minified: true, attributes: { crossorigin: anonymous, integrity: "sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" } }
+      /libraries/patterns/docs/styles/menu.css: {}
       /libraries/patterns/docs/styles/global.css: {}
-  js:
-    /libraries/patterns/docs/scripts/global.js: {}
+      /libraries/patterns/docs/styles/landing.css: {}
+      /libraries/patterns/docs/styles/redesign.css: {}
+      /libraries/patterns/docs/styles/animate.css: {}
+      https://cloud.typography.com/7195436/7974012/css/fonts.css: { type: external }
+#   js:
+#     /libraries/patterns/docs/scripts/modernizr-3.3.1.min.js: { minified: true }
+#     /libraries/patterns/docs/scripts/respond.min.js: { minified: true }
+#     /libraries/patterns/docs/scripts/bootstrap.min.js: { minified: true }
+#     /libraries/patterns/patternlab/source/plugins/enquire-v.2.1.2/dist/enquire.min.js: { minified: true }
+#     /libraries/patterns/docs/scripts/ios-orientationchange-fix.js: {}
+#     /libraries/patterns/docs/scripts/jquery.easing.1.3.js: {}
+#     /libraries/patterns/patternlab/source/plugins/royalslider/jquery.royalslider.min.js: { minified: true }
+#     /libraries/patterns/docs/scripts/menu.js: {}
+#     /libraries/patterns/docs/scripts/landing.js: {}
+#     /libraries/patterns/docs/scripts/global.js: {}
+#     /libraries/patterns/docs/scripts/redesign.js: {}

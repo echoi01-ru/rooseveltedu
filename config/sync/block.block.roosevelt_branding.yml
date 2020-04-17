@@ -1,4 +1,4 @@
-uuid: cb7c3a59-7de0-431f-972d-d42319cdbc67
+uuid: 57fb112c-8504-40c7-bbc1-7d35c1107218
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - system
   theme:
     - roosevelt
-_core:
-  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: roosevelt_branding
 theme: roosevelt
 region: header
@@ -16,10 +14,10 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
+  label: 'Roosevelt Branding'
   provider: system
   label_display: '0'
   use_site_logo: true
-  use_site_name: false
+  use_site_name: true
   use_site_slogan: false
 visibility: {  }

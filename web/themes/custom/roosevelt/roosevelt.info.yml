@@ -15,3 +15,17 @@ regions:
   help: Help
   content: Content
   footer: Footer
+
+component-libraries:
+  atoms:
+    paths:
+      - ../../../libraries/patterns/patternlab/source/_patterns/00-atoms
+  molecules:
+    paths:
+      - ../../../libraries/patterns/patternlab/source/_patterns/01-molecules
+  organisms:
+    paths:
+      - ../../../libraries/patterns/patternlab/source/_patterns/02-organisms
+  templates:
+    paths:
+      - ../../../libraries/patterns/patternlab/source/_patterns/03-templates

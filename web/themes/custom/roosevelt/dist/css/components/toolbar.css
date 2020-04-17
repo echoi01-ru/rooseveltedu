@@ -1,5 +1,5 @@
 /* line 1, app/scss/components/toolbar.scss */
 .toolbar-tray a {
   font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
-  font-size: rem-clac(13);
+  font-size: 13px;
 }
