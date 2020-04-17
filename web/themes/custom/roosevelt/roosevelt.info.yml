@@ -6,7 +6,7 @@ core: 8.x
 varsion: 8.7.0
 libraries:
   - roosevelt/global-styling
-  - roosevelt/patterns
+#   - roosevelt/patterns
 
 regions:
   announcement: Announcement
@@ -30,10 +30,10 @@ component-libraries:
     paths:
       - ../../../libraries/patterns/patternlab/source/_patterns/03-templates
 
-libraries-override:   
+# libraries-override:   
 #   core/jquery:
 #     js:
 #       assets/vendor/jquery/jquery.min.js: ../../../libraries/patterns/docs/scripts/jquery-3.2.1.min.js
-  core/modernizr:
-    js:
-      assets/vendor/modernizr/modernizr.min.js: ../../../libraries/patterns/docs/scripts/modernizr-3.3.1.min.js
+#   core/modernizr:
+#     js:
+#       assets/vendor/modernizr/modernizr.min.js: ../../../libraries/patterns/docs/scripts/modernizr-3.3.1.min.js

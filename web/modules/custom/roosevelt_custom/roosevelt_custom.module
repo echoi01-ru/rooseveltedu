@@ -27,6 +27,17 @@ function roosevelt_custom_help($route_name, RouteMatchInterface $route_match) {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function roosevelt_custom_theme($existing, $type, $theme, $path) {
+  return [
+    'search_form' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+/**
    * Implements hook_module_implements_alter().
    */
 function roosevelt_custom_module_implements_alter(&$implementations, $hook) {
@@ -39,6 +50,7 @@ function roosevelt_custom_module_implements_alter(&$implementations, $hook) {
       break;
   }
 }
+
 /**
  * hook_form_BASE_FORM_ID_alter() for the node_form.
  */
@@ -93,7 +105,6 @@ function roosevelt_custom_entity_presave(EntityInterface $entity) {
       break;
   }
 }
-
 
 /**
  * Adds custom validation to the user edit/add form
