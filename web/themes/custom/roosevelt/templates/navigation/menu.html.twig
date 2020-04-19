@@ -38,6 +38,7 @@
     {% for item in items %}
     {% set menu_item_classes = [
       item.in_active_trail ? 'active',
+      menu_level == 0 ? 'col'
     ] %}
       <li{{ item.attributes.addClass(menu_item_classes) }}>
         {{ link(item.title, item.url) }}

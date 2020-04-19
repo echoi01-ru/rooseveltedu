@@ -12,7 +12,7 @@ const del         = require('del'),
       log         = require('fancy-log');
 
 // Configurations
-var config        = require('./gulp.config.json');
+const config = require('./gulp.config');
 
 // Task: Clean:before
 // Description: Removing assets files before running other tasks

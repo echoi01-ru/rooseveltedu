@@ -31,6 +31,7 @@ bootstrap:
 patterns:
   css:
     base:
+      /libraries/patterns/docs/fonts/fonts.css: {}
       /libraries/patterns/docs/plugins/font-awesome-v.4.6.3/css/font-awesome.min.css: {}
     component:
       /libraries/patterns/docs/styles/menu.css: {}

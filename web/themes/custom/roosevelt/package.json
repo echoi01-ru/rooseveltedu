@@ -9,6 +9,7 @@
     "name": "Jason Savino",
     "email": "jason@kanopi.com"
   },
+  "main": "gulpfule.js",
   "license": "MIT",
   "private": true,
   "dependencies": {

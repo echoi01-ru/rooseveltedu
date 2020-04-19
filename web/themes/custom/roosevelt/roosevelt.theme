@@ -192,7 +192,15 @@ function roosevelt_theme_suggestions_details_alter(array &$suggestions, array $v
  * Implements hook_preprocess_menu_local_task().
  */
 function roosevelt_preprocess_menu_local_task(array &$variables) {
-  //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
+  $classes = ['nav-link'];
+
+  if (!empty($variables['element']['#active'])) {
+    $classes[] = 'active';
+  }
+
+  $variables['element']['#link']['url']->setOption('attributes', [
+    'class' => $classes
+  ]);
 }
 
 /**
@@ -200,5 +208,5 @@ function roosevelt_preprocess_menu_local_task(array &$variables) {
  */
 function roosevelt_preprocess_menu(array &$variables) {
   //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
-//   ksm($variables);
 }
+
