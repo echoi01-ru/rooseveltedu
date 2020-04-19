@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: future-students
 label: 'Future Students'
-description: 'Future Mega Menu Submenu'
+description: 'Mega Menu Submenu'
 locked: false
