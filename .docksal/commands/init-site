@@ -72,6 +72,7 @@ init_settings ()
   # TODO: Uncomment the local config (settings.local.php) include section in settings.php inline instead.
   # That'a the only change we need in the stock settings.php
   rm -f "${SITEDIR_PATH}/settings.php"
+  rm -f "${DOCROOT_PATH}/sites/development.services.yml"
 
   copy_settings_file "${PROJECT_ROOT}/.docksal/settings/settings.php" "${SITEDIR_PATH}/settings.php"
   copy_settings_file "${PROJECT_ROOT}/.docksal/settings/settings.local.php" "${SITEDIR_PATH}/settings.local.php"
@@ -105,8 +106,9 @@ init_settings
 gulp_install
 fix_permissions
 
-time -p ${PROJECT_ROOT}/.docksal/commands/refresh
-${PROJECT_ROOT}/.docksal/commands/site-build
+time -p refresh
+site-build
+theme-build
 
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 drush uli uri=http://${VIRTUAL_HOST}
