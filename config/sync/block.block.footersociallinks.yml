@@ -1,9 +1,9 @@
-uuid: e334d6a3-a091-464e-8b0c-9ca9c1fad9fc
+uuid: 56b8d2a6-653f-4f08-8441-05aedd343158
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:simple:283ce0d7-3857-48f1-b01b-22017ed739a4'
+    - 'block_content:simple:1e3e7003-6ad0-483e-9f36-2c41aa2bf025'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: footersociallinks
 theme: roosevelt
 region: footer_lower
-weight: -5
+weight: -6
 provider: null
-plugin: 'block_content:283ce0d7-3857-48f1-b01b-22017ed739a4'
+plugin: 'block_content:1e3e7003-6ad0-483e-9f36-2c41aa2bf025'
 settings:
-  id: 'block_content:283ce0d7-3857-48f1-b01b-22017ed739a4'
+  id: 'block_content:1e3e7003-6ad0-483e-9f36-2c41aa2bf025'
   label: 'Footer Social Links'
   provider: block_content
   label_display: '0'

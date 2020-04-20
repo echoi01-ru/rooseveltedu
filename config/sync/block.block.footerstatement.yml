@@ -1,9 +1,9 @@
-uuid: 67eeb8c6-a2b3-40b1-b29e-310f38cf7c58
+uuid: d9d97a26-cd7a-4f65-825d-334babcb16a8
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:simple:9c891d08-4b77-4464-9f31-f91757b860fa'
+    - 'block_content:simple:a1858ffc-be0e-4e85-a8ec-e07b1df2e67e'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: footerstatement
 theme: roosevelt
 region: footer_lower
-weight: -6
+weight: -7
 provider: null
-plugin: 'block_content:9c891d08-4b77-4464-9f31-f91757b860fa'
+plugin: 'block_content:a1858ffc-be0e-4e85-a8ec-e07b1df2e67e'
 settings:
-  id: 'block_content:9c891d08-4b77-4464-9f31-f91757b860fa'
+  id: 'block_content:a1858ffc-be0e-4e85-a8ec-e07b1df2e67e'
   label: 'Footer Statement'
   provider: block_content
   label_display: '0'

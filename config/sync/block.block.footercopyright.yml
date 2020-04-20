@@ -1,9 +1,9 @@
-uuid: 87b4cdde-5610-4523-beb8-7bc1114be64b
+uuid: e28412ab-d30f-4f53-a610-74ac8a6c398b
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:simple:bdeac5bb-8416-48b6-b894-f0111094825a'
+    - 'block_content:simple:2e46dc22-d254-4659-8b7d-2f130f84e575'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: footercopyright
 theme: roosevelt
 region: footer_bottom
-weight: 0
+weight: -7
 provider: null
-plugin: 'block_content:bdeac5bb-8416-48b6-b894-f0111094825a'
+plugin: 'block_content:2e46dc22-d254-4659-8b7d-2f130f84e575'
 settings:
-  id: 'block_content:bdeac5bb-8416-48b6-b894-f0111094825a'
+  id: 'block_content:2e46dc22-d254-4659-8b7d-2f130f84e575'
   label: 'Footer Copyright'
   provider: block_content
   label_display: '0'

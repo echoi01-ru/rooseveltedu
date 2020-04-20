@@ -1,9 +1,9 @@
-uuid: 02a27868-30fd-483a-a6e9-6a84bf9735e8
+uuid: c85fb2da-81e4-49a4-b6fa-c2fc5e78185c
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:campus_address:5733a2c8-d3ca-49b8-aae5-0035c8e12f62'
+    - 'block_content:campus_address:72e5ec5a-9122-4b28-bd6a-ceeda44d79b7'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: roosevelt
 region: footer_first
 weight: 0
 provider: null
-plugin: 'block_content:5733a2c8-d3ca-49b8-aae5-0035c8e12f62'
+plugin: 'block_content:72e5ec5a-9122-4b28-bd6a-ceeda44d79b7'
 settings:
-  id: 'block_content:5733a2c8-d3ca-49b8-aae5-0035c8e12f62'
+  id: 'block_content:72e5ec5a-9122-4b28-bd6a-ceeda44d79b7'
   label: 'Campus Addresses'
   provider: block_content
   label_display: '0'
