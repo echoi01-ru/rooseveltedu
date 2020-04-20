@@ -1,0 +1,64 @@
+uuid: 6749a947-d497-43f2-b068-3bfee551333c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.campus_address
+    - field.storage.block_content.field_campus_location
+    - paragraphs.paragraphs_type.campus_address
+  module:
+    - entity_reference_revisions
+id: block_content.campus_address.field_campus_location
+field_name: field_campus_location
+entity_type: block_content
+bundle: campus_address
+label: 'Campus Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      campus_address: campus_address
+    target_bundles_drag_drop:
+      accordion:
+        weight: 13
+        enabled: false
+      accordion_item:
+        weight: 14
+        enabled: false
+      basic_content:
+        weight: 15
+        enabled: false
+      call_to_action:
+        weight: 16
+        enabled: false
+      campus_address:
+        enabled: true
+        weight: 17
+      raci_consult:
+        weight: 18
+        enabled: false
+      raci_informed:
+        weight: 19
+        enabled: false
+      raci_responsible:
+        weight: 20
+        enabled: false
+      related_content:
+        weight: 21
+        enabled: false
+      related_media:
+        weight: 22
+        enabled: false
+      sample_course:
+        weight: 23
+        enabled: false
+      sample_courses:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

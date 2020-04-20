@@ -1,0 +1,25 @@
+uuid: e334d6a3-a091-464e-8b0c-9ca9c1fad9fc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:simple:283ce0d7-3857-48f1-b01b-22017ed739a4'
+  module:
+    - block_content
+  theme:
+    - roosevelt
+id: footersociallinks
+theme: roosevelt
+region: footer_lower
+weight: -5
+provider: null
+plugin: 'block_content:283ce0d7-3857-48f1-b01b-22017ed739a4'
+settings:
+  id: 'block_content:283ce0d7-3857-48f1-b01b-22017ed739a4'
+  label: 'Footer Social Links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

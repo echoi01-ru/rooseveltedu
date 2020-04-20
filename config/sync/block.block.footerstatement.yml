@@ -1,0 +1,25 @@
+uuid: 67eeb8c6-a2b3-40b1-b29e-310f38cf7c58
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:simple:9c891d08-4b77-4464-9f31-f91757b860fa'
+  module:
+    - block_content
+  theme:
+    - roosevelt
+id: footerstatement
+theme: roosevelt
+region: footer_lower
+weight: -6
+provider: null
+plugin: 'block_content:9c891d08-4b77-4464-9f31-f91757b860fa'
+settings:
+  id: 'block_content:9c891d08-4b77-4464-9f31-f91757b860fa'
+  label: 'Footer Statement'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

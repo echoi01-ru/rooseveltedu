@@ -1,0 +1,25 @@
+uuid: 87b4cdde-5610-4523-beb8-7bc1114be64b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:simple:bdeac5bb-8416-48b6-b894-f0111094825a'
+  module:
+    - block_content
+  theme:
+    - roosevelt
+id: footercopyright
+theme: roosevelt
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'block_content:bdeac5bb-8416-48b6-b894-f0111094825a'
+settings:
+  id: 'block_content:bdeac5bb-8416-48b6-b894-f0111094825a'
+  label: 'Footer Copyright'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

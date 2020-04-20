@@ -1,0 +1,8 @@
+uuid: 9b6f4a41-d945-49f9-9687-7c22b5fdc20d
+langcode: en
+status: true
+dependencies: {  }
+id: campus_address
+label: 'Campus Address'
+revision: 1
+description: 'Use this block to add a Campus Address to the Footer of the site.'

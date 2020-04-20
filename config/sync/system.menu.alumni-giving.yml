@@ -1,0 +1,8 @@
+uuid: 976c78bb-2cd5-4275-bc3e-2b6538dd802b
+langcode: en
+status: true
+dependencies: {  }
+id: alumni-giving
+label: 'Alumni & Giving'
+description: 'Mega Menu Submenu'
+locked: false
