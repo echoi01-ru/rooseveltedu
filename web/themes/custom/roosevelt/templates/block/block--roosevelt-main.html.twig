@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for a menu block.
+ *
+ * Available variables:
+ * - content: The content of this block.
+ */
+#}
+{# Menu. #}
+
+<div id="navCTA-group" class="col">
+  <span class="col-head">
+    Get Started
+    <span class="openChild">
+      <span class="openChildInner"></span>
+    </span>
+  </span>
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

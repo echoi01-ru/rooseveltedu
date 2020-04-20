@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - content: The content of this block.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+
+{% block content %}
+<div class="footerRequiredLinks">
+  {{ content }}
+</div>
+{% endblock %}

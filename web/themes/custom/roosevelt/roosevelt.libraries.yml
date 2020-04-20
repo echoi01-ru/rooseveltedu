@@ -1,0 +1,56 @@
+global-styling:
+  css:
+#     base:
+#     layout:
+    component:
+      dist/css/components/toolbar.css: {}
+    theme:
+      dist/css/style.css: {}
+  js:
+     dist/js/script.js: { scope: footer }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
+bootstrap:
+  css:
+    theme:
+      https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css: { type: external, minified: true, attributes: { crossorigin: anonymous, integrity: "sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" } }
+  js:
+    /libraries/patterns/docs/scripts/bootstrap.min.js: { minified: true }
+
+# royalslider:
+#   css:
+#     theme:
+#       /libraries/patterns/docs/plugins/royalslider/royalslider.css: {}
+#       /libraries/patterns/docs/plugins/royalslider/skins/universal/rs-universal.css: {}
+#       /libraries/patterns/docs/plugins/royalslider/skins/default/rs-default.css: {}
+#   js:
+#     /libraries/patterns/docs/plugins/royalslider/jquery.royalslider.min.js: { minified: true }
+
+patterns:
+  css:
+    base:
+      /libraries/patterns/patternlab/source/fonts/761187/A83D70AD93AC40E2C.css: {}
+      /libraries/patterns/docs/plugins/font-awesome-v.4.6.3/css/font-awesome.min.css: {}
+    component:
+      /libraries/patterns/docs/styles/menu.css: {}
+      /libraries/patterns/docs/styles/landing.css: {}
+      /libraries/patterns/docs/styles/redesign.css: {}
+      /libraries/patterns/docs/styles/animate.css: {}
+    theme:
+      /libraries/patterns/docs/styles/global.css: {}
+  js:
+    /libraries/patterns/docs/plugins/janimate/dist/janimate.min.js: { minified: true }
+#     /libraries/patterns/docs/scripts/respond.min.js: { minified: true }
+    /libraries/patterns/docs/plugins/enquire-v.2.1.2/dist/enquire.min.js: { minified: true }
+    /libraries/patterns/docs/plugins/sticky-kit/jquery.sticky-kit.min.js: { minified: true }
+#     /libraries/patterns/docs/scripts/ios-orientationchange-fix.js: {}
+#     /libraries/patterns/docs/scripts/jquery.easing.1.3.js: {}
+#     /libraries/patterns/docs/scripts/menu.js: {}
+#     /libraries/patterns/docs/scripts/landing.js: {}
+#     /libraries/patterns/docs/scripts/global.js: {}
+    /libraries/patterns/docs/scripts/redesign.js: {}
+#   dependencies:
+#     - core/modernizr
+#     - roosevelt/royalslider
