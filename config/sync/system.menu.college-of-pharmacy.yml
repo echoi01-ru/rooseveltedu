@@ -1,0 +1,8 @@
+uuid: ca7ab38a-bfac-4ed3-96ed-8727a8becb1d
+langcode: en
+status: true
+dependencies: {  }
+id: college-of-pharmacy
+label: 'College of Pharmacy'
+description: ''
+locked: false

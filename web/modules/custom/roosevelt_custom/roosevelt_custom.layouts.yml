@@ -1,0 +1,11 @@
+layout_megamenu_section:
+  label: 'Mega Menu'
+  path: layouts/megamenu_section
+  template: layout--megamenu-section
+  category: 'Mega Menu'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
