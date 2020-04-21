@@ -1,0 +1,8 @@
+uuid: 15c130fa-28c9-414a-b558-30d7ad6ec4d4
+langcode: en
+status: true
+dependencies: {  }
+id: cta-bar
+label: 'CTA Bar'
+description: 'CTA links at the bottom of the page.'
+locked: false
