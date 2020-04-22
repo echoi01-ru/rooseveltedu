@@ -106,9 +106,9 @@ init_settings
 gulp_install
 fix_permissions
 
-time -p refresh
-site-build
-theme-build
+time -p ${PROJECT_ROOT}/.docksal/commands/refresh
+${PROJECT_ROOT}/.docksal/commands/site-build
+${PROJECT_ROOT}/.docksal/commands/theme-build
 
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 drush uli uri=http://${VIRTUAL_HOST}
