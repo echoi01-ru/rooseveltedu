@@ -1,0 +1,25 @@
+uuid: d430f56e-fd5d-42b5-9307-ce5da25e67aa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:campus_address:ae902efd-a740-4ea8-ae2c-bd61faec920b'
+  module:
+    - block_content
+  theme:
+    - roosevelt
+id: campusaddresses
+theme: roosevelt
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:ae902efd-a740-4ea8-ae2c-bd61faec920b'
+settings:
+  id: 'block_content:ae902efd-a740-4ea8-ae2c-bd61faec920b'
+  label: 'Campus Addresses'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

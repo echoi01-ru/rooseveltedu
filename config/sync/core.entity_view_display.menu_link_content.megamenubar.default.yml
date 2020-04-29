@@ -1,0 +1,32 @@
+uuid: f22bb956-26c9-424f-a142-b04ebb5b4098
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.megamenubar.layout_builder__layout
+    - system.menu.megamenubar
+  module:
+    - layout_builder
+    - roosevelt_custom
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_megamenu_section
+        layout_settings: {  }
+        components: {  }
+        third_party_settings: {  }
+id: menu_link_content.megamenubar.default
+targetEntityType: menu_link_content
+bundle: megamenubar
+mode: default
+content:
+  children:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  layout_builder__layout: true

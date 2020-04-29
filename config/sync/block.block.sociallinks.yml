@@ -1,0 +1,25 @@
+uuid: 07084457-95a1-4a7e-a04b-55b77e039cba
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links
+  module:
+    - system
+  theme:
+    - roosevelt
+id: sociallinks
+theme: roosevelt
+region: footer_lower
+weight: -6
+provider: null
+plugin: 'system_menu_block:social-links'
+settings:
+  id: 'system_menu_block:social-links'
+  label: 'Social Links'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

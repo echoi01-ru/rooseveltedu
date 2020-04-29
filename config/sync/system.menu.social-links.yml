@@ -1,0 +1,8 @@
+uuid: 5049d4c8-595f-4679-80c8-c938c1fce0e5
+langcode: en
+status: true
+dependencies: {  }
+id: social-links
+label: 'Social Links'
+description: 'Social media links displayed as font-awesome style icons.'
+locked: false

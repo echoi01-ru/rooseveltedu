@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% if content %}
+<div class="footer-gridContainer-rightColumn">
+  {{ content }}
+</div>
+{% endif %}

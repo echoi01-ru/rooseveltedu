@@ -40,6 +40,7 @@ type_settings:
     publish:
       label: Publish
       from:
+        - published
         - review
       to: published
       weight: 0
@@ -67,6 +68,12 @@ type_settings:
         - editor_review
       to: review
       weight: -2
+    unarchive:
+      label: Unarchive
+      from:
+        - archive
+      to: draft
+      weight: 3
   entity_types:
     node:
       - landing_page

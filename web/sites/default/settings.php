@@ -24,7 +24,7 @@ $config_directories = array(
 );
 
 /**
- * Enable local config split which may have been enabled
+ * Disable local config split which may have been enabled
  */
 $config['config_split.config_split.dev']['status'] = FALSE;
 

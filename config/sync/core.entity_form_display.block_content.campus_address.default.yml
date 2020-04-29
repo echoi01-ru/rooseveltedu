@@ -1,0 +1,35 @@
+uuid: 539b7431-5985-4279-ac76-ab8960863ed4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.campus_address
+    - field.field.block_content.campus_address.field_campus_location
+  module:
+    - paragraphs
+id: block_content.campus_address.default
+targetEntityType: block_content
+bundle: campus_address
+mode: default
+content:
+  field_campus_location:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Location
+      title_plural: Locations
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: campus_address
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

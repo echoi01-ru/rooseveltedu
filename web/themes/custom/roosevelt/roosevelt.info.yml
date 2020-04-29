@@ -1,0 +1,49 @@
+name: Roosevelt
+type: theme
+description: 'Roosevelt Redesign'
+package: Other
+core: 8.x
+varsion: 8.7.0
+libraries:
+  - roosevelt/global-styling
+  - roosevelt/bootstrap
+  - roosevelt/patterns
+
+regions:
+  announcement: Announcement
+  header: Header
+  message: Message
+  help: Help
+  content: Content
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_lower: Footer (Lower)
+  footer_bottom: Bottom Nav
+  footer: Footer (Main)
+
+component-libraries:
+  atoms:
+    paths:
+      - ../../../libraries/patterns/patternlab/source/_patterns/00-atoms
+  molecules:
+    paths:
+      - ../../../libraries/patterns/patternlab/source/_patterns/01-molecules
+  organisms:
+    paths:
+      - ../../../libraries/patterns/patternlab/source/_patterns/02-organisms
+  templates:
+    paths:
+      - ../../../libraries/patterns/patternlab/source/_patterns/03-templates
+
+ckeditor_stylesheets:
+  - ../../../libraries/patterns/docs/styles/global.css
+  - ../../../libraries/patterns/docs/plugins/font-awesome-v.4.6.3/css/font-awesome.css
+  - dist/css/components/ckeditor.css
+
+# libraries-override:   
+#   core/jquery:
+#     js:
+#       assets/vendor/jquery/jquery.min.js: ../../../libraries/patterns/docs/scripts/jquery-3.2.1.min.js
+#   core/modernizr:
+#     js:
+#       assets/vendor/modernizr/modernizr.min.js: ../../../libraries/patterns/docs/scripts/modernizr-3.3.1.min.js

@@ -1,0 +1,25 @@
+uuid: 3dc61c6c-9a15-417c-8977-93bf26110b8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - roosevelt
+id: roosevelt_main
+theme: roosevelt
+region: header
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Roosevelt Main Navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

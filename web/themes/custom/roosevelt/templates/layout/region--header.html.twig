@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+<header class="site-header clearfix">
+  <!-- BEGIN: Emergency banner -->
+  {# TODO: Insert Special Announcements Block once created. #}
+  <!-- END: Emergency banner -->
+
+  <!-- Special Announcement -->
+  {# TODO: Insert Special Announcements Block once created. #}
+  <!-- END: Special Announcement -->
+
+  <!-- Upper Navigation Region -->
+  <div class="menuWidth">
+    <div class="nav-upperOutterContainer">
+      <!-- Navigation Logo -->
+      <div class="site-header-logoContainer">
+        <div class="stackMenu">
+          <span class="fa fa-bars" tabindex="0"></span>
+        </div>
+        {{ roosevelt_branding }}
+
+        <div id="navCTA-group-wrapper">
+          {{ roosevelt_main }}
+          <div id="search-icon-container">
+            <span class="fa fa-search searchIcon" tabindex="0"></span>
+          </div>
+        </div>
+      </div>
+      <!-- END: Navigation Logo -->
+    </div>
+  </div>
+  <!-- END: Upper Navigation Region -->
+
+  <!-- Main Navigation Mega Menu -->
+  <div role="menubar" id="megaMenuBar">
+    <div id="alignNav2">
+      {{ roosevelt_megamenu }}
+    </div>
+  </div>
+  <!-- END: Main Navigation Mega Menu -->
+
+  <!-- END: Main Navigation -->
+
+  <!-- Search Bar -->
+  <div role="search" id="searchBar">
+    <div id="wideSearchContainer">
+      {{ roosevelt_search }}
+    </div>
+  </div>
+  <!-- END Search Bar -->
+
+  {% if content %}
+    {{ content }}
+  {% endif %}
+</header>

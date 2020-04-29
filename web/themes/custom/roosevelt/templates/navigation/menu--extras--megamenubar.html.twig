@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to each level of menu.
+ */
+#}
+{% import _self as menu %}
+
+{{ menu.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menu_links %}
+  <ul id="mega-menu" class="menu-level-{{ items|first.menu_level }}" role="group">
+  {% for key, item in items if key|first != '#' %}
+    {% set menu_item_classes = [
+      'has-drop',
+      item.in_active_trail ? 'active',
+    ] %}
+
+    <li{{ item.attributes.addClass(menu_item_classes) }}>
+      {{ link(item.title, item.url) }}
+      {% set rendered_content = item.content|without('') %}
+      {% if rendered_content|render %}
+        {{ rendered_content }}
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}

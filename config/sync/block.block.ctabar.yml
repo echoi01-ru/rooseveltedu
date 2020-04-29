@@ -1,0 +1,25 @@
+uuid: 45e53c6b-3764-4b6b-b63b-fd88d158f3cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.cta-bar
+  module:
+    - system
+  theme:
+    - roosevelt
+id: ctabar
+theme: roosevelt
+region: content
+weight: -4
+provider: null
+plugin: 'system_menu_block:cta-bar'
+settings:
+  id: 'system_menu_block:cta-bar'
+  label: 'CTA Bar'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
