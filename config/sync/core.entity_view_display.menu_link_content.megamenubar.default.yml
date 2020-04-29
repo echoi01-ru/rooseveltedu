@@ -1,0 +1,40 @@
+uuid: f22bb956-26c9-424f-a142-b04ebb5b4098
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.megamenubar
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          0e9af632-be38-494f-9270-26e9f7f7a49a:
+            uuid: 0e9af632-be38-494f-9270-26e9f7f7a49a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:menu_link_content:megamenubar:children'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: menu_link_content.megamenubar.default
+targetEntityType: menu_link_content
+bundle: megamenubar
+mode: default
+content:
+  children:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  layout_builder__layout: true

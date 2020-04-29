@@ -1,0 +1,212 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the roosevelt theme.
+ */
+
+use Drupal\Core\Render\Renderer;
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function roosevelt_preprocess_html(array &$variables) {
+  /* Add class to html tag */
+  //$variables['html_attributes']->addClass('no-js');
+
+  // Don't display the site name twice on the front page (and potentially others)
+  /*if (isset($variables['head_title_array']['title']) && isset($variables['head_title_array']['name']) && ($variables['head_title_array']['title'] == $variables['head_title_array']['name'])) {
+    $variables['head_title'] = $variables['head_title_array']['name'];
+  }*/
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function roosevelt_page_attachments_alter(array &$page) {
+  // Tell IE to use latest rendering engine (not to use compatibility mode).
+  /*$ie_edge = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+    'http-equiv' => 'X-UA-Compatible',
+    'content' => 'IE=edge',
+    ],
+  ];
+  $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
+}
+
+/**
+ * Implements hook_preprocess_page() for page.html.twig.
+ */
+function roosevelt_preprocess_page(array &$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_region() for page.html.twig.
+ */
+function roosevelt_preprocess_region(array &$variables) {
+  if ($variables['region'] == 'header') {
+    // Unset the region content for reprocessing.
+    $variables['content'] = '';
+    $variables['elements']['#children'] = '';
+
+    // Block we want to display individually and hide from "content".
+    $hidden_blocks = [
+      'roosevelt_search',
+      'roosevelt_branding',
+      'roosevelt_main',
+      'roosevelt_megamenu'
+    ];
+
+    // Unset the block we want to display individually.
+    foreach($hidden_blocks as $block) {
+      $variables[$block] = $variables['elements'][$block];
+      unset($variables['elements'][$block]);
+    }
+
+    // Render any remaining blocks.
+    $content = \Drupal::service('renderer')->render($variables['elements']);
+    $variables['elements']['#children'] = $content;
+    unset($variables['elements']['#markup']);
+
+    // Create the $content variable that templates expect.
+    $variables['content'] = $variables['elements']['#children'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function roosevelt_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function roosevelt_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  /*$node = $variables['elements']['#node'];
+
+  if ($variables['elements']['#view_mode'] == "full") {
+
+  }*/
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for Block document templates.
+ */
+function roosevelt_preprocess_block(array &$variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function roosevelt_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  /*$element = $variables['element'];
+  $suggestions[] = 'field__' . $element['#view_mode'];
+  $suggestions[] = 'field__' . $element['#view_mode'] . '__' . $element['#field_name'];*/
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function roosevelt_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+  /*$element = $variables['element'];
+  if (isset($element['#attributes']['class']) && in_array('form-composite', $element['#attributes']['class'])) {
+    $suggestions[] = 'fieldset__form_composite';
+  }*/
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function roosevelt_preprocess_node(array &$variables) {
+  // Default to turning off byline/submitted.
+  //$variables['display_submitted'] = FALSE;
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function roosevelt_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function roosevelt_form_alter(array &$variables) {
+  if ($variables['#form_id'] == 'search_block_form') {
+    $variables['#theme'] = ['search_form'];
+    unset($variables['keys']);
+    unset($variables['actions']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function roosevelt_preprocess_form(array &$variables) {
+  //$variables['attributes']['novalidate'] = 'novalidate';
+}
+
+/**
+ * Implements hook_theme_suggestions_form_alter().
+ */
+function roosevelt_theme_suggestions_form_alter(array &$suggestions, array $variables) { }
+
+/**
+ * Implements hook_preprocess_select().
+ */
+function roosevelt_preprocess_select(array &$variables) {
+  //$variables['attributes']['class'][] = 'select-chosen';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function roosevelt_preprocess_field(array &$variables, $hook) {
+  /*switch ($variables['element']['#field_name']) {
+  }*/
+}
+
+/**
+ * Implements hook_preprocess_details().
+ */
+function roosevelt_preprocess_details(array &$variables) {
+  /*$variables['attributes']['class'][] = 'details';
+  $variables['summary_attributes']['class'] = 'summary';*/
+}
+
+/**
+ * Implements hook_theme_suggestions_details_alter().
+ */
+function roosevelt_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_menu_local_task().
+ */
+function roosevelt_preprocess_menu_local_task(array &$variables) {
+  $classes = ['nav-link'];
+
+  if (!empty($variables['element']['#active'])) {
+    $classes[] = 'active';
+  }
+
+  $variables['element']['#link']['url']->setOption('attributes', [
+    'class' => $classes
+  ]);
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function roosevelt_preprocess_menu(array &$variables) {
+  //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
+}
+

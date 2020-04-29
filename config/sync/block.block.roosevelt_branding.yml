@@ -1,0 +1,23 @@
+uuid: 57fb112c-8504-40c7-bbc1-7d35c1107218
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - roosevelt
+id: roosevelt_branding
+theme: roosevelt
+region: header
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Roosevelt Branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

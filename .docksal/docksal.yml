@@ -21,3 +21,20 @@ services:
       - PANTHEON_ENV
     volumes:
       - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro
+
+  # http(s)://patternlab.VIRTUAL_HOST
+  patternlab:
+    hostname: patternlab
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: nginx
+    depends_on:
+      - cli
+    labels:
+      - io.docksal.virtual-host=patternlab.${VIRTUAL_HOST}
+      - io.docksal.virtual-port=80
+    environment:
+      - NGINX_VHOST_PRESET=html
+      - NGINX_SERVER_ROOT=/var/www/${DOCROOT}/libraries/patterns/docs
+    ports:
+      - "3000:80"

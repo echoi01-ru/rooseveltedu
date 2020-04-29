@@ -6,19 +6,32 @@
     "authors": [
         {
             "name": "Blanca <blanca@kanopistudios.com>",
-            "role": "Tech Leadd / Developer"
+            "role": "Tech Lead / Developer"
         },
         {
             "name": "Jason <jason@kanopistudios.com>",
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "patterns": {
+            "type": "package",
+            "package": {
+                "name": "kanopi/roosevelt_pl",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/kanopi/roosevelt_pl.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
-    ],
+    },
     "require": {
         "php": ">=7.0.8",
         "composer/installers": "^1.0.20",
@@ -26,6 +39,7 @@
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "drupal/admin_toolbar": "^2.0",
         "drupal/better_exposed_filters": "^4.0@alpha",
+        "drupal/components": "^1.1",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/config_split": "^1.4",
@@ -34,16 +48,21 @@
         "drupal/default_content": "^1.0@alpha",
         "drupal/devel": "^2.1",
         "drupal/field_group": "^3.0",
+        "drupal/fpa": "2.x-dev",
         "drupal/fullcalendar_view": "^2.4",
         "drupal/geolocation": "^1.11",
         "drupal/kint": "^2.1",
+        "drupal/menu_attributes": "^1.0@beta",
+        "drupal/menu_item_extras": "^2.11",
         "drupal/optional_end_date": "^1.0@RC",
         "drupal/paragraphs": "^1.10",
         "drupal/pathauto": "^1.6",
+        "drupal/permissions_filter": "^1.1",
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/time_field": "^1.13",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
+        "kanopi/roosevelt_pl": "master",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "simplesamlphp/simplesamlphp": "^1.18",
@@ -70,7 +89,7 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "classmap": [
@@ -107,6 +126,7 @@
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
+            "web/libraries/patterns": ["kanopi/roosevelt_pl"],
             "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],

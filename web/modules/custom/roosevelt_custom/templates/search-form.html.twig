@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+<form{{ attributes }}>
+    <button id="btnSubmit2" aria-label="Search" type="submit" class="navSearch" title="Search">
+        <span class="fa fa-search searchIcon"></span>
+    </button>
+    <input class="searchBox" id="q2" type="text" title="Search Roosevelt University's website" autocomplete="on" placeholder="Search Roosevelt.edu">
+    {{ form }}
+</form>
