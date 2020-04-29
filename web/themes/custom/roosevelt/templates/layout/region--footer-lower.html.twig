@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+<div class="footer-lowerFooterContainer cf">
+  <div id="footerBranding" class="footBranding clearfix">
+    <a href="/" title="Roosevelt University homepage">
+      <svg id="rooseveltFooterLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 78.841" enable-background="new 0 0 80 78.841" xml:space="preserve">
+        <g id="icon">
+          <path fill="#6CC04A" d="M48.164,48.011c9.521-4.593,13.988-13.955,13.988-22.537c0-13.879-9.713-25.47-25.969-25.47H17.236v14.437 h16.09c6.164,0,11.265,4.32,11.265,10.963c0,6.64-5.101,10.9-11.265,10.9h-16.09v14.43h11.796l19.672,28.106h21.142L48.164,48.011z"></path>
+          <rect y="14.441" fill="#ACDB90" width="17.242" height="64.4"></rect>
+          <polygon fill="#00833E" points="0,50.735 17.242,50.735 17.242,36.307"></polygon>
+          <polygon fill="#00833E" points="17.242,0 0,14.441 17.242,14.441"></polygon>
+        </g>
+      </svg>
+    </a>
+    {% if content %}
+      {{ content }}
+    {% endif %}
+  </div>
+</div>

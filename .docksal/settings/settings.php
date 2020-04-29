@@ -24,6 +24,11 @@ $config_directories = array(
 );
 
 /**
+ * Disable local config split which may have been enabled
+ */
+$config['config_split.config_split.dev']['status'] = FALSE;
+
+/**
  * If there is a local settings file, then include it
  */
 $local_settings = __DIR__ . "/settings.local.php";

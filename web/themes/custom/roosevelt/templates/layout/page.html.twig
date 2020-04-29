@@ -55,12 +55,25 @@
   {{ page.message }}
 
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-    {{ page.content }}
+  {{ page.content }}
 
-  {% if page.footer %}
+  {% if page.footer_first or page.footer_second or page.footer_lower or page.footer_bottom or page.footer %}
   <footer class="footer-container" role="contentinfo">
-    {{ page.footer }}
+    <div class="globalWidth footer-innerContainer">
+
+      {% if page.footer_first or page.footer_second %}
+      <div class="footer-gridContainer">
+        {{ page.footer_first }}
+        {{ page.footer_second }}
+      </div>
+      {% endif %}
+
+      {{ page.footer_lower }}
+      {{ page.footer_bottom }}
+      {{ page.footer }}
+    </div>
   </footer>
   {% endif %}
+
 <div id="landing-slider"></div>
 </div>{# /.landing-mainContainer #}

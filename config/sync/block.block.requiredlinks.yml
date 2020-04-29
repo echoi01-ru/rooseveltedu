@@ -1,0 +1,25 @@
+uuid: 76bdbbac-68c4-4e5e-b128-801626e8f900
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.required-links
+  module:
+    - system
+  theme:
+    - roosevelt
+id: requiredlinks
+theme: roosevelt
+region: footer_bottom
+weight: -6
+provider: null
+plugin: 'system_menu_block:required-links'
+settings:
+  id: 'system_menu_block:required-links'
+  label: 'Required Links'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

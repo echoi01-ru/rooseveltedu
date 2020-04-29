@@ -1,0 +1,21 @@
+uuid: bbf89938-8735-4a4d-b0f8-59c0063bd042
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_campus_telephone
+    - paragraphs.paragraphs_type.campus_address
+  module:
+    - telephone
+id: paragraph.campus_address.field_campus_telephone
+field_name: field_campus_telephone
+entity_type: paragraph
+bundle: campus_address
+label: 'Campus Telephone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -6,7 +6,8 @@ core: 8.x
 varsion: 8.7.0
 libraries:
   - roosevelt/global-styling
-#   - roosevelt/patterns
+  - roosevelt/bootstrap
+  - roosevelt/patterns
 
 regions:
   announcement: Announcement
@@ -14,7 +15,11 @@ regions:
   message: Message
   help: Help
   content: Content
-  footer: Footer
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_lower: Footer (Lower)
+  footer_bottom: Bottom Nav
+  footer: Footer (Main)
 
 component-libraries:
   atoms:
@@ -29,6 +34,11 @@ component-libraries:
   templates:
     paths:
       - ../../../libraries/patterns/patternlab/source/_patterns/03-templates
+
+ckeditor_stylesheets:
+  - ../../../libraries/patterns/docs/styles/global.css
+  - ../../../libraries/patterns/docs/plugins/font-awesome-v.4.6.3/css/font-awesome.css
+  - dist/css/components/ckeditor.css
 
 # libraries-override:   
 #   core/jquery:

@@ -57,8 +57,12 @@ function styles() {
 // Description: Watch files
 function watchTask() {
   browerSync.init({
-    baseDir: './',
-    open: false
+    host: config.browserSync.host,
+    proxy: config.browserSync.proxy,
+    baseDir: config.browserSync.baseDir,
+    port: 3050,
+    open: false,
+    ui: false
   });
 
   var options = {

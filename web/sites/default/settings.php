@@ -36,3 +36,9 @@ if (file_exists($local_settings)) {
  * modifying settings.php.
  */
 $settings['install_profile'] = 'standard';
+
+/**
+ * Disable local config split which may have been enabled
+ */
+$config['config_split.config_split.dev']['status'] = FALSE;
+

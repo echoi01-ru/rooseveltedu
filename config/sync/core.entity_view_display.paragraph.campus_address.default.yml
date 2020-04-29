@@ -1,0 +1,41 @@
+uuid: dcadbe33-9015-4fc2-8995-2a8348e73fa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.campus_address.field_campus_address
+    - field.field.paragraph.campus_address.field_campus_name
+    - field.field.paragraph.campus_address.field_campus_telephone
+    - paragraphs.paragraphs_type.campus_address
+  module:
+    - address
+    - telephone
+id: paragraph.campus_address.default
+targetEntityType: paragraph
+bundle: campus_address
+mode: default
+content:
+  field_campus_address:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_plain
+    region: content
+  field_campus_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_campus_telephone:
+    weight: 2
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+hidden: {  }
