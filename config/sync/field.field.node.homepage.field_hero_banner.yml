@@ -1,0 +1,76 @@
+uuid: 365fcef9-58b0-47e7-9e1b-c0f123cbda37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_banner
+    - node.type.homepage
+    - paragraphs.paragraphs_type.herobanner
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_hero_banner
+field_name: field_hero_banner
+entity_type: node
+bundle: homepage
+label: 'Hero Banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      herobanner: herobanner
+    target_bundles_drag_drop:
+      accordion:
+        weight: 17
+        enabled: false
+      accordion_item:
+        weight: 18
+        enabled: false
+      basic_content:
+        weight: 19
+        enabled: false
+      call_to_action:
+        weight: 20
+        enabled: false
+      campus_address:
+        weight: 21
+        enabled: false
+      ctabar:
+        weight: 22
+        enabled: false
+      herobanner:
+        enabled: true
+        weight: 23
+      imgbox:
+        weight: 24
+        enabled: false
+      raci_consult:
+        weight: 25
+        enabled: false
+      raci_informed:
+        weight: 26
+        enabled: false
+      raci_responsible:
+        weight: 27
+        enabled: false
+      related_content:
+        weight: 28
+        enabled: false
+      related_media:
+        weight: 29
+        enabled: false
+      sample_course:
+        weight: 30
+        enabled: false
+      sample_courses:
+        weight: 31
+        enabled: false
+      textsection:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

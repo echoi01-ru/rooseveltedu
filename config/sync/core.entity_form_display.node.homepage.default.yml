@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.homepage.body
+    - field.field.node.homepage.field_ctabar
+    - field.field.node.homepage.field_hero_banner
     - field.field.node.homepage.field_textsection
     - node.type.homepage
   module:
@@ -31,16 +33,40 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_textsection:
+  field_ctabar:
     type: entity_reference_paragraphs
-    weight: 122
+    weight: 123
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_hero_banner:
+    type: entity_reference_paragraphs
+    weight: 124
+    settings:
+      title: 'Hero Banner'
+      title_plural: 'Hero Banners'
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_textsection:
+    type: entity_reference_paragraphs
+    weight: 122
+    settings:
+      title: 'Text Section'
+      title_plural: 'Text Sections'
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   moderation_state:

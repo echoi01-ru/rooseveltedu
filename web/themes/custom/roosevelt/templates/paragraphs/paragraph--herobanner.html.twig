@@ -38,15 +38,12 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'ctaBar',
-  ]
-%}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-  </div>
+  {% block content %}
+    {% include "@organisms/02-hero/hero.twig" with {
+          "title": content.field_banner_title|field_value,
+          "image_boxes": content.field_image_box
+        }
+    %}
+  {% endblock %}
 {% endblock paragraph %}

@@ -1,9 +1,9 @@
-uuid: c3e6f20b-9d9b-4082-8e86-e423572b8d38
+uuid: b5dc1dba-88ea-4cfb-89bf-d3625eda11b4
 langcode: en
 status: true
 dependencies: {  }
-id: textsection
-label: 'Homepage: Text Section'
+id: ctabar
+label: 'Homepage: CTA Bar'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }

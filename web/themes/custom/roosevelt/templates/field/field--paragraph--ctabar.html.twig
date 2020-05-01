@@ -5,6 +5,7 @@
  *
  */
 #}
+
 {% for item in items %}
-  {{ item.content }}
+  <div{{ item.attributes }}>{{ item.content }}</div>
 {% endfor %}

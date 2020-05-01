@@ -1,0 +1,29 @@
+uuid: edfffbd2-fa7b-4978-bd2c-f80a950144db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imgbox_quote
+    - paragraphs.paragraphs_type.imgbox
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    fancy_title: '0'
+    restricted_html: '0'
+    full_html: '0'
+id: paragraph.imgbox.field_imgbox_quote
+field_name: field_imgbox_quote
+entity_type: paragraph
+bundle: imgbox
+label: Quote
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

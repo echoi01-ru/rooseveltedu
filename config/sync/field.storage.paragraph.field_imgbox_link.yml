@@ -1,18 +1,18 @@
-uuid: cbc4de10-b159-4754-bec8-37593069dc4d
+uuid: e111b61d-f5de-4352-bffd-2ad217e93d73
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - paragraphs
-id: paragraph.field_link
-field_name: field_link
+id: paragraph.field_imgbox_link
+field_name: field_imgbox_link
 entity_type: paragraph
 type: link
 settings: {  }
 module: link
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

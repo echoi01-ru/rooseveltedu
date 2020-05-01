@@ -1,0 +1,9 @@
+uuid: 4a19ad61-6941-48a9-b1e2-11b7ad0ddde0
+langcode: en
+status: true
+dependencies: {  }
+id: imgbox
+label: 'Image Box'
+icon_uuid: null
+description: 'For the Homepage: Hero Banner child component.'
+behavior_plugins: {  }

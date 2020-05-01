@@ -1,9 +1,9 @@
-uuid: c3e6f20b-9d9b-4082-8e86-e423572b8d38
+uuid: f6bba49a-aedf-4499-90a8-6a32b8130d14
 langcode: en
 status: true
 dependencies: {  }
-id: textsection
-label: 'Homepage: Text Section'
+id: herobanner
+label: 'Homepage: Hero Banner'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }

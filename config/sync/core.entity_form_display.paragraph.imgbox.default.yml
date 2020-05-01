@@ -1,0 +1,61 @@
+uuid: 1993ceda-af13-4976-a065-dc92f424a02e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.imgbox.field_imgbox_image
+    - field.field.paragraph.imgbox.field_imgbox_link
+    - field.field.paragraph.imgbox.field_imgbox_quote
+    - field.field.paragraph.imgbox.field_imgbox_quote_label
+    - paragraphs.paragraphs_type.imgbox
+  module:
+    - allowed_formats
+    - link
+    - text
+id: paragraph.imgbox.default
+targetEntityType: paragraph
+bundle: imgbox
+mode: default
+content:
+  field_imgbox_image:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_imgbox_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_imgbox_quote:
+    weight: 1
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+    type: text_textarea
+    region: content
+  field_imgbox_quote_label:
+    weight: 2
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

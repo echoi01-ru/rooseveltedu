@@ -1,0 +1,23 @@
+uuid: 406e36ba-78e3-4dd3-aab7-d1d8e9e15069
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imgbox_link
+    - paragraphs.paragraphs_type.imgbox
+  module:
+    - link
+id: paragraph.imgbox.field_imgbox_link
+field_name: field_imgbox_link
+entity_type: paragraph
+bundle: imgbox
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link
