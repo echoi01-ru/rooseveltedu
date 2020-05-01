@@ -1,10 +1,14 @@
 uuid: 1a238cba-82c2-49aa-8768-7e91c6b43fb4
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.homepage.body
+    - field.field.node.homepage.field_ctabar
+    - field.field.node.homepage.field_hero_banner
+    - field.field.node.homepage.field_textsection
+    - field.field.node.homepage.layout_builder__layout
     - node.type.homepage
   module:
     - text
@@ -28,4 +32,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_ctabar: true
+  field_hero_banner: true
   field_textsection: true
+  layout_builder__layout: true
