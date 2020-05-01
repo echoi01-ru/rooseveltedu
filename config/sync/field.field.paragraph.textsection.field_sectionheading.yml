@@ -1,0 +1,29 @@
+uuid: 0af20fdc-5bf9-4784-9111-9cd0236152b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sectionheading
+    - paragraphs.paragraphs_type.textsection
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    fancy_title: fancy_title
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: paragraph.textsection.field_sectionheading
+field_name: field_sectionheading
+entity_type: paragraph
+bundle: textsection
+label: 'Section Heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

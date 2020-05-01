@@ -1,0 +1,10 @@
+uuid: 7b3f1be7-3d9f-4b99-985e-24d8634d1b91
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.media_box
+label: 'Media Box'
+targetEntityType: media
+cache: true

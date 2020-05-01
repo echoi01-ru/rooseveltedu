@@ -1,0 +1,109 @@
+uuid: ddd55f39-cc76-495a-a267-514fc4792ec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.textsection.field_calltoaction
+    - field.field.paragraph.textsection.field_descriptiontheme
+    - field.field.paragraph.textsection.field_heading_level
+    - field.field.paragraph.textsection.field_mediabox
+    - field.field.paragraph.textsection.field_mediaboxvariant
+    - field.field.paragraph.textsection.field_sectioncolor
+    - field.field.paragraph.textsection.field_sectiondescription
+    - field.field.paragraph.textsection.field_sectionheading
+    - field.field.paragraph.textsection.field_sectionimage
+    - field.field.paragraph.textsection.field_sectiontheme
+    - field.field.paragraph.textsection.field_sectionvariant
+    - field.field.paragraph.textsection.field_titletheme
+    - paragraphs.paragraphs_type.textsection
+  module:
+    - link
+    - options
+    - text
+id: paragraph.textsection.default
+targetEntityType: paragraph
+bundle: textsection
+mode: default
+content:
+  field_calltoaction:
+    weight: 8
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_mediabox:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_mediaboxvariant:
+    weight: 7
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_sectioncolor:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_sectiondescription:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sectionheading:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sectionimage:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: url_only
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_sectiontheme:
+    weight: 6
+    label: hidden
+    settings:
+      format: default
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_sectionvariant:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden:
+  field_descriptiontheme: true
+  field_heading_level: true
+  field_titletheme: true

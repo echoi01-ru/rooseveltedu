@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a Text Section paragraph.
+ *
+ */
+#}
+{% block paragraph %}
+  {% block content %}
+    {% set sectioncolor = content.field_sectioncolor|field_raw['value'] %}
+    {% set sectionvariant = content.field_sectionvariant|field_raw['value'] %}
+    {% set sectiontheme = content.field_sectiontheme|field_raw['value'] %}
+    {%
+      include "@organisms/textsection/textsection.twig" with
+        {
+          heading: content.field_sectionheading,
+          description: content.field_sectiondescription,
+          mediabox: content.field_mediabox,
+          calltoaction: content.field_calltoaction,
+          bg_img: content.field_sectionimage|render|striptags|trim,
+          bg_color: '#' ~ sectioncolor,
+          variant: sectionvariant|replace('-', ' '),
+          theme: sectiontheme == "1" ? "gradient-bottom"
+        }
+    %}
+  {% endblock %}
+{% endblock paragraph %}

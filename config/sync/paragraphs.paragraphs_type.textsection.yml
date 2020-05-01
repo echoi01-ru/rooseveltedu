@@ -1,0 +1,9 @@
+uuid: c3e6f20b-9d9b-4082-8e86-e423572b8d38
+langcode: en
+status: true
+dependencies: {  }
+id: textsection
+label: 'Home: Text Section'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

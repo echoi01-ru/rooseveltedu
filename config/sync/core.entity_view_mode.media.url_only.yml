@@ -1,0 +1,10 @@
+uuid: 7ddfb681-8295-4f96-a286-d65a692a5fb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.url_only
+label: 'URL Only'
+targetEntityType: media
+cache: true

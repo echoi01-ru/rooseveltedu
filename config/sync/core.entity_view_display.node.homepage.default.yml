@@ -1,0 +1,39 @@
+uuid: efdf5dae-6428-484c-824c-92af3a7a2d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage.body
+    - field.field.node.homepage.field_textsection
+    - node.type.homepage
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.homepage.default
+targetEntityType: node
+bundle: homepage
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_textsection:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

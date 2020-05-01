@@ -22,12 +22,12 @@
             "type": "package",
             "package": {
                 "name": "kanopi/roosevelt_pl",
-                "version": "master",
+                "version": "26124979",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/kanopi/roosevelt_pl.git",
                     "type": "git",
-                    "reference": "master"
+                    "reference": "26124979"
                 }
             }
         }
@@ -40,6 +40,7 @@
         "drupal/address": "~1.0",
         "drupal/address_formatter": "^2.0@alpha",
         "drupal/admin_toolbar": "^2.0",
+        "drupal/allowed_formats": "^1.2",
         "drupal/better_exposed_filters": "^4.0@alpha",
         "drupal/block_class": "^1.1",
         "drupal/components": "^1.1",
@@ -58,14 +59,16 @@
         "drupal/menu_attributes": "^1.0@beta",
         "drupal/menu_item_extras": "^2.11",
         "drupal/optional_end_date": "^1.0@RC",
+        "drupal/paragraph_blocks": "^2.1@beta",
         "drupal/paragraphs": "^1.10",
         "drupal/pathauto": "^1.6",
         "drupal/permissions_filter": "^1.1",
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/time_field": "^1.13",
+        "drupal/twig_field_value": "1.2",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8.3",
-        "kanopi/roosevelt_pl": "master",
+        "kanopi/roosevelt_pl": "26124979",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "simplesamlphp/simplesamlphp": "^1.18",

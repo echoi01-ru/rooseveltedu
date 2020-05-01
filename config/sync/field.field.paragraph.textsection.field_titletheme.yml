@@ -1,0 +1,23 @@
+uuid: 109cbc27-5218-4f9c-bf83-046fdb64334d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titletheme
+    - paragraphs.paragraphs_type.textsection
+  module:
+    - options
+id: paragraph.textsection.field_titletheme
+field_name: field_titletheme
+entity_type: paragraph
+bundle: textsection
+label: 'Heading Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,67 @@
+uuid: 181f3dd4-6e7f-451d-bd1a-9e83261b37c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_textsection
+    - node.type.homepage
+    - paragraphs.paragraphs_type.textsection
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_textsection
+field_name: field_textsection
+entity_type: node
+bundle: homepage
+label: 'Text Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      textsection: textsection
+    target_bundles_drag_drop:
+      textsection:
+        enabled: true
+        weight: -27
+      accordion:
+        weight: -26
+        enabled: false
+      accordion_item:
+        weight: -25
+        enabled: false
+      basic_content:
+        weight: -24
+        enabled: false
+      call_to_action:
+        weight: -23
+        enabled: false
+      campus_address:
+        weight: -22
+        enabled: false
+      raci_consult:
+        weight: -21
+        enabled: false
+      raci_informed:
+        weight: -20
+        enabled: false
+      raci_responsible:
+        weight: -19
+        enabled: false
+      related_content:
+        weight: -18
+        enabled: false
+      related_media:
+        weight: -17
+        enabled: false
+      sample_course:
+        weight: -16
+        enabled: false
+      sample_courses:
+        weight: -15
+        enabled: false
+field_type: entity_reference_revisions

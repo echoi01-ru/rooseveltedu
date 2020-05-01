@@ -1,0 +1,23 @@
+uuid: b2d493df-0fd2-4492-aef6-113dc5b5e49e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sectiontheme
+    - paragraphs.paragraphs_type.textsection
+id: paragraph.textsection.field_sectiontheme
+field_name: field_sectiontheme
+entity_type: paragraph
+bundle: textsection
+label: 'Add Bottom Gradient'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

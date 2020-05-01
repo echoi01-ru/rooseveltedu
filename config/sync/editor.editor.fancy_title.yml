@@ -1,0 +1,32 @@
+uuid: 972b3617-41d8-447b-a5d3-ef8dd139286d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.fancy_title
+  module:
+    - ckeditor
+format: fancy_title
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Underline
+            - '-'
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

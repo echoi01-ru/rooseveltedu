@@ -1,0 +1,202 @@
+uuid: e674e5c9-8687-4d19-95ee-f6bf4ea8db46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.textsection.field_calltoaction
+    - field.field.paragraph.textsection.field_descriptiontheme
+    - field.field.paragraph.textsection.field_heading_level
+    - field.field.paragraph.textsection.field_mediabox
+    - field.field.paragraph.textsection.field_mediaboxvariant
+    - field.field.paragraph.textsection.field_sectioncolor
+    - field.field.paragraph.textsection.field_sectiondescription
+    - field.field.paragraph.textsection.field_sectionheading
+    - field.field.paragraph.textsection.field_sectionimage
+    - field.field.paragraph.textsection.field_sectiontheme
+    - field.field.paragraph.textsection.field_sectionvariant
+    - field.field.paragraph.textsection.field_titletheme
+    - paragraphs.paragraphs_type.textsection
+  module:
+    - allowed_formats
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_heading:
+      children:
+        - field_heading_level
+        - field_titletheme
+        - field_sectionheading
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Heading
+    group_description:
+      children:
+        - field_descriptiontheme
+        - field_sectiondescription
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Description
+    group_media_box:
+      children:
+        - field_mediaboxvariant
+        - field_mediabox
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Media Box'
+    group_section_options:
+      children:
+        - field_sectionvariant
+        - field_sectiontheme
+        - field_sectionimage
+        - field_sectioncolor
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Section Options'
+    group_call_to_action:
+      children:
+        - field_calltoaction
+      parent_name: ''
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Call To Action'
+id: paragraph.textsection.default
+targetEntityType: paragraph
+bundle: textsection
+mode: default
+content:
+  field_calltoaction:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_descriptiontheme:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_heading_level:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mediabox:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_mediaboxvariant:
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sectioncolor:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sectiondescription:
+    weight: 4
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+    type: text_textarea
+    region: content
+  field_sectionheading:
+    weight: 3
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+    type: text_textarea
+    region: content
+  field_sectionimage:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_sectiontheme:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sectionvariant:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_titletheme:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

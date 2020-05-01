@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{% for item in items %}
+   {% include "@organisms/textsection/_section-heading.twig" with {
+      "content": item.content,
+      "heading": heading.level,
+      "variant": heading.variants,
+      "theme": heading.theme
+     }
+   %}
+{% endfor %}

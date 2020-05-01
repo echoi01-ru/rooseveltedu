@@ -1,0 +1,36 @@
+uuid: b2813706-eae5-4fe1-9d7b-9065c08b3d70
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_sectionvariant
+field_name: field_sectionvariant
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: split-left
+      label: 'Split: Heading on Left'
+    -
+      value: split-right
+      label: 'Split: Heading on Right'
+    -
+      value: stack-center
+      label: Stacked
+    -
+      value: stack-left
+      label: 'Stacked: Left Justified'
+    -
+      value: stack-right
+      label: 'Stacked: Right Justified'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

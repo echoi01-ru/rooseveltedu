@@ -1,0 +1,39 @@
+uuid: ff22f5ab-ae65-489b-b452-fd49b0d82309
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_descriptiontheme
+field_name: field_descriptiontheme
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: light
+      label: White
+    -
+      value: medium
+      label: Grey
+    -
+      value: dark
+      label: Black
+    -
+      value: light-green
+      label: 'Light Green'
+    -
+      value: medium-green
+      label: 'Medium Green'
+    -
+      value: dark-green
+      label: 'Dark Green'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
