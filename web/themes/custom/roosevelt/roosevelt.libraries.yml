@@ -63,6 +63,6 @@ patterns:
     /libraries/patterns/docs/scripts/landing.js: {  }
     /libraries/patterns/docs/scripts/global.js: {  }
     /libraries/patterns/docs/scripts/redesign.js: {  }
-#   dependencies:
-#     - core/modernizr
+  dependencies:
+    - core/modernizr
 #     - roosevelt/royalslider
