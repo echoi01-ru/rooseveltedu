@@ -1,16 +1,16 @@
-uuid: 916f30cc-494c-4d43-909d-3db4bdef4f88
+uuid: 433bb744-a4fb-4f5a-9fe1-2305f955ca48
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - time_field
-id: node.field_start_time
-field_name: field_start_time
+    - smart_date
+id: node.field_smart_date
+field_name: field_smart_date
 entity_type: node
-type: time
+type: smartdate
 settings: {  }
-module: time_field
+module: smart_date
 locked: false
 cardinality: 1
 translatable: true

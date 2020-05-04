@@ -1,11 +1,11 @@
 uuid: f57bab32-ade0-4055-818a-08d886caba02
 name: rooseveltedu
-mail: jasonrsavino@gmail.com
+mail: jason@kanopistudios.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/2
+  front: /node/4
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

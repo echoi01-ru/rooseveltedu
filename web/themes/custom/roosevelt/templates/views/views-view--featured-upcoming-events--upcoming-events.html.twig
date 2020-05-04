@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Theme override for main view template.
+ */
+#}
+
+{%
+  include "@organisms/eventsection/eventsection.twig" with {
+    "title": view.title,
+    "content": rows
+  }
+%}

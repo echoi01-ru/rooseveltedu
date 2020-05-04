@@ -9,12 +9,14 @@ dependencies:
     - field.field.node.homepage.field_textsection
     - field.field.node.homepage.layout_builder__layout
     - node.type.homepage
+    - views.view.featured_upcoming_events
   module:
     - entity_reference_revisions
     - layout_builder
     - layout_discovery
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: true
@@ -22,7 +24,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           6cd0c12a-44c9-47d7-8363-617077de2d91:
             uuid: 6cd0c12a-44c9-47d7-8363-617077de2d91
@@ -45,7 +48,8 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           a9170df7-82f7-4815-a994-ee2960f334a0:
             uuid: a9170df7-82f7-4815-a994-ee2960f334a0
@@ -68,7 +72,27 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
+        components:
+          eed659c0-a234-48ec-acdb-a2dd7b94dbe5:
+            uuid: eed659c0-a234-48ec-acdb-a2dd7b94dbe5
+            region: content
+            configuration:
+              id: 'views_block:featured_upcoming_events-upcoming_events'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
         components:
           876fa941-b5c6-4ecc-a107-f5b2a44bd434:
             uuid: 876fa941-b5c6-4ecc-a107-f5b2a44bd434

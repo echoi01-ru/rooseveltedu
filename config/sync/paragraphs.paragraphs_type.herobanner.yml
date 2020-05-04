@@ -5,5 +5,6 @@ dependencies: {  }
 id: herobanner
 label: 'Homepage: Hero Banner'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ */
+#}
+{% set event_name %}
+  <a href="{{ url }}">{{ label }}</a>
+{% endset %}
+{%
+  include "@molecules/eventcard/eventcard.twig" with {
+    "event_name": event_name,
+    "card_pic": content.field_image|render,
+    "description": content.body|field_value,
+    "date_range": event_dates|render,
+    "time_range": event_times|render,
+    "room": content.field_room_number|field_value,
+    "location": content.field_location|field_value
+  }
+%}
