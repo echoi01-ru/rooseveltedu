@@ -106,3 +106,7 @@ Thumbs.db
 ##########
 .sass-cache
 /web/libraries/patterns
+/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
+/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
+/vendor/simplesamlphp/simplesamlphp/config/config.php
+/vendor/simplesamlphp/simplesamlphp/config/authsources.php
