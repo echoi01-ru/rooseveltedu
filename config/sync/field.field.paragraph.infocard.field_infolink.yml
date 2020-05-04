@@ -1,0 +1,23 @@
+uuid: 6d5dec8d-8e16-4d85-a5e3-aad2a95dcc00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infolink
+    - paragraphs.paragraphs_type.infocard
+  module:
+    - link
+id: paragraph.infocard.field_infolink
+field_name: field_infolink
+entity_type: paragraph
+bundle: infocard
+label: 'Info Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

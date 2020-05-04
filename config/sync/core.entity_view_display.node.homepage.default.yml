@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.node.homepage.body
     - field.field.node.homepage.field_ctabar
+    - field.field.node.homepage.field_ctacard
     - field.field.node.homepage.field_hero_banner
+    - field.field.node.homepage.field_infocard
     - field.field.node.homepage.field_textsection
     - field.field.node.homepage.layout_builder__layout
     - node.type.homepage
@@ -113,6 +115,56 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          ddf0ff47-29ba-4972-91e7-449dd61605c6:
+            uuid: ddf0ff47-29ba-4972-91e7-449dd61605c6
+            region: content
+            configuration:
+              id: 'field_block:node:homepage:field_infocard'
+              label: InfoCard
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          ead78ca8-f36a-4c41-89ec-a30e6468cced:
+            uuid: ead78ca8-f36a-4c41-89ec-a30e6468cced
+            region: content
+            configuration:
+              id: 'field_block:node:homepage:field_ctacard'
+              label: 'CTA Card'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
@@ -134,10 +186,28 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_ctacard:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_hero_banner:
     type: entity_reference_revisions_entity_view
     weight: 104
     label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_infocard:
+    type: entity_reference_revisions_entity_view
+    weight: 106
+    label: above
     settings:
       view_mode: default
       link: ''

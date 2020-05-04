@@ -1,0 +1,24 @@
+uuid: 1864a2fc-721e-48cb-8d3d-05e57c8e6415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infocards.field_infocard
+    - paragraphs.paragraphs_type.infocards
+  module:
+    - entity_reference_revisions
+id: paragraph.infocards.default
+targetEntityType: paragraph
+bundle: infocards
+mode: default
+content:
+  field_infocard:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

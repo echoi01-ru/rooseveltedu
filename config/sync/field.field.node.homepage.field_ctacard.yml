@@ -1,0 +1,88 @@
+uuid: 68e47fae-9f70-47b0-8c96-8e7731b031b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ctacard
+    - node.type.homepage
+    - paragraphs.paragraphs_type.ctacards
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_ctacard
+field_name: field_ctacard
+entity_type: node
+bundle: homepage
+label: 'CTA Cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ctacards: ctacards
+    target_bundles_drag_drop:
+      ctacard:
+        weight: -37
+        enabled: false
+      accordion:
+        weight: -36
+        enabled: false
+      accordion_item:
+        weight: -35
+        enabled: false
+      basic_content:
+        weight: -34
+        enabled: false
+      call_to_action:
+        weight: -33
+        enabled: false
+      campus_address:
+        weight: -32
+        enabled: false
+      ctabar:
+        weight: -31
+        enabled: false
+      herobanner:
+        weight: -30
+        enabled: false
+      imgbox:
+        weight: -29
+        enabled: false
+      infocard:
+        weight: -28
+        enabled: false
+      raci_consult:
+        weight: -27
+        enabled: false
+      raci_informed:
+        weight: -26
+        enabled: false
+      raci_responsible:
+        weight: -25
+        enabled: false
+      related_content:
+        weight: -24
+        enabled: false
+      related_media:
+        weight: -23
+        enabled: false
+      sample_course:
+        weight: -22
+        enabled: false
+      sample_courses:
+        weight: -21
+        enabled: false
+      textsection:
+        weight: -20
+        enabled: false
+      ctacards:
+        enabled: true
+        weight: 28
+      infocards:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

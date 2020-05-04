@@ -1,0 +1,88 @@
+uuid: a6c73419-196f-4200-a8c4-05d85bd92c66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_infocard
+    - node.type.homepage
+    - paragraphs.paragraphs_type.infocards
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_infocard
+field_name: field_infocard
+entity_type: node
+bundle: homepage
+label: 'Info Cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      infocards: infocards
+    target_bundles_drag_drop:
+      infocards:
+        enabled: true
+        weight: -41
+      infocard:
+        weight: -40
+        enabled: false
+      accordion:
+        weight: -39
+        enabled: false
+      accordion_item:
+        weight: -38
+        enabled: false
+      basic_content:
+        weight: -37
+        enabled: false
+      call_to_action:
+        weight: -36
+        enabled: false
+      campus_address:
+        weight: -35
+        enabled: false
+      ctabar:
+        weight: -34
+        enabled: false
+      herobanner:
+        weight: -33
+        enabled: false
+      imgbox:
+        weight: -32
+        enabled: false
+      raci_consult:
+        weight: -31
+        enabled: false
+      raci_informed:
+        weight: -30
+        enabled: false
+      raci_responsible:
+        weight: -29
+        enabled: false
+      related_content:
+        weight: -28
+        enabled: false
+      related_media:
+        weight: -27
+        enabled: false
+      sample_course:
+        weight: -26
+        enabled: false
+      sample_courses:
+        weight: -25
+        enabled: false
+      textsection:
+        weight: -24
+        enabled: false
+      ctacard:
+        weight: -23
+        enabled: false
+      ctacards:
+        weight: -22
+        enabled: false
+field_type: entity_reference_revisions

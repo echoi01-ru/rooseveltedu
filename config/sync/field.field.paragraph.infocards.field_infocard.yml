@@ -1,0 +1,85 @@
+uuid: ce836b51-7a13-4bdd-804d-d311524fc206
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infocard
+    - paragraphs.paragraphs_type.infocard
+    - paragraphs.paragraphs_type.infocards
+  module:
+    - entity_reference_revisions
+id: paragraph.infocards.field_infocard
+field_name: field_infocard
+entity_type: paragraph
+bundle: infocards
+label: InfoCard
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      infocard: infocard
+    target_bundles_drag_drop:
+      infocard:
+        enabled: true
+        weight: -39
+      accordion:
+        weight: -38
+        enabled: false
+      accordion_item:
+        weight: -37
+        enabled: false
+      basic_content:
+        weight: -36
+        enabled: false
+      call_to_action:
+        weight: -35
+        enabled: false
+      campus_address:
+        weight: -34
+        enabled: false
+      ctabar:
+        weight: -33
+        enabled: false
+      ctacard:
+        weight: -32
+        enabled: false
+      herobanner:
+        weight: -31
+        enabled: false
+      imgbox:
+        weight: -30
+        enabled: false
+      infocards:
+        weight: -29
+        enabled: false
+      raci_consult:
+        weight: -28
+        enabled: false
+      raci_informed:
+        weight: -27
+        enabled: false
+      raci_responsible:
+        weight: -26
+        enabled: false
+      related_content:
+        weight: -25
+        enabled: false
+      related_media:
+        weight: -24
+        enabled: false
+      sample_course:
+        weight: -23
+        enabled: false
+      sample_courses:
+        weight: -22
+        enabled: false
+      textsection:
+        weight: -21
+        enabled: false
+field_type: entity_reference_revisions

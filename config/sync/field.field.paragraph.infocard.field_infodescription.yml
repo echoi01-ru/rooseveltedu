@@ -1,0 +1,29 @@
+uuid: cdd43fcc-46e0-465a-8f26-7bf2466c5822
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infodescription
+    - paragraphs.paragraphs_type.infocard
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    restricted_html: restricted_html
+    full_html: full_html
+    plain_text: plain_text
+    fancy_title: '0'
+id: paragraph.infocard.field_infodescription
+field_name: field_infodescription
+entity_type: paragraph
+bundle: infocard
+label: 'Info Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

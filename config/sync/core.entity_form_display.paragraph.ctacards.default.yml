@@ -1,0 +1,29 @@
+uuid: eec2b4ba-3e57-4fbf-be8d-6c3a681f80e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ctacards.field_ctacard
+    - paragraphs.paragraphs_type.ctacards
+  module:
+    - paragraphs
+id: paragraph.ctacards.default
+targetEntityType: paragraph
+bundle: ctacards
+mode: default
+content:
+  field_ctacard:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: 'CTA Card'
+      title_plural: 'CTA Cards'
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ctacard
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

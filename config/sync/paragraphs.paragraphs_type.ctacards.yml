@@ -1,0 +1,10 @@
+uuid: 6390e785-c1b1-4707-acb3-852be3e4a333
+langcode: en
+status: true
+dependencies: {  }
+id: ctacards
+label: 'Homepage: CTA Cards'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
