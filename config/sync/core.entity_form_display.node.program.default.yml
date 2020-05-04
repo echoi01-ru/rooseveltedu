@@ -22,7 +22,7 @@ dependencies:
     - field.field.node.program.field_related_content
     - field.field.node.program.field_sample_courses
     - node.type.program
-    - workflows.workflow.program_workflow
+    - workflows.workflow.story_workflow
   module:
     - content_moderation
     - field_group
@@ -92,6 +92,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -151,6 +152,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
   field_location:
     type: entity_reference_autocomplete
@@ -160,6 +162,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
   field_member_accountability:
     type: entity_reference_autocomplete
@@ -169,6 +172,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
   field_organizational_parent:
     weight: 11
@@ -176,6 +180,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -187,6 +192,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
   field_program_contact:
     type: entity_reference_autocomplete
@@ -196,6 +202,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
   field_program_faculty:
     type: entity_reference_autocomplete
@@ -205,6 +212,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
   field_program_type:
     weight: 1
@@ -230,6 +238,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -293,6 +302,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
 hidden: {  }

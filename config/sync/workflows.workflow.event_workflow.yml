@@ -35,12 +35,15 @@ type_settings:
     publish:
       label: Publish
       from:
+        - published
         - review
       to: published
       weight: 1
     return_to_draft:
       label: 'Return to Draft'
       from:
+        - archive
+        - published
         - review
       to: draft
       weight: 2
