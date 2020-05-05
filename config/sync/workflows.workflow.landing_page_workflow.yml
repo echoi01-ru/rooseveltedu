@@ -47,6 +47,9 @@ type_settings:
     return_to_draft:
       label: 'Return to Draft'
       from:
+        - archive
+        - editor_review
+        - published
         - review
       to: editor_review
       weight: 1

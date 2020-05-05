@@ -28,7 +28,7 @@ dependencies:
     - field.field.node.event.field_smart_date
     - field.field.node.event.field_tickets
     - node.type.event
-    - workflows.workflow.event_workflow
+    - workflows.workflow.story_workflow
   module:
     - content_moderation
     - field_group
