@@ -1,5 +1,24 @@
-.landing-mainContainer {
-  @media only screen and (min-width: 1199px) {
-    margin-top: 0 !important;
-  }
-}
+/**
+  *
+  * Base — CSS reset/normalize plus HTML element styling.
+  * Layout — macro arrangement of a web page, including any grid systems.
+  * Component — discrete, reusable UI elements.
+  * State — styles that deal with client-side changes to components.
+  * Theme — purely visual styling (“look-and-feel”) for a component.
+  *
+  */
+
+// Base.
+@import "base/toolbar";
+
+// Layout.
+@import "layout/grid";
+
+// Component.
+// @import "component/FILENAME";
+
+// State.
+// @import "state/FILENAME";
+
+// Theme.
+@import "theme/landing";
