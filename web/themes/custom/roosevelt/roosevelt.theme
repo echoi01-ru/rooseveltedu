@@ -159,7 +159,7 @@ function roosevelt_preprocess_node(array &$variables) {
       foreach($dates as $date) {
         if ($date['end_value'] > $date['value']) {
           $start_date = \Drupal::service('date.formatter')->format($date['value'], 'custom', 'M j');
-          $end_date = ' - ' . \Drupal::service('date.formatter')->format($date['end_value'], 'custom', 'M j, Y');
+          $end_date = ' - ' . \Drupal::service('date.formatter')->format($date['end_value'], 'custom', 'j, Y');
 
           $start_time = \Drupal::service('date.formatter')->format($date['value'], 'custom', 'h:i');
           $end_time = ' - ' . \Drupal::service('date.formatter')->format($date['end_value'], 'custom', 'h:ia');
