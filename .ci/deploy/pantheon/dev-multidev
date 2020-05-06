@@ -14,6 +14,10 @@ terminus -n auth:login --machine-token="$TERMINUS_TOKEN"
 # Prepare for Pantheon
 composer run prepare-for-pantheon
 
+# Create symlinks
+composer run simplesaml-build
+ln -sf ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
+
 if [[ $CI_BRANCH != $DEFAULT_BRANCH ]]
 then
   # Create a new multidev environment (or push to an existing one)

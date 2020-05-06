@@ -165,3 +165,8 @@ if (PHP_SAPI !== 'cli') {
     $_SERVER['SERVER_PORT'] = 443;
   }
 }
+
+/**
+ * Provide universal absolute path to the installation.
+ */
+$settings['simplesamlphp_dir'] = '../vendor/simplesamlphp';
