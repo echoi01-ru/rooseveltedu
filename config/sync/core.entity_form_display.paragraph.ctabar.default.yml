@@ -1,0 +1,25 @@
+uuid: cb2afb64-99cd-48a3-b662-c3739b69ae42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ctabar.field_ctabar_link
+    - paragraphs.paragraphs_type.ctabar
+  module:
+    - link
+id: paragraph.ctabar.default
+targetEntityType: paragraph
+bundle: ctabar
+mode: default
+content:
+  field_ctabar_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

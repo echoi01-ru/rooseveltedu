@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ */
+#}
+{% block paragraph %}
+  {% block content %}
+    {% include "@molecules/imgbox/imgbox.twig" with {
+      "image": content.field_imgbox_image|field_value,
+      "quote": content.field_imgbox_quote|field_raw['value'],
+      "label": content.field_imgbox_quote_label|render|striptags('<br>')|trim,
+      "cta":   content.field_imgbox_link|field_value,
+    } %}
+  {% endblock %}
+{% endblock paragraph %}

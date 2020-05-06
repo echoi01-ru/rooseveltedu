@@ -17,4 +17,5 @@ permissions:
   - 'use event_workflow transition publish'
   - 'use event_workflow transition return_to_draft'
   - 'use event_workflow transition send_to_archive'
+  - 'use text format fancy_title'
   - 'use text format full_html'

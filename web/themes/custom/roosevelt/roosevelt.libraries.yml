@@ -17,7 +17,7 @@ global-styling:
 
 bootstrap:
   css:
-    theme:
+    base:
       https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css: { type: external, minified: true, attributes: { crossorigin: anonymous, integrity: "sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" } }
   js:
     /libraries/patterns/docs/plugins/bootstrap/dist/js/bootstrap.min.js: { minified: true }
@@ -35,18 +35,14 @@ patterns:
   css:
     base:
       /libraries/patterns/docs/plugins/font-awesome/css/font-awesome.css: { }
-      /libraries/patterns/docs/styles/apply.css: { }
-      /libraries/patterns/docs/styles/colio.css: { }
-      /libraries/patterns/docs/styles/EditorStyles.css: { }
-      /libraries/patterns/docs/styles/LandingForm.css: { }
-      /libraries/patterns/docs/styles/LWcalendar.css: { }
-      /libraries/patterns/docs/styles/programDetails.css: { }
-      /libraries/patterns/docs/styles/RWDtable.css: { }
-      /libraries/patterns/docs/styles/tabstyle.css: { }
-      /libraries/patterns/docs/styles/webedit.css: { }
       /libraries/patterns/docs/styles/internal.css: { }
       /libraries/patterns/docs/fonts/761187/A83D70AD93AC40E2C.css: { }
       /libraries/patterns/docs/styles/print.css: { }
+      /libraries/patterns/docs/styles/animate.css: { }
+      /libraries/patterns/docs/styles/menu.css: { }
+      /libraries/patterns/docs/styles/global.css: { }
+      /libraries/patterns/docs/styles/landing.css: { }
+      /libraries/patterns/docs/styles/redesign.css: { }
       /libraries/patterns/docs/styles/animate.css: { }
     component:
       /libraries/patterns/docs/css/00-atoms/atoms.css: { }
@@ -54,12 +50,6 @@ patterns:
       /libraries/patterns/docs/css/02-organisms/organisms.css: { }
       /libraries/patterns/docs/css/03-templates/templates.css: { }
       /libraries/patterns/docs/css/04-pages/pages.css: { }
-    theme:
-      /libraries/patterns/docs/styles/menu.css: { }
-      /libraries/patterns/docs/styles/global.css: { }
-      /libraries/patterns/docs/styles/landing.css: { }
-      /libraries/patterns/docs/styles/redesign.css: { }
-      /libraries/patterns/docs/styles/animate.css: { }
   js:
 #     /libraries/patterns/docs/scripts/modernizr-3.6.0.min.js: { minified: true }
     /libraries/patterns/docs/scripts/respond.min.js: { minified: true }
@@ -73,6 +63,6 @@ patterns:
     /libraries/patterns/docs/scripts/landing.js: {  }
     /libraries/patterns/docs/scripts/global.js: {  }
     /libraries/patterns/docs/scripts/redesign.js: {  }
-#   dependencies:
-#     - core/modernizr
+  dependencies:
+    - core/modernizr
 #     - roosevelt/royalslider

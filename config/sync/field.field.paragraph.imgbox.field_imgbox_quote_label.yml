@@ -1,0 +1,29 @@
+uuid: 3c9f4761-ce16-487c-b43f-c18582688cb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imgbox_quote_label
+    - paragraphs.paragraphs_type.imgbox
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    restricted_html: restricted_html
+    basic_html: '0'
+    fancy_title: '0'
+    full_html: '0'
+    plain_text: '0'
+id: paragraph.imgbox.field_imgbox_quote_label
+field_name: field_imgbox_quote_label
+entity_type: paragraph
+bundle: imgbox
+label: 'Quote Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

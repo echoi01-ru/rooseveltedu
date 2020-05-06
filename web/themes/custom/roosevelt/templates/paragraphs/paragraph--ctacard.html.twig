@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ */
+#}
+{% block paragraph %}
+  {% block content %}
+    {%
+      include "@molecules/ctacard/ctacard.twig" with {
+        "heading": content.field_ctaheading,
+        "description": content.field_ctadescription,
+        "cta": content.field_ctalink|render,
+        "card_pic": content.field_ctaimage
+      }
+    %}
+  {% endblock %}
+{% endblock paragraph %}

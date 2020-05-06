@@ -1,0 +1,29 @@
+uuid: a7b2cfff-3e12-4b2a-8791-048b27c377a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infocards.field_infocard
+    - paragraphs.paragraphs_type.infocards
+  module:
+    - paragraphs
+id: paragraph.infocards.default
+targetEntityType: paragraph
+bundle: infocards
+mode: default
+content:
+  field_infocard:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: 'Info Card'
+      title_plural: 'Info Cards'
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: infocard
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,63 @@
+uuid: 73f6d710-8034-4b18-878e-a4a0aa986d46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infocard.field_infodescription
+    - field.field.paragraph.infocard.field_infoheading
+    - field.field.paragraph.infocard.field_infoimage
+    - field.field.paragraph.infocard.field_infolink
+    - field.field.paragraph.infocard.field_infosubtitle
+    - paragraphs.paragraphs_type.infocard
+  module:
+    - link
+    - text
+id: paragraph.infocard.default
+targetEntityType: paragraph
+bundle: infocard
+mode: default
+content:
+  field_infodescription:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_infoheading:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_infoimage:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_infolink:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  field_infosubtitle:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

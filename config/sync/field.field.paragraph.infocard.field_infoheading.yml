@@ -1,0 +1,29 @@
+uuid: 2db47e71-1aa1-4059-aceb-52b8bf90288b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infoheading
+    - paragraphs.paragraphs_type.infocard
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    fancy_title: fancy_title
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: paragraph.infocard.field_infoheading
+field_name: field_infoheading
+entity_type: paragraph
+bundle: infocard
+label: 'Info Heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

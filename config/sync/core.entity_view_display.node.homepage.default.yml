@@ -1,0 +1,222 @@
+uuid: efdf5dae-6428-484c-824c-92af3a7a2d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage.field_ctabar
+    - field.field.node.homepage.field_ctacard
+    - field.field.node.homepage.field_hero_banner
+    - field.field.node.homepage.field_infocard
+    - field.field.node.homepage.field_textsection
+    - field.field.node.homepage.layout_builder__layout
+    - node.type.homepage
+    - views.view.featured_upcoming_events
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          6cd0c12a-44c9-47d7-8363-617077de2d91:
+            uuid: 6cd0c12a-44c9-47d7-8363-617077de2d91
+            region: content
+            configuration:
+              id: 'field_block:node:homepage:field_hero_banner'
+              label: 'Hero Banner'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          a9170df7-82f7-4815-a994-ee2960f334a0:
+            uuid: a9170df7-82f7-4815-a994-ee2960f334a0
+            region: content
+            configuration:
+              id: 'field_block:node:homepage:field_textsection'
+              label: 'Text Section'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          eed659c0-a234-48ec-acdb-a2dd7b94dbe5:
+            uuid: eed659c0-a234-48ec-acdb-a2dd7b94dbe5
+            region: content
+            configuration:
+              id: 'views_block:featured_upcoming_events-upcoming_events'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          876fa941-b5c6-4ecc-a107-f5b2a44bd434:
+            uuid: 876fa941-b5c6-4ecc-a107-f5b2a44bd434
+            region: content
+            configuration:
+              id: 'field_block:node:homepage:field_ctabar'
+              label: 'CTA Bar'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          ddf0ff47-29ba-4972-91e7-449dd61605c6:
+            uuid: ddf0ff47-29ba-4972-91e7-449dd61605c6
+            region: content
+            configuration:
+              id: 'field_block:node:homepage:field_infocard'
+              label: InfoCard
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          ead78ca8-f36a-4c41-89ec-a30e6468cced:
+            uuid: ead78ca8-f36a-4c41-89ec-a30e6468cced
+            region: content
+            configuration:
+              id: 'field_block:node:homepage:field_ctacard'
+              label: 'CTA Card'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.homepage.default
+targetEntityType: node
+bundle: homepage
+mode: default
+content:
+  field_ctabar:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_ctacard:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_banner:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_infocard:
+    type: entity_reference_revisions_entity_view
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_textsection:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  layout_builder__layout: true

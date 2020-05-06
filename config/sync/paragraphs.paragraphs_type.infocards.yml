@@ -1,0 +1,10 @@
+uuid: 10b9f3d9-c717-4424-83d5-0b2c8e8f762f
+langcode: en
+status: true
+dependencies: {  }
+id: infocards
+label: 'Homepage: InfoCards'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

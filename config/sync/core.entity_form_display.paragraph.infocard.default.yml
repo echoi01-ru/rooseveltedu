@@ -1,0 +1,71 @@
+uuid: 3ee45f7b-ecba-4cd0-aa92-4354e4429f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.infocard.field_infodescription
+    - field.field.paragraph.infocard.field_infoheading
+    - field.field.paragraph.infocard.field_infoimage
+    - field.field.paragraph.infocard.field_infolink
+    - field.field.paragraph.infocard.field_infosubtitle
+    - paragraphs.paragraphs_type.infocard
+  module:
+    - allowed_formats
+    - link
+    - text
+id: paragraph.infocard.default
+targetEntityType: paragraph
+bundle: infocard
+mode: default
+content:
+  field_infodescription:
+    weight: 3
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+    type: text_textarea
+    region: content
+  field_infoheading:
+    weight: 1
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+    type: text_textarea
+    region: content
+  field_infoimage:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_infolink:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_infosubtitle:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

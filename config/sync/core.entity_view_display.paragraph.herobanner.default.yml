@@ -1,0 +1,33 @@
+uuid: 68a9d0a1-d7a7-42ef-883b-986f20b949a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.herobanner.field_banner_title
+    - field.field.paragraph.herobanner.field_image_box
+    - paragraphs.paragraphs_type.herobanner
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.herobanner.default
+targetEntityType: paragraph
+bundle: herobanner
+mode: default
+content:
+  field_banner_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image_box:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

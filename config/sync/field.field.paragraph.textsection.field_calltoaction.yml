@@ -1,0 +1,23 @@
+uuid: e881d4a5-7f0a-45b3-a994-3a3b7f8d4e25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_calltoaction
+    - paragraphs.paragraphs_type.textsection
+  module:
+    - link
+id: paragraph.textsection.field_calltoaction
+field_name: field_calltoaction
+entity_type: paragraph
+bundle: textsection
+label: 'Call To Action'
+description: 'Use this to link to other content, either internal or external. Do not use if you are trying to create a modal window. See Media Box above to do that.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

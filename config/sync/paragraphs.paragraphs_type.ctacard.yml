@@ -1,0 +1,10 @@
+uuid: d10ddad2-d302-4a3a-85a8-a1ee7835688f
+langcode: en
+status: true
+dependencies: {  }
+id: ctacard
+label: 'CTA Card'
+icon_uuid: null
+icon_default: null
+description: 'For the Homepage: CTA Cards child component.'
+behavior_plugins: {  }

@@ -1,0 +1,54 @@
+uuid: 5116ec59-fd93-463f-8fac-913ba798a6c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.imgbox.field_imgbox_image
+    - field.field.paragraph.imgbox.field_imgbox_link
+    - field.field.paragraph.imgbox.field_imgbox_quote
+    - field.field.paragraph.imgbox.field_imgbox_quote_label
+    - paragraphs.paragraphs_type.imgbox
+  module:
+    - link
+    - text
+id: paragraph.imgbox.default
+targetEntityType: paragraph
+bundle: imgbox
+mode: default
+content:
+  field_imgbox_image:
+    type: entity_reference_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_imgbox_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_imgbox_quote:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_imgbox_quote_label:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

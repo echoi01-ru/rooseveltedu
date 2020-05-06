@@ -1,0 +1,112 @@
+uuid: a00f7c64-b508-453e-b918-22fe8b5cf62b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.event.title
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.accountability_notes
+    - field.field.node.event.body
+    - field.field.node.event.field_accordion
+    - field.field.node.event.field_affiliated_personnel
+    - field.field.node.event.field_audience
+    - field.field.node.event.field_basic_content
+    - field.field.node.event.field_brand_pillars
+    - field.field.node.event.field_call_to_action
+    - field.field.node.event.field_campus
+    - field.field.node.event.field_contact_person
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_excluding_date
+    - field.field.node.event.field_featured
+    - field.field.node.event.field_image
+    - field.field.node.event.field_location
+    - field.field.node.event.field_member_accountability
+    - field.field.node.event.field_organization_school
+    - field.field.node.event.field_organization_student
+    - field.field.node.event.field_raci
+    - field.field.node.event.field_related_content
+    - field.field.node.event.field_related_programs
+    - field.field.node.event.field_room_number
+    - field.field.node.event.field_smart_date
+    - field.field.node.event.field_tickets
+    - node.type.event
+  module:
+    - layout_builder
+    - layout_discovery
+    - smart_date
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: entity_reference_entity_view
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_location:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_room_number:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_smart_date:
+    type: smartdate_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format: date_only
+      format_type: medium
+    third_party_settings: {  }
+hidden:
+  accountability_notes: true
+  content_moderation_control: true
+  field_accordion: true
+  field_affiliated_personnel: true
+  field_audience: true
+  field_basic_content: true
+  field_brand_pillars: true
+  field_call_to_action: true
+  field_campus: true
+  field_contact_person: true
+  field_end_time: true
+  field_event_type: true
+  field_excluding_date: true
+  field_featured: true
+  field_member_accountability: true
+  field_organization_school: true
+  field_organization_student: true
+  field_raci: true
+  field_recurring: true
+  field_related_content: true
+  field_related_programs: true
+  field_tickets: true
+  links: true

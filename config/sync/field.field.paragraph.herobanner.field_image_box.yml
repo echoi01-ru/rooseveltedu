@@ -1,0 +1,76 @@
+uuid: 74f0d5f4-5d3b-4d84-b96f-673efa227b7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_box
+    - paragraphs.paragraphs_type.herobanner
+    - paragraphs.paragraphs_type.imgbox
+  module:
+    - entity_reference_revisions
+id: paragraph.herobanner.field_image_box
+field_name: field_image_box
+entity_type: paragraph
+bundle: herobanner
+label: 'Image Box'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      imgbox: imgbox
+    target_bundles_drag_drop:
+      imgbox:
+        enabled: true
+        weight: -33
+      accordion:
+        weight: -32
+        enabled: false
+      accordion_item:
+        weight: -31
+        enabled: false
+      basic_content:
+        weight: -30
+        enabled: false
+      call_to_action:
+        weight: -29
+        enabled: false
+      campus_address:
+        weight: -28
+        enabled: false
+      ctabar:
+        weight: -27
+        enabled: false
+      herobanner:
+        weight: -26
+        enabled: false
+      raci_consult:
+        weight: -25
+        enabled: false
+      raci_informed:
+        weight: -24
+        enabled: false
+      raci_responsible:
+        weight: -23
+        enabled: false
+      related_content:
+        weight: -22
+        enabled: false
+      related_media:
+        weight: -21
+        enabled: false
+      sample_course:
+        weight: -20
+        enabled: false
+      sample_courses:
+        weight: -19
+        enabled: false
+      textsection:
+        weight: -18
+        enabled: false
+field_type: entity_reference_revisions

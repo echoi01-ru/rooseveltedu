@@ -96,11 +96,11 @@ function roosevelt_custom_entity_presave(EntityInterface $entity) {
         'first' => $entity->field_first_name->value,
         'last' => $entity->field_last_name->value,
       ];
-  
+
       // Remove empty values and convert to string
       $title_data = array_filter($title_data);
       $title = implode(' ', $title_data);
-  
+
       $entity->set('field_full_name', $title);
       break;
   }
@@ -127,6 +127,27 @@ function validateIsUnique(array &$form, FormStateInterface $form_state) {
       // If there is a user with the same netid, return and error message
       if(count($uids) > 0) {
         $form_state->setErrorByName('field_netid', 'The Net ID field must be unique for each user.');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_view_mode_alter().
+ */
+function roosevelt_custom_entity_view_mode_alter(&$view_mode, EntityInterface $entity, $context) {
+  // Determine proper display mode for remote_video in textsection paragraph.
+  if ($entity->bundle() == 'remote_video') {
+    $referencing_field = $entity->_referringItem->getParent();
+    $parent_entity = $referencing_field->getParent();
+    $paragraph_entity = $parent_entity->getEntity();
+    if ($paragraph_entity->bundle() == 'textsection') {
+      $view_mode = 'default';
+      if ($parent_entity->get('field_mediaboxvariant')->value == 1) {
+        $view_mode = 'modal';
+      }
+      elseif ($parent_entity->get('field_mediaboxvariant')->value == 0) {
+        $view_mode = 'media_box';
       }
     }
   }

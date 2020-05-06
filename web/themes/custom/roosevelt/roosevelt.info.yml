@@ -5,9 +5,9 @@ package: Other
 core: 8.x
 varsion: 8.7.0
 libraries:
-  - roosevelt/global-styling
   - roosevelt/bootstrap
   - roosevelt/patterns
+  - roosevelt/global-styling
 
 regions:
   announcement: Announcement
@@ -40,7 +40,7 @@ ckeditor_stylesheets:
   - ../../../libraries/patterns/docs/plugins/font-awesome-v.4.6.3/css/font-awesome.css
   - dist/css/components/ckeditor.css
 
-# libraries-override:   
+# libraries-override:
 #   core/jquery:
 #     js:
 #       assets/vendor/jquery/jquery.min.js: ../../../libraries/patterns/docs/scripts/jquery-3.2.1.min.js

@@ -1,0 +1,23 @@
+uuid: 92a27905-9e96-4a9f-bc96-c788a49f1654
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mediaboxvariant
+    - paragraphs.paragraphs_type.textsection
+id: paragraph.textsection.field_mediaboxvariant
+field_name: field_mediaboxvariant
+entity_type: paragraph
+bundle: textsection
+label: 'In Modal?'
+description: 'Tick this option to display the media as a button that triggers a modal window. Leave unticked to display media on page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'yes'
+  off_label: 'no'
+field_type: boolean

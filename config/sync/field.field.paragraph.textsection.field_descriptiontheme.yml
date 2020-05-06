@@ -1,0 +1,23 @@
+uuid: 01cfa4fd-e3dd-4d5e-8050-6c3ddc248dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_descriptiontheme
+    - paragraphs.paragraphs_type.textsection
+  module:
+    - options
+id: paragraph.textsection.field_descriptiontheme
+field_name: field_descriptiontheme
+entity_type: paragraph
+bundle: textsection
+label: 'Description Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ */
+#}
+{% block paragraph %}
+  {% block content %}
+    {%
+      include "@molecules/infocard/infocard.twig" with {
+        "title":       content.field_infosubtitle,
+        "heading":     content.field_infoheading,
+        "description": content.field_infodescription,
+        "cta":         content.field_infolink,
+        "card_pic":    content.field_infoimage
+      }
+    %}
+  {% endblock %}
+{% endblock paragraph %}

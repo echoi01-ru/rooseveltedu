@@ -10,7 +10,7 @@ field_name: field_link_label
 entity_type: media
 bundle: remote_video
 label: 'Link Label'
-description: ''
+description: 'Fill in the Link Label field to convert this media item from an on-screen player to a modal player.'
 required: false
 translatable: true
 default_value: {  }

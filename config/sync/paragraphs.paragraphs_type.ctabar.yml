@@ -1,0 +1,10 @@
+uuid: b5dc1dba-88ea-4cfb-89bf-d3625eda11b4
+langcode: en
+status: true
+dependencies: {  }
+id: ctabar
+label: 'Homepage: CTA Bar'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

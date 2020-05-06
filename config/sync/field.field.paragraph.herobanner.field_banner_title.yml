@@ -1,0 +1,29 @@
+uuid: 5e97a356-0caf-4ec2-85ff-82f9737dfdbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_title
+    - paragraphs.paragraphs_type.herobanner
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    fancy_title: fancy_title
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: paragraph.herobanner.field_banner_title
+field_name: field_banner_title
+entity_type: paragraph
+bundle: herobanner
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

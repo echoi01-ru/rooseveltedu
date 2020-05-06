@@ -36,6 +36,7 @@ permissions:
   - 'use landing_page_workflow transition send_to_publisher'
   - 'use program_workflow transition send_to_publisher'
   - 'use story_workflow transition send_to_publisher'
+  - 'use text format fancy_title'
   - 'use text format full_html'
   - 'view media'
   - 'view own unpublished content'

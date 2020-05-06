@@ -1,0 +1,19 @@
+uuid: e9ae7dac-7364-4765-b375-c154ed2838dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_imgbox_quote_label
+field_name: field_imgbox_quote_label
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

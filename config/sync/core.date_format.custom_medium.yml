@@ -1,0 +1,8 @@
+uuid: d2e05bcd-29c6-4f9a-8b55-5cede6332288
+langcode: en
+status: true
+dependencies: {  }
+id: custom_medium
+label: 'Custom Medium Format'
+locked: false
+pattern: 'F j, Y'

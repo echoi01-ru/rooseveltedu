@@ -1,0 +1,24 @@
+uuid: fbfc1075-2970-4d91-bc17-addb2d1d0f25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ctacards.field_ctacard
+    - paragraphs.paragraphs_type.ctacards
+  module:
+    - entity_reference_revisions
+id: paragraph.ctacards.default
+targetEntityType: paragraph
+bundle: ctacards
+mode: default
+content:
+  field_ctacard:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

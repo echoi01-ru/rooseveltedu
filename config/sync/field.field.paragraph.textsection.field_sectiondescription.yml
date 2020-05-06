@@ -1,0 +1,21 @@
+uuid: 9bdfdfa9-d365-43df-80d4-e2a725774d21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sectiondescription
+    - paragraphs.paragraphs_type.textsection
+  module:
+    - text
+id: paragraph.textsection.field_sectiondescription
+field_name: field_sectiondescription
+entity_type: paragraph
+bundle: textsection
+label: 'Section Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

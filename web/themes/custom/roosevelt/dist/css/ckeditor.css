@@ -1,0 +1,21 @@
+/* line 3, app/scss/ckeditor.scss */
+.cke_editable_themed a > .fa-facebook,
+.cke_editable_themed a > .fa-linkedin,
+.cke_editable_themed a > .fa-twitter,
+.cke_editable_themed a > .fa-snapchat,
+.cke_editable_themed a > .fa-instagram,
+.cke_editable_themed a > .fa-youtube {
+  display: inline-block;
+  color: #007741;
+  font-size: 20px;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #f1f1f2;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}

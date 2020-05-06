@@ -1,0 +1,10 @@
+uuid: fd5cf390-53b0-4b75-8a2e-f3cca89cb4c7
+langcode: en
+status: true
+dependencies: {  }
+id: infocard
+label: 'Info Card'
+icon_uuid: null
+icon_default: null
+description: 'For the Homepage: Info Cards child component.'
+behavior_plugins: {  }

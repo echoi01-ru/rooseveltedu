@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78c55d42ea73bd21ba42846f91c899d2",
+    "content-hash": "cba279149920780712c51d52ec1377d3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1451,6 +1451,50 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
+        },
+        {
+            "name": "drupal/allowed_formats",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/allowed_formats.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/allowed_formats-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "50f8f80cf3326382c968521d34d3a113b37e32b3"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1573747386",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "floretan",
+                    "homepage": "https://www.drupal.org/user/66163"
+                }
+            ],
+            "description": "Limit which text formats are available for each field instance.",
+            "homepage": "https://www.drupal.org/project/allowed_formats",
+            "support": {
+                "source": "https://git.drupalcode.org/project/allowed_formats"
             }
         },
         {
@@ -3281,50 +3325,56 @@
             }
         },
         {
-            "name": "drupal/optional_end_date",
-            "version": "1.0.0",
+            "name": "drupal/paragraph_blocks",
+            "version": "2.1.0-beta5",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/optional_end_date.git",
-                "reference": "8.x-1.0"
+                "url": "https://git.drupalcode.org/project/paragraph_blocks.git",
+                "reference": "8.x-2.1-beta5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/optional_end_date-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "26c7673d43a4f80be747a41cfc6cc8563628f251"
+                "url": "https://ftp.drupal.org/files/projects/paragraph_blocks-8.x-2.1-beta5.zip",
+                "reference": "8.x-2.1-beta5",
+                "shasum": "66899fe22af357234637b1f7b66ed286ef1f7f44"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "~8.0",
+                "drupal/ctools": "^3.0",
+                "drupal/paragraphs": "^1.8"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                    "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1581409227",
+                    "version": "8.x-2.1-beta5",
+                    "datestamp": "1572523386",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "Birk",
-                    "homepage": "https://www.drupal.org/user/1033026"
+                    "name": "douggreen",
+                    "homepage": "https://www.drupal.org/user/29191"
                 }
             ],
-            "description": "Make the end date in a Date range field optional.",
-            "homepage": "https://www.drupal.org/project/optional_end_date",
+            "description": "Drupal Paragraph Blocks module",
+            "homepage": "https://www.drupal.org/project/paragraph_blocks",
+            "keywords": [
+                "Drupal",
+                "Paragraphs"
+            ],
             "support": {
-                "source": "https://git.drupalcode.org/project/optional_end_date"
+                "source": "https://git.drupalcode.org/project/paragraph_blocks"
             }
         },
         {
@@ -3596,6 +3646,58 @@
             }
         },
         {
+            "name": "drupal/smart_date",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/smart_date.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/smart_date-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "613b976725795f230bd62144acf4de469cee2d25"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1571713684",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "mparker17",
+                    "homepage": "https://www.drupal.org/user/536298"
+                },
+                {
+                    "name": "stefan.korn",
+                    "homepage": "https://www.drupal.org/user/1942204"
+                }
+            ],
+            "description": "Provides the ability to store start and end times, with duration. Also provides an intelligent admin UI, and a variety of formatting options.",
+            "homepage": "https://www.drupal.org/project/smart_date",
+            "support": {
+                "source": "https://git.drupalcode.org/project/smart_date"
+            }
+        },
+        {
             "name": "drupal/time_field",
             "version": "1.13.0",
             "source": {
@@ -3709,6 +3811,50 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/twig_field_value",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/twig_field_value.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_field_value-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "dd5bfb64bc455ca262b3bdc6b489fdb08b2b8538"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1549817580",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sutharsan",
+                    "homepage": "https://www.drupal.org/user/73854"
+                }
+            ],
+            "description": "Twig filters for value(s) and label.",
+            "homepage": "https://www.drupal.org/project/twig_field_value",
+            "support": {
+                "source": "https://git.drupalcode.org/project/twig_field_value"
             }
         },
         {
@@ -4298,7 +4444,7 @@
                 "reference": "master"
             },
             "type": "drupal-library",
-            "time": "2020-04-29T13:57:16+00:00"
+            "time": "2020-05-04T12:35:52+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -11492,7 +11638,7 @@
         "drupal/default_content": 15,
         "drupal/fpa": 20,
         "drupal/menu_attributes": 10,
-        "drupal/optional_end_date": 5
+        "drupal/paragraph_blocks": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

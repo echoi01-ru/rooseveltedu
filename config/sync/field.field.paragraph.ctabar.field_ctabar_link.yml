@@ -1,0 +1,23 @@
+uuid: 73b592b6-f4ac-46b4-ac8e-b8a26bd60d14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ctabar_link
+    - paragraphs.paragraphs_type.ctabar
+  module:
+    - link
+id: paragraph.ctabar.field_ctabar_link
+field_name: field_ctabar_link
+entity_type: paragraph
+bundle: ctabar
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

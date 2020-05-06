@@ -1,0 +1,28 @@
+uuid: 78827cff-e9ed-4efe-827c-824b048ed27e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infoimage
+    - media.type.image
+    - paragraphs.paragraphs_type.infocard
+id: paragraph.infocard.field_infoimage
+field_name: field_infoimage
+entity_type: paragraph
+bundle: infocard
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

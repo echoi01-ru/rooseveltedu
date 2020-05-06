@@ -1,0 +1,43 @@
+uuid: ca144e21-1e63-42ff-be8c-b1316a328d3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.herobanner.field_banner_title
+    - field.field.paragraph.herobanner.field_image_box
+    - paragraphs.paragraphs_type.herobanner
+  module:
+    - allowed_formats
+    - paragraphs
+    - text
+id: paragraph.herobanner.default
+targetEntityType: paragraph
+bundle: herobanner
+mode: default
+content:
+  field_banner_title:
+    weight: 0
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+    type: text_textarea
+    region: content
+  field_image_box:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: 'Image Box'
+      title_plural: 'Image Boxs'
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: imgbox
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
