@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.homepage.body
     - field.field.node.homepage.field_ctabar
     - field.field.node.homepage.field_ctacard
     - field.field.node.homepage.field_hero_banner
@@ -16,7 +15,6 @@ dependencies:
     - entity_reference_revisions
     - layout_builder
     - layout_discovery
-    - text
     - user
     - views
 third_party_settings:
@@ -170,13 +168,6 @@ targetEntityType: node
 bundle: homepage
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_ctabar:
     type: entity_reference_revisions_entity_view
     weight: 103

@@ -9,7 +9,6 @@ dependencies:
   content:
     - 'taxonomy_term:event_type:e7fb74b8-abe9-44d2-be6d-b2a690430da5'
   module:
-    - datetime
     - node
     - taxonomy
     - user
@@ -55,7 +54,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 3
+          items_per_page: 4
           offset: 0
       style:
         type: default
@@ -401,10 +400,10 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        field_start_date_value:
-          id: field_start_date_value
-          table: node__field_start_date
-          field: field_start_date_value
+        field_smart_date_value:
+          id: field_smart_date_value
+          table: node__field_smart_date
+          field: field_smart_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -412,7 +411,7 @@ display:
           value:
             min: ''
             max: ''
-            value: now
+            value: today
             type: offset
           group: 1
           exposed: false
@@ -445,7 +444,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: datetime
+          plugin_id: date
       filter_groups:
         operator: AND
         groups:

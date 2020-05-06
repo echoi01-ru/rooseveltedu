@@ -4,7 +4,6 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.homepage.body
     - field.field.node.homepage.field_ctabar
     - field.field.node.homepage.field_ctacard
     - field.field.node.homepage.field_hero_banner
@@ -13,21 +12,12 @@ dependencies:
     - field.field.node.homepage.layout_builder__layout
     - node.type.homepage
   module:
-    - text
     - user
 id: node.homepage.teaser
 targetEntityType: node
 bundle: homepage
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     settings: {  }

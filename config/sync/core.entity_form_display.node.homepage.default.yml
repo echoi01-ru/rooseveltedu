@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.homepage.body
     - field.field.node.homepage.field_ctabar
     - field.field.node.homepage.field_ctacard
     - field.field.node.homepage.field_hero_banner
@@ -15,22 +14,11 @@ dependencies:
     - content_moderation
     - paragraphs
     - path
-    - text
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
