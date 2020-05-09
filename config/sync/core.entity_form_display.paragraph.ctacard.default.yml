@@ -16,6 +16,14 @@ targetEntityType: paragraph
 bundle: ctacard
 mode: default
 content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_ctadescription:
     weight: 0
     settings:

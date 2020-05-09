@@ -10,6 +10,14 @@ targetEntityType: paragraph
 bundle: related_media
 mode: default
 content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_media:
     weight: 0
     settings:
