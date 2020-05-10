@@ -14,12 +14,6 @@
   font-size: 13px;
 }
 
-/* line 1, app/scss/layout/_grid.scss */
-.infoBoxes,
-.ctaBoxes {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 @media only screen and (min-width: 1199px) {
   /* line 1, app/scss/theme/_landing.scss */
   .landing-mainContainer {

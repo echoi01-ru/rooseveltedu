@@ -40,10 +40,7 @@ ckeditor_stylesheets:
   - ../../../libraries/patterns/docs/plugins/font-awesome-v.4.6.3/css/font-awesome.css
   - dist/css/components/ckeditor.css
 
-# libraries-override:
-#   core/jquery:
-#     js:
-#       assets/vendor/jquery/jquery.min.js: ../../../libraries/patterns/docs/scripts/jquery-3.2.1.min.js
-#   core/modernizr:
-#     js:
-#       assets/vendor/modernizr/modernizr.min.js: ../../../libraries/patterns/docs/scripts/modernizr-3.3.1.min.js
+libraries-override:
+  core/modernizr:
+    js:
+      assets/vendor/modernizr/modernizr.min.js: ../../../libraries/patterns/docs/scripts/modernizr-3.3.1.min.js
