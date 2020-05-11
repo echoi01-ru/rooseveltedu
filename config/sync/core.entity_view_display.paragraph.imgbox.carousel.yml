@@ -1,0 +1,60 @@
+uuid: cdca8496-0178-41c4-a579-e39610a3b7a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.carousel
+    - field.field.paragraph.imgbox.field_imgbox_image
+    - field.field.paragraph.imgbox.field_imgbox_link
+    - field.field.paragraph.imgbox.field_imgbox_quote
+    - field.field.paragraph.imgbox.field_imgbox_quote_label
+    - paragraphs.paragraphs_type.imgbox
+  module:
+    - layout_builder
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.imgbox.carousel
+targetEntityType: paragraph
+bundle: imgbox
+mode: carousel
+content:
+  field_imgbox_image:
+    type: entity_reference_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_imgbox_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_imgbox_quote:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_imgbox_quote_label:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

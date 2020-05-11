@@ -7,6 +7,7 @@
 
 use Drupal\Core\Render\Renderer;
 use Drupal\Core\Entity\EntityInterface;
+
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
@@ -108,16 +109,20 @@ function roosevelt_preprocess_paragraph(array &$variables) {
   $elements = $variables['elements'];
   $paragraph = $variables['paragraph'];
 
-/*
-  if ($paragraph->getType() == 'textsection') {
-    $variant = $paragraph->get('field_sectionvariant')->value;
-    $variants = explode('-', $variant);
+  if ($paragraph->getType() == 'herobanner') {
+    // Duplicate the image box field and render as carousel
+    $carousel_items = '';
+    if ($paragraph->hasField('field_image_box')) {
+      $carousel_items = $paragraph->field_image_box->view('carousel');
+      if ($item_count = count($carousel_items['#items'])) {
+        $variables['item_count'] = $item_count - 1;
 
-    if (count($variants) > 1) {
-      ksm($variables);
+        foreach ($carousel_items['#items'] as $delta => $item) {
+          $variables['content']['carousel_items'][] = $carousel_items[$delta];
+        }
+      }
     }
   }
-*/
 }
 
 /**

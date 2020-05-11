@@ -40,6 +40,13 @@
 #}
 {% block paragraph %}
   {% block content %}
+    {% include "@organisms/02-hero/carousel.twig" with {
+          "title": content.field_banner_title|field_value,
+          "image_boxes": content.carousel_items,
+          "item_count": item_count|number_format
+        }
+    %}
+
     {% include "@organisms/02-hero/hero.twig" with {
           "title": content.field_banner_title|field_value,
           "image_boxes": content.field_image_box
