@@ -18,14 +18,14 @@ mode: default
 content:
   admin_title:
     type: string_textfield
-    weight: -10
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_ctadescription:
-    weight: 0
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -41,7 +41,7 @@ content:
     type: text_textarea
     region: content
   field_ctaimage:
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -51,7 +51,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_ctalink:
-    weight: 2
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
