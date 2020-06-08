@@ -14,7 +14,10 @@ regions:
   header: Header
   message: Message
   help: Help
+  admin_tasks: Admin Tasks
+  content_title: Content Title
   content: Content
+  sidebar: Sidebar Content
   footer_first: Footer First
   footer_second: Footer Second
   footer_lower: Footer (Lower)

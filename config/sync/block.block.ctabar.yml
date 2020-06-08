@@ -5,13 +5,14 @@ dependencies:
   config:
     - system.menu.cta-bar
   module:
+    - ctools
     - system
   theme:
     - roosevelt
 id: ctabar
 theme: roosevelt
 region: content
-weight: -4
+weight: -8
 provider: null
 plugin: 'system_menu_block:cta-bar'
 settings:
@@ -22,4 +23,11 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      general_info: general_info
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

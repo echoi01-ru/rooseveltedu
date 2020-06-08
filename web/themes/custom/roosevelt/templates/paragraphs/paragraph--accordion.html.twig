@@ -1,0 +1,8 @@
+{% block paragraph %}
+  {% block content %}
+  {% include "@organisms/accordion/accordion.twig" with {
+       "accordion": content
+     }
+  %}
+  {% endblock %}
+{% endblock paragraph %}

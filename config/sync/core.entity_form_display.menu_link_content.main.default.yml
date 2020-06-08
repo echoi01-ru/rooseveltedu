@@ -1,0 +1,23 @@
+uuid: 8cfe7585-d4e8-4b2b-bd0b-96e58e46e1f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - link
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  view_mode: true

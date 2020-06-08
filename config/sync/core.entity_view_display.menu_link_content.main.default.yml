@@ -10,24 +10,8 @@ dependencies:
     - layout_discovery
 third_party_settings:
   layout_builder:
-    allow_custom: true
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components:
-          070610f8-75a2-450c-beaa-702654e6f695:
-            uuid: 070610f8-75a2-450c-beaa-702654e6f695
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:menu_link_content:main:children'
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
+    allow_custom: false
+    enabled: false
 id: menu_link_content.main.default
 targetEntityType: menu_link_content
 bundle: main

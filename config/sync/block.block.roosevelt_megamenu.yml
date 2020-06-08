@@ -11,7 +11,7 @@ dependencies:
 id: roosevelt_megamenu
 theme: roosevelt
 region: header
-weight: -2
+weight: -8
 provider: null
 plugin: 'system_menu_block:megamenubar'
 settings:

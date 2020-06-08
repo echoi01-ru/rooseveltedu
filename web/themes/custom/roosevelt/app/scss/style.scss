@@ -15,10 +15,11 @@
 @import "layout/grid";
 
 // Component.
-// @import "component/FILENAME";
+@import "component/moderation";
 
 // State.
-// @import "state/FILENAME";
+@import "state/moderation";
 
 // Theme.
+@import "theme/internal";
 @import "theme/landing";

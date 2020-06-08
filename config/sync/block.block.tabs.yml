@@ -1,15 +1,13 @@
-uuid: 7232094d-9f10-4914-95cf-46f5308ce69c
+uuid: 9035784c-9868-4576-a8e8-83eafee2b2af
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - roosevelt
-_core:
-  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: roosevelt_local_tasks
+id: tabs
 theme: roosevelt
-region: announcement
-weight: -8
+region: admin_tasks
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

@@ -1,0 +1,27 @@
+uuid: 58230ca5-6bde-4121-bc1b-46e9490312e5
+langcode: en
+status: false
+dependencies:
+  module:
+    - ctools
+  theme:
+    - roosevelt
+id: pagetitle
+theme: roosevelt
+region: announcement
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      homepage: homepage
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

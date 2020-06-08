@@ -25,7 +25,16 @@
  * @see template_preprocess_block()
  */
 #}
-<div{{ attributes }}>
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+  ]
+%}
+{%
+  set classes = classes|merge(plugin_id|split(':'))
+%}
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>

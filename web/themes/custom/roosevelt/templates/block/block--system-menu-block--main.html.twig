@@ -29,18 +29,21 @@
   set classes = [
     'block',
     'block-' ~ configuration.provider|clean_class,
+    'sidebar-NavigationContainer',
   ]
 %}
 {%
   set classes = classes|merge(plugin_id|split(':'))
 %}
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes).setAttribute('role', 'navigation').setAttribute('aria-labelledby', 'sidebarNav') }}>
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
+  <div class="sidebarNavMainTitle" id="sidebarNav">{{ label }}</div>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
+  <nav id="sidebarMenu" class="menuContainer">
     {{ content }}
+  </nav>
   {% endblock %}
 </div>

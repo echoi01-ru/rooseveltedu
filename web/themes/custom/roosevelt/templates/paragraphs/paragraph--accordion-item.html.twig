@@ -1,0 +1,9 @@
+{% block paragraph %}
+  {% block content %}
+  {% include "@organisms/accordion/accordion-item.twig" with {
+       "item_title": content.field_accordion_item_title,
+       "item_content": content.field_accordion_item_text
+     }
+  %}
+  {% endblock %}
+{% endblock paragraph %}

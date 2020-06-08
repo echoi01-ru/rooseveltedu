@@ -16,4 +16,11 @@
 {% if title %}
   <h1{{ title_attributes }}>{{ title }}</h1>
 {% endif %}
+
+{% if hero %}
+<div class="internal-contentContainer-heroContainer" role="complementary">
+  {{ hero }}
+</div>
+{% endif %}
+
 {{ title_suffix }}

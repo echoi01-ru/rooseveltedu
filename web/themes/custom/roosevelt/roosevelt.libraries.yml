@@ -59,6 +59,7 @@ patterns:
     /libraries/patterns/docs/plugins/iOS-Orientationchange-Fix/ios-orientationchange-fix.js: { }
     /libraries/patterns/docs/plugins/jquery.easing/jquery.easing.1.3.js: { }
     /libraries/patterns/docs/scripts/menu.js: {  }
+    /libraries/patterns/docs/scripts/internal.js: {  }
     /libraries/patterns/docs/scripts/landing.js: {  }
     /libraries/patterns/docs/scripts/global.js: {  }
     /libraries/patterns/docs/scripts/redesign.js: {  }

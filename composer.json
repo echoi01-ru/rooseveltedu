@@ -57,6 +57,7 @@
         "drupal/geolocation": "^1.11",
         "drupal/kint": "^2.1",
         "drupal/menu_attributes": "^1.0@beta",
+        "drupal/menu_block_title": "^1.1",
         "drupal/menu_item_extras": "^2.11",
         "drupal/paragraph_blocks": "^2.1@beta",
         "drupal/paragraphs": "^1.10",
@@ -132,6 +133,11 @@
         ]
     },
     "extra": {
+        "patches": {
+            "drupal/menu_item_extras": {
+                "3061342: plugin does not exist": "https://www.drupal.org/files/issues/2020-04-22/3061342-07-not-found-plugin.patch"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/patterns": ["kanopi/roosevelt_pl"],

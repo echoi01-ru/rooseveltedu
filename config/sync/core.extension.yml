@@ -45,6 +45,7 @@ module:
   media: 0
   media_entity_podcast: 0
   menu_attributes: 0
+  menu_block_title: 0
   menu_item_extras: 0
   menu_ui: 0
   node: 0
