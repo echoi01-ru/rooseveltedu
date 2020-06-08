@@ -8,7 +8,6 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-      - policy-sidebar
     parent: 'main:'
 name: 'General Info'
 type: general_info

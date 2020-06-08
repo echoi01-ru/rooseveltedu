@@ -15,4 +15,4 @@ description: 'This content type is for Events that are manually entered by any a
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false
