@@ -42,39 +42,47 @@ type_settings:
       label: 'Related Organization Review'
       weight: -1
   transitions:
+    draft:
+      label: Draft
+      from:
+        - create_new_draft
+        - draft
+      to: draft
+      weight: -3
     publish:
       label: Publish
       from:
         - published
         - review
       to: published
-      weight: -1
+      weight: 0
     return_to_draft:
       label: 'Return to Draft'
       from:
         - archive
         - review
       to: editor_review
-      weight: 0
+      weight: 1
     send_to_archive:
       label: 'Send to Archive'
       from:
         - published
       to: archive
-      weight: 1
+      weight: 2
     send_to_editor:
       label: 'Send to Editor'
       from:
         - create_new_draft
+        - draft
       to: editor_review
-      weight: -3
+      weight: -2
     send_to_publisher:
       label: 'Send to Publisher'
       from:
         - editor_review
       to: review
-      weight: -2
+      weight: -1
   entity_types:
     node:
       - program
-  default_moderation_state: draft
+  default_moderation_state: create_new_draft
