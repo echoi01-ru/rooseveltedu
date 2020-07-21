@@ -96,7 +96,7 @@
         "drupal/menu_attributes": "^1.0@beta",
         "drupal/menu_block_title": "^1.1",
         "drupal/menu_item_extras": "^2.11",
-        "drupal/migrate_plus": "^5.0",
+        "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^4.5",
         "drupal/paragraph_blocks": "^2.1@beta",
         "drupal/paragraphs": "^1.10",

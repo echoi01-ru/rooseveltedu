@@ -1,0 +1,8 @@
+uuid: b822f850-a59f-4c70-8e6f-bdab333eb1b7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media Directory'
+vid: media_directory
+description: 'A taxonomy to hold directory structure for Media entities.'
+weight: 0

@@ -1,0 +1,41 @@
+uuid: ac18a0c0-4a84-4fa8-9322-ff51c8d7eead
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.podcast.field_additional_keywords
+    - field.field.media.podcast.field_description
+    - field.field.media.podcast.field_learn_more
+    - field.field.media.podcast.field_media_podcast
+    - field.field.media.podcast.field_podcast_series_description
+    - field.field.media.podcast.field_podcast_series_image
+    - field.field.media.podcast.field_podcast_series_title
+    - field.field.media.podcast.field_published_date
+    - media.type.podcast
+id: media.podcast.media_library
+targetEntityType: media
+bundle: podcast
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_additional_keywords: true
+  field_description: true
+  field_learn_more: true
+  field_media_podcast: true
+  field_podcast_series_description: true
+  field_podcast_series_image: true
+  field_podcast_series_title: true
+  field_published_date: true
+  path: true
+  status: true
+  uid: true

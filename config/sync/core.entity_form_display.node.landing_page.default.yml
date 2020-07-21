@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.landing_page.field_related_content
     - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
-    - workflows.workflow.story_workflow
+    - workflows.workflow.landing_page_workflow
   module:
     - content_moderation
     - field_group
@@ -133,9 +133,9 @@ content:
     weight: 1
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content

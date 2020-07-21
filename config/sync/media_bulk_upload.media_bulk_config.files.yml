@@ -1,0 +1,16 @@
+uuid: 2b381188-148b-4e2d-9ca3-13c634652a9b
+langcode: en
+status: true
+dependencies: {  }
+id: files
+label: Files
+media_types:
+  file: file
+  audio: 0
+  image: 0
+  podcast: 0
+  remote_video: 0
+  video: 0
+show_alt: null
+show_title: null
+form_mode: media_library
