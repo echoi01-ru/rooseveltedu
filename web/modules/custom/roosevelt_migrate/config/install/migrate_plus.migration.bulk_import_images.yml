@@ -10,7 +10,7 @@ source:
     - id
   constants:
     file_directory: 'public://'
-    source_directory: sites/default/media_library
+    source_directory: sites/default/files/media_library
 process:
   filename: name
   source_path:
