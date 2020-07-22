@@ -1,8 +1,8 @@
-uuid: b822f850-a59f-4c70-8e6f-bdab333eb1b7
+uuid: 88df5a1b-ee63-407a-85fa-f6992f05ceaf
 langcode: en
 status: true
 dependencies: {  }
 name: 'Media Directory'
 vid: media_directory
-description: 'A taxonomy to hold directory structure for Media entities.'
+description: null
 weight: 0

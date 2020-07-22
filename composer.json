@@ -97,6 +97,7 @@
         "drupal/menu_block_title": "^1.1",
         "drupal/menu_item_extras": "^2.11",
         "drupal/migrate_plus": "^5.1",
+        "drupal/migrate_source_csv": "^3.4",
         "drupal/migrate_tools": "^4.5",
         "drupal/paragraph_blocks": "^2.1@beta",
         "drupal/paragraphs": "^1.10",
@@ -104,10 +105,11 @@
         "drupal/permissions_filter": "^1.1",
         "drupal/simplesamlphp_auth": "^3.2",
         "drupal/smart_date": "^1.1",
+        "drupal/taxonomy_import": "^1.0",
         "drupal/time_field": "^1.13",
         "drupal/twig_field_value": "1.2",
         "drush-ops/behat-drush-endpoint": "^9.3",
-        "drush/drush": "~8.3",
+        "drush/drush": "~8",
         "enyo/dropzone": "dev-master",
         "kanopi/roosevelt_pl": "master",
         "pantheon-systems/quicksilver-pushback": "^2",
@@ -222,7 +224,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "7.0.8"
+            "php": "7.3.11"
         }
     }
 }

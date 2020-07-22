@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_directories_modal
     - field.field.paragraph.textsection.field_calltoaction
     - field.field.paragraph.textsection.field_descriptiontheme
     - field.field.paragraph.textsection.field_heading_level
@@ -18,6 +19,7 @@ dependencies:
     - paragraphs.paragraphs_type.textsection
   module:
     - allowed_formats
+    - entity_browser
     - field_group
     - link
     - text
@@ -136,12 +138,16 @@ content:
   field_mediabox:
     weight: 10
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+      entity_browser: media_directories_modal
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
   field_mediaboxvariant:
     weight: 9
@@ -181,12 +187,16 @@ content:
   field_sectionimage:
     weight: 5
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+      entity_browser: media_directories_modal
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
   field_sectiontheme:
     weight: 4

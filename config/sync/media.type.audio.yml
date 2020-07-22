@@ -8,9 +8,11 @@ id: audio
 label: Audio
 description: 'A locally hosted audio file.'
 source: audio_file
-queue_thumbnail_downloads: false
-new_revision: true
+queue_thumbnail_downloads: true
+new_revision: false
 source_configuration:
   source_field: field_media_audio_file
 field_map:
   name: name
+  mimetype: field_media_audio_file
+  filesize: field_media_audio_file

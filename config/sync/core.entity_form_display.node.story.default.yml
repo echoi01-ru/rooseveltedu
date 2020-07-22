@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_directories_modal
     - field.field.node.story.body
     - field.field.node.story.field_accordion
     - field.field.node.story.field_accountability_notes
@@ -27,6 +28,7 @@ dependencies:
   module:
     - content_moderation
     - datetime
+    - entity_browser
     - field_group
     - paragraphs
     - path
@@ -191,14 +193,18 @@ content:
       display_label: true
     third_party_settings: {  }
   field_featured_image:
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     weight: 4
     region: content
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+      entity_browser: media_directories_modal
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
   field_member_accountability:
     type: entity_reference_autocomplete
