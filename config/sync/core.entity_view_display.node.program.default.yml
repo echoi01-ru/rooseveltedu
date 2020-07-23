@@ -24,8 +24,212 @@ dependencies:
     - node.type.program
   module:
     - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
     - link
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          cc6a641d-fc2e-4731-a2f8-3b11bafab4e8:
+            uuid: cc6a641d-fc2e-4731-a2f8-3b11bafab4e8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:program:links'
+            additional: {  }
+            weight: 2
+          320901ca-e46f-4b6a-be91-4664b8ab0f0b:
+            uuid: 320901ca-e46f-4b6a-be91-4664b8ab0f0b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_organizational_parent'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 3
+          ee7af81e-4e8b-4d08-a8bb-87c1cef1f9d6:
+            uuid: ee7af81e-4e8b-4d08-a8bb-87c1cef1f9d6
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_sample_courses'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+          3ed54fd7-3841-456f-a328-54911c732080:
+            uuid: 3ed54fd7-3841-456f-a328-54911c732080
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_raci'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 5
+          2e6fcc5b-132e-4042-ab96-fab206e0efa2:
+            uuid: 2e6fcc5b-132e-4042-ab96-fab206e0efa2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_program_type'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 6
+          4e123815-60e7-4865-a496-7bec110f2838:
+            uuid: 4e123815-60e7-4865-a496-7bec110f2838
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_related_content'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 7
+          8458a16f-2b4d-4f82-8638-b0abecaa0a68:
+            uuid: 8458a16f-2b4d-4f82-8638-b0abecaa0a68
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_accordion'
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+                type: entity_reference_revisions_entity_view
+            additional: {  }
+            weight: 8
+          8a99b4f3-1519-4481-97ac-aaa9c21f7933:
+            uuid: 8a99b4f3-1519-4481-97ac-aaa9c21f7933
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_catalog_link'
+              formatter:
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 9
+          0c91b834-67b2-40dc-b734-01ecf4d37d3a:
+            uuid: 0c91b834-67b2-40dc-b734-01ecf4d37d3a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_basic_content'
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+                type: entity_reference_revisions_entity_view
+            additional: {  }
+            weight: 10
+          52ca8215-2b59-4001-b711-36480ee2e817:
+            uuid: 52ca8215-2b59-4001-b711-36480ee2e817
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_call_to_action'
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+                type: entity_reference_revisions_entity_view
+            additional: {  }
+            weight: 11
+          a5c41ecd-1803-40c7-92b7-8e7a6c49aac9:
+            uuid: a5c41ecd-1803-40c7-92b7-8e7a6c49aac9
+            region: content
+            configuration:
+              id: 'field_block:node:program:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          aec361e3-4b66-4e0a-a6b7-050151b512cc:
+            uuid: aec361e3-4b66-4e0a-a6b7-050151b512cc
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:program:content_moderation_control'
+            additional: {  }
+            weight: 12
+        third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
 bundle: program

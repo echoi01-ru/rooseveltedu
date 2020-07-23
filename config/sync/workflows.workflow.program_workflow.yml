@@ -47,6 +47,8 @@ type_settings:
       from:
         - create_new_draft
         - draft
+        - editor_review
+        - review
       to: draft
       weight: -3
     publish:
