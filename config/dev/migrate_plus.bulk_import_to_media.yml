@@ -1,0 +1,56 @@
+id: bulk_import_to_media
+migration_tags:
+  - images
+label: 'Migrate images to media'
+migration_group: roosevelt_migrate
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      id: 1
+      image: 'https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg'
+    -
+      id: 2
+      image: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Patras_from_the_fortress.jpg'
+  ids:
+    id:
+      type: integer
+process:
+  pseudo_destination_filename:
+    -
+      plugin: callback
+      callable: basename
+      source: image
+    -
+      plugin: skip_on_empty
+      method: row
+      message: 'Cannot import empty filename.'
+  pseudo_destination_path:
+    -
+      plugin: concat
+      source:
+        - '@pseudo_destination_filename'
+  name: '@pseudo_destination_filename'
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: images_example
+    source: id
+  thumbnail/target_id:
+    plugin: migration_lookup
+    migration: images_example
+    source: id
+  uid:
+    -
+      plugin: skip_on_empty
+      method: process
+      message: 'No user for this file.'
+    -
+      plugin: migration_lookup
+      migration: users
+      source: author
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+migration_dependencies:
+  required:
+    - images_example
