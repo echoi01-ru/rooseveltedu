@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_directories_modal
     - field.field.paragraph.ctacard.field_ctadescription
     - field.field.paragraph.ctacard.field_ctaheading
     - field.field.paragraph.ctacard.field_ctaimage
     - field.field.paragraph.ctacard.field_ctalink
     - paragraphs.paragraphs_type.ctacard
   module:
+    - entity_browser
     - link
     - text
 id: paragraph.ctacard.default
@@ -43,12 +45,16 @@ content:
   field_ctaimage:
     weight: 4
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      entity_browser: media_directories_modal
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
   field_ctalink:
     weight: 3

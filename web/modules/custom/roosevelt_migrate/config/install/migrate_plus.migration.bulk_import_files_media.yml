@@ -1,0 +1,33 @@
+id: bulk_import_files_media
+migration_tags:
+  - images
+label: 'Migrate files to media'
+migration_group: roosevelt_migrate
+source:
+  plugin: csv
+  path: modules/custom/roosevelt_migrate/assets/media_item_files.csv
+  ids:
+    - id
+process:
+  name: name
+  field_media_file/target_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: id
+    -
+      plugin: migration_lookup
+      migration: bulk_import_files
+      source: id
+  directory:
+    plugin: media_directory
+    source: path
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:media'
+  default_bundle: file
+migration_dependencies:
+  required:
+    - bulk_import_files

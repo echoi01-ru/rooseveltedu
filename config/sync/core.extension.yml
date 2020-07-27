@@ -2,7 +2,6 @@ module:
   address: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
-  admin_toolbar_search: 0
   admin_toolbar_tools: 0
   allowed_formats: 0
   automated_cron: 0
@@ -25,8 +24,12 @@ module:
   datetime: 0
   dblog: 0
   default_content: 0
+  dropzonejs: 0
   dynamic_page_cache: 0
   editor: 0
+  embed: 0
+  entity_browser: 0
+  entity_embed: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
@@ -43,7 +46,12 @@ module:
   layout_discovery: 0
   link: 0
   media: 0
+  media_bulk_upload: 0
+  media_directories: 0
+  media_directories_editor: 0
+  media_directories_ui: 0
   media_entity_podcast: 0
+  media_library: 0
   menu_attributes: 0
   menu_block_title: 0
   menu_item_extras: 0
@@ -63,6 +71,7 @@ module:
   smart_date: 0
   system: 0
   taxonomy: 0
+  taxonomy_import: 0
   telephone: 0
   text: 0
   time_field: 0

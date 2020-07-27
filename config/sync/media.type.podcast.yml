@@ -10,7 +10,7 @@ id: podcast
 label: Podcast
 description: 'A remotely hosted podcast.'
 source: podcast
-queue_thumbnail_downloads: false
+queue_thumbnail_downloads: true
 new_revision: false
 source_configuration:
   source_field: field_media_podcast

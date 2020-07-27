@@ -1,0 +1,10 @@
+uuid: d507826a-1acc-4188-8363-087763acf8c4
+langcode: en
+status: true
+dependencies: {  }
+id: roosevelt_migrate
+label: 'Roosevelt Bulk Images'
+description: 'Bulk image import'
+source_type: null
+module: null
+shared_configuration: {  }

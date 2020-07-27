@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.homepage.field_textsection
     - field.field.node.homepage.layout_builder__layout
     - node.type.homepage
+    - workflows.workflow.story_workflow
   module:
     - content_moderation
     - field_group

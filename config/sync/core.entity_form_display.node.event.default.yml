@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_directories_modal
     - field.field.node.event.accountability_notes
     - field.field.node.event.body
     - field.field.node.event.field_accordion
@@ -28,9 +29,10 @@ dependencies:
     - field.field.node.event.field_smart_date
     - field.field.node.event.field_tickets
     - node.type.event
-    - workflows.workflow.story_workflow
+    - workflows.workflow.event_workflow
   module:
     - content_moderation
+    - entity_browser
     - field_group
     - link
     - paragraphs
@@ -219,12 +221,16 @@ content:
   field_image:
     weight: 8
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+      entity_browser: media_directories_modal
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
   field_location:
     type: entity_reference_autocomplete

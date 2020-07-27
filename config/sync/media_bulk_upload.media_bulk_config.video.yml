@@ -1,0 +1,16 @@
+uuid: 37cd08e6-b8a7-4b1d-b802-a1a86f7df470
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+media_types:
+  video: video
+  audio: 0
+  file: 0
+  image: 0
+  podcast: 0
+  remote_video: 0
+show_alt: null
+show_title: null
+form_mode: media_library
