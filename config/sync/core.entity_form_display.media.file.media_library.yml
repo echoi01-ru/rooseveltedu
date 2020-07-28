@@ -11,7 +11,13 @@ id: media.file.media_library
 targetEntityType: media
 bundle: file
 mode: media_library
-content: {  }
+content:
+  directory:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   field_link_label: true

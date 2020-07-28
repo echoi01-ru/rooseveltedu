@@ -18,7 +18,7 @@ id,name,alt,path
 17,prc-library,chicago city library building,Images/1440x720-banners/prc-library.jpg
 18,prc-willis-tower,willis tower,Images/1440x720-banners/prc-willis-tower.jpg
 19,Smiling-student-looking-up,Smiling student looking up,Images/1440x720-banners/Smiling-student-looking-up.jpg
-20,String camp,summer string camp,Images/1440x720-banners/String camp.jpg
+20,String camp,summer string camp,Images/1440x720-banners/String%20camp.jpg
 21,Student-by-blooming-flowers,Student by blooming flowers,Images/1440x720-banners/Student-by-blooming-flowers.jpg
 22,Student-in-blue-dress-standing-library-stacks,Student standing library stacks,Images/1440x720-banners/Student-in-blue-dress-standing-library-stacks.jpg
 23,Student-in-front-of-Wabash-Building-windows-overlooking-Lake-Michigan,Student in front of Wabash Building windows overlooking Lake Michigan,Images/1440x720-banners/Student-in-front-of-Wabash-Building-windows-overlooking-Lake-Michigan.jpg
@@ -40,10 +40,10 @@ id,name,alt,path
 39,A-circle-discussion-in-Emily-Wilkies-BA-13-homeroom,"A circle discussion in Emily Wilkie's (BA, ’13) homeroom",Images/1440x900-heroes-testimonials-stories-generalpage/A-circle-discussion-in-Emily-Wilkies-BA-13-homeroom.jpg
 40,Abel-Amezcua-Roosevelt-admission-counselor-speaks-Spanish-works-with-undocumented-students,"Abel Amezcua, a Roosevelt admission counselor who speaks Spanish and frequently works with prospective undocumented students and their parents",Images/1440x900-heroes-testimonials-stories-generalpage/Abel-Amezcua-Roosevelt-admission-counselor-speaks-Spanish-works-with-undocumented-students.jpg
 41,actuarial-classroom,Actuarial science classroom,Images/1440x900-heroes-testimonials-stories-generalpage/actuarial-classroom.jpg
-42,ADC_01 American Dream Conference MediaAlertImages_Fall 17,American Dream conference panel,Images/1440x900-heroes-testimonials-stories-generalpage/ADC_01 American Dream Conference MediaAlertImages_Fall 17.jpg
-43,ADC_01 American Dream Conference MediaAlertImages_Fall 172,Danielle Allen,Images/1440x900-heroes-testimonials-stories-generalpage/ADC_01 American Dream Conference MediaAlertImages_Fall 172.jpg
-44,ADC_01 American Dream Conference MediaAlertImages_Fall 174 (1),David Axelrod and William Kristol,Images/1440x900-heroes-testimonials-stories-generalpage/ADC_01 American Dream Conference MediaAlertImages_Fall 174 (1).jpg
-45,ADC_01 AmericanDreamMedia Alert_Fall 17,Aziz Huq and Maria Blanco,Images/1440x900-heroes-testimonials-stories-generalpage/ADC_01 AmericanDreamMedia Alert_Fall 17.jpg
+42,ADC_01 American Dream Conference MediaAlertImages_Fall 17,American Dream conference panel,Images/1440x900-heroes-testimonials-stories-generalpage/ADC_01%20American%20Dream%20Conference%20MediaAlertImages_Fall%2017.jpg
+43,ADC_01 American Dream Conference MediaAlertImages_Fall 172,Danielle Allen,Images/1440x900-heroes-testimonials-stories-generalpage/ADC_01%20American%20Dream%20Conference%20MediaAlertImages_Fall%20172.jpg
+44,ADC_01 American Dream Conference MediaAlertImages_Fall 174 (1),David Axelrod and William Kristol,Images/1440x900-heroes-testimonials-stories-generalpage/ADC_01%20American%20Dream%20Conference%20MediaAlertImages_Fall%20174%20(1).jpg
+45,ADC_01 AmericanDreamMedia Alert_Fall 17,Aziz Huq and Maria Blanco,Images/1440x900-heroes-testimonials-stories-generalpage/ADC_01%20AmericanDreamMedia%20Alert_Fall%2017.jpg
 46,ADC-Hero,The American Dream Reconsidered Conference,Images/1440x900-heroes-testimonials-stories-generalpage/ADC-Hero.jpg
 47,adm_162-Harper-University-Center_Fall-17---huc---hero,Harper University Center,Images/1440x900-heroes-testimonials-stories-generalpage/adm_162-Harper-University-Center_Fall-17---huc---hero.jpg
 48,admissionWabashHeroUp,Looking up on Wabash Avenue,Images/1440x900-heroes-testimonials-stories-generalpage/admissionWabashHeroUp.jpg
@@ -143,7 +143,7 @@ id,name,alt,path
 142,Classroom_GroupofStudents,classroom-group-of-students,Images/1440x900-heroes-testimonials-stories-generalpage/Classroom_GroupofStudents.jpg
 143,classroom-lecturer-students,Lecturer in front of classroom full of students,Images/1440x900-heroes-testimonials-stories-generalpage/classroom-lecturer-students.jpg
 144,Claudia-Muldoon-and-Tomasz-Jurga,Claudia Muldoon (left) and Dr. Tomasz Jurga (right) holding respective awards,Images/1440x900-heroes-testimonials-stories-generalpage/Claudia-Muldoon-and-Tomasz-Jurga.jpg
-145,Clinton Global Initiative 2018,Clinton Global Initiative 2018,Images/1440x900-heroes-testimonials-stories-generalpage/Clinton Global Initiative 2018.jpg
+145,Clinton Global Initiative 2018,Clinton Global Initiative 2018,Images/1440x900-heroes-testimonials-stories-generalpage/Clinton%20Global%20Initiative%202018.jpg
 146,COE-Class-of-2020,"College of Education 2020 graduates: Destini Arceo, Katelyn Jaffe, Nicole Frantik, Michael Fleming, Gina Narcisi",Images/1440x900-heroes-testimonials-stories-generalpage/COE-Class-of-2020.jpg
 147,Collage-of-black-Roosevelt-alumni-Black-History-Month,Collage of black Roosevelt alumni- Black History Month,Images/1440x900-heroes-testimonials-stories-generalpage/Collage-of-black-Roosevelt-alumni-Black-History-Month.jpg
 148,colleen-connell,Colleen Connell,Images/1440x900-heroes-testimonials-stories-generalpage/colleen-connell.jpg
@@ -169,7 +169,7 @@ id,name,alt,path
 168,David-Faris-The-Kids-Are-All-Left,David Faris discussing his book The Kids Are All Left on Good Day Chicago.,Images/1440x900-heroes-testimonials-stories-generalpage/David-Faris-The-Kids-Are-All-Left.jpg
 169,David-Faris,David Faris,Images/1440x900-heroes-testimonials-stories-generalpage/David-Faris.jpg
 170,Dedication-plaque-Inclusion,Dedication plaque - Inclusion,Images/1440x900-heroes-testimonials-stories-generalpage/Dedication-plaque-Inclusion.jpg
-171,Delta Mu Delta_050519,"DMD Inductees May 5, 2019",Images/1440x900-heroes-testimonials-stories-generalpage/Delta Mu Delta_050519.jpg
+171,Delta Mu Delta_050519,"DMD Inductees May 5, 2019",Images/1440x900-heroes-testimonials-stories-generalpage/Delta%20Mu%20Delta_050519.jpg
 172,Delta-Mu-Delta-2017,Delta Mu Delta,Images/1440x900-heroes-testimonials-stories-generalpage/Delta-Mu-Delta-2017.jpg
 173,Dempsey-Travis,Dempsey Travis,Images/1440x900-heroes-testimonials-stories-generalpage/Dempsey-Travis.jpg
 174,Denise-Plotzker-infographics,Denise Plotzker,Images/1440x900-heroes-testimonials-stories-generalpage/Denise-Plotzker-infographics.jpg
@@ -178,7 +178,7 @@ id,name,alt,path
 177,dick-durbin-1440x900,Dick Durbin at news conference,Images/1440x900-heroes-testimonials-stories-generalpage/dick-durbin-1440x900.jpg
 178,Divya-Jain,Divya Jain,Images/1440x900-heroes-testimonials-stories-generalpage/Divya-Jain.png
 179,Dorian-Cunningham,Dorian Cunningham,Images/1440x900-heroes-testimonials-stories-generalpage/Dorian-Cunningham.jpg
-180,Dorri McWhorter YWCA Chicago,Dorri McWhorter YWCA Chicago,Images/1440x900-heroes-testimonials-stories-generalpage/Dorri McWhorter YWCA Chicago.jpg
+180,Dorri McWhorter YWCA Chicago,Dorri McWhorter YWCA Chicago,Images/1440x900-heroes-testimonials-stories-generalpage/Dorri%20McWhorter%20YWCA%20Chicago.jpg
 181,Drake-teaching,St. Clair Drake teaches an early class of Roosevelt students,Images/1440x900-heroes-testimonials-stories-generalpage/Drake-teaching.jpg
 182,dual-language-grads,Dual Language Graduate Students,Images/1440x900-heroes-testimonials-stories-generalpage/dual-language-grads.jpg
 183,Durbin-news-conference,Dick Durbin at news conference,Images/1440x900-heroes-testimonials-stories-generalpage/Durbin-news-conference.jpg
@@ -205,7 +205,7 @@ id,name,alt,path
 204,Featured-Graduating-Students-Spring-2017-compilation,Featured Graduating Students Spring 2017,Images/1440x900-heroes-testimonials-stories-generalpage/Featured-Graduating-Students-Spring-2017-compilation.jpg
 205,felicia-wong,Felicia Wong,Images/1440x900-heroes-testimonials-stories-generalpage/felicia-wong.jpg
 206,Filip-Mitrovic,Filip Mitrovic,Images/1440x900-heroes-testimonials-stories-generalpage/Filip-Mitrovic.jpg
-207,Financial Literacy Sessions,Students in front of Cook County jail,Images/1440x900-heroes-testimonials-stories-generalpage/Financial Literacy Sessions.jpg
+207,Financial Literacy Sessions,Students in front of Cook County jail,Images/1440x900-heroes-testimonials-stories-generalpage/Financial%20Literacy%20Sessions.jpg
 208,Food-Pantry-1440x900,Food Pantry,Images/1440x900-heroes-testimonials-stories-generalpage/Food-Pantry-1440x900.jpg
 209,Fountain-Rung-Fulbright-Scholar,Roosevelt professors John Fountain and Margaret Rung,Images/1440x900-heroes-testimonials-stories-generalpage/Fountain-Rung-Fulbright-Scholar.jpg
 210,four-students-in-front-of-red-wall,Four students in front of red wall,Images/1440x900-heroes-testimonials-stories-generalpage/four-students-in-front-of-red-wall.jpg
@@ -214,7 +214,7 @@ id,name,alt,path
 213,gage-gal-fall-17-show,Photo from Gage Gallery's Fall 2107 show,Images/1440x900-heroes-testimonials-stories-generalpage/gage-gal-fall-17-show.jpg
 214,Gage-Gallery-Interior,Gage Gallery Interior,Images/1440x900-heroes-testimonials-stories-generalpage/Gage-Gallery-Interior.jpg
 215,GageGallery-Greg-Constantine-NowherePeople,Greg Constantine standing in front of 'Nowhere People - The Children' gallery,Images/1440x900-heroes-testimonials-stories-generalpage/GageGallery-Greg-Constantine-NowherePeople.jpg
-216,Gala photo with honorees 2018,"(From left to right:  Chris Groesbeck (HCB International), Clllete English Dixon (MBIRE), Adrian Smith, Gordon Gill and Robert Forest (Smith+Gill Architecture))",Images/1440x900-heroes-testimonials-stories-generalpage/Gala photo with honorees 2018.jpg
+216,Gala photo with honorees 2018,"(From left to right:  Chris Groesbeck (HCB International), Clllete English Dixon (MBIRE), Adrian Smith, Gordon Gill and Robert Forest (Smith+Gill Architecture))",Images/1440x900-heroes-testimonials-stories-generalpage/Gala%20photo%20with%20honorees%202018.jpg
 217,gateways,"Chris Chulos, Margaret Rung, Sandra Frink, and Celeste Chamberland",Images/1440x900-heroes-testimonials-stories-generalpage/gateways.jpg
 218,gerald-bouey,Gerald Bouey,Images/1440x900-heroes-testimonials-stories-generalpage/gerald-bouey.jpg
 219,Giacomo-Luca-newscast,"“I have my Roosevelt journalism professors to thank for preparing me well for this experience,” says Giacomo Luca, an award-winning journalist who is currently reporting for CBS/Fox affiliate KFVS-TV in Cape Girardeau, Mo.",Images/1440x900-heroes-testimonials-stories-generalpage/Giacomo-Luca-newscast.jpg
@@ -230,8 +230,8 @@ id,name,alt,path
 229,guests-loretta-lynch,Loretta Lynch,Images/1440x900-heroes-testimonials-stories-generalpage/guests-loretta-lynch.jpg
 230,gwenCohen-news,Gwen Cohen,Images/1440x900-heroes-testimonials-stories-generalpage/gwenCohen-news.jpg
 231,harper-university-center-ribbon-cutting,Ribbon-cutting ceremony at the launch of the Harper University Center,Images/1440x900-heroes-testimonials-stories-generalpage/harper-university-center-ribbon-cutting.jpg
-232,HCB Alumni Week 2018,Students at Alumni week March 19 to 23 2018,Images/1440x900-heroes-testimonials-stories-generalpage/HCB Alumni Week 2018.jpg
-233,HCB Schaumburg Advisory Board,Schaumburg Advisory Board,Images/1440x900-heroes-testimonials-stories-generalpage/HCB Schaumburg Advisory Board.jpg
+232,HCB Alumni Week 2018,Students at Alumni week March 19 to 23 2018,Images/1440x900-heroes-testimonials-stories-generalpage/HCB%20Alumni%20Week%202018.jpg
+233,HCB Schaumburg Advisory Board,Schaumburg Advisory Board,Images/1440x900-heroes-testimonials-stories-generalpage/HCB%20Schaumburg%20Advisory%20Board.jpg
 234,hcb_20_CCCF_Annual_Report_0717_1,"Heather Alger, Leslie Andrews, Guadelupe Cotto",Images/1440x900-heroes-testimonials-stories-generalpage/hcb_20_CCCF_Annual_Report_0717_1.jpg
 235,hcb_20_CCCF_Annual_Report_0717_2,"Jan Paul Ferrer, Amylee Harris, Tricia Kelly, Ambrosia Mcclain",Images/1440x900-heroes-testimonials-stories-generalpage/hcb_20_CCCF_Annual_Report_0717_2.jpg
 236,hcb_20_CCCF_Annual_Report_0717_3,"Harry Petrakos, Dawn Romei, David Rubin, Daniel Schutte",Images/1440x900-heroes-testimonials-stories-generalpage/hcb_20_CCCF_Annual_Report_0717_3.jpg
@@ -249,7 +249,7 @@ id,name,alt,path
 248,imc-contest-winning--students,Matthew Spahr and Ben Lanzerotti,Images/1440x900-heroes-testimonials-stories-generalpage/imc-contest-winning--students.jpg
 249,Immigration-Injustice-1440x900,"Mary Nikpouri (left) with son, Ryan, and husband, Amir",Images/1440x900-heroes-testimonials-stories-generalpage/Immigration-Injustice-1440x900.jpg
 250,instructional,Professor interacting with students,Images/1440x900-heroes-testimonials-stories-generalpage/instructional.jpg
-251,Ioana Ardelean Delta Mu Delta,Ioana Ardelean Geico Award,Images/1440x900-heroes-testimonials-stories-generalpage/Ioana Ardelean Delta Mu Delta.jpg
+251,Ioana Ardelean Delta Mu Delta,Ioana Ardelean Geico Award,Images/1440x900-heroes-testimonials-stories-generalpage/Ioana%20Ardelean%20Delta%20Mu%20Delta.jpg
 252,Jake_Ludwig,Jake Ludwig,Images/1440x900-heroes-testimonials-stories-generalpage/Jake_Ludwig.jpg
 253,james-davis-business-student,business students in conversation,Images/1440x900-heroes-testimonials-stories-generalpage/james-davis-business-student.jpg
 254,James-Forman,James Forman,Images/1440x900-heroes-testimonials-stories-generalpage/James-Forman.jpg
@@ -303,7 +303,7 @@ id,name,alt,path
 302,MarkCrayton,Mark Crayton,Images/1440x900-heroes-testimonials-stories-generalpage/MarkCrayton.png
 303,Martin-Luther-King-Jr-c-1957-when-he-received-a-Roosevelt-University-Founders-and-Friends-Award,"Martin Luther King, Jr. c. 1957, when he received a Roosevelt University Founders and Friends Award.",Images/1440x900-heroes-testimonials-stories-generalpage/Martin-Luther-King-Jr-c-1957-when-he-received-a-Roosevelt-University-Founders-and-Friends-Award.jpg
 304,mathxposition,Students with Rubics Cubes,Images/1440x900-heroes-testimonials-stories-generalpage/mathxposition.jpg
-305,Matt Kozlak,Matthew Kozlak TEI AON Scholarship Accounting HCB,Images/1440x900-heroes-testimonials-stories-generalpage/Matt Kozlak.jpg
+305,Matt Kozlak,Matthew Kozlak TEI AON Scholarship Accounting HCB,Images/1440x900-heroes-testimonials-stories-generalpage/Matt%20Kozlak.jpg
 306,Matthew-Freeman-Brittney-1440x900,Brittney Austin speaking at a podium,Images/1440x900-heroes-testimonials-stories-generalpage/Matthew-Freeman-Brittney-1440x900.jpg
 307,Matthew-Freeman-Sean-1440x900,Sean Ellis Hussey speaking at a podium,Images/1440x900-heroes-testimonials-stories-generalpage/Matthew-Freeman-Sean-1440x900.jpg
 308,mbire-2019-sponsors,"sponsor logos: Duke Realty, Leopardo, Pike Street Properties",Images/1440x900-heroes-testimonials-stories-generalpage/mbire-2019-sponsors.gif
@@ -323,7 +323,7 @@ id,name,alt,path
 322,michelle-stipp,Michelle Stipp,Images/1440x900-heroes-testimonials-stories-generalpage/michelle-stipp.jpg
 323,mitch-weakley,Mitch Weakley,Images/1440x900-heroes-testimonials-stories-generalpage/mitch-weakley.jpg
 324,mobile-app-screenshot,The Roosevelt Mobile App,Images/1440x900-heroes-testimonials-stories-generalpage/mobile-app-screenshot.jpg
-325,MWilton PCAOB Scholarship,Michael Wilton,Images/1440x900-heroes-testimonials-stories-generalpage/MWilton PCAOB Scholarship.png
+325,MWilton PCAOB Scholarship,Michael Wilton,Images/1440x900-heroes-testimonials-stories-generalpage/MWilton%20PCAOB%20Scholarship.png
 326,Natasha-Robinson-headshot,"Natasha Robinson, criminal justice lecturer",Images/1440x900-heroes-testimonials-stories-generalpage/Natasha-Robinson-headshot.png
 327,neha,Neha Kasalkar,Images/1440x900-heroes-testimonials-stories-generalpage/neha.JPG
 328,New-Student-Orientation-Group-of-student-standing-at-the-AUD-entrance,New Student Orientation,Images/1440x900-heroes-testimonials-stories-generalpage/New-Student-Orientation-Group-of-student-standing-at-the-AUD-entrance.jpg
@@ -347,7 +347,7 @@ id,name,alt,path
 346,Paul-Wertico,Paul Wertico,Images/1440x900-heroes-testimonials-stories-generalpage/Paul-Wertico.jpg
 347,peruMedicalMissionsTrip,"Medical Relief Mission trip to Arequipa, Peru",Images/1440x900-heroes-testimonials-stories-generalpage/peruMedicalMissionsTrip.jpg
 348,pharmacy-students-puerto-rico,"COP students leading a drive to help students in Puerto Rico include (from left to right): Jimmy Nyugen, Anna Majerczak, Nilma Ortiz and Victor Santizo.",Images/1440x900-heroes-testimonials-stories-generalpage/pharmacy-students-puerto-rico.jpg
-349,Policastro Reading Clinic,Professor Policastro,Images/1440x900-heroes-testimonials-stories-generalpage/Policastro Reading Clinic.jpg
+349,Policastro Reading Clinic,Professor Policastro,Images/1440x900-heroes-testimonials-stories-generalpage/Policastro%20Reading%20Clinic.jpg
 350,policy-research-collab-cover-city-map,chicago city map,Images/1440x900-heroes-testimonials-stories-generalpage/policy-research-collab-cover-city-map.jpg
 351,President-Ali-and-students-working-in-garden,President Ali and students working in garden,Images/1440x900-heroes-testimonials-stories-generalpage/President-Ali-and-students-working-in-garden.jpg
 352,President-Ali-Malekzadeh-in-front-of-skyline,President Ali Malekzadeh in front of skyline,Images/1440x900-heroes-testimonials-stories-generalpage/President-Ali-Malekzadeh-in-front-of-skyline.jpg
@@ -393,7 +393,7 @@ id,name,alt,path
 392,RU_Web_CurrentStudents_HeroContent_Basketball_1400x900-copy,Roosevelt Laker Basketball Players,Images/1440x900-heroes-testimonials-stories-generalpage/RU_Web_CurrentStudents_HeroContent_Basketball_1400x900-copy.jpg
 393,RU_Web_CurrentStudents_HeroContent_Beckett-Costello_1440x900,Roosevelt University student Beckett Costello,Images/1440x900-heroes-testimonials-stories-generalpage/RU_Web_CurrentStudents_HeroContent_Beckett-Costello_1440x900.jpg
 394,RU_Web_CurrentStudents_HeroContent_Oxfam_O2_1400x900,Students sitting on the floor,Images/1440x900-heroes-testimonials-stories-generalpage/RU_Web_CurrentStudents_HeroContent_Oxfam_O2_1400x900.jpg
-395,RU_Web_DACA_BuildingWithFlag_1440x900 (1),american-flag-in-front-of-AUD-and-WB,Images/1440x900-heroes-testimonials-stories-generalpage/RU_Web_DACA_BuildingWithFlag_1440x900 (1).jpg
+395,RU_Web_DACA_BuildingWithFlag_1440x900 (1),american-flag-in-front-of-AUD-and-WB,Images/1440x900-heroes-testimonials-stories-generalpage/RU_Web_DACA_BuildingWithFlag_1440x900%20(1).jpg
 396,RU_Web_Home_CurrentStudents_OSR-Research-Symposium-1440x900,Rows of research posters in the Roosevelt University Library,Images/1440x900-heroes-testimonials-stories-generalpage/RU_Web_Home_CurrentStudents_OSR-Research-Symposium-1440x900.jpg
 397,RU_Web_Home_Hero_ChristianBrian_Lincoln,"Christian J. Brian, a Roosevelt University senior biology major",Images/1440x900-heroes-testimonials-stories-generalpage/RU_Web_Home_Hero_ChristianBrian_Lincoln.jpg
 398,RU_Web_Home_Hero_Golin-Fellows-1440x900,"The first Roosevelt students to be named as Al Golin fellows include (From L to R): Karina Herrera, Alondra Ibarra, Abisola Ajayi and Darryl Langston, Jr.",Images/1440x900-heroes-testimonials-stories-generalpage/RU_Web_Home_Hero_Golin-Fellows-1440x900.jpg
@@ -507,7 +507,7 @@ id,name,alt,path
 506,seanHussey-2017,Sean Hussey,Images/1440x900-heroes-testimonials-stories-generalpage/seanHussey-2017.jpg
 507,service-day-2017,students at American Dream Service Day,Images/1440x900-heroes-testimonials-stories-generalpage/service-day-2017.jpg
 508,Seth-Boustead-at-piano,Seth Boustead at piano,Images/1440x900-heroes-testimonials-stories-generalpage/Seth-Boustead-at-piano.jpg
-509,Sharee Zlatkova,Sharee Zlatkova,Images/1440x900-heroes-testimonials-stories-generalpage/Sharee Zlatkova.jpg
+509,Sharee Zlatkova,Sharee Zlatkova,Images/1440x900-heroes-testimonials-stories-generalpage/Sharee%20Zlatkova.jpg
 510,sharing-notes-feature,Local volunteer musicians performing at area hospitals,Images/1440x900-heroes-testimonials-stories-generalpage/sharing-notes-feature.jpg
 511,sivling-lam-and-student,CAS graduate admission counselor Sivling Lam with a student,Images/1440x900-heroes-testimonials-stories-generalpage/sivling-lam-and-student.jpg
 512,Smiling-graduate-in-Auditorium,Smiling graduate in Auditorium,Images/1440x900-heroes-testimonials-stories-generalpage/Smiling-graduate-in-Auditorium.jpg
@@ -694,7 +694,7 @@ id,name,alt,path
 693,Two-women-carefully-inspecting-a-handheld-instrument-in-a-lab,Two women carefully inspecting a handheld instrument in a lab,Images/2020-redesign-assets/Two-women-carefully-inspecting-a-handheld-instrument-in-a-lab.jpg
 694,Wabash-Auditorium-Goodman-buildings-from-south-view,"Wabash, Auditorium, and Goodman Center buildings shown from south view",Images/2020-redesign-assets/Wabash-Auditorium-Goodman-buildings-from-south-view.jpg
 695,Annual-Fund-1,Students in Classroom,Images/800x800-infographics/Annual-Fund-1.jpg
-696,infographic-1-World-Class City,one-world-class-city,Images/800x800-infographics/infographic-1-World-Class City.png
+696,infographic-1-World-Class City,one-world-class-city,Images/800x800-infographics/infographic-1-World-Class%20City.png
 697,infographic-11-14K-scholarships,$11K-14K scholarships available to qualified full-time students,Images/800x800-infographics/infographic-11-14K-scholarships.png
 698,infographic-11-to-1-student-to-faculty-ratio,11 to 1 student/faculty ratio,Images/800x800-infographics/infographic-11-to-1-student-to-faculty-ratio.png
 699,infographic-120-degree-programs,120+ degree programs,Images/800x800-infographics/infographic-120-degree-programs.png
@@ -860,7 +860,7 @@ id,name,alt,path
 859,RU-Web-Admission-Step-4,RU Web Admission- Step 4,Images/900x675-infoboxes/RU-Web-Admission-Step-4.jpg
 860,RU-Web-Admission-Step-5,RU Web Admission- Step 5,Images/900x675-infoboxes/RU-Web-Admission-Step-5.jpg
 861,RU-Web-Admission-Step-6-Visit-campus,RU Web Admission- Step 6 - Visit campus,Images/900x675-infoboxes/RU-Web-Admission-Step-6-Visit-campus.jpg
-862,RUFlint -Social Justice,#RUFlint -Social Justice,Images/900x675-infoboxes/RUFlint -Social Justice.jpg
+862,RUFlint -Social Justice,#RUFlint -Social Justice,Images/900x675-infoboxes/RUFlint%20-Social%20Justice.jpg
 863,Schaumburg-campus-at-sunset-infobox,Schaumburg campus at sunset,Images/900x675-infoboxes/Schaumburg-campus-at-sunset-infobox.jpg
 864,schaumburg-landscaping,Schaumburg landscape,Images/900x675-infoboxes/schaumburg-landscaping.jpg
 865,Scholarship-Golf-Outing,Scholarship Golf Outing,Images/900x675-infoboxes/Scholarship-Golf-Outing.png
@@ -1194,7 +1194,7 @@ id,name,alt,path
 1193,ImageNotAvailable,Image Not Available,Images/Faculty/ImageNotAvailable.jpg
 1194,jadams32,Jeff Adams,Images/Faculty/jadams32.jpg
 1195,jalegro,Jason Alegro,Images/Faculty/jalegro.jpg
-1196,James Redlich,James Redlich,Images/Faculty/James Redlich.jpg
+1196,James Redlich,James Redlich,Images/Faculty/James%20Redlich.jpg
 1197,jboen,Jonathan Boen,Images/Faculty/jboen.jpg
 1198,jbone,Jan Bone,Images/Faculty/jbone.jpg
 1199,jbramson,Jeff Bramson,Images/Faculty/jbramson.jpg
@@ -1256,7 +1256,7 @@ id,name,alt,path
 1255,jsnow,Janelle Snow,Images/Faculty/jsnow.jpg
 1256,jtaylor56,Jumaane Taylor,Images/Faculty/jtaylor56.jpg
 1257,jtelser,Joshua Telser,Images/Faculty/jtelser.jpg
-1258,Justin Shea,"Justin Shea, Visiting Lecturer in Finance, HCB",Images/Faculty/Justin Shea.jpg
+1258,Justin Shea,"Justin Shea, Visiting Lecturer in Finance, HCB",Images/Faculty/Justin%20Shea.jpg
 1259,jwondra,Janet Wondra,Images/Faculty/jwondra.jpg
 1260,jyeh,John B Yeh,Images/Faculty/jyeh.jpg
 1261,jyoon,Jiwon Yoon,Images/Faculty/jyoon.jpg
@@ -1680,22 +1680,22 @@ id,name,alt,path
 1679,9,Dev Placeholder,Images/GALLERIES/home/thumb/9.jpg
 1680,MLK-program,"Ad for the 1957 dinner where Martin Luther King, Jr. was presented with the Roosevelt University Founders and Friends Award.",Images/GALLERIES/MLK-program.jpg
 1681,MLK-telegram-to-RU,"Telegram from Martin Luther King, Jr. to Roosevelt University confirming his acceptance of the award.",Images/GALLERIES/MLK-telegram-to-RU.jpg
-1682,abbott-exterior,"Abbott, Exterior (June 1957, CHA Archive)",Images/GALLERIES/New Deal/abbott-exterior.jpg
-1683,britton,"Edgar Britton, “Scenes of Industry” panel (1934), Highland Park High School, Highland Park, Illinois",Images/GALLERIES/New Deal/britton.jpg
-1684,building-in-blighted-area-2,"Building in blighted area, c. 1930s, CHA Archive",Images/GALLERIES/New Deal/building-in-blighted-area-2.jpg
-1685,building-in-blighted-area,"Building in blighted area, c. 1930s, CHA Archive",Images/GALLERIES/New Deal/building-in-blighted-area.jpg
-1686,cabrini-slum-dwelling-sites,"Cabrini Slum Dwelling Sites 1940s, CHA Archives",Images/GALLERIES/New Deal/cabrini-slum-dwelling-sites.jpg
-1687,chicago-1930s,Chicago in the 1930's,Images/GALLERIES/New Deal/chicago-1930s.jpg
-1688,city-life,"Victor Arnautoff, “City Life,” (1934), Coit Tower, San Francisco, California",Images/GALLERIES/New Deal/city-life.jpg
-1689,dilapidated-slum-washroom,"Dilapidated slum washroom, 1930s, CHA Archive",Images/GALLERIES/New Deal/dilapidated-slum-washroom.jpg
-1690,durston,"Arthur Durston, “Industry,” (1934)",Images/GALLERIES/New Deal/durston.jpg
-1691,lathrop-landscape,"Lathrop, Landscape (August 13, 1938, CHA Archive)",Images/GALLERIES/New Deal/lathrop-landscape.jpg
-1692,lawndale-architecture-sketch,"Lawndale Architecture Sketch (1942, CHA Archive)",Images/GALLERIES/New Deal/lawndale-architecture-sketch.jpg
-1693,lawndale,"Lawndale (June, 1951, CHA Archive)",Images/GALLERIES/New Deal/lawndale.jpg
-1694,muralists,"Muralists at work, Lane Tech High School, Chicago, Illinois",Images/GALLERIES/New Deal/muralists.jpg
-1695,southside-chicago-tenement-housing,"Southside Chicago tenement housing, c. 1930s, CHA Archive",Images/GALLERIES/New Deal/southside-chicago-tenement-housing.jpg
-1696,stateway-gardens-building-sketch,"Stateway Gardens Building Sketch (1956, CHA Archive)",Images/GALLERIES/New Deal/stateway-gardens-building-sketch.jpg
-1697,wells-extension-exterior,"Wells Extension, Exterior (1954, CHA Archive)",Images/GALLERIES/New Deal/wells-extension-exterior.jpg
+1682,abbott-exterior,"Abbott, Exterior (June 1957, CHA Archive)",Images/GALLERIES/New%20Deal/abbott-exterior.jpg
+1683,britton,"Edgar Britton, “Scenes of Industry” panel (1934), Highland Park High School, Highland Park, Illinois",Images/GALLERIES/New%20Deal/britton.jpg
+1684,building-in-blighted-area-2,"Building in blighted area, c. 1930s, CHA Archive",Images/GALLERIES/New%20Deal/building-in-blighted-area-2.jpg
+1685,building-in-blighted-area,"Building in blighted area, c. 1930s, CHA Archive",Images/GALLERIES/New%20Deal/building-in-blighted-area.jpg
+1686,cabrini-slum-dwelling-sites,"Cabrini Slum Dwelling Sites 1940s, CHA Archives",Images/GALLERIES/New%20Deal/cabrini-slum-dwelling-sites.jpg
+1687,chicago-1930s,Chicago in the 1930's,Images/GALLERIES/New%20Deal/chicago-1930s.jpg
+1688,city-life,"Victor Arnautoff, “City Life,” (1934), Coit Tower, San Francisco, California",Images/GALLERIES/New%20Deal/city-life.jpg
+1689,dilapidated-slum-washroom,"Dilapidated slum washroom, 1930s, CHA Archive",Images/GALLERIES/New%20Deal/dilapidated-slum-washroom.jpg
+1690,durston,"Arthur Durston, “Industry,” (1934)",Images/GALLERIES/New%20Deal/durston.jpg
+1691,lathrop-landscape,"Lathrop, Landscape (August 13, 1938, CHA Archive)",Images/GALLERIES/New%20Deal/lathrop-landscape.jpg
+1692,lawndale-architecture-sketch,"Lawndale Architecture Sketch (1942, CHA Archive)",Images/GALLERIES/New%20Deal/lawndale-architecture-sketch.jpg
+1693,lawndale,"Lawndale (June, 1951, CHA Archive)",Images/GALLERIES/New%20Deal/lawndale.jpg
+1694,muralists,"Muralists at work, Lane Tech High School, Chicago, Illinois",Images/GALLERIES/New%20Deal/muralists.jpg
+1695,southside-chicago-tenement-housing,"Southside Chicago tenement housing, c. 1930s, CHA Archive",Images/GALLERIES/New%20Deal/southside-chicago-tenement-housing.jpg
+1696,stateway-gardens-building-sketch,"Stateway Gardens Building Sketch (1956, CHA Archive)",Images/GALLERIES/New%20Deal/stateway-gardens-building-sketch.jpg
+1697,wells-extension-exterior,"Wells Extension, Exterior (1954, CHA Archive)",Images/GALLERIES/New%20Deal/wells-extension-exterior.jpg
 1698,recognitionAward-01,Awards Event,Images/GALLERIES/recognitionAwards/recognitionAward-01.jpg
 1699,recognitionAward-02,Awards Event,Images/GALLERIES/recognitionAwards/recognitionAward-02.jpg
 1700,recognitionAward-03,Awards Event,Images/GALLERIES/recognitionAwards/recognitionAward-03.jpg
@@ -1799,7 +1799,7 @@ id,name,alt,path
 1798,Fall2017,,Images/nonstandard-sizes/300x200/Fall2017.PNG
 1799,Goodman-Center-Entrance,Goodman Center Entrance,Images/nonstandard-sizes/300x200/Goodman-Center-Entrance.jpg
 1800,Spring-Summer-2018,,Images/nonstandard-sizes/300x200/Spring-Summer-2018.PNG
-1801,Vivid vocal jazz,Jazz Vocalists,Images/nonstandard-sizes/300x200/Vivid vocal jazz.jpg
+1801,Vivid vocal jazz,Jazz Vocalists,Images/nonstandard-sizes/300x200/Vivid%20vocal%20jazz.jpg
 1802,Lucy-Lopez,Lucy Lopez,Images/nonstandard-sizes/334x334/Lucy-Lopez.jpg
 1803,Jennifer-Turner,Jennifer Turner,Images/nonstandard-sizes/480x480/Jennifer-Turner.jpg
 1804,500k-1mil,Between $500K and $1 Million,Images/nonstandard-sizes/500k-1mil.png
@@ -1870,7 +1870,7 @@ id,name,alt,path
 1869,Daron-Hagen,"Daron Hagen - composer, librettist, director and conductor",Images/nonstandard-sizes/Daron-Hagen.jpg
 1870,davey-hines,Davey Hines,Images/nonstandard-sizes/davey-hines.jpg
 1871,EAL-recipients,Josh Moller and Abril de la Pa,Images/nonstandard-sizes/EAL-recipients.jpg
-1872,Edward Oldfield,Edward Oldfield,Images/nonstandard-sizes/Edward Oldfield.jpg
+1872,Edward Oldfield,Edward Oldfield,Images/nonstandard-sizes/Edward%20Oldfield.jpg
 1873,Edwin-Vega-and-Grammy,Edwin Vega in formal attire standing next to a large version of the Grammy's award trophy,Images/nonstandard-sizes/Edwin-Vega-and-Grammy.jpg
 1874,Elizabeth-Henley,Elizabeth Henley,Images/nonstandard-sizes/Elizabeth-Henley.jpg
 1875,Ellie-Knoll,Ellie Knoll,Images/nonstandard-sizes/Ellie-Knoll.jpg
@@ -1880,7 +1880,7 @@ id,name,alt,path
 1879,EWeiss-Photo,"Erika Weiss (MPA Public Administration, ’13)",Images/nonstandard-sizes/EWeiss-Photo.jpg
 1880,fair-housing,Our Chicago - The Fight and Future of Fair Housing at 50,Images/nonstandard-sizes/fair-housing.png
 1881,FalaandAli,"Fala the Laker is the official mascot of Roosevelt University. Introduced to Roosevelt in 2016, Fala is the beloved Scottish Terrier of President Franklin Delano Roosevelt and Eleanor Roosevelt. He brings spirit and energy to athletic events and University functions.",Images/nonstandard-sizes/FalaandAli.jpg
-1882,ganz hall YCC,Ganz Hall,Images/nonstandard-sizes/ganz hall YCC.jpg
+1882,ganz hall YCC,Ganz Hall,Images/nonstandard-sizes/ganz%20hall%20YCC.jpg
 1883,general-education-diagram,general education diagram,Images/nonstandard-sizes/general-education-diagram.png
 1884,grant-ladniak,Grant Ladniak,Images/nonstandard-sizes/grant-ladniak.jpg
 1885,Hannah-Ford-Welton,Hannah Ford Welton,Images/nonstandard-sizes/Hannah-Ford-Welton.png
@@ -1942,7 +1942,7 @@ id,name,alt,path
 1941,Rosalyn-Kliot-Art-Show,Alum Rosalyn Kliot standing in front of one of her paintings at an art show.,Images/nonstandard-sizes/Rosalyn-Kliot-Art-Show.jpg
 1942,Roshni-Patel-scholarship-recipient,Roshni Patel Scholarship Recipient,Images/nonstandard-sizes/Roshni-Patel-scholarship-recipient.jpg
 1943,RU_WebHome-JamesFormanJr-400x399,James Forman Jr.,Images/nonstandard-sizes/RU_WebHome-JamesFormanJr-400x399.jpg
-1944,Screen Shot 20171222 at 25127 PM,$1.1 million,Images/nonstandard-sizes/Screen Shot 20171222 at 25127 PM.png
+1944,Screen Shot 20171222 at 25127 PM,$1.1 million,Images/nonstandard-sizes/Screen%20Shot%2020171222%20at%2025127%20PM.png
 1945,story_pharmacy_students_taking_oath,pharmacy students taking oath,Images/nonstandard-sizes/story_pharmacy_students_taking_oath.jpg
 1946,Strings,Strings in Orchestra,Images/nonstandard-sizes/Strings.jpg
 1947,Student-Christina-Dupee,EdD candidate Christina Dupee,Images/nonstandard-sizes/Student-Christina-Dupee.jpg
@@ -2032,14 +2032,14 @@ id,name,alt,path
 2031,UpperPanel,Roosevelt University Flag,Images/TEMPLATES/Defaults/UpperPanel.jpg
 2032,visit-box,Student walking in front of Roosevelt,Images/TEMPLATES/Defaults/visit-box.jpg
 2033,100,100%,Images/TEMPLATES/ICONS/100.png
-2034,1019K (1),10K-19K,Images/TEMPLATES/ICONS/1019K (1).png
+2034,1019K (1),10K-19K,Images/TEMPLATES/ICONS/1019K%20(1).png
 2035,15k,$15k,Images/TEMPLATES/ICONS/15k.png
 2036,1k-8k,"$1,000 to $8,000 is the annual value of merit-based scholarships awarded to full-time graduate students",Images/TEMPLATES/ICONS/1k-8k.png
 2037,278mil,$27.8 million,Images/TEMPLATES/ICONS/278mil.png
 2038,500plus,more than 500,Images/TEMPLATES/ICONS/500plus.png
 2039,94,94%,Images/TEMPLATES/ICONS/94.png
 2040,best-masters-online,Best Master's Degrees Online Degrees,Images/TEMPLATES/ICONS/best-masters-online.png
-2041,Graduate Scholarship Infographic,,Images/TEMPLATES/ICONS/Graduate Scholarship Infographic.png
+2041,Graduate Scholarship Infographic,,Images/TEMPLATES/ICONS/Graduate%20Scholarship%20Infographic.png
 2042,grid1,Trend,Images/TEMPLATES/ICONS/grid1.png
 2043,grid2,Teach,Images/TEMPLATES/ICONS/grid2.png
 2044,grid3_wht1,Accelerated Options,Images/TEMPLATES/ICONS/grid3_wht1.png
@@ -2065,23 +2065,23 @@ id,name,alt,path
 2064,rooseveltUniversity-Nav,Roosevelt University,Images/TEMPLATES/logos/rooseveltUniversity-Nav.png
 2065,rooseveltUniversity,Roosevelt University,Images/TEMPLATES/logos/rooseveltUniversity.png
 2066,trigger,Navigation Chevron,Images/TEMPLATES/trigger.png
-2067,Android Phone_landscape,Android Phone,System/Simulator Backgrounds/Android Phone_landscape.png
-2068,Android Phone,Android Phone,System/Simulator Backgrounds/Android Phone.png
-2069,Android Tablet_landscape,Android Tablet,System/Simulator Backgrounds/Android Tablet_landscape.jpg
-2070,Android Tablet,Android Tablet,System/Simulator Backgrounds/Android Tablet.jpg
-2071,Blackberry,Blackberry,System/Simulator Backgrounds/Blackberry.png
-2072,Feature Phone,Feature Phone,System/Simulator Backgrounds/Feature Phone.png
-2073,HD TV,HD TV,System/Simulator Backgrounds/HD TV.png
-2074,iPad_landscape,iPad,System/Simulator Backgrounds/iPad_landscape.png
-2075,iPad,iPad,System/Simulator Backgrounds/iPad.png
-2076,iPhone_landscape,iPhone,System/Simulator Backgrounds/iPhone_landscape.png
-2077,iPhone,iPhone,System/Simulator Backgrounds/iPhone.png
-2078,Large Android phone_landscape,Large Android Phone,System/Simulator Backgrounds/Large Android phone_landscape.jpg
-2079,Large Android phone,Large Android Phone,System/Simulator Backgrounds/Large Android phone.jpg
-2080,Windows Phone_ landscape,Winfows Phone,System/Simulator Backgrounds/Windows Phone_ landscape.jpg
-2081,Windows Phone,Windows Phone,System/Simulator Backgrounds/Windows Phone.jpg
-2082,audio,Audio,System/Template Thumbnails/audio.png
-2083,document,Document,System/Template Thumbnails/document.png
-2084,file,File,System/Template Thumbnails/file.png
-2085,leopard-folder-big,Folder,System/Template Thumbnails/leopard-folder-big.png
-2086,video,Movie,System/Template Thumbnails/video.png
+2067,Android Phone_landscape,Android Phone,System/Simulator%20Backgrounds/Android%20Phone_landscape.png
+2068,Android Phone,Android Phone,System/Simulator%20Backgrounds/Android%20Phone.png
+2069,Android Tablet_landscape,Android Tablet,System/Simulator%20Backgrounds/Android%20Tablet_landscape.jpg
+2070,Android Tablet,Android Tablet,System/Simulator%20Backgrounds/Android%20Tablet.jpg
+2071,Blackberry,Blackberry,System/Simulator%20Backgrounds/Blackberry.png
+2072,Feature Phone,Feature Phone,System/Simulator%20Backgrounds/Feature%20Phone.png
+2073,HD TV,HD TV,System/Simulator%20Backgrounds/HD%20TV.png
+2074,iPad_landscape,iPad,System/Simulator%20Backgrounds/iPad_landscape.png
+2075,iPad,iPad,System/Simulator%20Backgrounds/iPad.png
+2076,iPhone_landscape,iPhone,System/Simulator%20Backgrounds/iPhone_landscape.png
+2077,iPhone,iPhone,System/Simulator%20Backgrounds/iPhone.png
+2078,Large Android phone_landscape,Large Android Phone,System/Simulator%20Backgrounds/Large%20Android%20phone_landscape.jpg
+2079,Large Android phone,Large Android Phone,System/Simulator%20Backgrounds/Large%20Android%20phone.jpg
+2080,Windows Phone_ landscape,Winfows Phone,System/Simulator%20Backgrounds/Windows%20Phone_%20landscape.jpg
+2081,Windows Phone,Windows Phone,System/Simulator%20Backgrounds/Windows%20Phone.jpg
+2082,audio,Audio,System/Template%20Thumbnails/audio.png
+2083,document,Document,System/Template%20Thumbnails/document.png
+2084,file,File,System/Template%20Thumbnails/file.png
+2085,leopard-folder-big,Folder,System/Template%20Thumbnails/leopard-folder-big.png
+2086,video,Movie,System/Template%20Thumbnails/video.png
