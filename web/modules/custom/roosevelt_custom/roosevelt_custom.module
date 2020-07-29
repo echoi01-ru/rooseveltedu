@@ -9,6 +9,8 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_help().
@@ -150,5 +152,70 @@ function roosevelt_custom_entity_view_mode_alter(&$view_mode, EntityInterface $e
         $view_mode = 'media_box';
       }
     }
+  }
+}
+
+/**
+ * hook_form_BASE_FORM_ID_alter() for the node_form.
+ */
+function roosevelt_custom_form_node_program_edit_form_alter(&$form, FormStateInterface $form_state) {
+  _node_form_alter($form, $form_state);
+}
+
+/**
+ * hook_form_BASE_FORM_ID_alter() for the node_form.
+ */
+function roosevelt_custom_form_node_program_form_alter(&$form, FormStateInterface $form_state) {
+  _node_form_alter($form, $form_state);
+}
+
+/**
+ * hook_form_BASE_FORM_ID_alter() for the node_form.
+ */
+function _node_form_alter(&$form, FormStateInterface $form_state) {
+  $testimonials = views_embed_view('program_testimonials', 'list');
+
+  $form['testimonials'] = [
+    '#title' => t('Testimonials'),
+    '#group' => 'advanced',
+    '#type' => 'details',
+    '#access' => TRUE,
+    '#open' => FALSE,
+    '#tree' => TRUE,
+    '#weight' => 99,
+  ];
+  $form['testimonials']['list'] = [
+    '#markup' => '<p>The ability to add <em>Testimonials</em> will be available after the node has been created.</p>',
+    '#weight' => -1,
+  ];
+
+  if ($form['#form_id'] === 'node_program_edit_form') {
+    $form['testimonials']['#open'] = TRUE;
+    $destination = \Drupal::destination()->getAsArray();
+    $block_add_url = '/block/add/testimonial';
+    $block_add_url_options = [
+      'attributes' => [
+        'class' => ['button'],
+      ],
+      'query' => [
+        $destination,
+      ],
+    ];
+    $link_markup = Link::fromTextAndUrl(t('Add Testimonial'),
+        Url::fromUserInput($block_add_url, $block_add_url_options))->toString();
+
+    $form['testimonials']['add_testimonial'] = [
+      '#type' => 'markup',
+      '#markup' => $link_markup,
+      '#weight' => 0,
+      '#cache' => [
+        'contexts' => ['url.query_args'],
+      ],
+      '#attributes' => [
+        'class' => ['button'],
+      ],
+    ];
+
+    $form['testimonials']['list'] = $testimonials;
   }
 }
