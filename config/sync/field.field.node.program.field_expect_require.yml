@@ -1,0 +1,98 @@
+uuid: 0aa73838-b2ef-477d-87b7-e84ed578467a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expect_require
+    - node.type.program
+    - paragraphs.paragraphs_type.expectations
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: node.program.field_expect_require
+field_name: field_expect_require
+entity_type: node
+bundle: program
+label: 'Expectations and Requirements'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      expectations: expectations
+    target_bundles_drag_drop:
+      accordion:
+        weight: 23
+        enabled: false
+      accordion_item:
+        weight: 24
+        enabled: false
+      basic_content:
+        weight: 25
+        enabled: false
+      call_to_action:
+        weight: 26
+        enabled: false
+      campus_address:
+        weight: 27
+        enabled: false
+      ctabar:
+        weight: 28
+        enabled: false
+      ctacard:
+        weight: 29
+        enabled: false
+      ctacards:
+        weight: 30
+        enabled: false
+      expectations:
+        enabled: true
+        weight: 31
+      from_library:
+        weight: 32
+        enabled: false
+      herobanner:
+        weight: 33
+        enabled: false
+      imgbox:
+        weight: 34
+        enabled: false
+      infocard:
+        weight: 35
+        enabled: false
+      infocards:
+        weight: 36
+        enabled: false
+      raci_consult:
+        weight: 37
+        enabled: false
+      raci_informed:
+        weight: 38
+        enabled: false
+      raci_responsible:
+        weight: 39
+        enabled: false
+      related_content:
+        weight: 40
+        enabled: false
+      related_media:
+        weight: 41
+        enabled: false
+      sample_course:
+        weight: 42
+        enabled: false
+      sample_courses:
+        weight: 43
+        enabled: false
+      textsection:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

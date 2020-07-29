@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.program.field_catalog_link
     - field.field.node.program.field_contact_person
     - field.field.node.program.field_differentiators
+    - field.field.node.program.field_expect_require
     - field.field.node.program.field_location
     - field.field.node.program.field_member_accountability
     - field.field.node.program.field_organizational_parent
@@ -21,7 +22,6 @@ dependencies:
     - field.field.node.program.field_program_type
     - field.field.node.program.field_raci
     - field.field.node.program.field_related_content
-    - field.field.node.program.field_sample_courses
     - node.type.program
   module:
     - entity_reference_revisions
@@ -65,23 +65,6 @@ third_party_settings:
                 type: entity_reference_label
             additional: {  }
             weight: 3
-          ee7af81e-4e8b-4d08-a8bb-87c1cef1f9d6:
-            uuid: ee7af81e-4e8b-4d08-a8bb-87c1cef1f9d6
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_sample_courses'
-              formatter:
-                type: entity_reference_revisions_entity_view
-                label: above
-                settings:
-                  view_mode: default
-                  link: ''
-                third_party_settings: {  }
-            additional: {  }
-            weight: 4
           3ed54fd7-3841-456f-a328-54911c732080:
             uuid: 3ed54fd7-3841-456f-a328-54911c732080
             region: content
@@ -246,6 +229,23 @@ third_party_settings:
                 type: entity_reference_label
             additional: {  }
             weight: 13
+          19e28e3e-fc50-4d49-aa10-3f37ecd365f1:
+            uuid: 19e28e3e-fc50-4d49-aa10-3f37ecd365f1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_expect_require'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 14
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
@@ -304,6 +304,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_expect_require:
+    type: entity_reference_revisions_entity_view
+    weight: 110
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_organizational_parent:
     weight: 101
     label: above
@@ -336,15 +345,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_sample_courses:
-    type: entity_reference_revisions_entity_view
-    weight: 102
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
     region: content
   links:
     weight: 100

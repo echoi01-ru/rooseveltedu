@@ -1,16 +1,16 @@
-uuid: 99642019-3f2a-4615-bee6-ffa515b99374
+uuid: 0bd92d07-ac33-4928-8abb-945c6fef8eb4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.sample_course.field_link
-    - field.field.paragraph.sample_course.field_title
-    - paragraphs.paragraphs_type.sample_course
+    - field.field.paragraph.expectations.field_title
+    - field.field.paragraph.expectations.field_wysiwyg
+    - paragraphs.paragraphs_type.expectations
   module:
-    - link
-id: paragraph.sample_course.default
+    - text
+id: paragraph.expectations.default
 targetEntityType: paragraph
-bundle: sample_course
+bundle: expectations
 mode: default
 content:
   admin_title:
@@ -21,21 +21,21 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_link:
-    weight: 1
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_title:
-    weight: 0
+    weight: -9
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_wysiwyg:
+    weight: -8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
 hidden:
   created: true

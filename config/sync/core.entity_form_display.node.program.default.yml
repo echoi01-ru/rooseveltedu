@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.program.field_catalog_link
     - field.field.node.program.field_contact_person
     - field.field.node.program.field_differentiators
+    - field.field.node.program.field_expect_require
     - field.field.node.program.field_location
     - field.field.node.program.field_member_accountability
     - field.field.node.program.field_organizational_parent
@@ -21,7 +22,6 @@ dependencies:
     - field.field.node.program.field_program_type
     - field.field.node.program.field_raci
     - field.field.node.program.field_related_content
-    - field.field.node.program.field_sample_courses
     - node.type.program
     - workflows.workflow.program_workflow
   module:
@@ -98,7 +98,7 @@ content:
     third_party_settings: {  }
   admission_info:
     type: text_textarea
-    weight: 3
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -179,6 +179,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+    region: content
+  field_expect_require:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_location:
     type: entity_reference_autocomplete
@@ -267,18 +279,6 @@ content:
       match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_sample_courses:
-    type: entity_reference_paragraphs
-    weight: 4
-    settings:
-      title: 'Sample Course'
-      title_plural: 'Sample Courses'
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-    third_party_settings: {  }
     region: content
   moderation_state:
     type: moderation_state_default
