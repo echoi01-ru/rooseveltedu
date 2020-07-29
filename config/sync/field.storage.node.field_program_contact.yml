@@ -1,17 +1,18 @@
-uuid: 135f8cf2-3944-4d3f-8479-f103731241b7
+uuid: 4894b2a8-99e3-4cae-97e4-a1ce2e13fd6f
 langcode: en
 status: true
 dependencies:
   module:
+    - entity_reference_revisions
     - node
-    - user
+    - paragraphs
 id: node.field_program_contact
 field_name: field_program_contact
 entity_type: node
-type: entity_reference
+type: entity_reference_revisions
 settings:
-  target_type: user
-module: core
+  target_type: paragraph
+module: entity_reference_revisions
 locked: false
 cardinality: -1
 translatable: true

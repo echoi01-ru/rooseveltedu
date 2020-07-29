@@ -233,15 +233,17 @@ content:
       match_limit: 10
     third_party_settings: {  }
   field_program_contact:
-    type: entity_reference_autocomplete
-    weight: 7
-    region: content
+    type: entity_reference_paragraphs
+    weight: 26
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
   field_program_faculty:
     type: entity_reference_autocomplete
     weight: 6

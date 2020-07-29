@@ -1,10 +1,17 @@
-uuid: a42725b3-efcc-455e-97ca-9fc9d857f0e8
+uuid: 00c60915-24f3-4641-852d-7964e4416702
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_program_contact
     - node.type.program
+    - paragraphs.paragraphs_type.program_contact
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 0
 id: node.program.field_program_contact
 field_name: field_program_contact
 entity_type: node
@@ -16,13 +23,79 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:user'
+  handler: 'default:paragraph'
   handler_settings:
-    include_anonymous: false
-    filter:
-      type: _none
-    target_bundles: null
-    sort:
-      field: _none
-    auto_create: false
-field_type: entity_reference
+    negate: 0
+    target_bundles:
+      program_contact: program_contact
+    target_bundles_drag_drop:
+      accordion:
+        weight: 24
+        enabled: false
+      accordion_item:
+        weight: 25
+        enabled: false
+      basic_content:
+        weight: 26
+        enabled: false
+      call_to_action:
+        weight: 27
+        enabled: false
+      campus_address:
+        weight: 28
+        enabled: false
+      ctabar:
+        weight: 29
+        enabled: false
+      ctacard:
+        weight: 30
+        enabled: false
+      ctacards:
+        weight: 31
+        enabled: false
+      expectations:
+        weight: 32
+        enabled: false
+      from_library:
+        weight: 33
+        enabled: false
+      herobanner:
+        weight: 34
+        enabled: false
+      imgbox:
+        weight: 35
+        enabled: false
+      infocard:
+        weight: 36
+        enabled: false
+      infocards:
+        weight: 37
+        enabled: false
+      program_contact:
+        enabled: true
+        weight: 38
+      raci_consult:
+        weight: 39
+        enabled: false
+      raci_informed:
+        weight: 40
+        enabled: false
+      raci_responsible:
+        weight: 41
+        enabled: false
+      related_content:
+        weight: 42
+        enabled: false
+      related_media:
+        weight: 43
+        enabled: false
+      sample_course:
+        weight: 44
+        enabled: false
+      sample_courses:
+        weight: 45
+        enabled: false
+      textsection:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

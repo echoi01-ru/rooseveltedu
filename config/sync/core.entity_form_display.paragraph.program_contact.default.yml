@@ -1,0 +1,42 @@
+uuid: e3bae659-b4f2-4521-bb84-81e9ae708d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_contact.field_person
+    - field.field.paragraph.program_contact.field_person_title
+    - paragraphs.paragraphs_type.program_contact
+id: paragraph.program_contact.default
+targetEntityType: paragraph
+bundle: program_contact
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_person:
+    weight: -9
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_person_title:
+    weight: -8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

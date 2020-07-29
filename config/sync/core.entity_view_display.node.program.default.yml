@@ -246,6 +246,23 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 14
+          310f5ddb-cd87-4272-a6d1-917ddebc1ea4:
+            uuid: 310f5ddb-cd87-4272-a6d1-917ddebc1ea4
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_program_contact'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 15
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
@@ -321,6 +338,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_program_contact:
+    type: entity_reference_revisions_entity_view
+    weight: 111
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_program_type:
     weight: 104
     label: above
@@ -359,5 +385,4 @@ hidden:
   field_location: true
   field_member_accountability: true
   field_possible_terms: true
-  field_program_contact: true
   field_program_faculty: true
