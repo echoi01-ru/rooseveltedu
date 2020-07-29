@@ -1,0 +1,29 @@
+uuid: 0a12bb51-32a1-4b56-8d41-ccd54f4be32c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_differentiators
+    - node.type.program
+    - taxonomy.vocabulary.differentiator
+id: node.program.field_differentiators
+field_name: field_differentiators
+entity_type: node
+bundle: program
+label: Differentiators
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      differentiator: differentiator
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

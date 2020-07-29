@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.program.field_call_to_action
     - field.field.node.program.field_catalog_link
     - field.field.node.program.field_contact_person
+    - field.field.node.program.field_differentiators
     - field.field.node.program.field_location
     - field.field.node.program.field_member_accountability
     - field.field.node.program.field_organizational_parent
@@ -229,6 +230,22 @@ third_party_settings:
               id: 'extra_field_block:node:program:content_moderation_control'
             additional: {  }
             weight: 12
+          e3de9b21-6c5f-4a2e-b35f-f8b3997e744f:
+            uuid: e3de9b21-6c5f-4a2e-b35f-f8b3997e744f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:program:field_differentiators'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 13
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
@@ -278,6 +295,14 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_differentiators:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_organizational_parent:
     weight: 101

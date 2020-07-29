@@ -1,0 +1,8 @@
+uuid: c2040e74-f7ec-4664-bbd6-690586207794
+langcode: en
+status: true
+dependencies: {  }
+name: Differentiator
+vid: differentiator
+description: ''
+weight: 0

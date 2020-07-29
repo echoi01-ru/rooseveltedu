@@ -1,17 +1,18 @@
-uuid: c435e6b1-d10c-4d83-a1e6-31af315ebc0d
+uuid: 31c8ffc4-966a-4798-af39-6c2f61136219
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.differentiators
-    - field.field.block_content.differentiators.field_headline
-    - field.field.block_content.differentiators.field_icon
-    - field.field.block_content.differentiators.field_text
+    - field.field.taxonomy_term.differentiator.field_headline
+    - field.field.taxonomy_term.differentiator.field_icon
+    - field.field.taxonomy_term.differentiator.field_text
+    - taxonomy.vocabulary.differentiator
   module:
+    - media_library
     - text
-id: block_content.differentiators.default
-targetEntityType: block_content
-bundle: differentiators
+id: taxonomy_term.differentiator.default
+targetEntityType: taxonomy_term
+bundle: differentiator
 mode: default
 content:
   field_headline:
@@ -23,14 +24,11 @@ content:
     type: string_textarea
     region: content
   field_icon:
+    type: media_library_widget
     weight: 1
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_text:
     weight: 3
@@ -40,7 +38,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  info:
+  name:
     type: string_textfield
     weight: 0
     region: content
@@ -48,4 +46,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  description: true
+  path: true
+  status: true

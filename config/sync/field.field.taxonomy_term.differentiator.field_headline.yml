@@ -1,0 +1,19 @@
+uuid: 90ffac51-38d3-4cef-a22b-36508ef23aca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_headline
+    - taxonomy.vocabulary.differentiator
+id: taxonomy_term.differentiator.field_headline
+field_name: field_headline
+entity_type: taxonomy_term
+bundle: differentiator
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
