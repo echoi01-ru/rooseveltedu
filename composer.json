@@ -86,6 +86,7 @@
         "drupal/embed": "^1.4",
         "drupal/entity_browser": "^2.5",
         "drupal/entity_embed": "^1.1",
+        "drupal/entity_usage": "^2.0@beta",
         "drupal/field_group": "^3.0",
         "drupal/fpa": "2.x-dev",
         "drupal/fullcalendar_view": "^2.4",
