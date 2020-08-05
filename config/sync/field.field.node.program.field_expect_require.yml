@@ -1,22 +1,22 @@
-uuid: 00c60915-24f3-4641-852d-7964e4416702
+uuid: 0aa73838-b2ef-477d-87b7-e84ed578467a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_program_contact
+    - field.storage.node.field_expect_require
     - node.type.program
-    - paragraphs.paragraphs_type.program_contact
+    - paragraphs.paragraphs_type.expectations
   module:
     - entity_reference_revisions
     - paragraph_blocks
 third_party_settings:
   paragraph_blocks:
-    status: 0
-id: node.program.field_program_contact
-field_name: field_program_contact
+    status: 1
+id: node.program.field_expect_require
+field_name: field_expect_require
 entity_type: node
 bundle: program
-label: 'Program Contact'
+label: 'Expectations and Requirements'
 description: ''
 required: false
 translatable: false
@@ -27,75 +27,72 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      program_contact: program_contact
+      expectations: expectations
     target_bundles_drag_drop:
       accordion:
-        weight: 24
+        weight: 23
         enabled: false
       accordion_item:
-        weight: 25
+        weight: 24
         enabled: false
       basic_content:
-        weight: 26
+        weight: 25
         enabled: false
       call_to_action:
-        weight: 27
+        weight: 26
         enabled: false
       campus_address:
-        weight: 28
+        weight: 27
         enabled: false
       ctabar:
-        weight: 29
+        weight: 28
         enabled: false
       ctacard:
-        weight: 30
+        weight: 29
         enabled: false
       ctacards:
-        weight: 31
+        weight: 30
         enabled: false
       expectations:
+        enabled: true
+        weight: 31
+      from_library:
         weight: 32
         enabled: false
-      from_library:
+      herobanner:
         weight: 33
         enabled: false
-      herobanner:
+      imgbox:
         weight: 34
         enabled: false
-      imgbox:
+      infocard:
         weight: 35
         enabled: false
-      infocard:
+      infocards:
         weight: 36
         enabled: false
-      infocards:
+      raci_consult:
         weight: 37
         enabled: false
-      program_contact:
-        enabled: true
-        weight: 38
-      raci_consult:
-        weight: 39
-        enabled: false
       raci_informed:
-        weight: 40
+        weight: 38
         enabled: false
       raci_responsible:
-        weight: 41
+        weight: 39
         enabled: false
       related_content:
-        weight: 42
+        weight: 40
         enabled: false
       related_media:
-        weight: 43
+        weight: 41
         enabled: false
       sample_course:
-        weight: 44
+        weight: 42
         enabled: false
       sample_courses:
-        weight: 45
+        weight: 43
         enabled: false
       textsection:
-        weight: 46
+        weight: 44
         enabled: false
 field_type: entity_reference_revisions

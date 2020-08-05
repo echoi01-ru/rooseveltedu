@@ -1,0 +1,31 @@
+uuid: 6ec1a671-9590-4433-ae41-d25fd3f49929
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.expectations.field_title
+    - field.field.paragraph.expectations.field_wysiwyg
+    - paragraphs.paragraphs_type.expectations
+  module:
+    - text
+id: paragraph.expectations.default
+targetEntityType: paragraph
+bundle: expectations
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_wysiwyg:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

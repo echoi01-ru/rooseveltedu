@@ -1,16 +1,14 @@
-uuid: 99642019-3f2a-4615-bee6-ffa515b99374
+uuid: e3bae659-b4f2-4521-bb84-81e9ae708d85
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.sample_course.field_link
-    - field.field.paragraph.sample_course.field_title
-    - paragraphs.paragraphs_type.sample_course
-  module:
-    - link
-id: paragraph.sample_course.default
+    - field.field.paragraph.program_contact.field_person
+    - field.field.paragraph.program_contact.field_person_title
+    - paragraphs.paragraphs_type.program_contact
+id: paragraph.program_contact.default
 targetEntityType: paragraph
-bundle: sample_course
+bundle: program_contact
 mode: default
 content:
   admin_title:
@@ -21,16 +19,18 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_link:
-    weight: 1
+  field_person:
+    weight: -9
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: link_default
+    type: entity_reference_autocomplete
     region: content
-  field_title:
-    weight: 0
+  field_person_title:
+    weight: -8
     settings:
       size: 60
       placeholder: ''

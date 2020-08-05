@@ -1,0 +1,29 @@
+uuid: 234e7311-c950-462d-88dc-132f27026677
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_text
+    - taxonomy.vocabulary.differentiator
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    fancy_title: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: taxonomy_term.differentiator.field_text
+field_name: field_text
+entity_type: taxonomy_term
+bundle: differentiator
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

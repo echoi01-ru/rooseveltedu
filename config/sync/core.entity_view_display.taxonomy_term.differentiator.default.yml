@@ -1,0 +1,47 @@
+uuid: 87a82abc-0ee4-4a19-95d1-7d398a4b4096
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.differentiator.field_headline
+    - field.field.taxonomy_term.differentiator.field_icon
+    - field.field.taxonomy_term.differentiator.field_text
+    - taxonomy.vocabulary.differentiator
+  module:
+    - text
+id: taxonomy_term.differentiator.default
+targetEntityType: taxonomy_term
+bundle: differentiator
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_headline:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_text:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

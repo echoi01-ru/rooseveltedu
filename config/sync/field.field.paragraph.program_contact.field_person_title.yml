@@ -1,0 +1,19 @@
+uuid: 7800c990-e50a-4b57-9bb5-c460ed5c1538
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_person_title
+    - paragraphs.paragraphs_type.program_contact
+id: paragraph.program_contact.field_person_title
+field_name: field_person_title
+entity_type: paragraph
+bundle: program_contact
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

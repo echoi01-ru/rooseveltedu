@@ -1,0 +1,30 @@
+uuid: da5bf754-8651-4cea-a575-c7b4f0603fe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_contact.field_person
+    - field.field.paragraph.program_contact.field_person_title
+    - paragraphs.paragraphs_type.program_contact
+id: paragraph.program_contact.default
+targetEntityType: paragraph
+bundle: program_contact
+mode: default
+content:
+  field_person:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_person_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

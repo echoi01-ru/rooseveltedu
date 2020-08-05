@@ -1,0 +1,19 @@
+uuid: cfe2eed6-b885-4169-87c8-57d0ee236b4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.expectations
+id: paragraph.expectations.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: expectations
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
