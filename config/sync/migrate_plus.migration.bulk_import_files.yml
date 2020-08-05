@@ -1,0 +1,54 @@
+uuid: 0a4b7013-d0b6-421f-9a14-0a4e251d77dd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: o6sZA2DJYaiWj778B-HYLO0MI_EXeKN0v1asr_ouSaY
+id: bulk_import_files
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - images
+migration_group: roosevelt_migrate
+label: 'Import files'
+source:
+  plugin: csv
+  path: modules/custom/roosevelt_migrate/assets/media_item_files.csv
+  ids:
+    - id
+  constants:
+    file_directory: 'public://'
+    source_directory: sites/default/files/media_library
+process:
+  filename: name
+  source_path:
+    -
+      plugin: concat
+      source:
+        - constants/source_directory
+        - path
+      delimiter: /
+    -
+      plugin: urlencode
+  uri_file:
+    -
+      plugin: concat
+      source:
+        - constants/file_directory
+        - path
+    -
+      plugin: urlencode
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_path'
+      - '@uri_file'
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:file'
+migration_dependencies:
+  required: {  }
+  optional: {  }
