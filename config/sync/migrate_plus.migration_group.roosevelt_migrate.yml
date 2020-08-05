@@ -1,0 +1,12 @@
+uuid: 72afa107-2b64-41c4-a168-a908d47d61ee
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Sr9TOBh_VZX9k0PpW9Cp7xtSfKS1c5uAyeI3j3yAKlM
+id: roosevelt_migrate
+label: 'Roosevelt Bulk Images'
+description: 'Bulk image import'
+source_type: null
+module: null
+shared_configuration: {  }
