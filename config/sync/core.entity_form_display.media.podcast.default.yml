@@ -30,6 +30,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  directory:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_additional_keywords:
     weight: 7
     settings:
@@ -125,5 +131,4 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden:
-  moderation_state: true
+hidden: {  }

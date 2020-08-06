@@ -2,6 +2,8 @@ uuid: d483a92f-9e96-466a-bfb0-46c8fe9957d9
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.general_info
   module:
     - content_moderation
 id: general_info_workflow
@@ -82,5 +84,7 @@ type_settings:
         - editor_review
       to: raci_approval
       weight: -1
-  entity_types: {  }
-  default_moderation_state: draft
+  entity_types:
+    node:
+      - general_info
+  default_moderation_state: published
