@@ -6,7 +6,15 @@ dependencies:
     - field.storage.paragraph.field_accordion_item_title
     - paragraphs.paragraphs_type.accordion_item
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    fancy_title: '0'
+    restricted_html: '0'
+    full_html: '0'
 id: paragraph.accordion_item.field_accordion_item_title
 field_name: field_accordion_item_title
 entity_type: paragraph

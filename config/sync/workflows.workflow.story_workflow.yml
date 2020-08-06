@@ -2,6 +2,8 @@ uuid: 9848cf08-e5e0-439b-bad9-ca7458c68810
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.story
   module:
     - content_moderation
 id: story_workflow
@@ -57,5 +59,7 @@ type_settings:
         - draft
       to: review
       weight: 0
-  entity_types: {  }
-  default_moderation_state: draft
+  entity_types:
+    node:
+      - story
+  default_moderation_state: published
