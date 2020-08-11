@@ -203,16 +203,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          aec361e3-4b66-4e0a-a6b7-050151b512cc:
-            uuid: aec361e3-4b66-4e0a-a6b7-050151b512cc
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:program:content_moderation_control'
-            additional: {  }
-            weight: 12
           e3de9b21-6c5f-4a2e-b35f-f8b3997e744f:
             uuid: e3de9b21-6c5f-4a2e-b35f-f8b3997e744f
             region: content

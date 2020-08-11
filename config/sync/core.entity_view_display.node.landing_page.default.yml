@@ -27,7 +27,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           173d6ebb-01a7-4509-a7bb-09e596535eae:
             uuid: 173d6ebb-01a7-4509-a7bb-09e596535eae
@@ -84,18 +85,9 @@ third_party_settings:
         third_party_settings: {  }
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
-          7d95fa3d-f699-4aaf-ae6e-acde30741784:
-            uuid: 7d95fa3d-f699-4aaf-ae6e-acde30741784
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:landing_page:content_moderation_control'
-            additional: {  }
-            weight: 0
           0be885af-b479-4723-b8f7-06cc2c67e03c:
             uuid: 0be885af-b479-4723-b8f7-06cc2c67e03c
             region: content
