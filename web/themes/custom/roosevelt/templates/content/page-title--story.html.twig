@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Theme override for page titles.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ */
+#}
+{{ title_prefix }}
+{% if title %}
+<div class="internal-upperContainer" role="banner">
+  <!-- Background Image-->
+
+  <!-- END Background Image-->
+
+  <!-- Main Page Title-->
+  <div id="plcheader_0_pnlTitleContainer" class="internal-upperContainer-titleContainer eventDetails">
+    <div class="globalWidth">
+      <h1{{ title_attributes }}>{{ title }}</h1>
+      <div id="plcheader_0_pnlDivider" class="internal-upperContainer-sepWrapper">
+        <div class="internal-upperContainer-sepWrapper-left"></div>
+        <div class="internal-upperContainer-sepWrapper-center"><span class="fa fa-circle-o headingSep" aria-hidden="true"></span></div>
+        <div class="internal-upperContainer-sepWrapper-right"></div>
+      </div>
+      <div id="plcheader_0_pnlAttributeContainer" class="storyDetails-attributeContainer">
+        <div class="storyDetails-attribute-name">{{ name|trim() }}</div>
+        <div class="storyDetails-attribute-type">{{ types }}</div>
+      </div>
+    </div>
+  </div>
+  <!-- END Main Page Title-->
+
+  <!-- Overlay-->
+  <div class="internal-upperContainer-overlay"></div>
+  <!--END Overlay-->
+
+  <!-- Event Date -->
+  <div id="plcheader_0_pnlEventDate" class="eventDetails-dateContainer">
+    <div class="eventDetails-dateWrapper">
+      <div class="eventDetails-innerDateWrapper">
+        <div class="eventDetails-innerDateWrapper-month">{{ month }}</div>
+        <div class="eventDetails-innerDateWrapper-date">{{ date }}</div>
+        <div class="eventDetails-innerDateWrapper-name">{{ day }}</div>
+      </div>
+      <div class="eventDetails-innerDateWrapper-year">{{ year }}</div>
+    </div>
+  </div>
+  <!-- END Event Date -->
+</div>
+{% endif %}
+{{ title_suffix }}

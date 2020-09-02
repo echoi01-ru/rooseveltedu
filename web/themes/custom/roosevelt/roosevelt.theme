@@ -7,6 +7,8 @@
 
 use Drupal\Core\Render\Renderer;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\user\Entity\User;
 
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
@@ -57,16 +59,61 @@ function roosevelt_page_attachments_alter(array &$page) {
 function roosevelt_preprocess_page(array &$variables) {
 }
 
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function roosevelt_theme_suggestions_page_title_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+
+    $suggestions[] = 'page_title__' . $node->bundle();
+  }
+}
 
 /**
  * Implements hook_preprocess_page_title().
  */
 function roosevelt_preprocess_page_title(array &$variables) {
-if ($node = \Drupal::routeMatch()->getParameter('node')) {
-  if (is_numeric($node)) {
-    $node = Node::load($node);
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+
+    if ($node->bundle() == 'story') {
+      // Get the Author's name from User object
+      $uid = $node->getOwnerId();
+      $account = User::load($uid);
+      $name = '';
+      if ($account->hasField('field_full_name')) {
+        $name = $account->field_full_name->value;
+      }
+
+      $variables['name'] = $name;
+
+      // Get the story types
+      $types = [];
+      if ($node->hasField('field_story_type')) {
+        foreach ($node->get('field_story_type') as $type) {
+          $term = Term::load($type->target_id);
+          $types [] = $term->getName();
+        }
+
+        $variables['types'] = implode(', ', $types);
+      }
+
+      // Breakout the date field
+      $timestamp = strtotime($node->field_date_published->value);
+      $format = 'custom';
+      $date_formatter = \Drupal::service('date.formatter');
+
+      $variables['month'] = $date_formatter->format($timestamp, $format, 'M'); // Jul
+      $variables['date'] = $date_formatter->format($timestamp, $format, 'd'); // 28
+      $variables['day'] = $date_formatter->format($timestamp, $format, 'D'); // Tue
+      $variables['year'] = $date_formatter->format($timestamp, $format, 'Y'); // 2020
+    }
   }
-}
 }
 
 /**
