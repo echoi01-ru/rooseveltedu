@@ -91,7 +91,11 @@
   {% endif %}
 
   <div{{ content_attributes }}>
+{% if content.field_featured_image|render is not empty %}
+  <div class="eventDetails-featuredImg-wrapper">
     {{ content.field_featured_image }}
+  </div>
+{% endif %}
     {{ content|without('field_featured_image') }}
   </div>
 
