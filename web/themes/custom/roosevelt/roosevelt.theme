@@ -5,6 +5,7 @@
  * Functions to support theming in the roosevelt theme.
  */
 
+use Drupal\Core\Render\Element;
 use Drupal\Core\Render\Renderer;
 use Drupal\Core\Entity\EntityInterface;
 
@@ -62,11 +63,17 @@ function roosevelt_preprocess_page(array &$variables) {
  * Implements hook_preprocess_page_title().
  */
 function roosevelt_preprocess_page_title(array &$variables) {
-if ($node = \Drupal::routeMatch()->getParameter('node')) {
-  if (is_numeric($node)) {
-    $node = Node::load($node);
+  if ($user = \Drupal::routeMatch()->getParameter('user')) {
+    if (isset($user->field_full_name)) {
+      $variables['title']['#markup'] = $user->field_full_name->value;
+    }
   }
-}
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if (is_numeric($node)) {
+      $node = Node::load($node);
+    }
+  }
 }
 
 /**
@@ -132,7 +139,15 @@ function roosevelt_theme_suggestions_node_alter(array &$suggestions, array $vari
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function roosevelt_preprocess_block(array &$variables) {
+  if ($variables['elements']['#base_plugin_id'] == 'block_content') {
+    $block_type = $variables['elements']['content']['#block_content']->bundle();
 
+    switch($block_type) {
+      case 'outcome':
+        $variables['#attached']['library'][] = 'roosevelt/program';
+        break;
+    }
+  }
 }
 
 /**
@@ -162,6 +177,10 @@ function roosevelt_preprocess_paragraph(array &$variables) {
  * Implements hook_theme_suggestions_block_alter().
  */
 function roosevelt_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if ($variables['elements']['#base_plugin_id'] == 'block_content') {
+    $block_type = $variables['elements']['content']['#block_content']->bundle();
+    $suggestions[] = 'block__block_content__' . $block_type;
+  }
 }
 
 /**
@@ -380,3 +399,34 @@ function roosevelt_preprocess_menu(array &$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_layout() for page.html.twig.
+ */
+function roosevelt_preprocess_layout(array &$variables) {
+  if ($variables['layout']->id() == 'layout_program_detail') {
+    $route_name = \Drupal::routeMatch()->getRouteName();
+
+    foreach(Element::children($variables['content']) as $key) {
+      $section = $variables['content'][$key];
+      $variables['has_' . $key] = true;
+
+      // Only do this on node displays
+      if (strpos($route_name, 'layout_builder.') === 0 &&
+          array_key_exists('#attributes', $section)
+      ) {
+        // remove because it is not needed here
+        unset($section['#attributes']);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_layout_alter().
+ */
+function roosevelt_theme_suggestions_layout_alter(array &$suggestions, array $variables) {
+/*
+  ksm($suggestions);
+  ksm($variables['content']);
+*/
+}

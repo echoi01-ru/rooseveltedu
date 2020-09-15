@@ -22,6 +22,7 @@ visibility:
     id: 'entity_bundle:node'
     bundles:
       general_info: general_info
+      program: program
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

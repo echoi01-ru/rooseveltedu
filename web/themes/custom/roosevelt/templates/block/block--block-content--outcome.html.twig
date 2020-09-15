@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+
+{%
+  set classes = [
+    'programDetails-panel5-outcomes-indInfo-firstView'
+  ]
+%}
+<div class="programDetails-panel5-outcomes-indInfoContainer">
+  <div class="programDetails-panel5-outcomes-indInfoWrapper">
+    {{ title_prefix }}
+    <div{{ title_attributes.addClass(classes) }} style="height: 22px;">
+      <span>{{ label }}</span>
+    </div>
+    {{ title_suffix }}
+
+    {% block content %}
+    <div class="programDetails-panel5-outcomes-indInfo-secondView" style="display: none;">
+      {{ content }}
+      <div class="closeToggleIcon">
+        <span class="fa fa-times-circle-o" aria-hidden="true"></span>
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+</div>

@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.program.field_program_type
     - field.field.node.program.field_raci
     - field.field.node.program.field_related_content
+    - field.field.node.program.layout_builder__layout
     - node.type.program
     - workflows.workflow.program_workflow
   module:
@@ -333,4 +334,5 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true

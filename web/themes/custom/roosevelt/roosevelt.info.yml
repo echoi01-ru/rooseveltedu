@@ -47,3 +47,8 @@ libraries-override:
   core/modernizr:
     js:
       assets/vendor/modernizr/modernizr.min.js: ../../../libraries/patterns/docs/scripts/modernizr-3.3.1.min.js
+
+  roosevelt_custom/program_detail:
+    css:
+      theme:
+        layouts/program_detail/program_detail.css: layouts/program_detail/program_detail.css

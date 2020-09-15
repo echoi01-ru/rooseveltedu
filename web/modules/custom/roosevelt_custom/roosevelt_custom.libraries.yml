@@ -1,0 +1,10 @@
+outcome_section:
+  version: VERSION
+  css:
+    theme:
+      layouts/outcome_section/outcome_section.css: {}
+program_detail:
+  version: VERSION
+  css:
+    theme:
+      layouts/program_detail/program_detail.css: {}

@@ -1,0 +1,15 @@
+.layout-builder__region-label,
+.layout-builder__section-label {
+  display: block;
+}
+
+.programDetails-panel5-outcomes .layout-builder__add-block {
+  width: 33.3333%;
+  margin: 40px 0 0;
+  display: inline-block;
+  padding: 50px 0px;
+}
+
+.programDetails-panel5-outcomes .layout-builder__link--add {
+  font-size: 19px;
+}

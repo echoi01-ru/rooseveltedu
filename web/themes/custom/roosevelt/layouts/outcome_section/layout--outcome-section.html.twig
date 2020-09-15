@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Theme override for a three-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ */
+#}
+{% if content %}
+<div id="pnlOutcomesSection" class="programDetails-panel5-outcomes">
+  <div class="globalWidth">
+    <h2 class="programDetails-panel5-titleContainer"><span>Outcomes</span></h2>
+    <div class="programDetails-panel5-outcomesWrapper">
+      <div class="programDetails-panel5-outcomes-textContainer"></div>
+      <div class="programDetails-panel5-outcomes-indInfoGridContainer">
+      {% if content.first %}
+        <div class="programDetails-panel5-outcomes-indInfoContainer">
+          <div class="programDetails-panel5-outcomes-indInfoWrapper">
+            {{ content.first }}
+          </div>
+        </div>
+      {% endif %}
+      {% if content.second %}
+        <div class="programDetails-panel5-outcomes-indInfoContainer">
+          <div class="programDetails-panel5-outcomes-indInfoWrapper">
+            {{ content.second }}
+          </div>
+        </div>
+      {% endif %}
+      {% if content.third %}
+        <div class="programDetails-panel5-outcomes-indInfoContainer">
+          <div class="programDetails-panel5-outcomes-indInfoWrapper">
+            {{ content.third }}
+          </div>
+        </div>
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

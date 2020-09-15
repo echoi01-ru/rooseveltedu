@@ -22,179 +22,161 @@ dependencies:
     - field.field.node.program.field_program_type
     - field.field.node.program.field_raci
     - field.field.node.program.field_related_content
+    - field.field.node.program.layout_builder__layout
     - node.type.program
+    - views.view.program_related_content
+    - views.view.program_testimonials
+  content:
+    - 'block_content:outcome:4643f0e2-a0f9-4852-ab5c-797060ccd87d'
   module:
+    - block_content
     - entity_reference_revisions
     - layout_builder
-    - layout_discovery
     - link
+    - roosevelt_custom
     - user
+    - views
 third_party_settings:
   layout_builder:
-    allow_custom: false
+    allow_custom: true
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_program_detail
         layout_settings:
-          label: ''
+          label: 'Program Detail'
         components:
-          cc6a641d-fc2e-4731-a2f8-3b11bafab4e8:
-            uuid: cc6a641d-fc2e-4731-a2f8-3b11bafab4e8
-            region: content
+          0a25696d-689f-491e-bb10-4a6ae16c8216:
+            uuid: 0a25696d-689f-491e-bb10-4a6ae16c8216
+            region: reqs
             configuration:
+              id: 'field_block:node:program:field_expect_require'
+              label: 'Expectations and Requirements'
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:program:links'
-            additional: {  }
-            weight: 2
-          320901ca-e46f-4b6a-be91-4664b8ab0f0b:
-            uuid: 320901ca-e46f-4b6a-be91-4664b8ab0f0b
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_organizational_parent'
               formatter:
-                label: above
+                label: hidden
+                type: entity_reference_revisions_entity_view
                 settings:
-                  link: true
+                  view_mode: default
                 third_party_settings: {  }
-                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 3
-          3ed54fd7-3841-456f-a328-54911c732080:
-            uuid: 3ed54fd7-3841-456f-a328-54911c732080
-            region: content
+          fb55bab5-0f60-4689-8ff2-64601f588e13:
+            uuid: fb55bab5-0f60-4689-8ff2-64601f588e13
+            region: diffs
             configuration:
+              id: 'field_block:node:program:field_differentiators'
+              label: Differentiators
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_raci'
               formatter:
-                type: entity_reference_revisions_entity_view
-                label: above
+                label: hidden
+                type: entity_reference_entity_view
                 settings:
                   view_mode: default
-                  link: ''
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+          6f5d0202-f0a8-41c0-a825-f885a3d09cd3:
+            uuid: 6f5d0202-f0a8-41c0-a825-f885a3d09cd3
+            region: intro
+            configuration:
+              id: 'field_block:node:program:field_basic_content'
+              label: 'Basic Content'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+          7a67b399-b345-4114-bc8c-c7bf583e007e:
+            uuid: 7a67b399-b345-4114-bc8c-c7bf583e007e
+            region: outcomes
+            configuration:
+              id: 'block_content:4643f0e2-a0f9-4852-ab5c-797060ccd87d'
+              label: 'A Record of Success'
+              provider: block_content
+              label_display: visible
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
             additional: {  }
             weight: 5
-          2e6fcc5b-132e-4042-ab96-fab206e0efa2:
-            uuid: 2e6fcc5b-132e-4042-ab96-fab206e0efa2
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_program_type'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 6
-          4e123815-60e7-4865-a496-7bec110f2838:
-            uuid: 4e123815-60e7-4865-a496-7bec110f2838
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_related_content'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
-            weight: 7
-          8458a16f-2b4d-4f82-8638-b0abecaa0a68:
-            uuid: 8458a16f-2b4d-4f82-8638-b0abecaa0a68
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_accordion'
-              formatter:
-                label: above
-                settings:
-                  view_mode: default
-                  link: ''
-                third_party_settings: {  }
-                type: entity_reference_revisions_entity_view
-            additional: {  }
-            weight: 8
-          8a99b4f3-1519-4481-97ac-aaa9c21f7933:
-            uuid: 8a99b4f3-1519-4481-97ac-aaa9c21f7933
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_catalog_link'
-              formatter:
-                label: above
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: ''
-                  target: ''
-                third_party_settings: {  }
-                type: link
-            additional: {  }
-            weight: 9
-          0c91b834-67b2-40dc-b734-01ecf4d37d3a:
-            uuid: 0c91b834-67b2-40dc-b734-01ecf4d37d3a
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_basic_content'
-              formatter:
-                label: above
-                settings:
-                  view_mode: default
-                  link: ''
-                third_party_settings: {  }
-                type: entity_reference_revisions_entity_view
-            additional: {  }
-            weight: 10
-          52ca8215-2b59-4001-b711-36480ee2e817:
-            uuid: 52ca8215-2b59-4001-b711-36480ee2e817
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_call_to_action'
-              formatter:
-                label: above
-                settings:
-                  view_mode: default
-                  link: ''
-                third_party_settings: {  }
-                type: entity_reference_revisions_entity_view
-            additional: {  }
-            weight: 11
-          a5c41ecd-1803-40c7-92b7-8e7a6c49aac9:
-            uuid: a5c41ecd-1803-40c7-92b7-8e7a6c49aac9
-            region: content
+          e8ad9bda-4f85-4582-87a4-d782e52da64d:
+            uuid: e8ad9bda-4f85-4582-87a4-d782e52da64d
+            region: hero
             configuration:
               id: 'field_block:node:program:body'
               label: Body
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: above
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+          c756374a-5faf-4453-81e2-acec44c367c3:
+            uuid: c756374a-5faf-4453-81e2-acec44c367c3
+            region: faculty
+            configuration:
+              id: 'field_block:node:program:field_program_faculty'
+              label: 'Program Faculty'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          8e3b9d1b-a422-41ed-a32c-c73f94097bf8:
+            uuid: 8e3b9d1b-a422-41ed-a32c-c73f94097bf8
+            region: events
+            configuration:
+              id: 'views_block:program_related_content-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          3dbc57d8-7d58-4b94-a37c-059a9eb710db:
+            uuid: 3dbc57d8-7d58-4b94-a37c-059a9eb710db
+            region: admissions
+            configuration:
+              id: 'field_block:node:program:admission_info'
+              label: 'Admission Info'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
                 type: text_default
                 settings: {  }
                 third_party_settings: {  }
@@ -203,56 +185,38 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          e3de9b21-6c5f-4a2e-b35f-f8b3997e744f:
-            uuid: e3de9b21-6c5f-4a2e-b35f-f8b3997e744f
-            region: content
+          66a1fdca-2b69-40b3-87b6-faca47bddaf9:
+            uuid: 66a1fdca-2b69-40b3-87b6-faca47bddaf9
+            region: testimonials
             configuration:
+              id: 'views_block:program_testimonials-list'
+              label: ''
+              provider: views
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_differentiators'
-              formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-                type: entity_reference_label
+              views_label: ''
+              items_per_page: '1'
+              context_mapping: {  }
             additional: {  }
-            weight: 13
-          19e28e3e-fc50-4d49-aa10-3f37ecd365f1:
-            uuid: 19e28e3e-fc50-4d49-aa10-3f37ecd365f1
-            region: content
+            weight: 0
+          49600fdf-33ac-4eca-9a9a-fb1dd3e9ba36:
+            uuid: 49600fdf-33ac-4eca-9a9a-fb1dd3e9ba36
+            region: programs
             configuration:
+              id: 'field_block:node:program:field_related_content'
+              label: 'Related Pages'
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:program:field_expect_require'
               formatter:
-                type: entity_reference_revisions_entity_view
-                label: above
+                label: hidden
+                type: entity_reference_entity_view
                 settings:
                   view_mode: default
-                  link: ''
                 third_party_settings: {  }
-            additional: {  }
-            weight: 14
-          310f5ddb-cd87-4272-a6d1-917ddebc1ea4:
-            uuid: 310f5ddb-cd87-4272-a6d1-917ddebc1ea4
-            region: content
-            configuration:
-              label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:node:program:field_program_contact'
-              formatter:
-                type: entity_reference_revisions_entity_view
-                label: above
-                settings:
-                  view_mode: default
-                  link: ''
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
-            weight: 15
+            weight: 0
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
@@ -376,3 +340,4 @@ hidden:
   field_member_accountability: true
   field_possible_terms: true
   field_program_faculty: true
+  layout_builder__layout: true
