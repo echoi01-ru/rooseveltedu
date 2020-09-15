@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.related
     - node.type.story
     - taxonomy.vocabulary.story_type
   content:
     - 'taxonomy_term:story_type:f9146f18-b5d6-4281-afb8-76bd38c742bd'
   module:
+    - datetime
     - node
     - taxonomy
     - user
@@ -53,7 +55,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 5
+          items_per_page: 3
           offset: 0
       style:
         type: default
@@ -265,9 +267,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  featured_news:
     display_plugin: block
-    id: block_1
+    id: featured_news
     display_title: 'Featured News'
     position: 1
     display_options:
@@ -282,9 +284,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_2:
+  related_news:
     display_plugin: block
-    id: block_2
+    id: related_news
     display_title: 'Related News Stories'
     position: 2
     display_options:
@@ -321,6 +323,15 @@ display:
         filters: false
         filter_groups: false
         arguments: false
+        use_more: true
+        use_more_always: true
+        use_more_text: true
+        link_display: true
+        link_url: true
+        style: false
+        row: false
+        sorts: false
+        css_class: false
       filter_groups:
         operator: AND
         groups:
@@ -367,6 +378,69 @@ display:
           require_value: false
           reduce_duplicates: false
           plugin_id: taxonomy_index_tid
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: node
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: true
+          entity_type: node
+          entity_field: nid
+          plugin_id: node_nid
+      style:
+        type: default
+        options:
+          row_class: storyDetails-indAdditionalStories
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: related
+      sorts:
+        field_date_published_value:
+          id: field_date_published_value
+          table: node__field_date_published
+          field: field_date_published_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
+      css_class: eventDetails-associatedEventsWrapper
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

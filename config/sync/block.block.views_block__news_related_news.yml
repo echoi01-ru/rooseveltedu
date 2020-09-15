@@ -1,0 +1,32 @@
+uuid: 42e60b2f-0eff-4fec-a1fe-5e97c301f829
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - node
+    - views
+  theme:
+    - roosevelt
+id: views_block__news_related_news
+theme: roosevelt
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:news-related_news'
+settings:
+  id: 'views_block:news-related_news'
+  label: 'Related News ...'
+  provider: views
+  label_display: visible
+  views_label: 'Related News ...'
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      story: story
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

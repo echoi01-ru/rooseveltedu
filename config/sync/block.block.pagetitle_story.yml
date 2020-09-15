@@ -1,0 +1,27 @@
+uuid: 08ccc899-fc33-45f0-9514-1e8ea482d8ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - roosevelt
+id: pagetitle_story
+theme: roosevelt
+region: content_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page Title: Story'
+  provider: core
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      story: story
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

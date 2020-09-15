@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ */
+#}
+<div id="pnlFeaturedImage" class="eventDetails-featuredImg">
+  {{ content.field_media_image }}
+</div>
+
+{% if content.field_image_caption %}
+<div id="pnlCaption" class="eventDetails-featuredImg-caption">
+	<span id="lblCaptionCredit">{{ content.field_image_caption }}</span>
+</div>
+{% endif %}

@@ -1,9 +1,9 @@
-uuid: 9fdb0002-c7cc-4e26-81c8-a8f4e2d9cccc
+uuid: 94056481-1dcb-4689-9274-4b92fb2c77ab
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.related
     - field.field.node.story.body
     - field.field.node.story.field_accordion
     - field.field.node.story.field_accountability_notes
@@ -24,24 +24,47 @@ dependencies:
     - field.field.node.story.field_story_type
     - node.type.story
   module:
+    - datetime
+    - layout_builder
+    - text
     - user
-id: node.story.teaser
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.story.related
 targetEntityType: node
 bundle: story
-mode: teaser
+mode: related
 content:
-  content_moderation_control:
-    weight: -20
-    settings: {  }
+  body:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 250
     third_party_settings: {  }
+    type: text_summary_or_trimmed
     region: content
-  links:
-    weight: 100
-    settings: {  }
+  field_date_published:
+    type: datetime_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: short
     third_party_settings: {  }
+  field_featured_image:
+    type: entity_reference_entity_view
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      view_mode: related
+      link: false
+    third_party_settings: {  }
 hidden:
-  body: true
+  content_moderation_control: true
   field_accordion: true
   field_accountability_notes: true
   field_audience: true
@@ -49,9 +72,7 @@ hidden:
   field_brand_pillars: true
   field_call_to_action: true
   field_campus: true
-  field_date_published: true
   field_featured: true
-  field_featured_image: true
   field_member_accountability: true
   field_parent_organization: true
   field_raci: true
@@ -59,3 +80,5 @@ hidden:
   field_related_media: true
   field_related_people: true
   field_story_type: true
+  layout_builder__layout: true
+  links: true
