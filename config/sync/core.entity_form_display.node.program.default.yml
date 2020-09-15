@@ -24,9 +24,7 @@ dependencies:
     - field.field.node.program.field_related_content
     - field.field.node.program.layout_builder__layout
     - node.type.program
-    - workflows.workflow.program_workflow
   module:
-    - content_moderation
     - field_group
     - link
     - paragraphs
@@ -71,8 +69,8 @@ third_party_settings:
         - field_possible_terms
         - field_program_type
         - body
-        - field_program_contact
         - field_contact_person
+        - field_program_contact
       parent_name: ''
       weight: 1
       format_type: details
@@ -139,11 +137,18 @@ content:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
-    type: entity_reference_paragraphs
+    type: paragraphs
     region: content
   field_call_to_action:
     weight: 18
@@ -284,11 +289,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 13

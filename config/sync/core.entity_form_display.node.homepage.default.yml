@@ -10,9 +10,7 @@ dependencies:
     - field.field.node.homepage.field_textsection
     - field.field.node.homepage.layout_builder__layout
     - node.type.homepage
-    - workflows.workflow.story_workflow
   module:
-    - content_moderation
     - field_group
     - paragraphs
     - path
@@ -212,11 +210,13 @@ content:
     third_party_settings: {  }
     region: content
   moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 6

@@ -16,9 +16,7 @@ dependencies:
     - field.field.node.general_info.field_raci
     - field.field.node.general_info.field_related_content
     - node.type.general_info
-    - workflows.workflow.general_info_workflow
   module:
-    - content_moderation
     - entity_browser
     - field_group
     - paragraphs
@@ -203,11 +201,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 13

@@ -24,9 +24,7 @@ dependencies:
     - field.field.node.story.field_story_type
     - field.field.node.story.layout_builder__layout
     - node.type.story
-    - workflows.workflow.story_workflow
   module:
-    - content_moderation
     - datetime
     - entity_browser
     - field_group
@@ -41,7 +39,7 @@ third_party_settings:
         - field_brand_pillars
         - field_campus
       parent_name: ''
-      weight: 7
+      weight: 6
       format_type: details
       region: content
       format_settings:
@@ -58,7 +56,7 @@ third_party_settings:
         - field_related_content
         - field_related_media
       parent_name: ''
-      weight: 8
+      weight: 7
       format_type: details
       region: content
       format_settings:
@@ -74,7 +72,7 @@ third_party_settings:
         - field_accountability_notes
         - field_raci
       parent_name: ''
-      weight: 9
+      weight: 8
       format_type: details
       region: content
       format_settings:
@@ -90,7 +88,7 @@ bundle: story
 mode: default
 content:
   body:
-    weight: 6
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -101,12 +99,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 11
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_accordion:
-    weight: 16
+    weight: 15
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -136,7 +134,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_basic_content:
-    weight: 17
+    weight: 16
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -158,7 +156,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_call_to_action:
-    weight: 18
+    weight: 17
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -181,20 +179,20 @@ content:
     region: content
   field_date_published:
     type: datetime_default
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_featured:
     type: boolean_checkbox
-    weight: 4
+    weight: 3
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_featured_image:
     type: entity_browser_entity_reference
-    weight: 5
+    weight: 4
     region: content
     settings:
       entity_browser: media_directories_modal
@@ -272,7 +270,7 @@ content:
     third_party_settings: {  }
   field_story_type:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
@@ -281,14 +279,16 @@ content:
       match_limit: 10
     third_party_settings: {  }
   moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -296,21 +296,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 13
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -323,7 +323,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 13
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
