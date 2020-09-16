@@ -107,8 +107,21 @@
 {% endif %}
 
 {% if has_admissions %}
-<div id="pnlAdmissionSection" class="programDetails-panel10-imgPromotion">
-{{ content.admissions }}
+<div id="pnlAdmissionSection" class="programDetails-panel10-imgPromotion" style="background-image:url('/sites/default/files/images/TEMPLATES/Defaults/slide1.jpg');">
+  <div class="globalWidth programDetails-panel10-imgPromotionContainer">
+    <h2 class="programDetails-panel10-titleContainer">Admission Info</h2>
+    <div id="pnlAdmissionPromotionSection" class="programDetails-panel10-imgPromotionWrapper">
+      <!--Img Column-->
+      <div class="programDetails-panel10-imgPromotion-imgContainer">
+        <img id="imgAdmission" alt="Chicago skyline" src="/sites/default/files/images/TEMPLATES/Defaults/slide2.jpg">
+      </div>
+      <!--END Img Column-->
+      <!--Content Column -->
+      {{ content.admissions }}
+      <!-- END Content Column-->
+    </div>
+  </div>
+  <div class="programDetails-panel10-imgPromotion-overlay"></div>
 </div>
 {% endif %}
 
