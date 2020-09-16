@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abe59b34139d0ea23e5396380f722523",
+    "content-hash": "982de885899de628101eb73de4641132",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5227,7 +5227,7 @@
                 "reference": "dev"
             },
             "type": "drupal-library",
-            "time": "2020-09-16T12:07:33+00:00"
+            "time": "2020-09-16T12:49:55+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -12779,6 +12779,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2017-12-04T08:55:13+00:00"
         },
         {

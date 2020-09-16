@@ -54,12 +54,12 @@
             "type": "package",
             "package": {
                 "name": "kanopi/roosevelt_pl",
-                "version": "dev",
+                "version": "master",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/kanopi/roosevelt_pl.git",
                     "type": "git",
-                    "reference": "dev"
+                    "reference": "master"
                 }
             }
         }
