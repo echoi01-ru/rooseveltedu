@@ -41,9 +41,20 @@
   </div>
 </div>
 
-{% if has_intro %}
+{% if has_intro_image or has_intro_content %}
 <div class="programDetails-panel2-intro">
-{{ content.intro }}
+  <div class="globalWidth">
+    <div class="programDetails-panel2-introWrapper">
+      <div class="programDetails-panel2-intro-colLeft">
+        <div class="programDetails-panel2-intro-colLeft-imgWrapper">
+          {{ content.intro_image }}
+        </div>
+      </div>
+      <div class="programDetails-panel2-intro-colRight">
+        {{ content.intro_content }}
+      </div>
+    </div>
+  </div>
 </div>
 {% endif %}
 

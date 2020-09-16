@@ -1,18 +1,24 @@
-uuid: adb1e86a-e5b9-4e4d-a7ac-49adc4463b94
+uuid: 38506a38-0955-4268-b7e7-9e5c8dea5c2e
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.program
     - field.field.paragraph.basic_content.field_image
     - field.field.paragraph.basic_content.field_title
     - field.field.paragraph.basic_content.field_wysiwyg
     - paragraphs.paragraphs_type.basic_content
   module:
+    - layout_builder
     - text
-id: paragraph.basic_content.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.basic_content.program
 targetEntityType: paragraph
 bundle: basic_content
-mode: default
+mode: program
 content:
   field_image:
     weight: 2

@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.program.field_possible_terms
     - field.field.node.program.field_program_contact
     - field.field.node.program.field_program_faculty
+    - field.field.node.program.field_program_image
     - field.field.node.program.field_program_type
     - field.field.node.program.field_raci
     - field.field.node.program.field_related_content
@@ -27,6 +28,7 @@ dependencies:
   module:
     - field_group
     - link
+    - media_library
     - paragraphs
     - path
     - text
@@ -71,6 +73,7 @@ third_party_settings:
         - body
         - field_contact_person
         - field_program_contact
+        - field_program_image
       parent_name: ''
       weight: 1
       format_type: details
@@ -172,7 +175,7 @@ content:
     region: content
   field_contact_person:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -240,7 +243,7 @@ content:
     third_party_settings: {  }
   field_program_contact:
     type: entity_reference_paragraphs
-    weight: 26
+    weight: 7
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -260,6 +263,13 @@ content:
       placeholder: ''
       match_limit: 10
     third_party_settings: {  }
+  field_program_image:
+    type: media_library_widget
+    weight: 8
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
   field_program_type:
     weight: 4
     settings: {  }

@@ -39,8 +39,10 @@ layout_program_detail:
   regions:
     hero:
       label: Hero
-    intro:
-      label: Intro
+    intro_image:
+      label: 'Intro Image'
+    intro_content:
+      label: 'Intro Content'
     diffs:
       label: Differentitators
     reqs:

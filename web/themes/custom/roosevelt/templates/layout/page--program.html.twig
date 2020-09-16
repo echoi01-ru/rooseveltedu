@@ -15,14 +15,7 @@
 <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
 {% if page.content_title %}
-<div class="internal-upperContainer" role="banner">
-  <div id="plcheader_0_pnlTitleContainer" class="internal-upperContainer-titleContainer">
-    <div class="globalWidth">
-      {{ page.content_title }}
-    </div>
-  </div>
-  <div class="internal-upperContainer-overlay"></div>
-</div>
+  {{ page.content_title }}
 {% endif %}
 
 {{ page.help }}
@@ -32,9 +25,7 @@
 
 <div class="internal-contentWrapper">
   <div class="internal-contentInnerWrapper programDetails">
-    <div class="globalWidth">
-      {{ page.content }}
-    </div>
+    {{ page.content }}
   </div>
 </div>
 

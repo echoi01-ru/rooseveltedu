@@ -234,6 +234,22 @@ function roosevelt_preprocess_paragraph(array &$variables) {
       }
     }
   }
+
+  if ($paragraph->getType() == 'program_contact') {
+    if ($paragraph->hasField('field_person')) {
+      $uid = $paragraph->field_person->target_id;
+      $user = User::load($uid);
+      if ($user->hasField('field_display_name')) {
+        $variables['content']['full_name'] = Markup::create($user->field_display_name->value);
+      }
+      if ($user->hasField('mail')) {
+        $variables['content']['email'] = Markup::create($user->mail->value);
+      }
+      if ($user->hasField('field_primary_phone')) {
+        $variables['content']['phone_number'] = Markup::create($user->field_primary_phone->value);
+      }
+    }
+  }
 }
 
 /**
@@ -514,4 +530,13 @@ function roosevelt_theme_suggestions_layout_alter(array &$suggestions, array $va
   ksm($suggestions);
   ksm($variables['content']);
 */
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Provide user template suggestions.
+ */
+function roosevelt_theme_suggestions_user_alter(&$suggestions, array $variables) {
+  $suggestions[] = 'user__' . $variables['elements']['#view_mode'];
 }

@@ -1,10 +1,24 @@
 uuid: 29d99ab6-f6de-4577-8880-ff8f6f78bdfd
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_campus
+    - field.field.user.user.field_display_name
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_netid
+    - field.field.user.user.field_office_location
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_picture
+    - field.field.user.user.field_primary_phone
+    - field.field.user.user.field_secondary_phone
+    - field.field.user.user.field_user_type
   module:
+    - telephone
     - user
 _core:
   default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
@@ -12,11 +26,26 @@ id: user.user.compact
 targetEntityType: user
 bundle: user
 mode: compact
-content: {  }
+content:
+  field_display_name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_primary_phone:
+    type: telephone_link
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
 hidden:
   field_bio: true
   field_campus: true
-  field_display_name: true
   field_first_name: true
   field_full_name: true
   field_last_name: true
@@ -24,7 +53,6 @@ hidden:
   field_office_location: true
   field_organization: true
   field_picture: true
-  field_primary_phone: true
   field_secondary_phone: true
   field_user_type: true
   member_for: true
