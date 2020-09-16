@@ -405,6 +405,29 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 4
+          2a1daba9-f8b1-4603-ba38-45125d2e3fdd:
+            uuid: 2a1daba9-f8b1-4603-ba38-45125d2e3fdd
+            region: intro_image
+            configuration:
+              id: 'field_block:node:program:field_catalog_link'
+              label: 'Catalog Link'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: link
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
 id: node.program.default
 targetEntityType: node
