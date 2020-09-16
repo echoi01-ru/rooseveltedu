@@ -1,0 +1,9 @@
+name: Roosevelt Workflows
+description: Provides customized Workflows for Roosevelt Edu.
+core_version_requirement: ^8.8 || ^9
+package: Roosevelt
+type: module
+version: VERSION
+dependencies:
+  - content_moderation
+  - workflows

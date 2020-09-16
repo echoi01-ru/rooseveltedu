@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - content_moderation
+id: event_workflow
+label: 'Event Workflow'
+type: content_moderation
+type_settings:
+  states:
+    archive:
+      published: false
+      default_revision: false
+      label: Archive
+      weight: 1
+    draft:
+      published: false
+      default_revision: false
+      label: Draft
+      weight: -2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+    review:
+      published: false
+      default_revision: false
+      label: 'Related Organization Review'
+      weight: -1
+  transitions:
+    publish:
+      label: Publish
+      from:
+        - published
+        - review
+      to: published
+      weight: 1
+    return_to_draft:
+      label: 'Return to Draft'
+      from:
+        - archive
+        - published
+        - review
+      to: draft
+      weight: 2
+    send_to_archive:
+      label: 'Send to Archive'
+      from:
+        - published
+      to: archive
+      weight: 3
+    send_to_publisher:
+      label: 'Send to Publisher'
+      from:
+        - draft
+      to: review
+      weight: 0
+  entity_types:
+    node:
+      - event
+  default_moderation_state: published

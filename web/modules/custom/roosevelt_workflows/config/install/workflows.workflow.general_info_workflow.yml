@@ -1,0 +1,89 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.general_info
+  module:
+    - content_moderation
+id: general_info_workflow
+label: 'General Info Workflow'
+type: content_moderation
+type_settings:
+  states:
+    archive:
+      published: false
+      default_revision: false
+      label: Archive
+      weight: 1
+    draft:
+      published: false
+      default_revision: false
+      label: Draft
+      weight: -2
+    editor_review:
+      published: false
+      default_revision: false
+      label: 'Editor Review'
+      weight: 3
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+    raci_approval:
+      published: false
+      default_revision: false
+      label: 'RACI Approval'
+      weight: 2
+    review:
+      published: false
+      default_revision: false
+      label: 'Related Organization Review'
+      weight: -1
+  transitions:
+    publish:
+      label: Publish
+      from:
+        - published
+        - review
+      to: published
+      weight: 0
+    return_to_draft:
+      label: 'Return to Draft'
+      from:
+        - archive
+        - editor_review
+        - published
+        - raci_approval
+        - review
+      to: editor_review
+      weight: 1
+    send_to_archive:
+      label: 'Send to Archive'
+      from:
+        - published
+      to: archive
+      weight: 2
+    send_to_editor:
+      label: 'Send to Editor'
+      from:
+        - draft
+      to: editor_review
+      weight: -3
+    send_to_publisher:
+      label: 'Send to Publisher'
+      from:
+        - editor_review
+        - raci_approval
+      to: review
+      weight: -2
+    send_to_raci_approver:
+      label: 'Send to RACI Approver'
+      from:
+        - editor_review
+      to: raci_approval
+      weight: -1
+  entity_types:
+    node:
+      - general_info
+  default_moderation_state: published
