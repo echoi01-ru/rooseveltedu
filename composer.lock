@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d73f00471bba8f5c6477a760fbe9648",
+    "content-hash": "abe59b34139d0ea23e5396380f722523",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5220,13 +5220,14 @@
         },
         {
             "name": "kanopi/roosevelt_pl",
-            "version": "26125058",
+            "version": "dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kanopi/roosevelt_pl.git",
-                "reference": "26125058"
+                "reference": "dev"
             },
-            "type": "drupal-library"
+            "type": "drupal-library",
+            "time": "2020-09-16T12:07:33+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -13448,6 +13449,7 @@
         "drupal/menu_attributes": 10,
         "drupal/paragraph_blocks": 10,
         "enyo/dropzone": 20,
+        "kanopi/roosevelt_pl": 20,
         "vakata/jstree": 20
     },
     "prefer-stable": true,

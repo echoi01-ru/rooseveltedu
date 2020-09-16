@@ -54,12 +54,12 @@
             "type": "package",
             "package": {
                 "name": "kanopi/roosevelt_pl",
-                "version": "26125058",
+                "version": "dev",
                 "type": "drupal-library",
                 "source": {
                     "url": "https://github.com/kanopi/roosevelt_pl.git",
                     "type": "git",
-                    "reference": "26125058"
+                    "reference": "dev"
                 }
             }
         }
@@ -112,7 +112,7 @@
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8",
         "enyo/dropzone": "dev-master",
-        "kanopi/roosevelt_pl": "26125058",
+        "kanopi/roosevelt_pl": "dev",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "simplesamlphp/simplesamlphp": "^1.18",
