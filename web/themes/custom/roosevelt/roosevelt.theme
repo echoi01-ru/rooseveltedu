@@ -5,7 +5,9 @@
  * Functions to support theming in the roosevelt theme.
  */
 
+use Drupal\block\Entity\Block;
 use Drupal\Core\Render\Element;
+use Drupal\Core\Render\Markup;
 use Drupal\Core\Render\Renderer;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\taxonomy\Entity\Term;
@@ -28,6 +30,7 @@ function roosevelt_preprocess_html(array &$variables) {
     if (is_numeric($node)) {
       $node = Node::load($node);
     }
+/*
     if ($node->get('moderation_state')->value !== 'published') {
       if (!isset($variables['attributes']['class'])) {
         $variables['attributes']['class'] = [];
@@ -35,6 +38,7 @@ function roosevelt_preprocess_html(array &$variables) {
 
       $variables['attributes']['class'][] = 'unpublished';
     }
+*/
   }
 }
 
@@ -137,18 +141,25 @@ function roosevelt_preprocess_region(array &$variables) {
       'roosevelt_search',
       'roosevelt_branding',
       'roosevelt_utility',
-      'roosevelt_megamenu'
+      'roosevelt_megamenu',
+      'currentstudentsheader',
     ];
 
     // Unset the block we want to display individually.
     foreach($hidden_blocks as $block) {
-      $variables[$block] = $variables['elements'][$block];
-      unset($variables['elements'][$block]);
+      if (isset($variables['elements'][$block])) {
+        $variables[$block] = $variables['elements'][$block];
+        unset($variables['elements'][$block]);
+      }
     }
 
-    // Render any remaining blocks.
-    $content = \Drupal::service('renderer')->render($variables['elements']);
-    $variables['elements']['#children'] = $content;
+    $content = '';
+    foreach(Element::children($variables['elements']) as $element) {
+      // Render any remaining blocks.
+      $content .= \Drupal::service('renderer')->render($variables['elements'][$element]['content']);
+    }
+
+    $variables['elements']['#children'] = Markup::create($content);
     unset($variables['elements']['#markup']);
 
     // Create the $content variable that templates expect.
@@ -186,6 +197,11 @@ function roosevelt_theme_suggestions_node_alter(array &$suggestions, array $vari
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function roosevelt_preprocess_block(array &$variables) {
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $variables['content']['#attributes']['region'] = $region;
+  }
+
   if ($variables['elements']['#base_plugin_id'] == 'block_content') {
     $block_type = $variables['elements']['content']['#block_content']->bundle();
 
@@ -227,6 +243,18 @@ function roosevelt_theme_suggestions_block_alter(array &$suggestions, array $var
   if ($variables['elements']['#base_plugin_id'] == 'block_content') {
     $block_type = $variables['elements']['content']['#block_content']->bundle();
     $suggestions[] = 'block__block_content__' . $block_type;
+  }
+
+  // Create suggestion block--REGION.html.twig
+  if (isset($variables['elements']['#id'])) {
+    $region = Block::load($variables['elements']['#id'])->getRegion();
+    $plugin_id = $variables['elements']['#base_plugin_id'];
+
+    $suggestion = str_replace('-', '_', 'block__' . $plugin_id . '__' . $region);
+    $suggestions[] = $suggestion;
+
+    $suggestion = str_replace('-', '_', 'block__' . $region);
+    $suggestions[] = $suggestion;
   }
 }
 
@@ -436,13 +464,23 @@ function roosevelt_preprocess_menu_local_task(array &$variables) {
  * Implements hook_preprocess_menu().
  */
 function roosevelt_preprocess_menu(array &$variables) {
-  //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
-  if ($variables['menu_name'] == 'main') {
-    foreach($variables['items'] as $key => $item) {
-      if ($item['in_active_trail']) {
-        $variables['items'][$key]['url']->setOption('attributes', ['id'=>'selectedNav']);
-      }
-    }
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Provide region based menu suggestions.
+ */
+function roosevelt_theme_suggestions_menu_alter(&$suggestions, array $variables) {
+  if (isset($variables['attributes']['region'])) {
+    $suggestion = 'menu__' . $variables['attributes']['region'];
+    $suggestion = str_replace('-', '_', $suggestion);
+    $suggestions[] = $suggestion;
+
+    $suggestion = 'menu__' . $variables['menu_name'] . '__' . $variables['attributes']['region'];
+    $suggestion = str_replace('-', '_', $suggestion);
+    $suggestions[] = $suggestion;
   }
 }
 

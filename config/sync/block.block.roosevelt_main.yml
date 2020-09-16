@@ -5,8 +5,8 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - ctools
     - menu_block_title
-    - node
     - system
   theme:
     - roosevelt
@@ -28,11 +28,10 @@ settings:
   depth: 0
   expand_all_items: true
 visibility:
-  node_type:
-    id: node_type
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     bundles:
       general_info: general_info
-      story: story
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

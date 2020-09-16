@@ -22,26 +22,31 @@
 
 {% import _self as menus %}
 
-{{ menus.menu_links(items, attributes, 0) }}
+{{ menus.menu_links(items, attributes, 0, false) }}
 
-{% macro menu_links(items, attributes, menu_level) %}
+{% macro menu_links(items, attributes, menu_level, active_trail) %}
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
     {% set classes = ['roosMenu'] %}
       <ul{{ attributes.addClass(classes) }}>
     {% else %}
-      <ul class="subMenu">
+      <ul class="subMenu"{% if active_trail %} style="display:block;overflow:visible;"{% endif %}>
     {% endif %}
     {% for item in items %}
       {% set menu_item_classes = [
         'tierMenu',
+        item.in_active_trail ? 'over'
       ] %}
-      <li{{ item.attributes.addClass(menu_item_classes) }}>
-        {{ link(item.title, item.url) }}
+      <li{{ item.attributes.addClass(menu_item_classes).removeClass('col') }}>
+        {% if item.in_active_trail and menu_level > 1 %}
+          {{ link(item.title, item.url, {'id': 'selectedNav'}) }}
+        {% else %}
+          {{ link(item.title, item.url) }}
+        {% endif %}
         {% if item.below %}
           <span class="openChild"><span class="openChildInner"></span></span>
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1, item.in_active_trail) }}
         {% endif %}
       </li>
     {% endfor %}

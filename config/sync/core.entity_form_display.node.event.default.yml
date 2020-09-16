@@ -372,4 +372,3 @@ content:
 hidden:
   field_end_time: true
   field_excluding_date: true
-  moderation_state: true

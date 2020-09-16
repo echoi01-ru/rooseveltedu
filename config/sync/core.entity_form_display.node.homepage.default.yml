@@ -209,14 +209,6 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
     region: content
-  moderation_state:
-    weight: 101
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   path:
     type: path
     weight: 6
