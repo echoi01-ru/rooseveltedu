@@ -112,7 +112,7 @@
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8",
         "enyo/dropzone": "dev-master",
-        "kanopi/roosevelt_pl": "dev",
+        "kanopi/roosevelt_pl": "master",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "simplesamlphp/simplesamlphp": "^1.18",
