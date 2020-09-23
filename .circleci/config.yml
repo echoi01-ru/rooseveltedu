@@ -247,13 +247,14 @@ workflows:
               ignore:
                 - master
 
-  scheduled_update_check:
-    triggers:
-       - schedule:
-           cron: "0 0 * * *"
-           filters:
-             branches:
-              only:
-                - master
-    jobs:
-      - composer_lock_updater
+# Commenting out until I find time to debug why it is failing all the time.
+#   scheduled_update_check:
+#     triggers:
+#        - schedule:
+#            cron: "0 0 * * *"
+#            filters:
+#              branches:
+#               only:
+#                 - master
+#     jobs:
+#       - composer_lock_updater
