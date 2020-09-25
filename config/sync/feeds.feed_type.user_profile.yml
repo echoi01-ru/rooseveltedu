@@ -1,0 +1,224 @@
+uuid: b602b213-8828-4d59-bb12-115f00fc47b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_campus
+    - field.field.user.user.field_display_name
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_netid
+    - field.field.user.user.field_office_location
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_picture
+    - field.field.user.user.field_primary_phone
+    - field.field.user.user.field_secondary_phone
+  module:
+    - feeds_tamper
+    - user
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      5dc2f7a7-826e-446b-8b91-15a79c1653e5:
+        default_value: '1'
+        only_if_empty: false
+        plugin: default_value
+        source: status
+        weight: 0
+        label: 'Set value or default value'
+        uuid: 5dc2f7a7-826e-446b-8b91-15a79c1653e5
+id: user_profile
+label: User/Profile
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  skip_hash_check: false
+  owner_id: 0
+  values: {  }
+  authorize: false
+  owner_feed_author: false
+custom_sources:
+  facultyid:
+    label: FacultyID
+    value: FacultyID
+    machine_name: facultyid
+  netid:
+    label: NetID
+    value: NetID
+    machine_name: netid
+  first_name:
+    label: 'First Name'
+    value: 'First Name'
+    machine_name: first_name
+  last_name:
+    label: 'Last Name'
+    value: 'Last Name'
+    machine_name: last_name
+  full_name:
+    label: 'Full Name'
+    value: 'Full Name'
+    machine_name: full_name
+  display_name:
+    label: 'Display Name'
+    value: 'Display Name'
+    machine_name: display_name
+  primary_phone:
+    label: 'Primary Phone'
+    value: 'Primary Phone'
+    machine_name: primary_phone
+  secondary_phone:
+    label: 'Secondary Phone'
+    value: 'Secondary Phone'
+    machine_name: secondary_phone
+  picture:
+    label: Picture
+    value: Picture
+    machine_name: picture
+  campus:
+    label: Campus
+    value: Campus
+    machine_name: campus
+  officename:
+    label: OfficeName
+    value: OfficeName
+    machine_name: officename
+  organizationid:
+    label: OrganizationID
+    value: OrganizationID
+    machine_name: organizationid
+  status:
+    label: Status
+    value: Status
+    machine_name: status
+  email:
+    label: Email
+    value: Email
+    machine_name: email
+  aboutme:
+    label: aboutMe
+    value: aboutMe
+    machine_name: aboutme
+mappings:
+  -
+    target: name
+    map:
+      value: netid
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: field_netid
+    map:
+      value: netid
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_first_name
+    map:
+      value: first_name
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_last_name
+    map:
+      value: last_name
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_full_name
+    map:
+      value: full_name
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_display_name
+    map:
+      value: display_name
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_primary_phone
+    map:
+      value: primary_phone
+    settings:
+      language: null
+  -
+    target: field_secondary_phone
+    map:
+      value: secondary_phone
+    settings:
+      language: null
+  -
+    target: field_picture
+    map:
+      target_id: picture
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+  -
+    target: field_bio
+    map:
+      value: aboutme
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_campus
+    map:
+      target_id: campus
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: mail
+    map:
+      value: email
+    unique: {  }
+    settings:
+      defuse: false
+  -
+    target: field_office_location
+    map:
+      value: officename
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_organization
+    map:
+      target_id: organizationid
+    settings:
+      language: ''
+      reference_by: field_organization_code
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: status
+    map:
+      value: status
+    settings: {  }

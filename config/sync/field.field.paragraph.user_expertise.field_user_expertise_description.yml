@@ -1,0 +1,21 @@
+uuid: 1f53f51e-51ac-4bc1-be25-b3962d27695d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_user_expertise_description
+    - paragraphs.paragraphs_type.user_expertise
+  module:
+    - text
+id: paragraph.user_expertise.field_user_expertise_description
+field_name: field_user_expertise_description
+entity_type: paragraph
+bundle: user_expertise
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

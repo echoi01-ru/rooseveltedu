@@ -1,0 +1,19 @@
+uuid: 52861e41-8e34-4cbc-8c46-4da1a7da3c8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_college_code
+    - taxonomy.vocabulary.colleges
+id: taxonomy_term.colleges.field_college_code
+field_name: field_college_code
+entity_type: taxonomy_term
+bundle: colleges
+label: 'College Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

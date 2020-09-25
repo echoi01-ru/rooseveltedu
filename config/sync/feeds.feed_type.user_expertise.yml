@@ -1,0 +1,83 @@
+uuid: 2d043b63-fbbd-43ec-89ba-e48b5c1a6d48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_expertise.feeds_item
+    - field.field.paragraph.user_expertise.field_user_expertise_description
+    - field.field.paragraph.user_expertise.field_user_expertise_topic
+    - paragraphs.paragraphs_type.user_expertise
+  module:
+    - paragraphs
+id: user_expertise
+label: 'User Expertise'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:paragraph'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: false
+  skip_hash_check: false
+  values:
+    type: user_expertise
+custom_sources:
+  topicid:
+    label: topicID
+    value: topicID
+    machine_name: topicid
+  employee_id:
+    label: EMPLOYEE_ID
+    value: EMPLOYEE_ID
+    machine_name: employee_id
+  topic:
+    label: Topic
+    value: Topic
+    machine_name: topic
+  description:
+    label: Description
+    value: Description
+    machine_name: description
+mappings:
+  -
+    target: feeds_item
+    map:
+      url: ''
+      guid: topicid
+    unique:
+      guid: '1'
+    settings: {  }
+  -
+    target: parent_id
+    map:
+      value: employee_id
+    unique: {  }
+    settings: {  }
+  -
+    target: field_user_expertise_topic
+    map:
+      value: topic
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_user_expertise_description
+    map:
+      value: description
+    settings:
+      language: null
+      format: plain_text

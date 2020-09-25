@@ -1,0 +1,23 @@
+uuid: de8a4baa-1c52-461f-b843-369ec4ebcca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.feeds_item
+    - paragraphs.paragraphs_type.user_expertise
+  module:
+    - feeds
+id: paragraph.user_expertise.feeds_item
+field_name: feeds_item
+entity_type: paragraph
+bundle: user_expertise
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

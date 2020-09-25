@@ -1,0 +1,51 @@
+uuid: 32680f7d-90ae-400d-ba99-a0062f02b3ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_education.feeds_item
+    - field.field.paragraph.user_education.field_designation
+    - field.field.paragraph.user_education.field_major
+    - field.field.paragraph.user_education.field_school
+    - paragraphs.paragraphs_type.user_education
+id: paragraph.user_education.default
+targetEntityType: paragraph
+bundle: user_education
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_designation:
+    weight: -9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_major:
+    weight: -7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_school:
+    weight: -8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  status: true

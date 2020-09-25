@@ -1,0 +1,28 @@
+uuid: fd9f933d-5a04-4fcb-8060-d2246f8f3dcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_social_media.feeds_item
+    - field.field.paragraph.user_social_media.field_user_social_media
+    - paragraphs.paragraphs_type.user_social_media
+  module:
+    - link
+id: paragraph.user_social_media.default
+targetEntityType: paragraph
+bundle: user_social_media
+mode: default
+content:
+  field_user_social_media:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  admin_title: true
+  created: true
+  feeds_item: true
+  status: true

@@ -1,0 +1,95 @@
+uuid: bbab6a33-f936-4fe4-a3c3-ca29b3f08761
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_education.feeds_item
+    - field.field.paragraph.user_education.field_designation
+    - field.field.paragraph.user_education.field_major
+    - field.field.paragraph.user_education.field_school
+    - paragraphs.paragraphs_type.user_education
+  module:
+    - paragraphs
+id: user_education
+label: 'User Education'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:paragraph'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: false
+  skip_hash_check: false
+  values:
+    type: user_education
+custom_sources:
+  designation:
+    label: designation
+    value: designation
+    machine_name: designation
+  major:
+    label: major
+    value: major
+    machine_name: major
+  school:
+    label: school
+    value: school
+    machine_name: school
+  facultyid:
+    label: facultyID
+    value: facultyID
+    machine_name: facultyid
+  degreeid:
+    label: degreeID
+    value: degreeID
+    machine_name: degreeid
+mappings:
+  -
+    target: field_designation
+    map:
+      value: designation
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_major
+    map:
+      value: major
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_school
+    map:
+      value: school
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: parent_id
+    map:
+      value: facultyid
+    unique: {  }
+    settings: {  }
+  -
+    target: feeds_item
+    map:
+      url: ''
+      guid: degreeid
+    unique:
+      guid: '1'
+    settings: {  }

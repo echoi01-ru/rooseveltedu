@@ -1,0 +1,8 @@
+uuid: 02a45724-6f20-4653-b037-8112bdb5d160
+langcode: en
+status: true
+dependencies: {  }
+name: Colleges
+vid: colleges
+description: ''
+weight: 0

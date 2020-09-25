@@ -1,0 +1,68 @@
+uuid: cbb08197-e191-4a95-aa1e-9a82631449f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.colleges.feeds_item
+    - field.field.taxonomy_term.colleges.field_college_code
+    - taxonomy.vocabulary.colleges
+  module:
+    - taxonomy
+id: colleges
+label: Colleges
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  skip_hash_check: false
+  values:
+    vid: colleges
+  owner_id: 0
+  authorize: false
+  owner_feed_author: false
+custom_sources:
+  college_name:
+    label: 'College Name'
+    value: 'College Name'
+    machine_name: college_name
+  college_code:
+    label: 'College Code'
+    value: 'College Code'
+    machine_name: college_code
+mappings:
+  -
+    target: name
+    map:
+      value: college_name
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_college_code
+    map:
+      value: college_code
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: feeds_item
+    map:
+      url: ''
+      guid: college_code
+    unique:
+      guid: '1'
+    settings: {  }

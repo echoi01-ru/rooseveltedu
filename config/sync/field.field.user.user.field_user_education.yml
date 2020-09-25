@@ -1,0 +1,104 @@
+uuid: e34f2621-72b6-4a88-9a14-02a20e72e0e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_education
+    - paragraphs.paragraphs_type.user_education
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+    - user
+third_party_settings:
+  paragraph_blocks:
+    status: 0
+id: user.user.field_user_education
+field_name: field_user_education
+entity_type: user
+bundle: user
+label: Education
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      user_education: user_education
+    target_bundles_drag_drop:
+      accordion:
+        weight: 25
+        enabled: false
+      accordion_item:
+        weight: 26
+        enabled: false
+      basic_content:
+        weight: 27
+        enabled: false
+      call_to_action:
+        weight: 28
+        enabled: false
+      campus_address:
+        weight: 29
+        enabled: false
+      ctabar:
+        weight: 30
+        enabled: false
+      ctacard:
+        weight: 31
+        enabled: false
+      ctacards:
+        weight: 32
+        enabled: false
+      expectations:
+        weight: 33
+        enabled: false
+      from_library:
+        weight: 34
+        enabled: false
+      herobanner:
+        weight: 35
+        enabled: false
+      imgbox:
+        weight: 36
+        enabled: false
+      infocard:
+        weight: 37
+        enabled: false
+      infocards:
+        weight: 38
+        enabled: false
+      program_contact:
+        weight: 39
+        enabled: false
+      raci_consult:
+        weight: 40
+        enabled: false
+      raci_informed:
+        weight: 41
+        enabled: false
+      raci_responsible:
+        weight: 42
+        enabled: false
+      related_content:
+        weight: 43
+        enabled: false
+      related_media:
+        weight: 44
+        enabled: false
+      sample_course:
+        weight: 45
+        enabled: false
+      sample_courses:
+        weight: 46
+        enabled: false
+      textsection:
+        weight: 47
+        enabled: false
+      user_education:
+        enabled: true
+        weight: 48
+field_type: entity_reference_revisions

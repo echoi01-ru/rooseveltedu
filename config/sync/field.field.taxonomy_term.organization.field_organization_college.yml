@@ -1,0 +1,29 @@
+uuid: 03cc5222-5eb9-4dc0-9b26-9a9ac0daa4d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_organization_college
+    - taxonomy.vocabulary.colleges
+    - taxonomy.vocabulary.organization
+id: taxonomy_term.organization.field_organization_college
+field_name: field_organization_college
+entity_type: taxonomy_term
+bundle: organization
+label: College
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colleges: colleges
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

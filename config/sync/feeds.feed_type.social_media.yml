@@ -1,0 +1,71 @@
+uuid: dc71edb3-8b8f-4307-a7a8-cbd879a8ab7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_social_media.feeds_item
+    - field.field.paragraph.user_social_media.field_user_social_media
+    - paragraphs.paragraphs_type.user_social_media
+  module:
+    - paragraphs
+id: social_media
+label: 'Social Media'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:paragraph'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: false
+  skip_hash_check: false
+  values:
+    type: user_social_media
+custom_sources:
+  recordid:
+    label: recordID
+    value: recordID
+    machine_name: recordid
+  facultyid:
+    label: facultyID
+    value: facultyID
+    machine_name: facultyid
+  url:
+    label: URL
+    value: URL
+    machine_name: url
+mappings:
+  -
+    target: feeds_item
+    map:
+      url: ''
+      guid: recordid
+    unique:
+      guid: '1'
+    settings: {  }
+  -
+    target: parent_id
+    map:
+      value: facultyid
+    unique: {  }
+    settings: {  }
+  -
+    target: field_user_social_media
+    map:
+      uri: url
+      title: url
+    settings:
+      language: null

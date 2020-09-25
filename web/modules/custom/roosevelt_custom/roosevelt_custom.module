@@ -219,3 +219,31 @@ function _node_form_alter(&$form, FormStateInterface $form_state) {
     $form['testimonials']['list'] = $testimonials;
   }
 }
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for 'paragraph'.
+ * Helper for Feeds.
+ */
+function roosevelt_custom_paragraph_insert(EntityInterface $paragraph) {
+  $type = $paragraph->type->target_id;
+  if ($type == 'user_education' || $type == 'user_expertise' || $type == 'user_social_media') {
+    $parent_type = 'user';
+    $parent_field_name = 'field_'.$type;
+    ///Get user id from NetID
+    $parent_id = $paragraph->parent_id->value;
+    $user = user_load_by_name($parent_id);
+    if($user){
+      // Check if entity already has a reference to this paragraph.
+      foreach ($user->{$parent_field_name} as $item) {
+        if ($item->target_id == $paragraph->id()) {
+          // Paragraph found. Abort.
+          return;
+        }
+      }
+      $user->{$parent_field_name}[] = $paragraph;
+      $user->save();
+    }else{
+      //Orphan Record --- how to avoid save it?
+    }
+  }
+}

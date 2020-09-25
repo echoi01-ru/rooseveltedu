@@ -1,0 +1,29 @@
+uuid: 26799550-a5b3-4f42-be46-154f37030df7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.user_social_media.feeds_item
+    - field.field.paragraph.user_social_media.field_user_social_media
+    - paragraphs.paragraphs_type.user_social_media
+  module:
+    - link
+id: paragraph.user_social_media.default
+targetEntityType: paragraph
+bundle: user_social_media
+mode: default
+content:
+  field_user_social_media:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  feeds_item: true

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.feeds_item
     - field.field.user.user.field_bio
     - field.field.user.user.field_campus
     - field.field.user.user.field_display_name
@@ -15,8 +16,12 @@ dependencies:
     - field.field.user.user.field_picture
     - field.field.user.user.field_primary_phone
     - field.field.user.user.field_secondary_phone
+    - field.field.user.user.field_user_education
+    - field.field.user.user.field_user_expertise
+    - field.field.user.user.field_user_social_media
     - field.field.user.user.field_user_type
   module:
+    - entity_reference_revisions
     - telephone
     - text
     - user
@@ -123,6 +128,33 @@ content:
     settings:
       title: ''
     third_party_settings: {  }
+  field_user_education:
+    type: entity_reference_revisions_entity_view
+    weight: 14
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_user_expertise:
+    type: entity_reference_revisions_entity_view
+    weight: 15
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_user_social_media:
+    type: entity_reference_revisions_entity_view
+    weight: 16
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_user_type:
     type: entity_reference_label
     weight: 13
@@ -136,4 +168,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

@@ -1,0 +1,23 @@
+uuid: f993085a-f651-430f-8eef-3913d09a62d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_user_social_media
+    - paragraphs.paragraphs_type.user_social_media
+  module:
+    - link
+id: paragraph.user_social_media.field_user_social_media
+field_name: field_user_social_media
+entity_type: paragraph
+bundle: user_social_media
+label: 'Social Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

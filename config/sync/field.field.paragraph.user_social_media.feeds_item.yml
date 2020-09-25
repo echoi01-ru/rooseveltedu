@@ -1,0 +1,23 @@
+uuid: 25c196c6-f9f4-4b0a-b59c-978cdfc49539
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.feeds_item
+    - paragraphs.paragraphs_type.user_social_media
+  module:
+    - feeds
+id: paragraph.user_social_media.feeds_item
+field_name: feeds_item
+entity_type: paragraph
+bundle: user_social_media
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

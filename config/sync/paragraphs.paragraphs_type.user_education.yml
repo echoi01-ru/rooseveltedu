@@ -1,0 +1,10 @@
+uuid: 1c33d781-6c79-4b27-bba9-c3161dacaab4
+langcode: en
+status: true
+dependencies: {  }
+id: user_education
+label: 'User Education'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

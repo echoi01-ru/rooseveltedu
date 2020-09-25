@@ -1,0 +1,82 @@
+uuid: be0db6e1-e3be-4b7c-9f01-67e0cc378496
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.organization.feeds_item
+    - field.field.taxonomy_term.organization.field_organization_code
+    - field.field.taxonomy_term.organization.field_organization_college
+    - taxonomy.vocabulary.organization
+  module:
+    - taxonomy
+id: organizations
+label: Organizations
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  skip_hash_check: false
+  values:
+    vid: organization
+  owner_id: 0
+  authorize: false
+  owner_feed_author: false
+custom_sources:
+  officename:
+    label: OfficeName
+    value: OfficeName
+    machine_name: officename
+  id:
+    label: ID
+    value: ID
+    machine_name: id
+  college:
+    label: College
+    value: College
+    machine_name: college
+mappings:
+  -
+    target: name
+    map:
+      value: officename
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_organization_code
+    map:
+      value: id
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: feeds_item
+    map:
+      url: ''
+      guid: id
+    unique:
+      guid: '1'
+    settings: {  }
+  -
+    target: field_organization_college
+    map:
+      target_id: college
+    settings:
+      language: ''
+      reference_by: field_college_code
+      feeds_item: guid
+      autocreate: 0

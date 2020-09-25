@@ -1,0 +1,110 @@
+uuid: 642a8af5-0dca-476f-9a54-c76981d5f17f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_social_media
+    - paragraphs.paragraphs_type.user_social_media
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+    - user
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: user.user.field_user_social_media
+field_name: field_user_social_media
+entity_type: user
+bundle: user
+label: 'Social Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      user_social_media: user_social_media
+    target_bundles_drag_drop:
+      accordion:
+        weight: 27
+        enabled: false
+      accordion_item:
+        weight: 28
+        enabled: false
+      basic_content:
+        weight: 29
+        enabled: false
+      call_to_action:
+        weight: 30
+        enabled: false
+      campus_address:
+        weight: 31
+        enabled: false
+      ctabar:
+        weight: 32
+        enabled: false
+      ctacard:
+        weight: 33
+        enabled: false
+      ctacards:
+        weight: 34
+        enabled: false
+      expectations:
+        weight: 35
+        enabled: false
+      from_library:
+        weight: 36
+        enabled: false
+      herobanner:
+        weight: 37
+        enabled: false
+      imgbox:
+        weight: 38
+        enabled: false
+      infocard:
+        weight: 39
+        enabled: false
+      infocards:
+        weight: 40
+        enabled: false
+      program_contact:
+        weight: 41
+        enabled: false
+      raci_consult:
+        weight: 42
+        enabled: false
+      raci_informed:
+        weight: 43
+        enabled: false
+      raci_responsible:
+        weight: 44
+        enabled: false
+      related_content:
+        weight: 45
+        enabled: false
+      related_media:
+        weight: 46
+        enabled: false
+      sample_course:
+        weight: 47
+        enabled: false
+      sample_courses:
+        weight: 48
+        enabled: false
+      textsection:
+        weight: 49
+        enabled: false
+      user_education:
+        weight: 50
+        enabled: false
+      user_expertise:
+        weight: 51
+        enabled: false
+      user_social_media:
+        enabled: true
+        weight: 52
+field_type: entity_reference_revisions

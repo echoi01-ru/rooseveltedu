@@ -1,0 +1,55 @@
+uuid: c2a12b12-176c-437e-ba3f-1c06544513ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.colleges.feeds_item
+    - field.field.taxonomy_term.colleges.field_college_code
+    - taxonomy.vocabulary.colleges
+  module:
+    - path
+    - text
+id: taxonomy_term.colleges.default
+targetEntityType: taxonomy_term
+bundle: colleges
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_college_code:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden:
+  feeds_item: true

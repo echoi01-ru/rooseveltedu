@@ -1,0 +1,10 @@
+uuid: afc4a079-12b6-4f04-bee2-6ff7d6a50c8a
+langcode: en
+status: true
+dependencies: {  }
+id: user_expertise
+label: 'User Expertise'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

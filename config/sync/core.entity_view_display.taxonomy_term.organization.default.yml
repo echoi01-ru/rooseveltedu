@@ -1,0 +1,41 @@
+uuid: 8897c391-2dc0-4000-af76-6d217e6fb7c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.organization.feeds_item
+    - field.field.taxonomy_term.organization.field_organization_code
+    - field.field.taxonomy_term.organization.field_organization_college
+    - taxonomy.vocabulary.organization
+  module:
+    - text
+id: taxonomy_term.organization.default
+targetEntityType: taxonomy_term
+bundle: organization
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_organization_code:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_organization_college:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  feeds_item: true

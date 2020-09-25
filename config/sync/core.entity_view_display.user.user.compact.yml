@@ -4,6 +4,23 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.feeds_item
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_campus
+    - field.field.user.user.field_display_name
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_netid
+    - field.field.user.user.field_office_location
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_picture
+    - field.field.user.user.field_primary_phone
+    - field.field.user.user.field_secondary_phone
+    - field.field.user.user.field_user_education
+    - field.field.user.user.field_user_expertise
+    - field.field.user.user.field_user_social_media
+    - field.field.user.user.field_user_type
   module:
     - user
 _core:
@@ -14,6 +31,7 @@ bundle: user
 mode: compact
 content: {  }
 hidden:
+  feeds_item: true
   field_bio: true
   field_campus: true
   field_display_name: true
@@ -26,5 +44,8 @@ hidden:
   field_picture: true
   field_primary_phone: true
   field_secondary_phone: true
+  field_user_education: true
+  field_user_expertise: true
+  field_user_social_media: true
   field_user_type: true
   member_for: true
