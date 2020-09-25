@@ -113,12 +113,12 @@
         "drupal/twig_field_value": "1.2",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8",
-        "enyo/dropzone": "dev-master",
+        "enyo/dropzone": "master",
         "kanopi/roosevelt_pl": "master",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "simplesamlphp/simplesamlphp": "^1.18",
-        "vakata/jstree": "dev-master",
+        "vakata/jstree": "master",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {

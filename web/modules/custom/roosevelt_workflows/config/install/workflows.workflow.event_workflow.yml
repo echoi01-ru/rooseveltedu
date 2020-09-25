@@ -1,13 +1,12 @@
-uuid: 9848cf08-e5e0-439b-bad9-ca7458c68810
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.story
+    - node.type.event
   module:
     - content_moderation
-id: story_workflow
-label: 'Story Workflow'
+id: event_workflow
+label: 'Event Workflow'
 type: content_moderation
 type_settings:
   states:
@@ -61,5 +60,5 @@ type_settings:
       weight: 0
   entity_types:
     node:
-      - story
+      - event
   default_moderation_state: published

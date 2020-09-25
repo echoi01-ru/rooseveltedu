@@ -1,6 +1,6 @@
 name: 'Roosevelt Custom'
 type: module
-description: 'Cusotm functionality needed for the Roosevelt website'
+description: 'Custom functionality needed for the Roosevelt website'
 package: Roosevelt
 core: 8.x
 version: VERSION

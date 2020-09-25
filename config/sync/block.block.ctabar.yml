@@ -1,14 +1,18 @@
 uuid: 45e53c6b-3764-4b6b-b63b-fd88d158f3cf
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.cta-bar
   module:
     - ctools
+    - menu_block_title
     - system
   theme:
     - roosevelt
+third_party_settings:
+  menu_block_title:
+    modify_title: false
 id: ctabar
 theme: roosevelt
 region: content
@@ -28,6 +32,7 @@ visibility:
     id: 'entity_bundle:node'
     bundles:
       general_info: general_info
+      story: story
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'

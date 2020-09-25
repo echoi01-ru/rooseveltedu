@@ -1,0 +1,138 @@
+{% if has_hero %}
+<div class="globalWidth">
+  <div id="pnlHeroBlock" class="internal-contentContainer-heroContainer" role="complementary">
+    {{ content.hero }}
+  </div>
+</div>
+{% endif %}
+
+<div class="programDetails-panel1-cta">
+  <div class="globalWidth ctaBtnHolder">
+    {% if has_diffs %}
+      <a href="#pnlDifferentiateSection" onclick="scrollToSection('programDetails-panel3-Container');">Differentiators</a>
+    {% endif %}
+    {% if has_reqs %}
+      <a href="#pnlRequirementsSection" onclick="scrollToSection('programDetails-panel4-requirements');">Expectations</a>
+    {% endif %}
+    {% if has_outcomes %}
+      <a href="#pnlOutcomesSection" onclick="scrollToSection('programDetails-panel5-outcomes');">Outcomes</a>
+    {% endif %}
+    {% if has_promos %}
+      <a href="#pnlimgPromotionSection" onclick="scrollToSection('programDetails-panel6-imgPromotion');">Promotions</a>
+    {% endif %}
+    {% if has_opps %}
+      <a href="#pnlOpportunitiesSection" onclick="scrollToSection('programDetails-panel7-opportunties');">Opportunties</a>
+    {% endif %}
+    {% if has_faculty %}
+      <a href="#pnlFacultySection" onclick="scrollToSection('programDetails-panel8-faculty');">Faculty</a>
+    {% endif %}
+    {% if has_testimonials %}
+      <a href="#pnlTestimonialSection" onclick="scrollToSection('programDetails-panel9-testimonials');">Testimonials</a>
+    {% endif %}
+    {% if has_admissions %}
+      <a href="#pnlAdmissionSection" onclick="scrollToSection('programDetails-panel10-imgPromotion');">Admission Info</a>
+    {% endif %}
+    {% if has_events %}
+      <a href="#pnlupcomingEventsSection" onclick="scrollToSection('programDetails-panel11-upcomingEvents');">Upcoming Events</a>
+    {% endif %}
+    {% if has_programs %}
+      <a href="#pnlRelatedProgramsSection" onclick="scrollToSection('programDetails-panel12-relatedPrograms');">Related Programs</a>
+    {% endif %}
+  </div>
+</div>
+
+{% if has_intro_image or has_intro_content %}
+<div class="programDetails-panel2-intro">
+  <div class="globalWidth">
+    <div class="programDetails-panel2-introWrapper">
+      <div class="programDetails-panel2-intro-colLeft">
+        {{ content.intro_image }}
+      </div>
+      <div class="programDetails-panel2-intro-colRight">
+        {{ content.intro_content }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if has_diffs %}
+<div id="pnlDifferentiateSection" class="programDetails-panel3-Container">
+{{ content.diffs }}
+</div>
+{% endif %}
+
+{% if has_reqs %}
+<div id="pnlRequirementsSection" class="programDetails-panel4-requirements">
+{{ content.reqs }}
+</div>
+{% endif %}
+
+{% if has_outcomes %}
+<div id="pnlOutcomesSection" class="programDetails-panel5-outcomes">
+  <div class="globalWidth">
+    <h2 class="programDetails-panel5-titleContainer"><span>Outcomes</span></h2>
+    <div class="programDetails-panel5-outcomesWrapper">
+      <div class="programDetails-panel5-outcomes-textContainer"></div>
+      <div class="programDetails-panel5-outcomes-indInfoGridContainer">
+        {{ content.outcomes }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if has_promos %}
+<div id="pnlimgPromotionSection" class="programDetails-panel6-imgPromotion">
+{{ content.promos }}
+</div>
+{% endif %}
+
+{% if has_opps %}
+<div id="pnlOpportunitiesSection" class="programDetails-panel7-opportunties">
+{{ content.opps }}
+</div>
+{% endif %}
+
+{% if has_faculty %}
+<div id="pnlFacultySection" class="programDetails-panel8-faculty">
+{{ content.faculty }}
+</div>
+{% endif %}
+
+{% if has_testimonials %}
+<div id="pnlTestimonialSection" class="programDetails-panel9-testimonials">
+{{ content.testimonials }}
+</div>
+{% endif %}
+
+{% if has_admissions %}
+<div id="pnlAdmissionSection" class="programDetails-panel10-imgPromotion" style="background-image:url('/sites/default/files/images/TEMPLATES/Defaults/slide1.jpg');">
+  <div class="globalWidth programDetails-panel10-imgPromotionContainer">
+    <h2 class="programDetails-panel10-titleContainer">Admission Info</h2>
+    <div id="pnlAdmissionPromotionSection" class="programDetails-panel10-imgPromotionWrapper">
+      <!--Img Column-->
+      <div class="programDetails-panel10-imgPromotion-imgContainer">
+        <img id="imgAdmission" alt="Chicago skyline" src="/sites/default/files/images/TEMPLATES/Defaults/slide2.jpg">
+      </div>
+      <!--END Img Column-->
+      <!--Content Column -->
+      {{ content.admissions }}
+      <!-- END Content Column-->
+    </div>
+  </div>
+  <div class="programDetails-panel10-imgPromotion-overlay"></div>
+</div>
+{% endif %}
+
+{% if has_events %}
+<div id="pnlupcomingEventsSection" class="programDetails-panel11-upcomingEvents">
+{{ content.events }}
+</div>
+{% endif %}
+
+{% if has_programs %}
+<div id="pnlrelatedProgramsSection" class="programDetails-panel12-relatedPrograms">
+{{ content.programs }}
+</div>
+{% endif %}

@@ -26,14 +26,14 @@ mode: default
 content:
   accountability_notes:
     type: basic_string
-    weight: 11
+    weight: 10
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   body:
     type: text_default
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings: {  }
@@ -44,7 +44,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_accordion:
-    weight: 7
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -53,7 +53,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_basic_content:
-    weight: 8
+    weight: 6
     label: hidden
     settings:
       view_mode: default
@@ -62,15 +62,16 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_brand_pillars:
-    weight: 5
+    weight: 3
     label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_call_to_action:
-    weight: 9
+    weight: 7
     label: hidden
     settings:
       view_mode: default
@@ -79,31 +80,34 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_campus:
-    weight: 6
+    weight: 4
     label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_featured_image:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_member_accountability:
-    weight: 10
+    weight: 8
     label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_raci:
-    weight: 3
+    weight: 9
     label: hidden
     settings:
       view_mode: default
@@ -116,11 +120,12 @@ content:
     label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   links:
-    weight: 4
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

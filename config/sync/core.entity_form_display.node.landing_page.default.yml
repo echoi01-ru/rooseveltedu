@@ -16,9 +16,7 @@ dependencies:
     - field.field.node.landing_page.field_related_content
     - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
-    - workflows.workflow.landing_page_workflow
   module:
-    - content_moderation
     - entity_browser
     - field_group
     - paragraphs
@@ -177,12 +175,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
-    third_party_settings: {  }
   path:
     type: path
     weight: 10

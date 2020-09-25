@@ -4,13 +4,12 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_related_content
-    - node.type.landing_page
     - node.type.program
 id: node.program.field_related_content
 field_name: field_related_content
 entity_type: node
 bundle: program
-label: 'Related Pages'
+label: 'Related Programs'
 description: ''
 required: false
 translatable: true
@@ -20,7 +19,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      landing_page: landing_page
+      program: program
     sort:
       field: _none
     auto_create: false

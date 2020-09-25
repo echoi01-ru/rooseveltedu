@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ */
+#}
+{%
+  set classes = [
+    'programDetails-panel2-intro-colLeft-imgWrapper',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+{% block content %}
+  {{ content }}
+{% endblock %}
+</div>

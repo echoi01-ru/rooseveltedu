@@ -21,11 +21,72 @@ dependencies:
     - field.field.user.user.field_user_social_media
     - field.field.user.user.field_user_type
   module:
+    - field_group
     - paragraphs
-    - path
     - roosevelt_custom
+    - telephone
     - text
     - user
+third_party_settings:
+  field_group:
+    group_account:
+      children:
+        - account
+      parent_name: group_user
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        description: ''
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+        formatter: closed
+      label: Account
+    group_details:
+      children:
+        - field_user_type
+        - field_netid
+        - field_display_name
+        - field_first_name
+        - field_last_name
+        - field_full_name
+        - field_picture
+        - field_campus
+        - field_bio
+        - field_office_location
+        - field_organization
+        - field_primary_phone
+        - field_secondary_phone
+        - field_user_education
+        - field_user_expertise
+        - field_user_social_media
+      parent_name: group_user
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        formatter: closed
+      label: Details
+    group_user:
+      children:
+        - group_account
+        - group_details
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: User
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -43,13 +104,23 @@ content:
     region: content
   field_bio:
     type: text_textarea
-    weight: 6
+    weight: 9
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_first_name:
+  field_campus:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_display_name:
     type: string_textfield
     weight: 3
     region: content
@@ -57,9 +128,25 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_last_name:
+  field_first_name:
     type: string_textfield
     weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_full_name:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 5
     region: content
     settings:
       size: 60
@@ -73,8 +160,26 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_office_location:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_organization:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_picture:
-    weight: 5
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -83,9 +188,23 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_primary_phone:
+    type: telephone_default
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_secondary_phone:
+    type: telephone_default
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_user_education:
     type: entity_reference_paragraphs
-    weight: 31
+    weight: 14
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -97,7 +216,7 @@ content:
     region: content
   field_user_expertise:
     type: entity_reference_paragraphs
-    weight: 32
+    weight: 15
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -109,7 +228,7 @@ content:
     region: content
   field_user_social_media:
     type: entity_reference_paragraphs
-    weight: 33
+    weight: 16
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -125,20 +244,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   feeds_item: true
-  field_campus: true
-  field_display_name: true
-  field_full_name: true
-  field_office_location: true
-  field_organization: true
-  field_primary_phone: true
-  field_secondary_phone: true
   language: true
+  path: true
   timezone: true

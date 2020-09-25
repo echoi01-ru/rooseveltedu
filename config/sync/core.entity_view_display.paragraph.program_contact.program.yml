@@ -1,0 +1,38 @@
+uuid: f61149ca-2d2e-406e-b585-9e0f6a56c92e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.program
+    - field.field.paragraph.program_contact.field_person
+    - field.field.paragraph.program_contact.field_person_title
+    - paragraphs.paragraphs_type.program_contact
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.program_contact.program
+targetEntityType: paragraph
+bundle: program_contact
+mode: program
+content:
+  field_person:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: compact
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_person_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

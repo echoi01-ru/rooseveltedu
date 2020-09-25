@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for a three-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ */
+#}
+{% if content %}
+<div class="outcomes">
+  <div class="outcomer">
+    {{ content.first }}
+  </div>
+  <div class="outcome">
+    {{ content.second }}
+  </div>
+  <div class="outcome">
+    {{ content.third }}
+  </div>
+</div>
+{% endif %}

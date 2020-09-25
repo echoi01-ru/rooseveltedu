@@ -1,0 +1,33 @@
+uuid: 7aa8f2dd-7df3-4572-902a-276ed0c35ad9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:simple:bad2237a-e88e-40eb-ae53-2a39b908d054'
+  module:
+    - block_content
+    - node
+  theme:
+    - roosevelt
+id: requestmoreinfoblock
+theme: roosevelt
+region: help
+weight: 0
+provider: null
+plugin: 'block_content:bad2237a-e88e-40eb-ae53-2a39b908d054'
+settings:
+  id: 'block_content:bad2237a-e88e-40eb-ae53-2a39b908d054'
+  label: 'Request More Info Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      program: program
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

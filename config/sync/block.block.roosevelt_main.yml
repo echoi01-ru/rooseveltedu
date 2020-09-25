@@ -5,8 +5,8 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - ctools
     - menu_block_title
-    - node
     - system
   theme:
     - roosevelt
@@ -23,15 +23,16 @@ settings:
   id: 'system_menu_block:main'
   label: 'Roosevelt Main Navigation'
   provider: system
-  label_display: '0'
+  label_display: visible
   level: 2
   depth: 0
   expand_all_items: true
 visibility:
-  node_type:
-    id: node_type
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     bundles:
       general_info: general_info
+      story: story
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

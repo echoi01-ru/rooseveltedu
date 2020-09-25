@@ -1,0 +1,10 @@
+uuid: e8c8481e-aa7d-47f5-a94f-c727d29888fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.related
+label: Related
+targetEntityType: media
+cache: true

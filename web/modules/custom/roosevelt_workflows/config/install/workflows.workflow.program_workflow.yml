@@ -1,13 +1,12 @@
-uuid: 97cb2d5a-0f10-4c6d-849f-df5686d27d67
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.event
+    - node.type.program
   module:
     - content_moderation
-id: event_workflow
-label: 'Event Workflow'
+id: program_workflow
+label: 'Program Workflow'
 type: content_moderation
 type_settings:
   states:
@@ -16,11 +15,21 @@ type_settings:
       default_revision: false
       label: Archive
       weight: 1
+    create_new_draft:
+      published: false
+      default_revision: false
+      label: 'Create New Draft'
+      weight: -3
     draft:
       published: false
       default_revision: false
       label: Draft
       weight: -2
+    editor_review:
+      published: false
+      default_revision: false
+      label: 'Editor Review'
+      weight: 2
     published:
       label: Published
       published: true
@@ -32,34 +41,49 @@ type_settings:
       label: 'Related Organization Review'
       weight: -1
   transitions:
+    draft:
+      label: Draft
+      from:
+        - create_new_draft
+        - draft
+        - editor_review
+        - review
+      to: draft
+      weight: -3
     publish:
       label: Publish
       from:
         - published
         - review
       to: published
-      weight: 1
+      weight: 0
     return_to_draft:
       label: 'Return to Draft'
       from:
         - archive
-        - published
         - review
-      to: draft
-      weight: 2
+      to: editor_review
+      weight: 1
     send_to_archive:
       label: 'Send to Archive'
       from:
         - published
       to: archive
-      weight: 3
+      weight: 2
+    send_to_editor:
+      label: 'Send to Editor'
+      from:
+        - create_new_draft
+        - draft
+      to: editor_review
+      weight: -2
     send_to_publisher:
       label: 'Send to Publisher'
       from:
-        - draft
+        - editor_review
       to: review
-      weight: 0
+      weight: -1
   entity_types:
     node:
-      - event
+      - program
   default_moderation_state: published

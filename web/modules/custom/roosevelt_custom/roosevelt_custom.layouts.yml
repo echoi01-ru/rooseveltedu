@@ -9,3 +9,57 @@ layout_megamenu_section:
   regions:
     content:
       label: Content
+
+layout_outcome_section:
+  label: 'Outcomes'
+  path: layouts/outcome_section
+  template: layout--outcome-section
+  library: roosevelt_custom/outcome_section
+  category: 'Sections'
+  default_region: second
+  icon_map:
+    - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+
+layout_program_detail:
+  label: 'Program Detail'
+  path: layouts/program_detail
+  template: layout--program-detail
+  library: roosevelt_custom/program_detail
+  category: 'Sections'
+  default_region: intro
+  icon_map:
+    - [intro, hero]
+  regions:
+    hero:
+      label: Hero
+    intro_image:
+      label: 'Intro Image'
+    intro_content:
+      label: 'Intro Content'
+    diffs:
+      label: Differentitators
+    reqs:
+      label: Requirements
+    outcomes:
+      label: Outcomes
+    promos:
+      label: 'Image Promos'
+    opps:
+      label: Opportunities
+    faculty:
+      label: Faculty
+    testimonials:
+      label: Testimonials
+    admissions:
+      label: 'Admissions Section'
+    events:
+      label: 'Upcoming Events'
+    programs:
+      label: 'Related Programs'

@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override for page titles.
+ *
+ */
+#}
+<div class="internal-upperContainer" role="banner">
+<!--Main Page Title-->
+<div id="plcheader_0_pnlTitleContainer" class="internal-upperContainer-titleContainer">
+
+<div class="globalWidth">
+  {{ title_prefix }}
+  {% if title %}
+    <h1{{ title_attributes }}>{{ title }}</h1>
+  {% endif %}
+  {{ title_suffix }}
+  <div id="plcheader_0_pnlDivider" class="internal-upperContainer-sepWrapper">
+    <div class="internal-upperContainer-sepWrapper-left"></div>
+    <div class="internal-upperContainer-sepWrapper-center">
+      <span class="fa fa-circle-o headingSep" aria-hidden="true"></span>
+    </div>
+    <div class="internal-upperContainer-sepWrapper-right"></div>
+  </div>
+
+  <div id="plcheader_0_pnlAttributeContainer" class="storyDetails-attributeContainer">
+    <div class="storyDetails-attribute-name"></div>
+      <div class="storyDetails-attribute-type">
+        <div id="collegeName">
+        {# {{ college_name }} #}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--Main Page Title-->
+
+<!--Overlay-->
+<div class="internal-upperContainer-overlay"></div>
+<!--END Overlay-->
+</div>

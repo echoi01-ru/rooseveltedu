@@ -5,9 +5,13 @@ dependencies:
   config:
     - system.menu.utility
   module:
+    - menu_block_title
     - system
   theme:
     - roosevelt
+third_party_settings:
+  menu_block_title:
+    modify_title: false
 id: roosevelt_utility
 theme: roosevelt
 region: header
@@ -22,4 +26,9 @@ settings:
   level: 1
   depth: 1
   expand_all_items: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/current-students\r\n/current-students/*"
+    negate: true
+    context_mapping: {  }

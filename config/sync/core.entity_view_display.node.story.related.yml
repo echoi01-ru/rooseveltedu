@@ -1,0 +1,84 @@
+uuid: 94056481-1dcb-4689-9274-4b92fb2c77ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.related
+    - field.field.node.story.body
+    - field.field.node.story.field_accordion
+    - field.field.node.story.field_accountability_notes
+    - field.field.node.story.field_audience
+    - field.field.node.story.field_basic_content
+    - field.field.node.story.field_brand_pillars
+    - field.field.node.story.field_call_to_action
+    - field.field.node.story.field_campus
+    - field.field.node.story.field_date_published
+    - field.field.node.story.field_featured
+    - field.field.node.story.field_featured_image
+    - field.field.node.story.field_member_accountability
+    - field.field.node.story.field_parent_organization
+    - field.field.node.story.field_raci
+    - field.field.node.story.field_related_content
+    - field.field.node.story.field_related_media
+    - field.field.node.story.field_related_people
+    - field.field.node.story.field_story_type
+    - node.type.story
+  module:
+    - datetime
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.story.related
+targetEntityType: node
+bundle: story
+mode: related
+content:
+  body:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 250
+    third_party_settings: {  }
+    type: text_summary_or_trimmed
+    region: content
+  field_date_published:
+    type: datetime_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
+  field_featured_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: related
+      link: false
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_accordion: true
+  field_accountability_notes: true
+  field_audience: true
+  field_basic_content: true
+  field_brand_pillars: true
+  field_call_to_action: true
+  field_campus: true
+  field_featured: true
+  field_member_accountability: true
+  field_parent_organization: true
+  field_raci: true
+  field_related_content: true
+  field_related_media: true
+  field_related_people: true
+  field_story_type: true
+  layout_builder__layout: true
+  links: true

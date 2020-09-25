@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ */
+#}
+<!--Block Quote-->
+<div id="plcmaincontent_0_pnlPullQuote" class="internalPage">
+  <blockquote>
+    <span id="plcmaincontent_0_lblQuoteText">{{ content.field_quote }}</span>
+    <span class="blockquoteTitle">
+      <span id="plcmaincontent_0_lblName">{{ content.field_full_name }}</span>
+    </span>
+    <span class="blockquoteAttribute">
+      <span id="plcmaincontent_0_lblSubtitle">{{ content.field_organizational_title }}</span>
+    </span>
+    {{ content|without('field_quote','field_full_name','field_organizational_title')}}
+  </blockquote>
+</div>
+<!--END Block Quote-->

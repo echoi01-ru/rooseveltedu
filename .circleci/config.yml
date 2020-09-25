@@ -227,7 +227,10 @@ jobs:
 
       - run:
           name: run composer lock updater
-          command: set -e && clu https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${CI_PROJECT_USERNAME}/${CI_PROJECT_REPONAME}.git | sed -e "s/${GITHUB_TOKEN}/[REDACTED]/g"
+          command: |
+            set -e
+            clu https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${CI_PROJECT_USERNAME}/${CI_PROJECT_REPONAME}.git
+            sed -e "s/${GITHUB_TOKEN}/[REDACTED]/g"
 
 workflows:
   version: 2
@@ -247,13 +250,14 @@ workflows:
               ignore:
                 - master
 
-  scheduled_update_check:
-    triggers:
-       - schedule:
-           cron: "0 0 * * *"
-           filters:
-             branches:
-              only:
-                - master
-    jobs:
-      - composer_lock_updater
+# Commenting out until I find time to debug why it is failing all the time.
+#   scheduled_update_check:
+#     triggers:
+#        - schedule:
+#            cron: "0 0 * * *"
+#            filters:
+#              branches:
+#               only:
+#                 - master
+#     jobs:
+#       - composer_lock_updater

@@ -24,9 +24,7 @@ dependencies:
     - field.field.node.story.field_story_type
     - field.field.node.story.layout_builder__layout
     - node.type.story
-    - workflows.workflow.story_workflow
   module:
-    - content_moderation
     - datetime
     - entity_browser
     - field_group
@@ -279,12 +277,6 @@ content:
       size: 60
       placeholder: ''
       match_limit: 10
-    third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
     third_party_settings: {  }
   path:
     type: path

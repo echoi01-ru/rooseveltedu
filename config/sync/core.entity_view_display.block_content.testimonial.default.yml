@@ -23,7 +23,7 @@ mode: default
 content:
   field_affiliation:
     weight: 7
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -31,14 +31,14 @@ content:
     region: content
   field_full_name:
     weight: 0
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_graduation_year:
     weight: 5
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -48,7 +48,7 @@ content:
   field_image:
     type: entity_reference_entity_view
     weight: 6
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -56,14 +56,14 @@ content:
     region: content
   field_organizational_title:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_program_referenced:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -71,7 +71,7 @@ content:
     region: content
   field_program_type:
     weight: 4
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -79,7 +79,7 @@ content:
     region: content
   field_quote:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
@@ -87,11 +87,11 @@ content:
   field_related_content:
     type: entity_reference_revisions_entity_view
     weight: 8
-    label: above
+    region: content
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    region: content
 hidden:
   body: true

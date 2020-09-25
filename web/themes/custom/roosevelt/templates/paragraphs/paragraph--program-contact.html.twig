@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ */
+#}
+{% block paragraph %}
+
+<div class="programDetails-panel2-intro-colRight-contact">
+  {% block content %}
+  <div class="programDetails-panel2-intro-colRight-contactName">{{ content.full_name }}</div>
+  {% if content.field_person_title|render %}
+  <div class="programDetails-panel2-intro-colRight-contactAttribute">,&nbsp;{{ content.field_person_title }}</div>
+  {% endif %}
+  <div class="programDetails-panel2-intro-colRight-contactMeta">
+    {% if content.email|render %}
+    <div class="programDetails-panel2-intro-colRight-contactMeta-element">
+      <a href="mailto:{{ content.email }}" title="Send an email to {{ content.full_name }}" class="programDetails-panel2-intro-colRight-contactMeta-email">{{ content.email }}</a>
+    </div>
+    {% endif %}
+    {% if content.phone_number|render %}
+    <div class="programDetails-panel2-intro-colRight-contactMeta-element">
+      <a href="tel:{{ content.phone_number }}" title="Call {{ content.full_name }}" class="programDetails-panel2-intro-colRight-contactMeta-phone">{{ content.phone_number }}</a>
+    </div>
+    {% endif %}
+  </div>
+  {% endblock %}
+</div>
+
+{% endblock paragraph %}

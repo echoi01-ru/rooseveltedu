@@ -34,9 +34,9 @@
       <ul class="subMenu">
     {% endif %}
     {% for item in items %}
-    {% set menu_item_classes = [
-      'tierMenu',
-    ] %}
+      {% set menu_item_classes = [
+        'tierMenu',
+      ] %}
       <li{{ item.attributes.addClass(menu_item_classes) }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}

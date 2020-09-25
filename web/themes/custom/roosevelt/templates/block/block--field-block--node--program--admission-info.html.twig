@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ */
+#}
+{%
+  set classes = [
+    'programDetails-panel10-imgPromotion-txtContainer',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+{% block content %}
+  <div class="programDetails-panel10-imgPromotion-txt">
+    {{ content }}
+  </div>
+  <div class="programDetails-panel10-faculty-viewFacultyDirectoryBtn">
+    <a id="hlAdmission" href="https://applyru.roosevelt.edu/apply/">Apply Now</a>
+  </div>
+{% endblock %}
+</div>

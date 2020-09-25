@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+{% if content %}
+<div class="facultyDescription-upperPanelContainer">
+  <div class="facultyDescription-upperPanel-leftCol">
+    <div class="facultyDescription-upperPanel-leftCol-imgContainer">
+      {{ content.field_picture }}
+    </div>
+  </div>
+
+  <div class="facultyDescription-upperPanel-rightCol">
+    <div class="facultyDescription-upperPanel-rightCol-top">
+      <div class="facultyDescription-upperPanel-rightCol-top-primaryTitle">{{ content.field_full_name }}</div>
+      <div class="facultyDescription-upperPanel-rightCol-top-secondTitle"></div>
+      <div class="facultyDescription-upperPanel-rightCol-top-program"></div>
+    </div>
+    <div class="facultyDescription-upperPanel-rightCol-nestRight">
+      <div class="facultyDescription-upperPanel-listTitle">Contact Me...</div>
+      <ul class="facultyDescription-upperPanel-sectionContactList">
+        <li class="facultyDescription-office">{{ content.field_office_location }}</li>
+        <li class="facultyDescription-email"></li>
+        <li class="facultyDescription-phone">{{ content.field_primary_phone }}</li>
+      </ul>
+      <div class="facultyDescription-upperPanel-linkList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="facultyDescription-about">
+  {{ content.field_bio }}
+  {{ content|without('field_picture','field_full_name','field_office_location','field_primary_phone') }}
+</div>
+
+{% endif %}

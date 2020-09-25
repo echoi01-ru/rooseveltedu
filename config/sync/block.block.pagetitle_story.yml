@@ -1,27 +1,27 @@
-uuid: 58230ca5-6bde-4121-bc1b-46e9490312e5
+uuid: 08ccc899-fc33-45f0-9514-1e8ea482d8ba
 langcode: en
-status: false
+status: true
 dependencies:
   module:
-    - ctools
+    - node
   theme:
     - roosevelt
-id: pagetitle
+id: pagetitle_story
 theme: roosevelt
-region: announcement
-weight: -8
+region: content_title
+weight: 0
 provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Page title'
+  label: 'Page Title: Story'
   provider: core
   label_display: '0'
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
+  node_type:
+    id: node_type
     bundles:
-      homepage: homepage
-    negate: true
+      story: story
+    negate: false
     context_mapping:
       node: '@node.node_route_context:node'
