@@ -1,0 +1,34 @@
+uuid: 4d6341a6-ed01-4030-9362-9125b809bdb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.future-students
+  module:
+    - menu_block_title
+    - system
+  theme:
+    - roosevelt
+third_party_settings:
+  menu_block_title:
+    modify_title: true
+id: futurestudents
+theme: roosevelt
+region: sidebar
+weight: 0
+provider: null
+plugin: 'system_menu_block:future-students'
+settings:
+  id: 'system_menu_block:future-students'
+  label: 'Future Students'
+  provider: system
+  label_display: visible
+  level: 2
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    pages: /about/why-roosevelt/stories
+    negate: false
+    context_mapping: {  }

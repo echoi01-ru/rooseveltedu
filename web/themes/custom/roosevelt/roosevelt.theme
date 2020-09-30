@@ -12,6 +12,8 @@ use Drupal\Core\Render\Renderer;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\user\Entity\User;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
@@ -171,6 +173,15 @@ function roosevelt_preprocess_region(array &$variables) {
  * Implements hook_theme_suggestions_page_alter().
  */
 function roosevelt_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $current_route_name = \Drupal::service('current_route_match')->getRouteName();
+  $route = explode('.', $current_route_name);
+
+  if($route[0] == 'view') {
+    $suggestions[] = 'page__' . $route[0];
+    $suggestions[] = 'page__' . $route[0] . '__' . $route[1];
+    $suggestions[] = 'page__' . $route[0] . '__' . $route[1] . '__' . $route[2];
+  }
+
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     // When viewing a revision $node will be numeric.
     // @see https://www.drupal.org/node/2495703
@@ -325,6 +336,62 @@ function roosevelt_preprocess_node(array &$variables) {
       $variables['event_dates'] = $event_dates;
       $variables['event_times'] = $event_times;
       break;
+    case 'story':
+      $terms = [];
+//
+      if ($node->hasField('field_audience')) {
+        if($audience = $node->get('field_audience')->first()) {
+          $tid = $audience->target_id;
+          $term = Term::load($tid);
+
+          $url = Url::fromRoute('view.stories.page_1');
+          $url->setOption('query', [
+            'field_audience_target_id' => $audience->target_id,
+          ]);
+
+          $term_link = Link::fromTextAndUrl($term->getName(), $url);
+          $term_link = $term_link->toRenderable();
+
+          $terms[] = $term_link;
+        }
+      }
+//
+      if ($node->hasField('field_parent_organization')) {
+        if($organization = $node->get('field_parent_organization')->first()) {
+          $tid = $organization->target_id;
+          $term = Term::load($tid);
+
+          $url = Url::fromRoute('view.stories.page_1');
+          $url->setOption('query', [
+            'field_parent_organization_target_id' => $tid,
+          ]);
+
+          $term_link = Link::fromTextAndUrl($term->getName(), $url);
+          $term_link = $term_link->toRenderable();
+
+          $terms[] = $term_link;
+        }
+      }
+//
+      if ($node->hasField('field_brand_pillars')) {
+        if($pillar = $node->get('field_brand_pillars')->first()) {
+          $tid = $pillar->target_id;
+          $term = Term::load($tid);
+
+          $url = Url::fromRoute('view.stories.page_1');
+          $url->setOption('query', [
+            'field_brand_pillars_target_id' => $tid,
+          ]);
+
+          $term_link = Link::fromTextAndUrl($term->getName(), $url);
+          $term_link = $term_link->toRenderable();
+
+          $terms[] = $term_link;
+        }
+      }
+
+      $variables['tag_list'] = $terms;
+      break;
   }
 
 }
@@ -344,6 +411,12 @@ function roosevelt_form_alter(array &$variables) {
     $variables['#theme'] = ['search_form'];
     unset($variables['keys']);
     unset($variables['actions']);
+  }
+  if ($variables['#form_id'] == 'views_exposed_form') {
+    $variables['field_audience_target_id']['#options']['All'] = '- Select Subject -';
+    $variables['field_parent_organization_target_id']['#options']['All'] = '- Select Affiliation -';
+    $variables['field_brand_pillars_target_id']['#options']['All'] = '- Choose -';
+    $variables['#attached']['library'][] = 'roosevelt/views_form';
   }
 }
 

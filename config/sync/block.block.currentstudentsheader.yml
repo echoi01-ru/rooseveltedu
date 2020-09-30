@@ -2,10 +2,7 @@ uuid: 190d0b78-634c-42db-8d30-9ce2479c0a16
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:simple:106c4648-b96f-46d0-8042-5c6a56963147'
   module:
-    - block_content
     - system
   theme:
     - roosevelt

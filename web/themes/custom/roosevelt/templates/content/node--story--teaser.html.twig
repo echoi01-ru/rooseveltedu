@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ */
+#}
+
+<div class="internal-storyListing-Container">
+  <div class="internal-storyListing-contentWrapper">
+    {{ title_prefix }}
+    <h4>
+      <a class="internal-storyListing-contentTitleLink" href="{{ url }}">{{ label }}</a>
+    </h4>
+    {{ title_suffix }}
+    <div class="internal-storyListing-contentPersonName">{{ author_info }}</div>
+    <div class="internal-storyListing-contentAttribute"></div>
+    <div class="internal-storyListing-contentTeaser">{{ content.body }}</div>
+    <div class="internal-storyListing-taxButtonContainer">{{ tag_list }}</div>
+  </div>
+  <div class="internal-storyListing-imgWrapper">
+    {{ content.field_featured_image }}
+  </div>
+</div>
