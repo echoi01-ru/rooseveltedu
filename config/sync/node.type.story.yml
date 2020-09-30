@@ -7,6 +7,12 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
+      - alumni-giving
+      - college-of-pharmacy
+      - current-students
+      - faculty-staff
+      - footer
+      - future-students
       - main
     parent: 'main:'
 name: Story
