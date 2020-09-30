@@ -126,6 +126,12 @@ function roosevelt_preprocess_page_title(array &$variables) {
       $variables['day'] = $date_formatter->format($timestamp, $format, 'D'); // Tue
       $variables['year'] = $date_formatter->format($timestamp, $format, 'Y'); // 2020
     }
+
+    if ($node->bundle() == 'views_page') {
+      if ($node->hasField('field_subtitle')) {
+        $variables['subtitle'] = $node->field_subtitle->value;
+      }
+    }
   }
 }
 

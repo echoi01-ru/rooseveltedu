@@ -109,6 +109,7 @@
         "drupal/taxonomy_import": "^1.0",
         "drupal/time_field": "^1.13",
         "drupal/twig_field_value": "1.2",
+        "drupal/viewsreference": "^1.4",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "~8",
         "enyo/dropzone": "master",

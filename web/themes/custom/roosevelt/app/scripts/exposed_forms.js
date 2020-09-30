@@ -5,10 +5,10 @@
 
   Drupal.behaviors.storyFilterToggle = {
     attach: function () {
-      $(".storyFilterToggle").click(function () {
+      $(".storyFilterToggle").once('storyFilterToggle').click(function () {
         $(".storyFilterTogglePanel").slideToggle("slow");
         $(".storyFilterToggle").toggleClass("open");
       });
-    };
-
+    }
+  }
 })(jQuery, Drupal);

@@ -12,15 +12,63 @@
  *   displayed after the main title tag that appears in the template.
  */
 #}
-{{ title_prefix }}
-{% if title %}
-  <h1{{ title_attributes }}>{{ title }}</h1>
-{% endif %}
+<div class="internal-upperContainer" role="banner">
 
-{% if hero %}
-<div class="internal-contentContainer-heroContainer" role="complementary">
-  {{ hero }}
+  <!--Background Image-->
+
+  <!--END Background Image-->
+
+  <!--Main Page Title-->
+  <div class="internal-upperContainer-titleContainer">
+
+    <div class="globalWidth">
+      {{ title_prefix }}
+      <h1>{{ title }}</h1>
+      {{ title_suffix }}
+
+      {%  if subtitle %}
+      <div class="internal-upperContainer-sepWrapper">
+
+        <div class="internal-upperContainer-sepWrapper-left"></div>
+        <div class="internal-upperContainer-sepWrapper-center"><span class="fa fa-circle-o headingSep" aria-hidden="true"></span></div>
+        <div class="internal-upperContainer-sepWrapper-right"></div>
+
+      </div>
+      <div class="storyDetails-attributeContainer">
+
+        <div class="storyDetails-attribute-name">{{ subtitle }}</div>
+        <div class="storyDetails-attribute-type"></div>
+
+      </div>
+      {%  endif %}
+    </div>
+
+  </div>
+  <!--Main Page Title-->
+
+  <!--Overlay-->
+  <div class="internal-upperContainer-overlay"></div>
+  <!--END Overlay-->
+
+  {% if event_date %}
+  <!--Event Date-->
+    {{ event_date }}
+  <!-- END Event Date -->
+  {% endif %}
+
+  {% if has_triangle %}
+  <!--Triangle Effect-->
+  <div class="internal-headerTriangle">
+    <svg version="1.1" id="angle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 74.7" preserveAspectRatio="none">
+      <polygon fill="#FFFFFF" points="1000,74.7 0,74.7 0,5.7 501,50.7 1000,5.7 "/>
+    </svg>
+  </div>
+  <!--Triangle Effect-->
+  {% endif %}
+
+  {% if hero %}
+    <div class="internal-contentContainer-heroContainer" role="complementary">
+      {{ hero }}
+    </div>
+  {% endif %}
 </div>
-{% endif %}
-
-{{ title_suffix }}
