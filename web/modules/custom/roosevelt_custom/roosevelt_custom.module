@@ -76,6 +76,19 @@ function roosevelt_custom_form_user_form_alter(&$form, FormStateInterface $form_
 /**
  * hook_form_BASE_FORM_ID_alter() for the node_form.
  */
+function roosevelt_custom_form_block_form_alter(&$form, FormStateInterface $form_state) {
+  $form['settings']['subtitle'] = [
+    '#type' => 'textfield',
+    '#value' => '',
+    '#title' => t('Subtitle'),
+    '#maxlength' => 255,
+    '#description' => t('Use this field for the page\'s subtitle.'),
+  ];
+}
+
+/**
+ * hook_form_BASE_FORM_ID_alter() for the node_form.
+ */
 function roosevelt_custom_form_block_content_outcome_form_alter(&$form, FormStateInterface $form_state) {
   $form['info']['widget'][0]['value']['#title'] = t('Label');
 }

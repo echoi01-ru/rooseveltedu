@@ -13,9 +13,9 @@
       <a class="internal-storyListing-contentTitleLink" href="{{ url }}">{{ label }}</a>
     </h4>
     {{ title_suffix }}
-    <div class="internal-storyListing-contentPersonName">{{ author_info }}</div>
+    <div class="internal-storyListing-contentPersonName">{{ author_name }}</div>
     <div class="internal-storyListing-contentAttribute"></div>
-    <div class="internal-storyListing-contentTeaser">{{ content.body }}</div>
+    <div class="internal-storyListing-contentTeaser"><p>{{ content.body|render|striptags|trim() }}</p></div>
     <div class="internal-storyListing-taxButtonContainer">{{ tag_list }}</div>
   </div>
   <div class="internal-storyListing-imgWrapper">
