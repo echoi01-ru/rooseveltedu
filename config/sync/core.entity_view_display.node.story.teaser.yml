@@ -1,6 +1,6 @@
 uuid: 9fdb0002-c7cc-4e26-81c8-a8f4e2d9cccc
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -22,26 +22,39 @@ dependencies:
     - field.field.node.story.field_related_media
     - field.field.node.story.field_related_people
     - field.field.node.story.field_story_type
+    - field.field.node.story.layout_builder__layout
     - node.type.story
   module:
+    - text
     - user
 id: node.story.teaser
 targetEntityType: node
 bundle: story
 mode: teaser
 content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      trim_length: 120
+    third_party_settings: {  }
   content_moderation_control:
     weight: -20
     settings: {  }
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
+  field_featured_image:
+    type: entity_reference_entity_view
+    weight: 1
     region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
 hidden:
-  body: true
   field_accordion: true
   field_accountability_notes: true
   field_audience: true
@@ -51,7 +64,6 @@ hidden:
   field_campus: true
   field_date_published: true
   field_featured: true
-  field_featured_image: true
   field_member_accountability: true
   field_parent_organization: true
   field_raci: true
@@ -60,3 +72,4 @@ hidden:
   field_related_people: true
   field_story_type: true
   layout_builder__layout: true
+  links: true

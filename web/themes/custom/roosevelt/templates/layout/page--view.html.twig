@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+<div class="internalNavigationController">
+  {{ page.announcement }}
+  {{ page.header }}
+</div>{# /.internalNavigationController #}
+
+<a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+{% if page.content_title %}
+  {{ page.content_title }}
+{% endif %}
+
+{{ page.help }}
+{{ page.message }}
+
+{{ page.admin_tasks }}
+
+<div class="internal-contentWrapper">
+  <div class="internal-contentInnerWrapper">
+    <div class="globalWidth">
+      <div class="internal-mainColumn-container">
+        <div class="internal-leftColumn-container">
+          <div class="internal-leftColumn-wrapper">
+            {{ page.sidebar }}
+          </div>
+        </div>
+        <div class="internal-rightColumn-container">
+          <div class="internal-rightColumn-wrapper">
+            {{ page.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if page.footer_first or page.footer_second or page.footer_lower or page.footer_bottom or page.footer %}
+<footer class="footer-container" role="contentinfo">
+  <div class="globalWidth footer-innerContainer">
+
+    {% if page.footer_first or page.footer_second %}
+    <div class="footer-gridContainer">
+      {{ page.footer_first }}
+      {{ page.footer_second }}
+    </div>
+    {% endif %}
+
+    {{ page.footer_lower }}
+    {{ page.footer_bottom }}
+    {{ page.footer }}
+  </div>
+</footer>
+{% endif %}
+
+<div id="landing-slider"></div>

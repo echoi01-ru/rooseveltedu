@@ -21,6 +21,10 @@ bootstrap:
   js:
     /libraries/patterns/docs/plugins/bootstrap/dist/js/bootstrap.min.js: { minified: true }
 
+views_form:
+  js:
+    dist/js/exposed_forms.js: { scope: footer }
+
 # royalslider:
 #   css:
 #     theme:

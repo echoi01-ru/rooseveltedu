@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override for main view template.
+ */
+#}
+{% if header %}
+  {{ header }}
+{% endif %}
+
+{{ exposed }}
+{{ attachment_before }}
+
+<div class="internal-storyListing-mainContainer">
+{% if rows -%}
+  {{ rows }}
+{% elseif empty -%}
+  {{ empty }}
+{% endif %}
+{{ pager }}
+
+{{ attachment_after }}
+{{ more }}
+
+{% if footer %}
+  {{ footer }}
+{% endif %}
+
+{{ feed_icons }}
+</div>

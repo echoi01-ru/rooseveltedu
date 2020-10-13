@@ -2,10 +2,7 @@ uuid: 7aa8f2dd-7df3-4572-902a-276ed0c35ad9
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:simple:bad2237a-e88e-40eb-ae53-2a39b908d054'
   module:
-    - block_content
     - node
   theme:
     - roosevelt

@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @see template_preprocess_views_exposed_form()
+ */
+#}
+{% if q is not empty %}
+  {{ q }}
+{% endif %}
+<div class="storyFilterContainer">
+    <div class="storyFilterToggleContainer">
+        <a title="Filter stories by..." class="storyFilterToggle">Filter stories by...</a>
+    </div>
+    <div class="storyFilterTogglePanel">
+        <div class="storyFilterTogglePanelWrapper">
+            <div class="storyFilterTogglePanel-SelectWrapper">
+                {{ form.field_audience_target_id }}
+            </div>
+            <div class="storyFilterTogglePanel-SelectWrapper">
+                {{ form.field_parent_organization_target_id }}
+            </div>
+            <div class="storyFilterTogglePanel-SelectWrapper">
+                {{ form.field_brand_pillars_target_id }}
+            </div>
+        </div>
+        <div class="storyFilterToggleSubmitRow">
+            <div class="storyFilterTogglePanel-SubmitWrapper">
+                <input type="submit" value="Filter Results" class="storySubmitButton">
+            </div>
+            <div class="storyFilterTogglePanel-SubmitWrapper">
+                <input data-drupal-selector="edit-reset" type="submit" id="edit-reset" name="op" value="Show All Stories" class="button form-submit storyAllButton">
+            </div>
+        </div>
+    </div>
+</div>
