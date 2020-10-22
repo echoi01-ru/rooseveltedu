@@ -1,0 +1,21 @@
+uuid: 278d7b52-b9d4-45a3-8e36-65dd0cb375a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - user
+id: user.field_option_3_campus_office_roo
+field_name: field_option_3_campus_office_roo
+entity_type: user
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

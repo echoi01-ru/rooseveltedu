@@ -1,0 +1,29 @@
+uuid: 1edbe5cf-4024-4a13-bdd6-28bba896c2eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_organization_department
+    - paragraphs.paragraphs_type.department_college_2
+    - taxonomy.vocabulary.organization
+id: paragraph.department_college_2.field_organization_department
+field_name: field_organization_department
+entity_type: paragraph
+bundle: department_college_2
+label: Organization/Department
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

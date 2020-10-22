@@ -1,0 +1,10 @@
+uuid: 72edd9d6-07d0-4130-9c8f-2f9996641ea1
+langcode: en
+status: true
+dependencies: {  }
+id: campus_office_room
+label: Campus/Office/Room
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

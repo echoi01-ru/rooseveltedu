@@ -1,0 +1,70 @@
+uuid: bb576426-95ff-400b-8e00-9ce6708a7c01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.department_college_2.field_campus
+    - field.field.paragraph.department_college_2.field_college
+    - field.field.paragraph.department_college_2.field_office_location
+    - field.field.paragraph.department_college_2.field_organization_department
+    - field.field.paragraph.department_college_2.field_room
+    - paragraphs.paragraphs_type.department_college_2
+  module:
+    - text
+id: paragraph.department_college_2.default
+targetEntityType: paragraph
+bundle: department_college_2
+mode: default
+content:
+  field_campus:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_college:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_office_location:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_organization_department:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_room:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  admin_title: true
+  created: true
+  status: true

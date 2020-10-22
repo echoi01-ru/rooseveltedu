@@ -1,0 +1,52 @@
+uuid: 923308a1-7650-47c1-b3ac-1637dc41badf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.department_college_1.field_college
+    - field.field.paragraph.department_college_1.field_office_campus_room
+    - field.field.paragraph.department_college_1.field_organization_department
+    - paragraphs.paragraphs_type.department_college_1
+  module:
+    - paragraphs
+id: paragraph.department_college_1.default
+targetEntityType: paragraph
+bundle: department_college_1
+mode: default
+content:
+  field_college:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_office_campus_room:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_organization_department:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  admin_title: true
+  created: true
+  status: true

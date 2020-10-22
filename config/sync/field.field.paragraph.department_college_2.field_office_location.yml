@@ -1,0 +1,29 @@
+uuid: 812c27df-1efc-403d-9c4f-0937a8c49d20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_office_location
+    - paragraphs.paragraphs_type.department_college_2
+    - taxonomy.vocabulary.location
+id: paragraph.department_college_2.field_office_location
+field_name: field_office_location
+entity_type: paragraph
+bundle: department_college_2
+label: 'Office Location'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: a11d689b-1923-4bf2-a249-a8f5eb0eabfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_room
+    - paragraphs.paragraphs_type.department_college_2
+  module:
+    - text
+id: paragraph.department_college_2.field_room
+field_name: field_room
+entity_type: paragraph
+bundle: department_college_2
+label: Room
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

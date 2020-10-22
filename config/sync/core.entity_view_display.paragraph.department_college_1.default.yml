@@ -1,0 +1,42 @@
+uuid: 3da3e5ea-4aed-40bf-89fb-a1709aa96ae8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.department_college_1.field_college
+    - field.field.paragraph.department_college_1.field_office_campus_room
+    - field.field.paragraph.department_college_1.field_organization_department
+    - paragraphs.paragraphs_type.department_college_1
+  module:
+    - entity_reference_revisions
+id: paragraph.department_college_1.default
+targetEntityType: paragraph
+bundle: department_college_1
+mode: default
+content:
+  field_college:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_office_campus_room:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_organization_department:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 7248e875-9d13-4959-aa0f-64ac29865ddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_room
+    - paragraphs.paragraphs_type.campus_office_room
+  module:
+    - text
+id: paragraph.campus_office_room.field_room
+field_name: field_room
+entity_type: paragraph
+bundle: campus_office_room
+label: Room
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

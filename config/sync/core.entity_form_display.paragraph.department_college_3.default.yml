@@ -1,0 +1,37 @@
+uuid: 2f0374ac-3976-4881-b257-7d126ffc0f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.department_college_3.field_college
+    - field.field.paragraph.department_college_3.field_organization_department
+    - paragraphs.paragraphs_type.department_college_3
+id: paragraph.department_college_3.default
+targetEntityType: paragraph
+bundle: department_college_3
+mode: default
+content:
+  field_college:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_organization_department:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  admin_title: true
+  created: true
+  status: true

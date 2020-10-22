@@ -1,0 +1,122 @@
+uuid: 27a3b303-572b-4909-bbcd-ea37115c467d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_option_3_department_colleg
+    - paragraphs.paragraphs_type.department_college_3
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+    - user
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: user.user.field_option_3_department_colleg
+field_name: field_option_3_department_colleg
+entity_type: user
+bundle: user
+label: 'Option 3 - Department/College'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      department_college_3: department_college_3
+    target_bundles_drag_drop:
+      accordion:
+        weight: 31
+        enabled: false
+      accordion_item:
+        weight: 32
+        enabled: false
+      basic_content:
+        weight: 33
+        enabled: false
+      call_to_action:
+        weight: 34
+        enabled: false
+      campus_address:
+        weight: 35
+        enabled: false
+      campus_office_room:
+        weight: 36
+        enabled: false
+      ctabar:
+        weight: 37
+        enabled: false
+      ctacard:
+        weight: 38
+        enabled: false
+      ctacards:
+        weight: 39
+        enabled: false
+      department_college_1:
+        weight: 40
+        enabled: false
+      department_college_2:
+        weight: 41
+        enabled: false
+      department_college_3:
+        enabled: true
+        weight: 42
+      expectations:
+        weight: 43
+        enabled: false
+      from_library:
+        weight: 44
+        enabled: false
+      herobanner:
+        weight: 45
+        enabled: false
+      imgbox:
+        weight: 46
+        enabled: false
+      infocard:
+        weight: 47
+        enabled: false
+      infocards:
+        weight: 48
+        enabled: false
+      program_contact:
+        weight: 49
+        enabled: false
+      raci_consult:
+        weight: 50
+        enabled: false
+      raci_informed:
+        weight: 51
+        enabled: false
+      raci_responsible:
+        weight: 52
+        enabled: false
+      related_content:
+        weight: 53
+        enabled: false
+      related_media:
+        weight: 54
+        enabled: false
+      sample_course:
+        weight: 55
+        enabled: false
+      sample_courses:
+        weight: 56
+        enabled: false
+      textsection:
+        weight: 57
+        enabled: false
+      user_education:
+        weight: 58
+        enabled: false
+      user_expertise:
+        weight: 59
+        enabled: false
+      user_social_media:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

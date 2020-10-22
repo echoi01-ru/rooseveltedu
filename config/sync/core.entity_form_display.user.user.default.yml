@@ -12,6 +12,10 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_netid
     - field.field.user.user.field_office_location
+    - field.field.user.user.field_option_1
+    - field.field.user.user.field_option_2
+    - field.field.user.user.field_option_3_campus_office_roo
+    - field.field.user.user.field_option_3_department_colleg
     - field.field.user.user.field_organization
     - field.field.user.user.field_picture
     - field.field.user.user.field_primary_phone
@@ -62,6 +66,7 @@ third_party_settings:
         - field_user_education
         - field_user_expertise
         - field_user_social_media
+        - group_location
       parent_name: group_user
       weight: 2
       format_type: tab
@@ -87,6 +92,22 @@ third_party_settings:
         classes: ''
         direction: horizontal
       label: User
+    group_location:
+      children:
+        - field_option_1
+        - field_option_2
+        - field_option_3_department_colleg
+        - field_option_3_campus_office_roo
+      parent_name: group_details
+      weight: 17
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Location
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -168,6 +189,54 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_option_1:
+    type: entity_reference_paragraphs
+    weight: 18
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_option_2:
+    type: entity_reference_paragraphs
+    weight: 19
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_option_3_campus_office_roo:
+    type: entity_reference_paragraphs
+    weight: 21
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_option_3_department_colleg:
+    type: entity_reference_paragraphs
+    weight: 20
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_organization:
     type: entity_reference_autocomplete
     weight: 11

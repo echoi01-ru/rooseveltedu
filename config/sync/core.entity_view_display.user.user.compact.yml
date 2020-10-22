@@ -13,6 +13,10 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_netid
     - field.field.user.user.field_office_location
+    - field.field.user.user.field_option_1
+    - field.field.user.user.field_option_2
+    - field.field.user.user.field_option_3_campus_office_roo
+    - field.field.user.user.field_option_3_department_colleg
     - field.field.user.user.field_organization
     - field.field.user.user.field_picture
     - field.field.user.user.field_primary_phone
@@ -56,6 +60,10 @@ hidden:
   field_last_name: true
   field_netid: true
   field_office_location: true
+  field_option_1: true
+  field_option_2: true
+  field_option_3_campus_office_roo: true
+  field_option_3_department_colleg: true
   field_organization: true
   field_picture: true
   field_secondary_phone: true

@@ -1,0 +1,48 @@
+uuid: ba447871-88ac-4521-95f1-ecbf320a8d73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.campus_office_room.field_campus
+    - field.field.paragraph.campus_office_room.field_office_location
+    - field.field.paragraph.campus_office_room.field_room
+    - paragraphs.paragraphs_type.campus_office_room
+  module:
+    - text
+id: paragraph.campus_office_room.default
+targetEntityType: paragraph
+bundle: campus_office_room
+mode: default
+content:
+  field_campus:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_office_location:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_room:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  admin_title: true
+  created: true
+  status: true

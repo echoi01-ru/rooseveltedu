@@ -1,0 +1,10 @@
+uuid: 6fd22ed3-ccff-412e-b7a8-69d4943367eb
+langcode: en
+status: true
+dependencies: {  }
+id: department_college_3
+label: 'Department/College - 3'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
