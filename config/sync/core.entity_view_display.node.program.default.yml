@@ -27,10 +27,7 @@ dependencies:
     - node.type.program
     - views.view.program_related_content
     - views.view.program_testimonials
-  content:
-    - 'block_content:outcome:4643f0e2-a0f9-4852-ab5c-797060ccd87d'
   module:
-    - block_content
     - entity_reference_revisions
     - layout_builder
     - link

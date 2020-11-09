@@ -1,0 +1,82 @@
+uuid: 568cd4d7-27bf-4cf4-ac57-7fbcbe9e672d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.thumb
+    - field.field.node.program.accountability_notes
+    - field.field.node.program.admission_info
+    - field.field.node.program.body
+    - field.field.node.program.field_accordion
+    - field.field.node.program.field_basic_content
+    - field.field.node.program.field_call_to_action
+    - field.field.node.program.field_catalog_link
+    - field.field.node.program.field_contact_person
+    - field.field.node.program.field_differentiators
+    - field.field.node.program.field_expect_require
+    - field.field.node.program.field_location
+    - field.field.node.program.field_member_accountability
+    - field.field.node.program.field_organizational_parent
+    - field.field.node.program.field_possible_terms
+    - field.field.node.program.field_program_contact
+    - field.field.node.program.field_program_faculty
+    - field.field.node.program.field_program_image
+    - field.field.node.program.field_program_type
+    - field.field.node.program.field_raci
+    - field.field.node.program.field_related_content
+    - field.field.node.program.layout_builder__layout
+    - node.type.program
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.program.thumb
+targetEntityType: node
+bundle: program
+mode: thumb
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_location:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_program_type:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  accountability_notes: true
+  admission_info: true
+  body: true
+  field_accordion: true
+  field_basic_content: true
+  field_call_to_action: true
+  field_catalog_link: true
+  field_contact_person: true
+  field_differentiators: true
+  field_expect_require: true
+  field_member_accountability: true
+  field_organizational_parent: true
+  field_possible_terms: true
+  field_program_contact: true
+  field_program_faculty: true
+  field_program_image: true
+  field_raci: true
+  field_related_content: true
+  layout_builder__layout: true
+  links: true

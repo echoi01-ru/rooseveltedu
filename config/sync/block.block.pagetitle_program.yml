@@ -1,0 +1,25 @@
+uuid: 7ad159f6-b5ef-48fe-8e51-c73fee1837ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - roosevelt
+id: pagetitle_program
+theme: roosevelt
+region: content_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page Title: Program'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /academics/programs
+    negate: false
+    context_mapping: {  }
